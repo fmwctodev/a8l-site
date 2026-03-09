@@ -1,0 +1,32 @@
+# 301 Redirects for SEO-friendly URL structure
+# Explicit 200 redirect for Netlify form success page - must be first
+/netlify-success    /thank-you    302
+/thank-you    /index.html   200!
+/application-received    /index.html   200
+
+/book                                    /schedule-consultation           301
+/careers                                 /join-us                         301
+/contact                                 /get-in-touch                    301
+/job-application-thank-you               /application-received            301
+/privacy-policy                          /privacy                         301
+/terms-of-service                        /terms                           301
+/services/ai-agent-development           /solutions/ai-agent-development  301
+# Discontinued services - redirect to main solutions page
+/solutions/ai-content-creation           /                                410
+/solutions/ai-ads-management             /                                410
+/solutions/ai-powered-seo                /                                410
+/solutions/ai-web-design                 /                                410
+/solutions/voice-ai                      /                                410
+/services/ai-content-creation            /                                410
+/services/ai-ads-management              /                                410
+/services/ai-powered-seo                 /                                410
+/services/ai-web-design                  /                                410
+/services/voice-ai                       /                                410
+/services/workflow-automation            /solutions/workflow-automation   301
+/services/rpa-solutions                  /solutions/process-automation    301
+/services/api-integrations               /solutions/api-integrations      301
+/services/custom-llm-systems             /solutions/custom-llm-systems    301
+/services/software-development           /solutions/software-development  301
+/services/mobile-app-development         /solutions/mobile-app-development 301
+
+/*    /index.html   200

@@ -1,0 +1,35 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+  Link: </assets/vendor-react-*.js>; rel=modulepreload; as=script
+  Link: </assets/index-*.js>; rel=modulepreload; as=script
+  Link: </assets/index-*.css>; rel=preload; as=style
+
+https://connect.facebook.net/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+https://unpkg.com/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400

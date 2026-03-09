@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you
+Disallow: /application-received
+Disallow: /aiads-vsl
+
+Disallow: /solutions/ai-content-creation
+Disallow: /solutions/ai-ads-management
+Disallow: /solutions/ai-powered-seo
+Disallow: /solutions/ai-web-design
+Disallow: /solutions/voice-ai
+Disallow: /services/ai-content-creation
+Disallow: /services/ai-ads-management
+Disallow: /services/ai-powered-seo
+Disallow: /services/ai-web-design
+Disallow: /services/voice-ai
+
+Sitemap: https://autom8ionlab.com/sitemap.xml
