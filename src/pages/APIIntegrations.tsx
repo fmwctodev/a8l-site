@@ -51,8 +51,12 @@ const APIIntegrations = () => {
         <meta property="og:description" content="Connect your systems seamlessly with API integration services from Autom8ion Lab. Secure, scalable, and built to unify your business operations." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/api-integrations" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="API Integration Solutions | Secure Business Connectivity" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="API Integration Solutions | Secure Business Connectivity | Autom8ion Lab" />
         <meta name="twitter:description" content="Connect your systems seamlessly with API integration services from Autom8ion Lab. Secure, scalable, and built to unify your business operations." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
         
@@ -272,7 +276,7 @@ const APIIntegrations = () => {
               We build third-party API connection services that integrate seamlessly with Salesforce, HubSpot, Google Workspace, AWS services, Azure platforms, Stripe payment processing, Shopify e-commerce, Slack communications, and hundreds of other business applications. Our integration specialists understand the nuances of each platform's API, from authentication flows to webhook configurations.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Whether you need CRM synchronization, payment gateway integration, marketing automation connections, or cloud storage APIs, we handle the complexity. Our <Link to="/solutions/workflow-automation" className="text-green-400 hover:text-green-300 underline">workflow automation</Link> expertise ensures these integrations trigger intelligent business processes automatically. We also leverage <Link to="/solutions/cloud-systems" className="text-green-400 hover:text-green-300 underline">secure cloud infrastructure</Link> to host your integration services with high availability and scalability.
+              Whether you need CRM synchronization, payment gateway integration, marketing automation connections, or cloud storage APIs, we handle the complexity. Our <Link to="/solutions/workflow-automation" className="text-green-400 hover:text-green-300 underline">workflow automation</Link> expertise ensures these integrations trigger intelligent business processes automatically. We also leverage <Link to="/solutions/cloud-systems" className=\"text-green-400 hover:text-green-300 underline">secure cloud infrastructure</Link> to host your integration services with high availability and scalability.
             </p>
           </div>
         </div>

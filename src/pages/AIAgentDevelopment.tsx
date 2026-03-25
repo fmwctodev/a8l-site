@@ -42,7 +42,7 @@ const AIAgentDevelopment = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>AI Agent Development Services | Custom AI Automation Solutions</title>
+        <title>AI Agent Development Services | Custom AI Automation Solutions | Autom8ion Lab</title>
         <meta name="description" content="Design and deploy intelligent AI agents for chat, voice, and automation. Streamline workflows, boost customer support, and enhance business efficiency." />
         <meta name="keywords" content="ai agent development services, ai chatbot and virtual agent development, custom ai automation solutions, predictive analytics and ai insights, ai-powered process optimization" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/ai-agent-development')} />
@@ -51,8 +51,12 @@ const AIAgentDevelopment = () => {
         <meta property="og:description" content="Design and deploy intelligent AI agents for chat, voice, and automation. Streamline workflows, boost customer support, and enhance business efficiency." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/ai-agent-development" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Agent Development Services | Custom AI Automation Solutions" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="AI Agent Development Services | Custom AI Automation Solutions | Autom8ion Lab" />
         <meta name="twitter:description" content="Design and deploy intelligent AI agents for chat, voice, and automation. Streamline workflows, boost customer support, and enhance business efficiency." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
         

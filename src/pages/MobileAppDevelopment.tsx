@@ -51,8 +51,12 @@ const MobileAppDevelopment = () => {
         <meta property="og:description" content="Autom8ion Lab builds stunning, high-performance mobile apps for iOS and Android. Cross-platform solutions designed to scale with your business." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/mobile-app-development" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mobile App Development Agency | iOS & Android Experts" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="Mobile App Development Agency | iOS & Android Experts | Autom8ion Lab" />
         <meta name="twitter:description" content="Autom8ion Lab builds stunning, high-performance mobile apps for iOS and Android. Cross-platform solutions designed to scale with your business." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -360,7 +364,7 @@ const MobileAppDevelopment = () => {
               We optimize every API call for mobile networks — implementing intelligent caching, request batching, and offline-first architecture that ensures your app performs beautifully even with spotty connectivity. Advanced error handling and retry logic provide graceful fallbacks when network conditions degrade. Real-time data synchronization keeps users' devices in sync while minimizing battery drain and data usage.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Your mobile app infrastructure matters as much as the app itself. We deploy backends on <Link to="/solutions/cloud-systems" className="text-rose-400 hover:text-rose-300 underline">scalable cloud infrastructure</Link> with automated scaling, comprehensive monitoring, and disaster recovery plans. Whether you need a simple REST API or complex microservices architecture, we build systems that handle millions of requests while maintaining sub-second response times. Need custom software to complement your mobile app? Our <Link to="/solutions/software-development" className="text-rose-400 hover:text-rose-300 underline">full-stack development team</Link> builds web dashboards, admin panels, and backend systems that work seamlessly with your mobile applications.
+              Your mobile app infrastructure matters as much as the app itself. We deploy backends on <Link to="/solutions/cloud-systems" className="text-rose-400 hover:text-rose-300 underline">scalable cloud infrastructure</Link> with automated scaling, comprehensive monitoring, and disaster recovery plans. Whether you need a simple REST API or complex microservices architecture, we build systems that handle millions of requests while maintaining sub-second response times. Need custom software to complement your mobile app? Our <Link to="/solutions/software-development" className=\"text-rose-400 hover:text-rose-300 underline">full-stack development team</Link> builds web dashboards, admin panels, and backend systems that work seamlessly with your mobile applications.
             </p>
           </div>
         </div>

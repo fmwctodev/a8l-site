@@ -93,8 +93,12 @@ const CustomLLMSystems = () => {
         <meta property="og:description" content="Build and fine-tune large language models with Autom8ion Lab. Custom LLM systems designed for performance, accuracy, and enterprise-grade security." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/custom-llm-systems" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Custom LLM Development | Fine-Tuned AI Model Solutions" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="Custom LLM Development | Fine-Tuned AI Model Solutions | Autom8ion Lab" />
         <meta name="twitter:description" content="Build and fine-tune large language models with Autom8ion Lab. Custom LLM systems designed for performance, accuracy, and enterprise-grade security." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
         
@@ -400,7 +404,7 @@ const CustomLLMSystems = () => {
               Integrations With Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Existing Systems</span>
             </h2>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              Seamless integration with CRMs, ERPs, analytics platforms, and cloud systems through secure API endpoints and custom middleware. Our natural language processing solutions connect to your existing data pipelines without requiring major infrastructure changes. Custom LLMs integrate with <Link to="/solutions/data-management" className="text-cyan-400 hover:text-cyan-300 underline">data management systems</Link> for training data preparation, <Link to="/solutions/ai-agent-development" className="text-cyan-400 hover:text-cyan-300 underline">AI agent development</Link> platforms for application deployment, and <Link to="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity infrastructure</Link> for secure model hosting.
+              Seamless integration with CRMs, ERPs, analytics platforms, and cloud systems through secure API endpoints and custom middleware. Our natural language processing solutions connect to your existing data pipelines without requiring major infrastructure changes. Custom LLMs integrate with <Link to="/solutions/data-management" className="text-cyan-400 hover:text-cyan-300 underline">data management systems</Link> for training data preparation, <Link to="/solutions/ai-agent-development" className=\"text-cyan-400 hover:text-cyan-300 underline">AI agent development</Link> platforms for application deployment, and <Link to="/solutions/cybersecurity" className=\"text-cyan-400 hover:text-cyan-300 underline">cybersecurity infrastructure</Link> for secure model hosting.
             </p>
           </div>
         </div>

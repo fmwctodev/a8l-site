@@ -1,8 +1,17 @@
 /*
-  X-Frame-Options: DENY
+  X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/thank-you
+  X-Robots-Tag: noindex, nofollow
+
+/application-received
+  X-Robots-Tag: noindex, nofollow
+
+/aiads-vsl
+  X-Robots-Tag: noindex, nofollow
 
 /*.js
   Cache-Control: public, max-age=31536000, immutable
@@ -21,6 +30,14 @@
 
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
 
 /index.html
   Cache-Control: public, max-age=0, must-revalidate

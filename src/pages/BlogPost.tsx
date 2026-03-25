@@ -25,6 +25,16 @@ interface BlogPostData {
   tags: string[];
   meta_title: string;
   meta_description: string;
+  date_modified: string | null;
+  author_title: string | null;
+  author_linkedin: string | null;
+  og_image: string | null;
+  article_section: string | null;
+}
+
+interface TocItem {
+  id: string;
+  text: string;
 }
 
 const BlogPost = () => {
@@ -34,6 +44,7 @@ const BlogPost = () => {
   const [loading, setLoading] = useState(true);
   const [readingProgress, setReadingProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('');
+  const [tocItems, setTocItems] = useState<TocItem[]>([]);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -67,6 +78,19 @@ const BlogPost = () => {
   }, [slug, navigate]);
 
   useEffect(() => {
+    if (!post || !contentRef.current) return;
+
+    const headings = contentRef.current.querySelectorAll('h2');
+    const items: TocItem[] = [];
+    headings.forEach((heading, index) => {
+      const id = `section-${index}`;
+      heading.id = id;
+      items.push({ id, text: heading.textContent || '' });
+    });
+    setTocItems(items);
+  }, [post]);
+
+  useEffect(() => {
     const handleScroll = () => {
       if (!contentRef.current) return;
 
@@ -80,7 +104,7 @@ const BlogPost = () => {
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= 100 && rect.bottom >= 100) {
-          setActiveSection(section.textContent || '');
+          setActiveSection(section.id || '');
         }
       });
     };
@@ -139,14 +163,20 @@ const BlogPost = () => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.meta_title || post.title} />
         <meta property="og:description" content={post.meta_description || post.excerpt} />
-        <meta property="og:image" content={post.hero_image} />
+        <meta property="og:image" content={post.og_image || post.hero_image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content={`https://autom8ionlab.com/blog/${post.slug}`} />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@autom8ionlab" />
         <meta name="twitter:title" content={post.meta_title || post.title} />
         <meta name="twitter:description" content={post.meta_description || post.excerpt} />
-        <meta name="twitter:image" content={post.hero_image} />
+        <meta name="twitter:image" content={post.og_image || post.hero_image} />
         <meta property="article:published_time" content={post.published_at} />
+        {post.date_modified && <meta property="article:modified_time" content={post.date_modified} />}
         <meta property="article:author" content={post.author} />
+        {post.article_section && <meta property="article:section" content={post.article_section} />}
         {post.tags.map((tag) => (
           <meta key={tag} property="article:tag" content={tag} />
         ))}
@@ -156,9 +186,19 @@ const BlogPost = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": post.title,
-            "image": post.hero_image,
+            "image": post.og_image || post.hero_image,
             "datePublished": post.published_at,
-            "author": { "@type": "Organization", "name": post.author },
+            "dateModified": post.date_modified || post.published_at,
+            "inLanguage": "en-US",
+            "keywords": post.tags.join(', '),
+            ...(post.article_section ? { "articleSection": post.article_section } : {}),
+            "author": {
+              "@type": "Person",
+              "name": post.author,
+              ...(post.author_title ? { "jobTitle": post.author_title } : {}),
+              ...(post.author_linkedin ? { "sameAs": post.author_linkedin } : {}),
+              "worksFor": { "@type": "Organization", "name": "Autom8tion Lab" }
+            },
             "publisher": {
               "@type": "Organization",
               "name": "Autom8tion Lab",
@@ -350,30 +390,29 @@ const BlogPost = () => {
                       </div>
                     </div>
 
-                    <div className="pt-4 border-t border-slate-800">
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className={`w-4 h-4 ${readingProgress > 20 ? 'text-green-400' : 'text-slate-600'}`} />
-                          <span className={readingProgress > 20 ? 'text-slate-300' : 'text-slate-500'}>Introduction</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className={`w-4 h-4 ${readingProgress > 40 ? 'text-green-400' : 'text-slate-600'}`} />
-                          <span className={readingProgress > 40 ? 'text-slate-300' : 'text-slate-500'}>Traditional Automation</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className={`w-4 h-4 ${readingProgress > 60 ? 'text-green-400' : 'text-slate-600'}`} />
-                          <span className={readingProgress > 60 ? 'text-slate-300' : 'text-slate-500'}>AI Agents</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className={`w-4 h-4 ${readingProgress > 80 ? 'text-green-400' : 'text-slate-600'}`} />
-                          <span className={readingProgress > 80 ? 'text-slate-300' : 'text-slate-500'}>Hybrid Approach</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className={`w-4 h-4 ${readingProgress > 95 ? 'text-green-400' : 'text-slate-600'}`} />
-                          <span className={readingProgress > 95 ? 'text-slate-300' : 'text-slate-500'}>Conclusion</span>
-                        </div>
+                    {tocItems.length > 0 && (
+                      <div className="pt-4 border-t border-slate-800">
+                        <p className="text-slate-400 text-xs uppercase tracking-wider mb-3 font-medium">Sections</p>
+                        <nav aria-label="Table of contents">
+                          <div className="space-y-2">
+                            {tocItems.map((item, index) => {
+                              const threshold = ((index + 1) / tocItems.length) * 100;
+                              const isRead = readingProgress >= threshold - (100 / tocItems.length);
+                              return (
+                                <a
+                                  key={item.id}
+                                  href={`#${item.id}`}
+                                  className={`flex items-start gap-2 text-sm transition-colors hover:text-cyan-400 ${activeSection === item.id ? 'text-cyan-400' : isRead ? 'text-slate-300' : 'text-slate-500'}`}
+                                >
+                                  <CheckCircle2 className={`w-4 h-4 mt-0.5 flex-shrink-0 ${isRead ? 'text-green-400' : 'text-slate-600'}`} />
+                                  <span className="line-clamp-2">{item.text}</span>
+                                </a>
+                              );
+                            })}
+                          </div>
+                        </nav>
                       </div>
-                    </div>
+                    )}
 
                     {readingProgress === 100 && (
                       <div className="mt-4 p-4 bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-lg border border-green-700/30">

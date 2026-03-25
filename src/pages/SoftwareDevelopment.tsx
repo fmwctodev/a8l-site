@@ -51,8 +51,12 @@ const SoftwareDevelopment = () => {
         <meta property="og:description" content="Autom8ion Lab builds scalable, secure, and high-performance software. From SaaS apps to enterprise platforms — full-stack development built around your goals." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/software-development" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Software Development Company USA | Custom Engineering Services" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="Custom Software Development Company | Scalable Engineering | Autom8ion Lab" />
         <meta name="twitter:description" content="Autom8ion Lab builds scalable, secure, and high-performance software. From SaaS apps to enterprise platforms — full-stack development built around your goals." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 

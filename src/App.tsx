@@ -59,7 +59,11 @@ const HomePage = () => {
         <meta property="og:description" content="Autom8ion Lab builds custom AI automation, cloud infrastructure, and cybersecurity systems engineered for scale, speed, and measurable ROI." />
         <meta property="og:url" content="https://autom8ionlab.com/" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@autom8ionlab" />
         <meta name="twitter:title" content="AI Automation, Cloud & Cybersecurity Solutions | Autom8ion Lab" />
         <meta name="twitter:description" content="Autom8ion Lab builds custom AI automation, cloud infrastructure, and cybersecurity systems engineered for scale, speed, and measurable ROI." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -70,7 +74,10 @@ const HomePage = () => {
             "@type": "Organization",
             "name": "Autom8tion Lab",
             "url": "https://autom8ionlab.com",
-            "logo": "https://autom8ionlab.com/logo/logo.png",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://autom8ionlab.com/logo/logo.png"
+            },
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-855-508-6062",
@@ -80,52 +87,132 @@ const HomePage = () => {
               "availableLanguage": ["en"]
             },
             "description": "Autom8ion Lab builds custom AI automation, cloud infrastructure, and cybersecurity systems engineered for scale, speed, and measurable ROI.",
+            "foundingDate": "2023",
             "sameAs": [
               "https://www.facebook.com/autom8ionlab",
               "https://www.instagram.com/autom8ionlab",
               "https://www.linkedin.com/company/autom8ionlab",
               "https://twitter.com/autom8ionlab",
               "https://tiktok.com/@autom8ionlab"
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {buildJsonLd({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Autom8tion Lab",
+            "url": "https://autom8ionlab.com",
+            "telephone": "+1-855-508-6062",
+            "email": "info@autom8ionlab.com",
+            "priceRange": "$15,000 - $150,000",
+            "areaServed": "Worldwide",
+            "description": "Custom AI automation, cloud infrastructure, and cybersecurity systems engineered for measurable business ROI.",
+            "knowsAbout": [
+              "AI Agent Development",
+              "Custom LLM Fine-Tuning",
+              "Workflow Automation",
+              "Robotic Process Automation",
+              "API Integration",
+              "Custom Software Development",
+              "Mobile App Development",
+              "Cybersecurity and Compliance",
+              "Cloud Infrastructure Management",
+              "Data Management and Analytics"
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "AI Automation and Cloud Infrastructure Services",
+              "name": "AI Automation and Technology Services",
               "itemListElement": [
                 {
-                  "@type": "Service",
-                  "serviceType": "AI Agent Development",
-                  "description": "Custom conversational AI agents built on LLMs and fine-tuned to business data for lead qualification, customer support, and intelligent automation.",
-                  "provider": { "@type": "Organization", "name": "Autom8tion Lab" }
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom AI Agent Development",
+                    "url": "https://autom8ionlab.com/solutions/ai-agent-development",
+                    "description": "Custom conversational AI agents built on GPT-4 and Claude, fine-tuned on proprietary business data for lead qualification, customer support, and workflow automation."
+                  }
                 },
                 {
-                  "@type": "Service",
-                  "serviceType": "Workflow Automation Platform",
-                  "description": "End-to-end business process automation with complete audit trails, API orchestration, and seamless integration with existing systems.",
-                  "provider": { "@type": "Organization", "name": "Autom8tion Lab" }
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom LLM Fine-Tuning and Deployment",
+                    "url": "https://autom8ionlab.com/solutions/custom-llm-systems",
+                    "description": "Domain-specific LLM fine-tuning, RAG system implementation, and private deployment with complete data sovereignty."
+                  }
                 },
                 {
-                  "@type": "Service",
-                  "serviceType": "Enterprise Cybersecurity Services",
-                  "description": "Comprehensive cybersecurity solutions including vulnerability scanning, NIST/CIS-aligned policies, incident response planning, and compliance management.",
-                  "provider": { "@type": "Organization", "name": "Autom8tion Lab" }
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Enterprise Workflow Automation",
+                    "url": "https://autom8ionlab.com/solutions/workflow-automation",
+                    "description": "End-to-end business process automation using n8n, Make, and custom pipelines with complete audit trails."
+                  }
                 },
                 {
-                  "@type": "Service",
-                  "serviceType": "Cloud Infrastructure Management",
-                  "description": "Secure cloud infrastructure setup, container deployment, system monitoring, and automation across AWS, Azure, or on-premises environments.",
-                  "provider": { "@type": "Organization", "name": "Autom8tion Lab" }
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Robotic Process Automation (RPA)",
+                    "url": "https://autom8ionlab.com/solutions/process-automation",
+                    "description": "AI-enhanced RPA for repetitive task automation across legacy systems, web interfaces, and document workflows."
+                  }
                 },
                 {
-                  "@type": "Service",
-                  "serviceType": "Custom LLM Systems",
-                  "description": "Design, training, and hosting of bespoke large language models tailored to specific domains with proprietary data integration.",
-                  "provider": { "@type": "Organization", "name": "Autom8tion Lab" }
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "API Integration Services",
+                    "url": "https://autom8ionlab.com/solutions/api-integrations",
+                    "description": "RESTful API development, GraphQL, and enterprise system integrations unifying Salesforce, Shopify, and custom databases."
+                  }
                 },
                 {
-                  "@type": "Service",
-                  "serviceType": "Data Management and Analytics",
-                  "description": "Centralized data pipelines, AI-powered dashboards, secure storage solutions, and role-based access for structured reporting and insights.",
-                  "provider": { "@type": "Organization", "name": "Autom8tion Lab" }
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Software Development",
+                    "url": "https://autom8ionlab.com/solutions/software-development",
+                    "description": "Full-stack SaaS applications and enterprise platforms built with React, Node.js, Python, and cloud-native architectures."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile App Development",
+                    "url": "https://autom8ionlab.com/solutions/mobile-app-development",
+                    "description": "Cross-platform iOS and Android applications using React Native and native development."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cybersecurity and Compliance Consulting",
+                    "url": "https://autom8ionlab.com/solutions/cybersecurity",
+                    "description": "Penetration testing, risk assessments, and compliance audits aligned with NIST, CIS, HIPAA, ISO 27001, and SOC 2."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cloud Infrastructure Management",
+                    "url": "https://autom8ionlab.com/solutions/cloud-systems",
+                    "description": "Cloud architecture, Kubernetes orchestration, CI/CD pipelines, and 24/7 monitoring across AWS and Azure."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Data Management and Business Intelligence",
+                    "url": "https://autom8ionlab.com/solutions/data-management",
+                    "description": "Data pipelines, AI-powered dashboards, and predictive analytics for strategic decision-making."
+                  }
                 }
               ]
             }
@@ -137,7 +224,15 @@ const HomePage = () => {
             "@type": "WebSite",
             "url": "https://autom8ionlab.com",
             "name": "Autom8tion Lab",
-            "description": "Custom AI and automation solutions for businesses"
+            "description": "Custom AI automation, cloud infrastructure, and cybersecurity systems for businesses",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://autom8ionlab.com/blog?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
           })}
         </script>
         <script type="application/ld+json">

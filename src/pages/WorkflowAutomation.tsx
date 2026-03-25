@@ -42,7 +42,7 @@ const WorkflowAutomation = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Workflow Automation Solutions | End-to-End AI Systems</title>
+        <title>Workflow Automation Solutions | End-to-End AI Systems | Autom8ion Lab</title>
         <meta name="description" content="Streamline operations with enterprise-grade AI workflow automation. Connect systems, eliminate repetitive tasks, and improve productivity company-wide." />
         <meta name="keywords" content="enterprise workflow automation tools, end-to-end automation platforms, ai workflow automation solutions, automated task management systems, business process automation software" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/workflow-automation')} />
@@ -51,8 +51,12 @@ const WorkflowAutomation = () => {
         <meta property="og:description" content="Streamline operations with enterprise-grade AI workflow automation. Connect systems, eliminate repetitive tasks, and improve productivity company-wide." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/workflow-automation" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Workflow Automation Solutions | End-to-End AI Systems" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="Workflow Automation Solutions | End-to-End AI Systems | Autom8ion Lab" />
         <meta name="twitter:description" content="Streamline operations with enterprise-grade AI workflow automation. Connect systems, eliminate repetitive tasks, and improve productivity company-wide." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
         

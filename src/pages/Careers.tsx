@@ -118,7 +118,11 @@ const Careers = () => {
         <meta property="og:description" content="Join our team of innovators, engineers, and visionaries who are transforming how businesses operate through intelligent automation and custom AI solutions." />
         <meta property="og:url" content="https://autom8ionlab.com/join-us" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@autom8ionlab" />
         <meta name="twitter:title" content="Careers at Autom8tion Lab | Build the Future of AI & Automation" />
         <meta name="twitter:description" content="Join our team of innovators, engineers, and visionaries who are transforming how businesses operate through intelligent automation and custom AI solutions." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />

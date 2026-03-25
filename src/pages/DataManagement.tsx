@@ -51,8 +51,12 @@ const DataManagement = () => {
         <meta property="og:description" content="Unlock insights with Autom8ion Lab's data management and analytics consulting. Build dashboards, predict trends, and drive smarter business decisions." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/data-management" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Data Management & Analytics | Business Intelligence Experts" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="Data Management & Analytics | Business Intelligence | Autom8ion Lab" />
         <meta name="twitter:description" content="Unlock insights with Autom8ion Lab's data management and analytics consulting. Build dashboards, predict trends, and drive smarter business decisions." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -239,7 +243,7 @@ const DataManagement = () => {
               Our predictive analytics for business leverages machine learning algorithms to forecast trends, identify patterns, and automate decision-making. We build predictive models for revenue forecasting, customer churn prediction, demand planning, inventory optimization, and risk assessment—enabling proactive strategies rather than reactive responses. Our data scientists use Python, R, TensorFlow, and scikit-learn to develop custom machine learning models trained on your historical data, validated for accuracy, and deployed into production systems with automated retraining pipelines.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              AI-driven trend detection automatically identifies anomalies, seasonal patterns, and emerging opportunities in your business data. Predictive analytics can reduce customer churn by 25%, improve inventory efficiency by 30%, and increase forecast accuracy by 40% compared to traditional methods. We also integrate predictive insights with your <Link to="/solutions/process-automation" className="text-emerald-400 hover:text-emerald-300 underline">process automation</Link> workflows—enabling data-driven automation that responds intelligently to predicted outcomes. Our machine learning solutions can also leverage <Link to="/solutions/custom-llm-systems" className="text-emerald-400 hover:text-emerald-300 underline">custom LLM systems</Link> for natural language insights and conversational analytics that make data accessible through simple questions.
+              AI-driven trend detection automatically identifies anomalies, seasonal patterns, and emerging opportunities in your business data. Predictive analytics can reduce customer churn by 25%, improve inventory efficiency by 30%, and increase forecast accuracy by 40% compared to traditional methods. We also integrate predictive insights with your <Link to="/solutions/process-automation" className="text-emerald-400 hover:text-emerald-300 underline">process automation</Link> workflows—enabling data-driven automation that responds intelligently to predicted outcomes. Our machine learning solutions can also leverage <Link to="/solutions/custom-llm-systems" className=\"text-emerald-400 hover:text-emerald-300 underline">custom LLM systems</Link> for natural language insights and conversational analytics that make data accessible through simple questions.
             </p>
           </div>
         </div>

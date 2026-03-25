@@ -51,8 +51,12 @@ const Cybersecurity = () => {
         <meta property="og:description" content="Autom8ion Lab secures your business with advanced cybersecurity and compliance solutions. Risk assessments, audits, and monitoring aligned with NIST & CIS." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/cybersecurity" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cybersecurity & Compliance | Data Protection Consulting" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="Cybersecurity & Compliance Consulting | NIST & CIS Aligned | Autom8ion Lab" />
         <meta name="twitter:description" content="Autom8ion Lab secures your business with advanced cybersecurity and compliance solutions. Risk assessments, audits, and monitoring aligned with NIST & CIS." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -239,7 +243,7 @@ const Cybersecurity = () => {
               Regular data protection and compliance audits ensure your security controls remain effective and aligned with regulatory requirements. Our audit process examines access control implementations, data classification systems, encryption standards, and privacy safeguards across your entire technology stack. We verify that sensitive data—whether customer information, financial records, or intellectual property—receives appropriate protection through technical controls, policy enforcement, and employee training.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Our compliance reporting provides stakeholders with clear evidence of security maturity and regulatory adherence. We document security control effectiveness, track remediation progress, and maintain compliance artifacts required for audits. Whether you need SOC 2 attestation, HIPAA compliance validation, or ISO 27001 certification support, our auditors deliver thorough assessments that satisfy regulatory requirements. We integrate with your <Link to="/solutions/data-management" className="text-cyan-400 hover:text-cyan-300 underline">data management systems</Link> to ensure data integrity and with <Link to="/solutions/cloud-systems" className="text-cyan-400 hover:text-cyan-300 underline">cloud infrastructure</Link> for secure hosting of audit artifacts and compliance documentation.
+              Our compliance reporting provides stakeholders with clear evidence of security maturity and regulatory adherence. We document security control effectiveness, track remediation progress, and maintain compliance artifacts required for audits. Whether you need SOC 2 attestation, HIPAA compliance validation, or ISO 27001 certification support, our auditors deliver thorough assessments that satisfy regulatory requirements. We integrate with your <Link to="/solutions/data-management" className="text-cyan-400 hover:text-cyan-300 underline">data management systems</Link> to ensure data integrity and with <Link to="/solutions/cloud-systems" className=\"text-cyan-400 hover:text-cyan-300 underline">cloud infrastructure</Link> for secure hosting of audit artifacts and compliance documentation.
             </p>
           </div>
         </div>

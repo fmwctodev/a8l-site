@@ -60,7 +60,11 @@ const BlogList = () => {
         <meta property="og:description" content="Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity. Learn how to transform your business with intelligent automation solutions." />
         <meta property="og:url" content="https://autom8ionlab.com/blog" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@autom8ionlab" />
         <meta name="twitter:title" content="Blog | AI Automation & Cloud Infrastructure Insights | Autom8tion Lab" />
         <meta name="twitter:description" content="Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -68,11 +72,28 @@ const BlogList = () => {
         <script type="application/ld+json">
           {buildJsonLd({
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
+            "@type": "Blog",
             "name": "Autom8tion Lab Blog",
             "url": "https://autom8ionlab.com/blog",
             "description": "Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity.",
-            "publisher": { "@type": "Organization", "name": "Autom8tion Lab", "url": "https://autom8ionlab.com" }
+            "inLanguage": "en-US",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Autom8tion Lab",
+              "url": "https://autom8ionlab.com",
+              "logo": { "@type": "ImageObject", "url": "https://autom8ionlab.com/logo/logo.png" }
+            },
+            ...(posts.length > 0 ? {
+              "blogPost": posts.map(p => ({
+                "@type": "BlogPosting",
+                "headline": p.title,
+                "url": `https://autom8ionlab.com/blog/${p.slug}`,
+                "datePublished": p.published_at,
+                "description": p.excerpt,
+                "image": p.hero_image,
+                "keywords": p.tags.join(', ')
+              }))
+            } : {})
           })}
         </script>
         <script type="application/ld+json">

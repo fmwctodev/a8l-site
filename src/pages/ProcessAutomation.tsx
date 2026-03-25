@@ -70,8 +70,12 @@ const ProcessAutomation = () => {
         <meta property="og:description" content="Automate repetitive tasks and optimize workflows with AI and RPA. Improve accuracy, reduce costs, and scale operations seamlessly with Autom8ion Lab." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/process-automation" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Process Automation Software | RPA & AI-Driven Efficiency" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="Process Automation Software | RPA & AI-Driven Efficiency | Autom8ion Lab" />
         <meta name="twitter:description" content="Automate repetitive tasks and optimize workflows with AI and RPA. Improve accuracy, reduce costs, and scale operations seamlessly with Autom8ion Lab." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -304,7 +308,7 @@ const ProcessAutomation = () => {
 
           <div className="mt-12 text-center">
             <p className="text-slate-300 mb-6 max-w-3xl mx-auto">
-              Integrate seamlessly with <Link to="/solutions/workflow-automation" className="text-orange-400 hover:text-orange-300 underline">workflow automation</Link> for end-to-end process orchestration, <Link to="/solutions/ai-agent-development" className="text-orange-400 hover:text-orange-300 underline">AI agent development</Link> for intelligent decision-making, and <Link to="/solutions/data-management" className="text-orange-400 hover:text-orange-300 underline">data management systems</Link> for insight-driven optimization.
+              Integrate seamlessly with <Link to="/solutions/workflow-automation" className="text-orange-400 hover:text-orange-300 underline">workflow automation</Link> for end-to-end process orchestration, <Link to="/solutions/ai-agent-development" className=\"text-orange-400 hover:text-orange-300 underline">AI agent development</Link> for intelligent decision-making, and <Link to="/solutions/data-management" className=\"text-orange-400 hover:text-orange-300 underline">data management systems</Link> for insight-driven optimization.
             </p>
           </div>
         </div>

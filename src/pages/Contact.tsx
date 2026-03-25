@@ -46,7 +46,11 @@ const Contact = () => {
         <meta property="og:description" content="Ready to transform your business with custom AI and automation? Get in touch with Autom8tion Lab to discuss your project and receive a free consultation." />
         <meta property="og:url" content="https://autom8ionlab.com/get-in-touch" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@autom8ionlab" />
         <meta name="twitter:title" content="Contact Autom8tion Lab | Get a Custom Project Quote" />
         <meta name="twitter:description" content="Ready to transform your business with custom AI and automation? Get in touch with Autom8tion Lab to discuss your project and receive a free consultation." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />

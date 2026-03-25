@@ -51,8 +51,12 @@ const CloudSystems = () => {
         <meta property="og:description" content="Autom8ion Lab designs, deploys, and manages cloud infrastructure across AWS, Azure, and hybrid environments. Scale securely with DevOps and automation." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/cloud-systems" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cloud Infrastructure Management | Scalable Cloud Solutions" />
+        <meta name="twitter:site" content="@autom8ionlab" />
+        <meta name="twitter:title" content="Cloud Infrastructure Management | AWS & Azure DevOps | Autom8ion Lab" />
         <meta name="twitter:description" content="Autom8ion Lab designs, deploys, and manages cloud infrastructure across AWS, Azure, and hybrid environments. Scale securely with DevOps and automation." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -238,7 +242,7 @@ const CloudSystems = () => {
               Our hybrid and multi-cloud architecture solutions provide the flexibility and redundancy that modern businesses require. We design infrastructure that seamlessly integrates on-premises systems with AWS, Azure, and Google Cloud Platform—enabling you to leverage the strengths of each platform while avoiding vendor lock-in. Hybrid architectures support gradual cloud migration, data sovereignty requirements, and latency-sensitive workloads that benefit from edge computing or on-premises processing.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Multi-cloud strategies improve performance through geographic distribution, enhance resilience with cross-provider redundancy, and optimize costs by selecting the most cost-effective services from each provider. Our cloud infrastructure management services handle the complexity of multi-cloud networking, unified identity management, cross-cloud data synchronization, and centralized monitoring. We integrate with your <Link to="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity and compliance</Link> requirements and ensure your <Link to="/solutions/api-integrations" className="text-cyan-400 hover:text-cyan-300 underline">API integrations</Link> work seamlessly across cloud providers for optimal connectivity.
+              Multi-cloud strategies improve performance through geographic distribution, enhance resilience with cross-provider redundancy, and optimize costs by selecting the most cost-effective services from each provider. Our cloud infrastructure management services handle the complexity of multi-cloud networking, unified identity management, cross-cloud data synchronization, and centralized monitoring. We integrate with your <Link to="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity and compliance</Link> requirements and ensure your <Link to="/solutions/api-integrations" className=\"text-cyan-400 hover:text-cyan-300 underline">API integrations</Link> work seamlessly across cloud providers for optimal connectivity.
             </p>
           </div>
         </div>
