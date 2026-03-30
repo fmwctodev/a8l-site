@@ -25,22 +25,32 @@ const supabase = createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY
 );
 
+const PERSONAL_EMAIL_DOMAINS = new Set([
+  'gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.co.uk', 'yahoo.co.in',
+  'outlook.com', 'hotmail.com', 'hotmail.co.uk', 'live.com', 'msn.com',
+  'icloud.com', 'me.com', 'mac.com', 'aol.com', 'protonmail.com',
+  'proton.me', 'pm.me', 'yandex.com', 'yandex.ru', 'mail.com',
+  'zoho.com', 'gmx.com', 'gmx.net', 'inbox.com', 'fastmail.com',
+]);
+
+function isPersonalEmail(email: string): boolean {
+  const parts = email.toLowerCase().split('@');
+  if (parts.length !== 2) return false;
+  return PERSONAL_EMAIL_DOMAINS.has(parts[1]);
+}
+
 type Step = 'form' | 'download';
 
 interface FormData {
   first_name: string;
   last_name: string;
   email: string;
-  company: string;
-  job_title: string;
 }
 
 const initialFormData: FormData = {
   first_name: '',
   last_name: '',
   email: '',
-  company: '',
-  job_title: '',
 };
 
 const pillars = [
@@ -100,16 +110,32 @@ const NISTChecklist = () => {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [emailError, setEmailError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
     if (error) setError(null);
+    if (e.target.name === 'email' && emailError) setEmailError(null);
+  };
+
+  const handleEmailBlur = () => {
+    if (formData.email && isPersonalEmail(formData.email)) {
+      setEmailError('Please use your work email address.');
+    } else {
+      setEmailError(null);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     setError(null);
+
+    if (isPersonalEmail(formData.email)) {
+      setEmailError('Please use your work email address.');
+      return;
+    }
+
+    setLoading(true);
 
     const { error: insertError } = await supabase
       .from('nist_checklist_leads')
@@ -334,41 +360,20 @@ const NISTChecklist = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
+                      onBlur={handleEmailBlur}
                       placeholder="jane@company.com"
-                      className="w-full bg-slate-800/60 border border-slate-600/60 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/60 focus:ring-1 focus:ring-cyan-500/30 transition-colors text-sm"
+                      className={`w-full bg-slate-800/60 border rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-colors text-sm ${
+                        emailError
+                          ? 'border-red-500/60 focus:border-red-500/60 focus:ring-red-500/30'
+                          : 'border-slate-600/60 focus:border-cyan-500/60 focus:ring-cyan-500/30'
+                      }`}
                     />
-                  </div>
-
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-1.5">
-                      Company Name <span className="text-cyan-400">*</span>
-                    </label>
-                    <input
-                      id="company"
-                      name="company"
-                      type="text"
-                      required
-                      value={formData.company}
-                      onChange={handleChange}
-                      placeholder="Acme Corporation"
-                      className="w-full bg-slate-800/60 border border-slate-600/60 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/60 focus:ring-1 focus:ring-cyan-500/30 transition-colors text-sm"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="job_title" className="block text-sm font-medium text-slate-300 mb-1.5">
-                      Job Title <span className="text-cyan-400">*</span>
-                    </label>
-                    <input
-                      id="job_title"
-                      name="job_title"
-                      type="text"
-                      required
-                      value={formData.job_title}
-                      onChange={handleChange}
-                      placeholder="Chief Technology Officer"
-                      className="w-full bg-slate-800/60 border border-slate-600/60 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/60 focus:ring-1 focus:ring-cyan-500/30 transition-colors text-sm"
-                    />
+                    {emailError && (
+                      <div className="flex items-center gap-2 mt-2">
+                        <AlertTriangle className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
+                        <p className="text-red-400 text-xs">{emailError}</p>
+                      </div>
+                    )}
                   </div>
 
                   {error && (
