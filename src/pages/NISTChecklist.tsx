@@ -437,7 +437,7 @@ const NISTChecklist = () => {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
               <a
-                href="/NIST_AI_RMF_Compliance_Audit_Autom8ion_Lab.docx.pdf"
+                href="/downloads/NIST-AI-RMF-Checklist-Autom8ionLab.pdf"
                 download="NIST-AI-RMF-Checklist-Autom8ionLab.pdf"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-200 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 hover:-translate-y-0.5"
               >
