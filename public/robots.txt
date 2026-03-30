@@ -6,6 +6,7 @@ Allow: /llms-full.txt
 Disallow: /thank-you
 Disallow: /application-received
 Disallow: /aiads-vsl
+Disallow: /nist-checklist
 
 Sitemap: https://autom8ionlab.com/sitemap.xml
 

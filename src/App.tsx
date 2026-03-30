@@ -42,6 +42,9 @@ const DataManagement = React.lazy(() => import('./pages/DataManagement'));
 const BlogList = React.lazy(() => import('./pages/BlogList'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 
+// Lead capture pages
+const NISTChecklist = React.lazy(() => import('./pages/NISTChecklist'));
+
 // 404 page
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 
@@ -363,6 +366,7 @@ function App() {
           <Route path="/solutions/cloud-systems" element={<CloudSystems />} />
           <Route path="/solutions/data-management" element={<DataManagement />} />
           <Route path="/aiads-vsl" element={<VSLLandingPage />} />
+          <Route path="/nist-checklist" element={<NISTChecklist />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />

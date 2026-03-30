@@ -1,6 +1,41 @@
 const fs = require('fs');
 const path = require('path');
 
+function copyPublicDir() {
+  const publicDir = path.join(__dirname, '../public');
+  const distDir = path.join(__dirname, '../dist');
+
+  function copyDirRecursive(src, dest) {
+    if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+    let entries;
+    try {
+      entries = fs.readdirSync(src);
+    } catch {
+      return;
+    }
+    for (const entry of entries) {
+      const srcPath = path.join(src, entry);
+      const destPath = path.join(dest, entry);
+      let stat;
+      try {
+        stat = fs.statSync(srcPath);
+      } catch {
+        continue;
+      }
+      if (stat.isDirectory()) {
+        copyDirRecursive(srcPath, destPath);
+      } else {
+        try {
+          fs.copyFileSync(srcPath, destPath);
+        } catch {
+        }
+      }
+    }
+  }
+
+  copyDirRecursive(publicDir, distDir);
+}
+
 // Optimize the built index.html for better performance
 function optimizeBuild() {
   try {
@@ -50,6 +85,7 @@ function optimizeBuild() {
 
 // Run optimization if called directly
 if (require.main === module) {
+  copyPublicDir();
   optimizeBuild();
 }
 

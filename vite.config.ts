@@ -58,5 +58,6 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 200,
     reportCompressedSize: false,
+    copyPublicDir: false,
   },
 });

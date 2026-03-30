@@ -308,7 +308,7 @@ const ProcessAutomation = () => {
 
           <div className="mt-12 text-center">
             <p className="text-slate-300 mb-6 max-w-3xl mx-auto">
-              Integrate seamlessly with <Link to="/solutions/workflow-automation" className="text-orange-400 hover:text-orange-300 underline">workflow automation</Link> for end-to-end process orchestration, <Link to="/solutions/ai-agent-development" className=\"text-orange-400 hover:text-orange-300 underline">AI agent development</Link> for intelligent decision-making, and <Link to="/solutions/data-management" className=\"text-orange-400 hover:text-orange-300 underline">data management systems</Link> for insight-driven optimization.
+              Integrate seamlessly with <Link to="/solutions/workflow-automation" className="text-orange-400 hover:text-orange-300 underline">workflow automation</Link> for end-to-end process orchestration, <Link to="/solutions/ai-agent-development" className="text-orange-400 hover:text-orange-300 underline">AI agent development</Link> for intelligent decision-making, and <Link to="/solutions/data-management" className="text-orange-400 hover:text-orange-300 underline">data management systems</Link> for insight-driven optimization.
             </p>
           </div>
         </div>
