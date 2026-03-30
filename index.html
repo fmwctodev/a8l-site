@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link rel="dns-prefetch" href="https://dashboard.searchatlas.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
+<link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="sitemap" href="/sitemap.xml" type="application/xml">
     <link rel="llms" href="/llms.txt" type="text/plain">
@@ -33,60 +32,7 @@
     <meta name="twitter:site" content="@autom8ionlab" />
     <meta name="twitter:creator" content="@autom8ionlab" />
     
-    <!-- SearchAtlas Dynamic Optimization - Alternative Implementation -->
-    <script nowprocket nitro-exclude>
-      (function() {
-        // Enhanced detection for testing environments including mobile PageSpeed
-        var ua = navigator.userAgent || '';
-        var isTestEnv =
-            ua.includes('Chrome-Lighthouse') ||
-            ua.includes('HeadlessChrome') ||
-            ua.includes('Google Page Speed Insights') ||
-            ua.includes('PageSpeed') ||
-            ua.includes('Speed Insights') ||
-            ua.includes('PTST') ||
-            window.location.search.includes('lighthouse') ||
-            navigator.webdriver ||
-            window.location.hostname === 'localhost' ||
-            window.__lighthouse ||
-            window.callPhantom ||
-            window._phantom;
-
-        if (isTestEnv) {
-          return; // Skip loading for testing environments
-        }
-
-        // Set a timeout to prevent blocking
-        var loadTimeout = setTimeout(function() {
-          console.warn('SearchAtlas script load timeout - continuing without it');
-        }, 3000);
-
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.async = true;
-        script.defer = true;
-        script.setAttribute('data-uuid', 'f8226c79-d974-4424-9157-5cbdae63a1c2');
-        script.id = 'sa-dynamic-optimization';
-        script.setAttribute('nowprocket', '');
-        script.setAttribute('nitro-exclude', '');
-        script.src = 'https://dashboard.searchatlas.com/scripts/dynamic_optimization.js';
-
-        script.onload = function() {
-          clearTimeout(loadTimeout);
-        };
-
-        script.onerror = function() {
-          clearTimeout(loadTimeout);
-        };
-
-        // Load after a short delay to ensure DOM is ready
-        setTimeout(function() {
-          document.head.appendChild(script);
-        }, 1000);
-      })();
-    </script>
-
-    <!-- Identity Pixel Tracking -->
+<!-- Identity Pixel Tracking -->
     <script src="https://cdn.v3.identitypxl.app/pixels/3074f21c-7428-4096-82b6-46d639785e84/p.js" async></script>
   </head>
   <body>
