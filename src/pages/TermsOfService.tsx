@@ -37,7 +37,7 @@ const TermsOfService = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <img
-            src="/imgs/logo.png"
+            src="/logo/logo.png"
             alt="Autom8tion Lab Logo"
             className="w-20 h-20 object-contain mx-auto mb-8"
           />
