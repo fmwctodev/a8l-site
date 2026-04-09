@@ -46,10 +46,15 @@ const Footer = () => {
       downloadLink.click();
       document.body.removeChild(downloadLink);
 
-      // Brief delay to ensure download starts before navigation
+      console.log('Download triggered. Debug mode active: Redirect disabled.');
+      alert('Success! Download started. Check the console for email status.');
+
+      /* 
+      // Redirect disabled for debugging
       setTimeout(() => {
         window.location.href = '/thank-you';
       }, 1000);
+      */
     } catch (error) {
       console.error('Form submission failed:', error);
       setSubmitError(true);

@@ -1,15 +1,6 @@
 const sgMail = require('@sendgrid/mail');
 const { createClient } = require('@supabase/supabase-js');
 
-// Initialize SendGrid
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-// Initialize Supabase
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
-
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
@@ -20,6 +11,23 @@ exports.handler = async (event) => {
 
   try {
     const { name, email } = JSON.parse(event.body);
+    console.log(`Processing lead: ${name} (${email})`);
+
+    // 1. Validate Environment Variables
+    const {
+      SENDGRID_API_KEY,
+      SUPABASE_URL,
+      SUPABASE_SERVICE_ROLE_KEY,
+      SENDGRID_FROM_EMAIL
+    } = process.env;
+
+    if (!SENDGRID_API_KEY) throw new Error('Missing SENDGRID_API_KEY');
+    if (!SUPABASE_URL) throw new Error('Missing SUPABASE_URL');
+    if (!SUPABASE_SERVICE_ROLE_KEY) throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY');
+
+    // Initialize Clients
+    sgMail.setApiKey(SENDGRID_API_KEY);
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
     if (!name || !email) {
       return {
@@ -28,28 +36,31 @@ exports.handler = async (event) => {
       };
     }
 
-    // 1. Fetch the PDF from Supabase Storage
+    // 2. Fetch the PDF from Supabase Storage
     const bucketName = 'capabilities-statements';
     const filePath = 'Autom8ion_Lab_Capabilities_Statement.pdf';
 
+    console.log('Downloading PDF from Supabase Storage...');
     const { data, error: downloadError } = await supabase.storage
       .from(bucketName)
       .download(filePath);
 
     if (downloadError) {
       console.error('Supabase Download Error:', downloadError);
-      throw new Error('Could not retrieve capabilities statement');
+      throw new Error(`Supabase Download Failed: ${downloadError.message}`);
     }
 
-    // 2. Convert to Base64 for SendGrid
+    // 3. Convert to Base64 for SendGrid
+    console.log('Converting file to Base64...');
     const arrayBuffer = await data.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
     const base64Attachment = buffer.toString('base64');
 
-    // 3. Define Sender (Must be verified in SendGrid)
-    const fromEmail = process.env.SENDGRID_FROM_EMAIL || 'info@autom8ionlab.com';
+    // 4. Define Sender
+    const fromEmail = SENDGRID_FROM_EMAIL || 'info@autom8ionlab.com';
+    console.log(`Using sender email: ${fromEmail}`);
 
-    // 4. Construct Lead Email
+    // 5. Construct Lead Email
     const leadEmail = {
       to: email,
       from: fromEmail,
@@ -65,7 +76,7 @@ exports.handler = async (event) => {
       ],
     };
 
-    // 5. Construct Admin Notification
+    // 6. Construct Admin Notification
     const adminEmail = {
       to: 'admin@autom8ionlab.com',
       from: fromEmail,
@@ -73,18 +84,23 @@ exports.handler = async (event) => {
       text: `A new lead has requested the Capabilities Statement.\n\nName: ${name}\nEmail: ${email}\n\nThis lead has been sent the PDF attachment via SendGrid.`,
     };
 
-    // 6. Send Emails
+    // 7. Send Emails
+    console.log('Dispatching emails via SendGrid...');
     await sgMail.sendMultiple([leadEmail, adminEmail]);
+    console.log('Emails dispatched successfully.');
 
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true, message: 'Emails sent successfully' })
     };
   } catch (error) {
-    console.error('Webhook error:', error);
+    console.error('Webhook function error:', error.message);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message })
+      body: JSON.stringify({ 
+        error: error.message,
+        details: 'Check Netlify function logs for more information.'
+      })
     };
   }
 };
