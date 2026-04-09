@@ -91,8 +91,12 @@ exports.handler = async (event) => {
     // 5. Send Emails via SendGrid
     try {
       console.log('Dispatching emails via SendGrid...');
-      await sgMail.sendMultiple([leadEmail, adminEmail]);
-      console.log('Emails dispatched successfully.');
+      // Use Promise.all to send distinct messages concurrently
+      await Promise.all([
+        sgMail.send(leadEmail),
+        sgMail.send(adminEmail)
+      ]);
+      console.log('Both emails dispatched successfully.');
     } catch (sgError) {
       console.error('SendGrid Error:', sgError);
       let sgMessage = sgError.message;
