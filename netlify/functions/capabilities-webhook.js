@@ -13,17 +13,17 @@ exports.handler = async (event) => {
     const { name, email } = JSON.parse(event.body);
     console.log(`Processing lead: ${name} (${email})`);
 
-    // 1. Validate Environment Variables
-    const {
-      SENDGRID_API_KEY,
-      SUPABASE_URL,
-      SUPABASE_SERVICE_ROLE_KEY,
-      SENDGRID_FROM_EMAIL
-    } = process.env;
+    // 1. Validate Environment Variables (with fallbacks for VITE_ prefix)
+    const getEnv = (key) => process.env[key] || process.env[`VITE_${key}`];
 
-    if (!SENDGRID_API_KEY) throw new Error('Missing SENDGRID_API_KEY');
-    if (!SUPABASE_URL) throw new Error('Missing SUPABASE_URL');
-    if (!SUPABASE_SERVICE_ROLE_KEY) throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY');
+    const SENDGRID_API_KEY = getEnv('SENDGRID_API_KEY');
+    const SUPABASE_URL = getEnv('SUPABASE_URL');
+    const SUPABASE_SERVICE_ROLE_KEY = getEnv('SUPABASE_SERVICE_ROLE_KEY');
+    const SENDGRID_FROM_EMAIL = getEnv('SENDGRID_FROM_EMAIL');
+
+    if (!SENDGRID_API_KEY) throw new Error('Missing SENDGRID_API_KEY (or VITE_SENDGRID_API_KEY)');
+    if (!SUPABASE_URL) throw new Error('Missing SUPABASE_URL (or VITE_SUPABASE_URL)');
+    if (!SUPABASE_SERVICE_ROLE_KEY) throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY (or VITE_SUPABASE_SERVICE_ROLE_KEY)');
 
     // Initialize Clients
     sgMail.setApiKey(SENDGRID_API_KEY);
