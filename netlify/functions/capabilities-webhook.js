@@ -13,7 +13,7 @@ exports.handler = async (event) => {
     const { name, email } = JSON.parse(event.body);
     console.log(`Processing lead: ${name} (${email})`);
 
-    // 1. Validate Environment Variables (with fallbacks for VITE_ prefix)
+    // 1. Validate Environment Variables
     const getEnv = (key) => process.env[key] || process.env[`VITE_${key}`];
 
     const SENDGRID_API_KEY = getEnv('SENDGRID_API_KEY');
@@ -39,28 +39,33 @@ exports.handler = async (event) => {
     // 2. Fetch the PDF from Supabase Storage
     const bucketName = 'capabilities-statements';
     const filePath = 'Autom8ion_Lab_Capabilities_Statement.pdf';
+    let base64Attachment;
 
-    console.log('Downloading PDF from Supabase Storage...');
-    const { data, error: downloadError } = await supabase.storage
-      .from(bucketName)
-      .download(filePath);
+    try {
+      console.log('Downloading PDF from Supabase Storage...');
+      const { data, error: downloadError } = await supabase.storage
+        .from(bucketName)
+        .download(filePath);
 
-    if (downloadError) {
-      console.error('Supabase Download Error:', downloadError);
-      throw new Error(`Supabase Download Failed: ${downloadError.message}`);
+      if (downloadError) throw downloadError;
+
+      console.log('Converting file to Base64...');
+      const arrayBuffer = await data.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      base64Attachment = buffer.toString('base64');
+    } catch (supaError) {
+      console.error('Supabase Error:', supaError);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: `[Supabase Error] ${supaError.message}` })
+      };
     }
 
-    // 3. Convert to Base64 for SendGrid
-    console.log('Converting file to Base64...');
-    const arrayBuffer = await data.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-    const base64Attachment = buffer.toString('base64');
-
-    // 4. Define Sender
-    const fromEmail = SENDGRID_FROM_EMAIL || 'info@autom8ionlab.com';
+    // 3. Define Sender (Updated to verified sub-domain)
+    const fromEmail = SENDGRID_FROM_EMAIL || 'info@mail.autom8ionlab.com';
     console.log(`Using sender email: ${fromEmail}`);
 
-    // 5. Construct Lead Email
+    // 4. Construct Emails
     const leadEmail = {
       to: email,
       from: fromEmail,
@@ -76,7 +81,6 @@ exports.handler = async (event) => {
       ],
     };
 
-    // 6. Construct Admin Notification
     const adminEmail = {
       to: 'admin@autom8ionlab.com',
       from: fromEmail,
@@ -84,23 +88,32 @@ exports.handler = async (event) => {
       text: `A new lead has requested the Capabilities Statement.\n\nName: ${name}\nEmail: ${email}\n\nThis lead has been sent the PDF attachment via SendGrid.`,
     };
 
-    // 7. Send Emails
-    console.log('Dispatching emails via SendGrid...');
-    await sgMail.sendMultiple([leadEmail, adminEmail]);
-    console.log('Emails dispatched successfully.');
+    // 5. Send Emails via SendGrid
+    try {
+      console.log('Dispatching emails via SendGrid...');
+      await sgMail.sendMultiple([leadEmail, adminEmail]);
+      console.log('Emails dispatched successfully.');
+    } catch (sgError) {
+      console.error('SendGrid Error:', sgError);
+      let sgMessage = sgError.message;
+      if (sgError.response && sgError.response.body && sgError.response.body.errors) {
+        sgMessage = sgError.response.body.errors.map(e => e.message).join(', ');
+      }
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: `[SendGrid Error] ${sgMessage}` })
+      };
+    }
 
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true, message: 'Emails sent successfully' })
     };
   } catch (error) {
-    console.error('Webhook function error:', error.message);
+    console.error('General Webhook Error:', error.message);
     return {
       statusCode: 500,
-      body: JSON.stringify({ 
-        error: error.message,
-        details: 'Check Netlify function logs for more information.'
-      })
+      body: JSON.stringify({ error: error.message })
     };
   }
 };
