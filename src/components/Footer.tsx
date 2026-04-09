@@ -38,7 +38,18 @@ const Footer = () => {
         console.warn('Webhook notification failed:', webhookError);
       }
 
-      window.location.href = '/thank-you';
+      // Trigger automatic download
+      const downloadLink = document.createElement('a');
+      downloadLink.href = '/downloads/Autom8ion_Lab_Capabilities_Statement.pdf';
+      downloadLink.download = 'Autom8ion_Lab_Capabilities_Statement.pdf';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+
+      // Brief delay to ensure download starts before navigation
+      setTimeout(() => {
+        window.location.href = '/thank-you';
+      }, 1000);
     } catch (error) {
       console.error('Form submission failed:', error);
       setSubmitError(true);

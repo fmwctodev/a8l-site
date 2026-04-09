@@ -15,6 +15,7 @@
     "analyze": "vite build && open dist/stats.html"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
     "@supabase/supabase-js": "^2.83.0",
     "lucide-react": "^0.344.0",
     "node-fetch": "^2.7.0",
