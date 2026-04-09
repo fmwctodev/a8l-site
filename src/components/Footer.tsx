@@ -38,10 +38,11 @@ const Footer = () => {
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
           console.error('Webhook error response:', errorData);
-          alert(`Email delivery failed: ${errorData.error || 'Unknown error'}. Check console for details.`);
+          setSubmitError(true);
         }
       } catch (webhookError) {
         console.error('Webhook execution failed:', webhookError);
+        setSubmitError(true);
       }
 
       // Trigger automatic download

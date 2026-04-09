@@ -11,7 +11,6 @@ exports.handler = async (event) => {
 
   try {
     const { name, email } = JSON.parse(event.body);
-    console.log(`Processing lead: ${name} (${email})`);
 
     // 1. Validate Environment Variables
     const getEnv = (key) => process.env[key] || process.env[`VITE_${key}`];
@@ -21,9 +20,9 @@ exports.handler = async (event) => {
     const SUPABASE_SERVICE_ROLE_KEY = getEnv('SUPABASE_SERVICE_ROLE_KEY');
     const SENDGRID_FROM_EMAIL = getEnv('SENDGRID_FROM_EMAIL');
 
-    if (!SENDGRID_API_KEY) throw new Error('Missing SENDGRID_API_KEY (or VITE_SENDGRID_API_KEY)');
-    if (!SUPABASE_URL) throw new Error('Missing SUPABASE_URL (or VITE_SUPABASE_URL)');
-    if (!SUPABASE_SERVICE_ROLE_KEY) throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY (or VITE_SUPABASE_SERVICE_ROLE_KEY)');
+    if (!SENDGRID_API_KEY) throw new Error('Missing SENDGRID_API_KEY');
+    if (!SUPABASE_URL) throw new Error('Missing SUPABASE_URL');
+    if (!SUPABASE_SERVICE_ROLE_KEY) throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY');
 
     // Initialize Clients
     sgMail.setApiKey(SENDGRID_API_KEY);
@@ -42,14 +41,12 @@ exports.handler = async (event) => {
     let base64Attachment;
 
     try {
-      console.log('Downloading PDF from Supabase Storage...');
       const { data, error: downloadError } = await supabase.storage
         .from(bucketName)
         .download(filePath);
 
       if (downloadError) throw downloadError;
 
-      console.log('Converting file to Base64...');
       const arrayBuffer = await data.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);
       base64Attachment = buffer.toString('base64');
@@ -57,13 +54,12 @@ exports.handler = async (event) => {
       console.error('Supabase Error:', supaError);
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: `[Supabase Error] ${supaError.message}` })
+        body: JSON.stringify({ error: `Storage download failed: ${supaError.message}` })
       };
     }
 
-    // 3. Define Sender (Updated to verified sub-domain)
+    // 3. Define Sender
     const fromEmail = SENDGRID_FROM_EMAIL || 'info@mail.autom8ionlab.com';
-    console.log(`Using sender email: ${fromEmail}`);
 
     // 4. Construct Emails
     const leadEmail = {
@@ -90,13 +86,10 @@ exports.handler = async (event) => {
 
     // 5. Send Emails via SendGrid
     try {
-      console.log('Dispatching emails via SendGrid...');
-      // Use Promise.all to send distinct messages concurrently
       await Promise.all([
         sgMail.send(leadEmail),
         sgMail.send(adminEmail)
       ]);
-      console.log('Both emails dispatched successfully.');
     } catch (sgError) {
       console.error('SendGrid Error:', sgError);
       let sgMessage = sgError.message;
@@ -105,7 +98,7 @@ exports.handler = async (event) => {
       }
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: `[SendGrid Error] ${sgMessage}` })
+        body: JSON.stringify({ error: `Email delivery failed: ${sgMessage}` })
       };
     }
 
