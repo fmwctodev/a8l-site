@@ -25,17 +25,23 @@ const Footer = () => {
         body: new URLSearchParams(formData as any).toString()
       });
 
-      // Trigger GHL webhook via serverless function
+      // Trigger GHL webhook via serverless function (now SendGrid/Supabase)
       try {
-        await fetch('/.netlify/functions/capabilities-webhook', {
+        const response = await fetch('/.netlify/functions/capabilities-webhook', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(data)
         });
+
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          console.error('Webhook error response:', errorData);
+          alert(`Email delivery failed: ${errorData.error || 'Unknown error'}. Check console for details.`);
+        }
       } catch (webhookError) {
-        console.warn('Webhook notification failed:', webhookError);
+        console.error('Webhook execution failed:', webhookError);
       }
 
       // Trigger automatic download
