@@ -159,10 +159,17 @@ const Footer = () => {
             <div className="space-y-3">
               <Link to="/#about" className="block text-slate-400 hover:text-cyan-400 transition-colors" onClick={() => window.location.pathname !== '/' && (window.location.href = '/#about')}>About</Link>
               <Link to="/#process" className="block text-slate-400 hover:text-cyan-400 transition-colors" onClick={() => window.location.pathname !== '/' && (window.location.href = '/#process')}>Our Process</Link>
-              <Link to="/#pricing" className="block text-slate-400 hover:text-cyan-400 transition-colors" onClick={() => window.location.pathname !== '/' && (window.location.href = '/#pricing')}>Pricing</Link>
               <Link to="/blog" className="block text-slate-400 hover:text-cyan-400 transition-colors">Blog</Link>
               <Link to="/join-us" className="block text-slate-400 hover:text-cyan-400 transition-colors">Careers</Link>
               <Link to="/get-in-touch" className="block text-slate-400 hover:text-cyan-400 transition-colors">Contact</Link>
+              <a
+                href="https://os.autom8ionlab.com/client-portal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-slate-400 hover:text-cyan-400 transition-colors"
+              >
+                Login
+              </a>
             </div>
           </div>
         </div>

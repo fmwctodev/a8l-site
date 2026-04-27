@@ -88,7 +88,7 @@ const Header = () => {
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center space-x-4">
           <a 
-            href="https://portal.autom8ionlab.com" 
+            href="https://os.autom8ionlab.com/client-portal" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-slate-300 hover:text-cyan-400 transition-colors font-medium"
@@ -183,7 +183,7 @@ const Header = () => {
             {/* Mobile Buttons */}
             <div className="pt-4 border-t border-slate-700 space-y-3">
               <a 
-                href="https://portal.autom8ionlab.com" 
+                href="https://os.autom8ionlab.com/client-portal" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-slate-300 hover:text-cyan-400 transition-colors py-2 font-medium"
