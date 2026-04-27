@@ -5,6 +5,10 @@ command = "npm run build"
 [functions]
 directory = "netlify/functions"
 
+[[edge_functions]]
+function = "prerender"
+path = "/*"
+
 [[redirects]]
 from = "/*"
 to = "/index.html"
