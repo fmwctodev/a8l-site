@@ -225,83 +225,128 @@ const BlogPost = () => {
 
       <div className="fixed top-0 left-0 w-full h-1 bg-slate-800 z-50">
         <div
-          className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300"
+          className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300 shadow-[0_0_12px_rgba(6,182,212,0.7)]"
           style={{ width: `${readingProgress}%` }}
         />
       </div>
 
-      <article className="pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-[1fr_250px] gap-12">
-            <div className="max-w-4xl">
+      <div className="relative pt-28 pb-12 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/30 via-slate-950 to-slate-950" />
+        <div
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(6,182,212,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.08) 1px, transparent 1px)',
+            backgroundSize: '64px 64px',
+            maskImage: 'radial-gradient(ellipse at top, black 30%, transparent 75%)',
+          }}
+        />
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-8 text-sm font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Blog
+            Back to all articles
           </Link>
 
-          <header className="mb-12">
-            <div className="flex flex-wrap gap-2 mb-6">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-3 py-1 text-sm bg-slate-800 text-cyan-400 rounded-full border border-slate-700"
-                >
-                  {tag}
-                </span>
-              ))}
+          {post.article_section && (
+            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="text-cyan-300 text-xs font-semibold tracking-wider uppercase">
+                {post.article_section}
+              </span>
+            </div>
+          )}
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight">
+            {post.title}
+          </h1>
+
+          <p className="text-xl text-slate-300 leading-relaxed mb-8 max-w-3xl">
+            {post.excerpt}
+          </p>
+
+          <div className="flex flex-wrap items-center gap-6 pb-8 border-b border-slate-800">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm">
+                {post.author.charAt(0)}
+              </div>
+              <div>
+                <div className="text-white font-semibold text-sm">{post.author}</div>
+                {post.author_title && (
+                  <div className="text-slate-400 text-xs">{post.author_title}</div>
+                )}
+              </div>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              {post.title}
-            </h1>
-
-            <div className="flex items-center gap-6 text-slate-400 mb-8">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5" />
-                <time dateTime={post.published_at}>{formatDate(post.published_at)}</time>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5" />
-                <span>{post.reading_time_minutes} min read</span>
-              </div>
+            <div className="flex items-center gap-2 text-slate-400 text-sm">
+              <Calendar className="w-4 h-4" />
+              <time dateTime={post.published_at}>{formatDate(post.published_at)}</time>
             </div>
 
-            <div className="flex items-center gap-4">
-              <span className="text-slate-400 text-sm">Share:</span>
+            <div className="flex items-center gap-2 text-slate-400 text-sm">
+              <Clock className="w-4 h-4" />
+              <span>{post.reading_time_minutes} min read</span>
+            </div>
+
+            <div className="flex items-center gap-3 ml-auto">
+              <span className="text-slate-500 text-xs uppercase tracking-wider">Share</span>
               <button
                 onClick={shareOnLinkedIn}
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
+                className="w-9 h-9 rounded-lg bg-slate-800/60 border border-slate-700 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all flex items-center justify-center"
                 aria-label="Share on LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-4 h-4" />
               </button>
               <button
                 onClick={shareOnFacebook}
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
+                className="w-9 h-9 rounded-lg bg-slate-800/60 border border-slate-700 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all flex items-center justify-center"
                 aria-label="Share on Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-4 h-4" />
               </button>
               <button
                 onClick={shareOnTwitter}
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
+                className="w-9 h-9 rounded-lg bg-slate-800/60 border border-slate-700 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all flex items-center justify-center"
                 aria-label="Share on Twitter"
               >
-                <Share2 className="w-5 h-5" />
+                <Share2 className="w-4 h-4" />
               </button>
             </div>
-          </header>
+          </div>
 
-          <div className="relative mb-12 rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-            <img
-              src={post.hero_image}
-              alt={post.title}
-              className="w-full h-auto"
-            />
+          <div className="flex flex-wrap gap-2 mt-6">
+            {post.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 text-xs font-medium bg-slate-800/60 text-cyan-300 rounded-full border border-slate-700"
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <article className="pb-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-[1fr_250px] gap-12">
+            <div className="max-w-4xl">
+
+          <div className="relative mb-12 rounded-2xl overflow-hidden border border-slate-800 group">
+            <div className="absolute -inset-px bg-gradient-to-br from-blue-500/40 via-transparent to-cyan-500/40 rounded-2xl pointer-events-none" />
+            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-cyan-500/30 blur-3xl pointer-events-none" />
+            <div className="relative rounded-2xl overflow-hidden bg-slate-950">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent z-10 pointer-events-none" />
+              <img
+                src={post.hero_image}
+                alt={post.title}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 mb-12">
@@ -330,21 +375,7 @@ const BlogPost = () => {
 
           <div
             ref={contentRef}
-            className="prose prose-invert prose-lg max-w-none
-              prose-headings:text-white prose-headings:font-bold
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:scroll-mt-32
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:text-slate-300 prose-p:leading-relaxed prose-p:mb-6
-              prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:text-cyan-300
-              prose-strong:text-white prose-strong:font-semibold
-              prose-ul:text-slate-300 prose-ul:my-6
-              prose-ol:text-slate-300 prose-ol:my-6
-              prose-li:my-2
-              prose-img:rounded-2xl prose-img:my-8 prose-img:shadow-2xl
-              prose-table:border-slate-700
-              prose-th:bg-slate-800 prose-th:text-white prose-th:font-semibold
-              prose-td:text-slate-300
-              prose-code:text-cyan-400 prose-code:bg-slate-800 prose-code:px-2 prose-code:py-1 prose-code:rounded"
+            className="blog-content"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
