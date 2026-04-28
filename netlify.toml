@@ -1,8 +1,13 @@
 # Netlify config for the Next.js (App Router) site.
 #
 # Routing is handled by @netlify/plugin-nextjs, which reads .next/ output and
-# serves App Router routes (static + SSG/ISR) directly. The SPA-era catch-all
-# redirect (/* -> /index.html 200) is intentionally gone.
+# serves App Router routes (static + SSG/ISR) directly. Every URL ships
+# fully-rendered HTML on first byte — bots and humans see identical content.
+#
+# The Prerender.io edge function that originally backed bot crawls is gone:
+# Next.js handles SSR natively, and the edge function's `Vary: User-Agent`
+# header was fragmenting Netlify's CDN cache by user-agent and serving stale
+# 404s to ClaudeBot.
 
 [build]
   command = "npm run build"
@@ -13,10 +18,3 @@
 
 [functions]
   directory = "netlify/functions"
-
-# Prerender.io edge function stays registered for ~30 days post-cutover as a
-# safety net while Search Console reconfirms healthy indexation. Once stable,
-# remove this block and delete netlify/edge-functions/prerender.ts.
-[[edge_functions]]
-  function = "prerender"
-  path = "/*"
