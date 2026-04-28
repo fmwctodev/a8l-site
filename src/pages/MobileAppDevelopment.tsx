@@ -12,18 +12,18 @@ const MobileAppDevelopment = () => {
   const features = [
     {
       icon: Monitor,
-      title: "Cross-Platform Development",
-      description: "Advanced cross-platform development using React Native and Flutter frameworks that enable single codebase deployment across iOS, Android, and web platforms while maintaining native performance and platform-specific user interface guidelines. Our cross-platform approach reduces development time by up to 60% while ensuring consistent functionality, optimal performance, and native user experience across all target platforms. Sophisticated code sharing strategies and platform-specific optimizations deliver apps that feel truly native on each operating system."
+      title: "Federal-First Security Architecture",
+      description: "In 2026, your mobile app is part of your compliance boundary. We build custom iOS and Android applications engineered for US Federal, DIB, healthcare, and financial services environments where security, auditability, and system integrity are not optional. FedRAMP-aware architecture, NIST 800-53 control alignment across AC, AU, CM, IR, and SI families, and FISMA-ready security foundations are designed in from day one — not bolted on later."
     },
     {
       icon: Users,
-      title: "User-Centric Design",
-      description: "Comprehensive user experience design methodology that incorporates user research, persona development, and usability testing to create intuitive mobile interfaces that drive engagement and conversion. Our design process includes wireframing, prototyping, and iterative testing to ensure optimal user flows, accessibility compliance, and visual appeal. Advanced interaction design, micro-animations, and responsive layouts create engaging experiences that adapt seamlessly to different screen sizes, device capabilities, and user preferences while maintaining brand consistency and usability standards."
+      title: "Role-Based Access, Audit Logging & Offline Capability",
+      description: "We enforce role-based access so users only see and do what their permissions allow. Structured audit trails record user activity, administrative actions, data access events, and system changes for review, compliance, and incident response. Offline capability handles secure data entry when the network drops, syncing automatically once connectivity returns. Biometric authentication and end-to-end encryption protect sensitive data on the device itself."
     },
     {
       icon: Zap,
-      title: "Performance Optimization",
-      description: "Enterprise-grade performance optimization techniques including advanced code splitting, lazy loading, memory management, and efficient data caching strategies that ensure lightning-fast app performance across all devices and network conditions. Our optimization approach includes image compression, database query optimization, background processing management, and intelligent resource allocation that minimizes battery usage while maximizing responsiveness. Comprehensive performance monitoring and analytics provide real-time insights into app performance metrics, user behavior patterns, and optimization opportunities."
+      title: "30-Day Launch Built on React Native",
+      description: "We don't believe in six-month timelines. We deliver a functional, high-performance app in 30 days using React Native — sharing 90% of the code between iOS and Android while maintaining native performance. Founder-led: senior engineers write and oversee the code, not junior interns. We hook the app into your custom LLM systems, internal databases, and workflow automation, then handle the App Store and Google Play submissions for you."
     }
   ];
 
@@ -42,13 +42,13 @@ const MobileAppDevelopment = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Mobile App Development Agency | iOS & Android Experts</title>
-        <meta name="description" content="Autom8ion Lab builds stunning, high-performance mobile apps for iOS and Android. Cross-platform solutions designed to scale with your business." />
-        <meta name="keywords" content="mobile app development agency, iOS and Android app developers, cross-platform mobile app solutions, native app development services, custom mobile app design" />
+        <title>Mobile App Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <meta name="description" content="Custom iOS and Android apps built for federal-first security. FedRAMP-aware architecture, NIST 800-53 control alignment, FISMA-ready foundations. Role-based access, audit logging, offline capability. SDVOSB Pending. Live in 30 days." />
+        <meta name="keywords" content="federal mobile app development, FedRAMP mobile, NIST 800-53 mobile, FISMA mobile, DIB mobile app, secure iOS Android development, React Native federal, SDVOSB mobile app, audit logging mobile, healthcare mobile app" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/mobile-app-development')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Mobile App Development Agency | iOS & Android Experts" />
-        <meta property="og:description" content="Autom8ion Lab builds stunning, high-performance mobile apps for iOS and Android. Cross-platform solutions designed to scale with your business." />
+        <meta property="og:title" content="Mobile App Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:description" content="Custom iOS and Android apps built for federal-first security. FedRAMP-aware, NIST 800-53 aligned, FISMA-ready. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/mobile-app-development" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -157,13 +157,13 @@ const MobileAppDevelopment = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Custom Mobile App Development
+              Mobile Apps Built for Federal-First Security
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Built for Performance and Growth</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Leading mobile app development agency delivering stunning, high-performance mobile apps for iOS and Android. Native and cross-platform solutions designed to scale with your business.
+              Custom iOS and Android apps engineered for US Federal, DIB, healthcare, and financial services environments. FedRAMP-aware architecture, NIST 800-53 control alignment, FISMA-ready foundations. SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7. Live in 30 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -184,10 +184,10 @@ const MobileAppDevelopment = () => {
               End-to-End Mobile App Development Services
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              As a full-service mobile app development agency, Autom8tion Lab manages every phase of your app journey — from initial concept and wireframing to final deployment and ongoing maintenance. We don't just write code; we design experiences, architect scalable backends, integrate with your existing systems, and ensure your app meets App Store and Google Play guidelines from day one.
+              Most business apps are garbage. They are slow, clunky, and feel like a website shoved into a mobile container. The traditional development cycle takes six to twelve months — by which time your business needs have shifted. At Autom8tion Lab, we don't do "slow." We build high-performance, custom iOS and Android apps for business automation that launch in as little as 30 days. We're not just writing code; we're building the remote control for your entire operation.
             </p>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Our iOS and Android app developers bring decades of combined experience building consumer-facing apps, enterprise mobility solutions, and complex multi-platform systems. Whether you're launching a startup MVP or modernizing an enterprise application, we provide transparent project management, regular sprint reviews, and collaborative decision-making that keeps you involved at every milestone.
+              Mobile is no longer just for checking email. In 2026, your mobile app is part of your compliance boundary. We build custom iOS and Android applications engineered for environments where security, auditability, and system integrity are not optional. Whether you need a secure field operations app that syncs with your workflow automation in real time or a controlled internal portal connected to your AI agents, we deliver mobile systems built for operational use, internal approval, and security-first deployment. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
               Faster builds. Better performance. Higher engagement. Our clients report 40% faster time-to-market, 99.9% app uptime, and user retention rates that exceed industry averages by 2-3x. When you need a mobile app development agency that delivers results, not just code, partner with Autom8tion Lab.

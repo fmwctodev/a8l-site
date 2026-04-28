@@ -12,18 +12,18 @@ const ProcessAutomation = () => {
   const features = [
     {
       icon: Zap,
-      title: "AI-Powered Task Execution",
-      description: "Leverage advanced AI algorithms to execute repetitive tasks with unprecedented speed and accuracy. Our process automation software solutions analyze patterns, learn from historical data, and optimize task execution in real-time. From data entry and document processing to complex multi-step workflows, AI-powered automation eliminates human error while accelerating throughput by 300%. Intelligent decision-making capabilities handle exceptions automatically, routing complex scenarios to human oversight only when necessary."
+      title: "Repetitive Task Automation With Custom Integration",
+      description: "We build automations that act like a disciplined digital workforce: extract and normalize data from PDFs, emails, spreadsheets, and legacy databases; validate records against internal business rules and source systems; move data across disconnected tools through APIs, middleware, secure file handling, or browser-based automation; and trigger approvals, alerts, and audit logs based on workflow conditions. Custom-built — no per-bot licensing, no generic templates, no forcing your process into someone else's box."
     },
     {
       icon: GitMerge,
-      title: "Cross-System Integration",
-      description: "Seamlessly connect disparate business systems through robust API orchestration and intelligent data mapping. Our robotic process automation with AI bridges legacy applications, modern SaaS platforms, databases, and custom software without requiring expensive system replacements. Real-time data synchronization ensures consistency across all platforms while maintaining audit trails and compliance requirements. Advanced integration patterns handle authentication, error recovery, and rate limiting automatically."
+      title: "Workflow Automation for Compliance-Heavy Industries",
+      description: "Document intake from email, forms, shared drives, or secure uploads routed into the right internal workflow. Control validation that checks required fields, naming standards, dates, approvals, and supporting records before anything moves forward. Secure system handoffs that push approved data into regulated platforms then pull status updates back. Audit reporting with clean logs showing what moved, when, what rules were checked, and where exceptions occurred — designed for FedRAMP, NIST 800-53, and FISMA-aligned operations."
     },
     {
       icon: Activity,
-      title: "Continuous Process Optimization",
-      description: "Monitor, analyze, and improve automated processes through comprehensive performance analytics and machine learning insights. Our enterprise process automation platform tracks execution times, error rates, and bottlenecks while automatically suggesting optimization opportunities. Predictive analytics identify potential issues before they impact operations, enabling proactive maintenance and continuous improvement. Detailed reporting provides complete visibility into automation ROI and operational efficiency gains."
+      title: "Framework-Anchored Automation: Built for Control",
+      description: "Speed alone is not the goal. Controlled execution is. Our process automation is anchored to a simple framework: map the control point, define the system logic, build the integration layer, track every action, and refine based on live use. We don't build black-box bots — we build operational systems your team can trust and audit. Validation lives at every layer: missing documents stop the workflow, formatting failures get flagged, and regulated platform exceptions get logged and routed for review."
     }
   ];
 
@@ -61,13 +61,13 @@ const ProcessAutomation = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Process Automation Software | RPA & AI-Driven Efficiency</title>
-        <meta name="description" content="Automate repetitive tasks and optimize workflows with AI and RPA. Improve accuracy, reduce costs, and scale operations seamlessly with Autom8ion Lab." />
-        <meta name="keywords" content="process automation software solutions, robotic process automation tools, business process optimization services, workflow automation for enterprises, ai-driven process management" />
+        <title>Process Automation for Compliance-Heavy Industries | Autom8tion Lab</title>
+        <meta name="description" content="Framework-anchored process automation for US Federal, DIB, healthcare, and financial services. Custom integrations between internal systems and regulated platforms aligned to FedRAMP, NIST 800-53, and FISMA. SDVOSB Pending. Live in 30 days." />
+        <meta name="keywords" content="federal process automation, FedRAMP RPA, NIST 800-53 automation, FISMA process automation, DIB workflow automation, compliance-heavy automation, regulated industry RPA, audit-ready automation, SDVOSB automation, custom integration federal" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/process-automation')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Process Automation Software | RPA & AI-Driven Efficiency" />
-        <meta property="og:description" content="Automate repetitive tasks and optimize workflows with AI and RPA. Improve accuracy, reduce costs, and scale operations seamlessly with Autom8ion Lab." />
+        <meta property="og:title" content="Process Automation for Compliance-Heavy Industries | Autom8tion Lab" />
+        <meta property="og:description" content="Framework-anchored automation for federal, DIB, healthcare, and financial services. Custom integrations aligned to FedRAMP, NIST 800-53, and FISMA. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/process-automation" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -163,13 +163,13 @@ const ProcessAutomation = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Intelligent Process Automation
+              Process Automation
               <br />
-              That <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Scales With Your Business</span>
+              Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Compliance-Heavy Industries</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform manual workflows into AI-powered automation that drives efficiency, accuracy, and growth. Our process automation software solutions leverage robotic process automation tools and intelligent systems to eliminate repetitive tasks across finance, HR, operations, and beyond.
+              Framework-anchored process automation for US Federal, DIB, healthcare, and financial services teams. Custom integrations between internal systems and regulated platforms — aligned to FedRAMP, NIST 800-53, and FISMA. Veteran-owned, SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -190,10 +190,10 @@ const ProcessAutomation = () => {
               Automate Repetitive Tasks With <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">AI-Powered Precision</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Process automation software solutions represent the evolution from manual inefficiency to AI precision. Operations directors, CTOs, and business owners face mounting pressure to optimize processes while controlling costs. Manual data entry, approval routing, document processing, and system synchronization consume valuable time that could be spent on strategic initiatives. Our business process optimization services transform these repetitive workflows into intelligent automation that operates continuously with zero errors.
+              Your business is paying an invisible compliance tax. Every time an employee rekeys data between portals, manually checks records against a policy requirement, or copies documents from one system into another, you lose time, accuracy, and audit readiness. In compliance-heavy industries, repetitive work is not just inefficient — it creates risk. Manual work is the reason regulated operations slow down. Generic automation tools break under real-world requirements. They fail when workflows depend on conditional logic, multiple systems of record, approval chains, or secure regulated environments with strict process rules.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Unlike off-the-shelf tools requiring extensive configuration, Autom8ion Lab delivers done-for-you implementation of robotic process automation with AI. We analyze your current workflows, identify optimization opportunities, and deploy custom automation solutions tailored to your specific business logic. From finance approvals and HR onboarding to manufacturing quality control and customer service routing, our enterprise process automation adapts to any industry while maintaining the flexibility to evolve with your changing business needs.
+              At Autom8tion Lab, we don't deploy fragile templates — we build custom automation frameworks that hold up in environments where traceability, security, and reliability are non-negotiable. We engineer secure automation around your actual process, your actual rules, and your existing stack. Veteran-owned with SDVOSB Pending status for federal set-asides. Federal identifiers: UEI YY2DR3KSENH7, CAGE 9YCS7. That matters when the work demands operational discipline, accountability, and systems built to perform under scrutiny.
             </p>
           </div>
         </div>

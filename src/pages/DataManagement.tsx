@@ -12,18 +12,18 @@ const DataManagement = () => {
   const features = [
     {
       icon: Database,
-      title: "Dashboard Creation with Tableau, Power BI & Looker",
-      description: "Custom business intelligence and reporting tools built with industry-leading platforms including Tableau, Power BI, Looker, and custom web dashboards. Our data visualization and insights platforms feature interactive charts, drill-down capabilities, custom KPI tracking, and role-based views that make complex data accessible to every stakeholder. Real-time data updates ensure decision-makers always have current information. We design dashboards around your business objectives—whether tracking sales performance, operational efficiency, customer behavior, or financial metrics—creating intuitive visualizations that reveal trends and anomalies at a glance."
+      title: "AI-Powered Document Processing With Audit Trails",
+      description: "We extract data from forms, contracts, reports, case files, and operational records automatically. Your team stops retyping information by hand. Every critical action, approval, and data change is logged — giving you traceability that supports NIST 800-53 controls for accountability, auditability, and continuous monitoring. Designed for federal teams, DIB contractors, healthcare organizations, and financial services firms that need both efficiency and evidence."
     },
     {
       icon: BarChart,
-      title: "Real-Time KPI Tracking & Automated Reporting",
-      description: "Comprehensive KPI monitoring systems that track key business metrics in real-time with automated alerting when thresholds are exceeded or targets are at risk. Our business intelligence and reporting tools generate scheduled reports, customizable templates, and multi-format exports (PDF, Excel, PowerPoint) that enable stakeholder communication and executive briefings. Automated data refreshes ensure reports always reflect current business state. We implement metric hierarchies that align operational KPIs with strategic objectives, providing visibility from granular metrics to executive-level summaries that drive accountability and informed decision-making."
+      title: "AI-Powered Business Intelligence Dashboards",
+      description: "Generic BI tools fail because they require a data scientist to maintain them and do nothing to solve messy source data or federal control requirements. Our dashboards integrate custom AI layers that don't just show what happened — they explain why, predict what's next, and identify which records or documents support the conclusion. Real-time visibility means you spot a bottleneck, reporting issue, or compliance gap the moment it occurs."
     },
     {
       icon: TrendingUp,
-      title: "Goal-Aligned Analytics Strategy",
-      description: "Strategic data management and analytics consulting that aligns your analytics capabilities with business objectives and growth goals. We work closely with leadership teams to identify the metrics that matter, design measurement frameworks, and implement data governance policies that ensure data quality and consistency. Our consulting approach includes stakeholder workshops, analytics roadmap development, and ongoing optimization that evolves your data strategy as business needs change. We bridge the gap between technical implementation and business value—ensuring your data investments deliver measurable ROI through improved decision velocity, operational efficiency, and strategic insight."
+      title: "Secure Data Management for FedRAMP, NIST 800-53 & FISMA",
+      description: "In regulated environments, data management is about control, traceability, and security — not just efficiency. We provide secure data management with clear access controls, encryption, document governance, verifiable logging, and cloud architectures aligned to FedRAMP, NIST 800-53, and FISMA. We build audit trails into the workflow so you can prove who accessed data, what changed, and when — giving you a cleaner path through control assessments, ATO support activities, and continuous monitoring."
     }
   ];
 
@@ -42,13 +42,13 @@ const DataManagement = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Data Management & Analytics | Business Intelligence Experts</title>
-        <meta name="description" content="Unlock insights with Autom8ion Lab's data management and analytics consulting. Build dashboards, predict trends, and drive smarter business decisions." />
-        <meta name="keywords" content="data management and analytics consulting, business intelligence and reporting tools, data warehouse and ETL solutions, predictive analytics for business, data visualization and insights platforms" />
+        <title>Data Management & Analytics for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <meta name="description" content="AI-powered business intelligence dashboards, document processing, and centralized data pipelines aligned to NIST 800-53, FedRAMP, and FISMA. Built for federal teams, DIB contractors, healthcare, and financial services. SDVOSB Pending. 30-day delivery." />
+        <meta name="keywords" content="federal data management, FedRAMP analytics, NIST 800-53 dashboards, FISMA data pipelines, AI document processing, secure data analytics, government BI dashboards, SDVOSB data analytics, healthcare data management, financial services analytics" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/data-management')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Data Management & Analytics | Business Intelligence Experts" />
-        <meta property="og:description" content="Unlock insights with Autom8ion Lab's data management and analytics consulting. Build dashboards, predict trends, and drive smarter business decisions." />
+        <meta property="og:title" content="Data Management & Analytics for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:description" content="AI-powered BI dashboards and centralized data pipelines aligned to NIST 800-53, FedRAMP, and FISMA. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/data-management" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -149,7 +149,7 @@ const DataManagement = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform complexity into clarity with intelligent analytics. Expert data management and analytics consulting that turns raw data into actionable business insights through business intelligence, predictive analytics, and data visualization platforms.
+              AI-powered business intelligence dashboards, document processing, and centralized data pipelines aligned to NIST 800-53, FedRAMP, and FISMA. Built for US Federal teams, DIB contractors, healthcare organizations, and financial services firms. SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -170,10 +170,10 @@ const DataManagement = () => {
               Turn Raw Data Into <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Actionable Business Insights</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              At Autom8ion Lab, our data management and analytics consulting services help business owners, data teams, and executives transform fragmented data into clean, unified systems that drive smarter decisions. We specialize in collecting, cleaning, organizing, and analyzing data from multiple sources—turning raw information into actionable insights through business intelligence and reporting tools, predictive analytics for business, and data visualization and insights platforms. Transform complexity into clarity with intelligent analytics that reveal opportunities hidden in your data.
+              Federal teams, DIB contractors, healthcare organizations, and financial services firms operate in fragmented chaos. You use one platform for casework, another for finance, another for records, and several legacy systems that were never designed to share data cleanly. Your most important records are buried in PDFs, forms, contracts, scanned documents, and disconnected repositories. The "spreadsheet nightmare" creates manual entry errors, version control chaos, delayed reporting, and compliance risk when sensitive records move through inboxes and untracked spreadsheets.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Whether you're building your first data warehouse, implementing business intelligence dashboards, or developing predictive analytics capabilities, our data management and analytics consulting delivers the expertise you need. We partner with you to design data warehouse and ETL solutions that consolidate information, create data visualization platforms that make insights accessible to all stakeholders, and implement predictive analytics for business that forecast trends and automate decision-making. Our consulting approach ensures your data strategy aligns with business objectives and delivers measurable ROI.
+              At Autom8tion Lab, we build AI-powered business intelligence dashboards and custom data systems that turn raw information into compliant, usable intelligence. We use AI-powered document processing to extract, classify, and organize critical data, and we build audit trails that support NIST 800-53 control requirements, FedRAMP cloud expectations, and FISMA reporting and governance requirements. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
             </p>
           </div>
         </div>

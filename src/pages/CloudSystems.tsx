@@ -12,18 +12,18 @@ const CloudSystems = () => {
   const features = [
     {
       icon: Server,
-      title: "CI/CD Pipeline Implementation",
-      description: "Our DevOps automation and CI/CD solutions implement automated build, test, and deployment pipelines using Jenkins, GitLab CI, GitHub Actions, and Azure DevOps. We create workflows that automatically compile code, run unit and integration tests, perform security scanning, and deploy to multiple environments. Automated quality gates ensure only tested, validated code reaches production. Our CI/CD pipelines reduce deployment time from hours to minutes while eliminating manual errors and providing complete deployment traceability for compliance and rollback capabilities."
+      title: "FedRAMP-Aligned Cloud Architecture",
+      description: "Whether you build in AWS GovCloud, Azure Government, or a commercial environment that still has to satisfy federal-grade security requirements, we implement architecture around your authorization boundary, not a generic landing zone. We enforce least privilege, separation of duties, hardened network segmentation, and strong encryption boundaries — mapped to NIST 800-53 control families AC, AU, CM, IA, SC, and SI. We don't just hand you a login; we deliver a governed environment that stands up to FedRAMP scrutiny."
     },
     {
       icon: Activity,
-      title: "Infrastructure Monitoring & Observability",
-      description: "Comprehensive monitoring solutions provide real-time visibility into cloud infrastructure health, application performance, and resource utilization across AWS, Azure, and Google Cloud Platform. We implement Prometheus, Grafana, Datadog, and CloudWatch for metrics collection, log aggregation with ELK stack, and distributed tracing with Jaeger. Automated alerting systems notify teams of anomalies before they impact users. Our observability platform enables rapid troubleshooting, capacity planning, and performance optimization while maintaining audit trails for compliance."
+      title: "Secure DevSecOps & Controlled Releases",
+      description: "Manual code promotion, shared deployment access, and changes without approval gates create audit findings every release. We build CI/CD pipelines with automated security scans, approval gates, segregation of duties, immutable infrastructure releases, rollback capabilities, and audit-ready logging. Every deployment action is recorded for traceability and evidence collection — turning your release process into a controlled system that supports NIST 800-53 change management and configuration management requirements."
     },
     {
       icon: Cloud,
-      title: "Container Orchestration & Kubernetes",
-      description: "Expert container orchestration using Kubernetes, Docker, and managed services like EKS, AKS, and GKE for scalable cloud-based application hosting. We design microservices architectures with service mesh, implement auto-scaling based on traffic and resource metrics, and configure high-availability clusters across multiple availability zones. Our container solutions include secrets management, persistent storage integration, and network policies that ensure secure, resilient application delivery. We handle the complexity of Kubernetes so your teams can focus on application development."
+      title: "Continuous Monitoring & Control Enforcement",
+      description: "In regulated cloud environments, set-it-and-forget-it is a control failure. We monitor control drift, privileged activity, security events, log health, vulnerability posture, and resilience signals. When signals cross a threshold, our systems trigger alerts, tickets, and automated response paths fast. This is the difference between reactive firefighting and an operating model aligned to NIST 800-53, FedRAMP, and FISMA continuous monitoring expectations."
     }
   ];
 
@@ -42,13 +42,13 @@ const CloudSystems = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Cloud Infrastructure Management | Scalable Cloud Solutions</title>
-        <meta name="description" content="Autom8ion Lab designs, deploys, and manages cloud infrastructure across AWS, Azure, and hybrid environments. Scale securely with DevOps and automation." />
-        <meta name="keywords" content="cloud infrastructure management services, cloud migration and deployment experts, scalable cloud-based application hosting, DevOps automation and CI/CD solutions, hybrid and multi-cloud architecture" />
+        <title>Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8tion Lab</title>
+        <meta name="description" content="Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads in AWS GovCloud, Azure Government, and commercial cloud. Governed landing zones, secure DevSecOps, continuous monitoring. SDVOSB Pending. Live in 30 days." />
+        <meta name="keywords" content="FedRAMP cloud architecture, GovCloud infrastructure, NIST 800-53 cloud, FISMA cloud architecture, AWS GovCloud, Azure Government, secure DevSecOps, federal cloud landing zone, SDVOSB cloud services, continuous monitoring federal" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/cloud-systems')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Cloud Infrastructure Management | Scalable Cloud Solutions" />
-        <meta property="og:description" content="Autom8ion Lab designs, deploys, and manages cloud infrastructure across AWS, Azure, and hybrid environments. Scale securely with DevOps and automation." />
+        <meta property="og:title" content="Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8tion Lab" />
+        <meta property="og:description" content="Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads. Governed landing zones, secure DevSecOps, continuous monitoring. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/cloud-systems" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -56,8 +56,8 @@ const CloudSystems = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="Cloud Infrastructure Management | AWS & Azure DevOps | Autom8ion Lab" />
-        <meta name="twitter:description" content="Autom8ion Lab designs, deploys, and manages cloud infrastructure across AWS, Azure, and hybrid environments. Scale securely with DevOps and automation." />
+        <meta name="twitter:title" content="Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8tion Lab" />
+        <meta name="twitter:description" content="Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads. SDVOSB Pending." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
         <script type="application/ld+json">
@@ -143,12 +143,12 @@ const CloudSystems = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Cloud Infrastructure Management
+              Cloud Infrastructure for FedRAMP & GovCloud Workloads
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> for Scalable, Secure Growth</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Empower your business with scalable cloud solutions built for the future. Expert cloud infrastructure management services across AWS, Azure, and Google Cloud with DevOps automation, CI/CD pipelines, and hybrid multi-cloud architecture.
+              Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads supporting US Federal, DIB, healthcare, and financial services teams. Governed landing zones in AWS GovCloud, Azure Government, or commercial cloud. SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -169,10 +169,10 @@ const CloudSystems = () => {
               Build a Strong Foundation With <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Expert Cloud Management</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              At Autom8ion Lab, our cloud infrastructure management services empower CTOs, IT directors, and growing businesses to set up and manage scalable cloud environments designed for performance and reliability. We design, deploy, and manage cloud infrastructure across AWS, Azure, Google Cloud Platform, and hybrid environments—delivering the foundation your business needs to scale securely without infrastructure limitations. Our cloud migration and deployment experts handle the complete journey from planning to optimization.
+              Most teams supporting US Federal agencies, the Defense Industrial Base, healthcare organizations, or financial services firms start with a commercial cloud setup that was never designed for FedRAMP scrutiny, NIST 800-53 control mapping, or FISMA accountability. You provision a few resources, apply basic security groups, and assume you can harden it later. That breaks fast when your workload has to survive architecture review, control validation, and continuous monitoring. If you are dealing with inherited cloud sprawl, unclear boundary definitions, or an environment that cannot map cleanly to NIST 800-53 controls, your infrastructure is no longer an asset — it's an audit risk.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Whether you're migrating from legacy systems, implementing DevOps automation and CI/CD solutions, or building hybrid and multi-cloud architecture, our cloud infrastructure management services provide reliable, scalable, and secure cloud environments. We combine technical excellence with strategic guidance to ensure your scalable cloud-based application hosting meets current demands while positioning you for future growth. Empower your business with scalable cloud solutions built for the future.
+              At Autom8tion Lab, we don't just "manage" your cloud — we design secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads supporting US Federal, DIB, healthcare, and financial services teams. We lock down the control plane, automate the evidence trail, and give you a foundation built for security, compliance, and operational resilience from day one. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
             </p>
           </div>
         </div>
@@ -372,10 +372,10 @@ const CloudSystems = () => {
               Why Choose Autom8tion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Cloud Infrastructure Management</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Unlike generic cloud consultants who implement standard architectures, Autom8tion Lab delivers cloud infrastructure management services tailored to your specific performance requirements, budget constraints, and growth trajectory. Our cloud migration and deployment experts, DevOps engineers, and cloud architects work closely with CTOs and IT directors to design scalable cloud-based application hosting that balances cost efficiency with reliability. We specialize in AWS, Azure, and Google Cloud Platform with deep expertise in hybrid and multi-cloud architecture.
+              Generic managed service providers will tell you to bolt compliance on later. We don't do that. We architect your environment around NIST 800-53 from the start so your security controls, deployment patterns, and operational procedures line up with FedRAMP and FISMA expectations. Effective cloud infrastructure for US Federal, DIB, healthcare, and financial services organizations is about more than just hosting — it's about building a defensible system boundary, enforcing least privilege, centralizing audit logs, and making every major control family visible in the architecture.
             </p>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              We don't just provision cloud resources—we build comprehensive cloud ecosystems with DevOps automation and CI/CD solutions, continuous monitoring, and proactive optimization. Our cloud infrastructure management services typically reduce infrastructure costs by 30-50%, achieve 99.9% uptime, and accelerate deployment velocity by 10x. Growing businesses gain operational agility that enables faster feature delivery, market responsiveness, and the scalability needed to compete in the digital economy. Empower your business with scalable cloud solutions built for the future.
+              Our 30-day launch framework moves you from commercial cloud chaos to a FedRAMP-ready foundation: boundary review and control mapping in week one, secure architecture design and landing zone build in week two, workload migration with controlled delivery pipelines in week three, monitoring and operational handover in week four. We use Infrastructure as Code (Terraform, Pulumi) so your environment is reproducible, version-controlled, and auditable. By the end of the month, you have centralized dashboards, alerting, log retention, and evidence-producing workflows aligned to NIST 800-53, FedRAMP, and FISMA continuous monitoring expectations.
             </p>
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <p className="text-cyan-400 font-semibold mb-4 text-xl">Schedule Your Cloud Infrastructure Assessment</p>

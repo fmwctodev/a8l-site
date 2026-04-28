@@ -12,18 +12,18 @@ const Cybersecurity = () => {
   const features = [
     {
       icon: AlertTriangle,
-      title: "Penetration Testing & Ethical Hacking",
-      description: "Our penetration testing and monitoring services simulate real-world attacks to identify vulnerabilities before malicious actors exploit them. We conduct comprehensive penetration tests across web applications, APIs, network infrastructure, and cloud environments using industry-standard methodologies (OWASP, PTES). Our ethical hackers provide detailed reports with exploitability ratings, proof-of-concept demonstrations, and prioritized remediation guidance. Regular penetration testing ensures your defenses remain effective against evolving attack techniques."
+      title: "FedRAMP, FISMA & NIST 800-53 Engineering",
+      description: "We help federal contractors and cloud teams build the control foundation required for federal security reviews. Access control, MFA, and least-privilege enforcement. Centralized logging, alerting, and audit retention. Secure cloud configurations and boundary protections. Vulnerability management and configuration baselines. Documentation that maps implemented controls to assessment expectations — not policies that say one thing while systems do another."
     },
     {
       icon: Shield,
-      title: "Network Security & Risk Assessment",
-      description: "Comprehensive network security and risk assessment services that evaluate your security posture across endpoints, networks, cloud infrastructure, and applications. Our risk assessments follow NIST Risk Management Framework and identify threats, vulnerabilities, and potential business impacts. We analyze firewall configurations, network segmentation, access controls, and security monitoring capabilities. Detailed risk registers quantify likelihood and impact, enabling data-driven security investment decisions aligned with business priorities."
+      title: "CMMC 2.0 Readiness for the DIB",
+      description: "We implement the controls that protect CUI in real environments — not consulting decks. MFA across critical systems, role-based access, encryption at rest and in transit, centralized logging, secure enclaves, endpoint hardening, and change control. SSP and POA&M documentation aligned to the implemented controls. Remediation planning tied to the November 2026 Phase 2 deadline for CMMC 2.0. Engineered to survive a C3PAO assessment."
     },
     {
       icon: FileCheck,
-      title: "Data Protection & Compliance Audits",
-      description: "Data protection and compliance audits that verify adherence to NIST, CIS, HIPAA, ISO 27001, GDPR, and SOC 2 requirements. Our auditors review security policies, access controls, encryption implementations, audit logging, and incident response procedures. We conduct interviews, examine documentation, and perform technical assessments to identify compliance gaps. Comprehensive audit reports provide evidence of compliance for regulators and customers while highlighting remediation priorities to strengthen your security and compliance posture."
+      title: "HIPAA, SOC 2 & Audit-Ready Evidence",
+      description: "A compliant environment is not just secure — it is provable. We build the controls inside your stack, then create the documentation trail that supports them: System Security Plans (SSPs), Plans of Action and Milestones (POA&Ms), control narratives and policy sets, asset/access/vendor documentation, and evidence collection for audits and assessments. HIPAA safeguards for healthcare workflows. SOC 2 prep for SaaS and financial services environments. If an auditor asks how a control works, who owns it, and where the evidence lives — you have an answer."
     }
   ];
 
@@ -42,13 +42,13 @@ const Cybersecurity = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Cybersecurity & Compliance | Data Protection Consulting</title>
-        <meta name="description" content="Autom8ion Lab secures your business with advanced cybersecurity and compliance solutions. Risk assessments, audits, and monitoring aligned with NIST & CIS." />
-        <meta name="keywords" content="cybersecurity compliance consulting, data protection and compliance audits, network security and risk assessment, penetration testing and monitoring, IT governance and compliance frameworks" />
+        <title>Cybersecurity & Compliance — FedRAMP, NIST 800-53, CMMC 2.0, HIPAA, SOC 2 | Autom8tion Lab</title>
+        <meta name="description" content="Engineering-led cybersecurity and compliance for US Federal, DIB, healthcare, and financial services. FedRAMP, FISMA, NIST 800-53, CMMC 2.0 readiness, HIPAA safeguards, and SOC 2 prep — controls built and documented for audit. SDVOSB Pending." />
+        <meta name="keywords" content="FedRAMP compliance, NIST 800-53 implementation, CMMC 2.0 readiness, FISMA compliance, HIPAA safeguards, SOC 2 prep, SSP POA&M, C3PAO assessment prep, defense industrial base cybersecurity, SDVOSB cybersecurity" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/cybersecurity')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Cybersecurity & Compliance | Data Protection Consulting" />
-        <meta property="og:description" content="Autom8ion Lab secures your business with advanced cybersecurity and compliance solutions. Risk assessments, audits, and monitoring aligned with NIST & CIS." />
+        <meta property="og:title" content="Cybersecurity & Compliance — FedRAMP, NIST 800-53, CMMC 2.0, HIPAA, SOC 2 | Autom8tion Lab" />
+        <meta property="og:description" content="Engineering-led compliance for federal, DIB, healthcare, and financial services. We engineer compliant systems and document them for audit. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/cybersecurity" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -144,12 +144,12 @@ const Cybersecurity = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Cybersecurity & Compliance Services
+              Cybersecurity & Compliance — Engineered, Not Outsourced
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> for Modern Businesses</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Protect, comply, and scale securely with cybersecurity compliance consulting. We provide data protection audits, penetration testing, risk assessments, and IT governance aligned with NIST, CIS, HIPAA, and ISO 27001.
+              Engineering-led cybersecurity and compliance for US Federal, DIB, healthcare, and financial services. FedRAMP, FISMA, NIST 800-53, CMMC 2.0, HIPAA, and SOC 2 — controls built and documented for audit. SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -170,10 +170,10 @@ const Cybersecurity = () => {
               Protect Your Data and Systems From <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Evolving Threats</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              At Autom8ion Lab, we take a holistic approach to cybersecurity compliance consulting, combining prevention, detection, and response to safeguard your business from modern cyber threats. Our cybersecurity and compliance solutions protect critical data, ensure regulatory adherence, and maintain operational continuity even when facing sophisticated attacks. We understand that IT managers, compliance officers, and business owners need a trusted cybersecurity partner who provides proactive protection and ongoing monitoring.
+              Security is not a checkbox. In 2026, it is the foundation of your entire operation. If you handle CUI, federal data, PHI, or sensitive customer data, your "good enough" security stack is already a liability. FedRAMP, FISMA, NIST 800-53, CMMC 2.0 readiness, HIPAA safeguards, and SOC 2 prep are now operational requirements, not optional projects. Most firms approach compliance by duct-taping generic tools together and scrambling before an audit. That fails because auditors do not certify intentions — they verify controls, evidence, and documentation.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              From network security and risk assessment to penetration testing and monitoring, we implement defense-in-depth strategies tailored to your threat landscape. Our data protection and compliance audits ensure your systems meet stringent regulatory requirements while our IT governance frameworks provide structured oversight of security policies and procedures. Whether you're protecting sensitive customer data, meeting industry standards, or preparing for compliance audits, we build security systems that protect your business without impeding operational efficiency.
+              At Autom8tion Lab, we don't hand you a checklist and disappear. We engineer compliant systems and document them for audit so your environment matches what your policies say. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7. We support teams operating in US Federal, the Defense Industrial Base, Healthcare, and Financial Services — where security requirements directly impact contracts, approvals, and revenue. Most remediation projects take 4 to 9 months because the real work is fixing identity, access, logging, endpoint controls, encryption, vendor risk, and documentation at the same time. We handle both sides.
             </p>
           </div>
         </div>

@@ -12,18 +12,18 @@ const WorkflowAutomation = () => {
   const features = [
     {
       icon: GitBranch,
-      title: "End-to-End Process Mapping",
-      description: "Business process analysis and visualization that maps every step of your workflows from initial trigger to final completion. Our intelligent mapping system identifies bottlenecks, redundancies, and optimization opportunities while creating process documentation. Conditional logic and decision trees ensure workflows adapt to different scenarios, handle exceptions gracefully, and maintain process integrity across multi-departmental operations with complete visibility and control."
+      title: "Multi-Step Approval Workflows With Audit Trails",
+      description: "We build approval systems that route requests through the right reviewers, enforce separation of duties, record timestamps, and preserve full decision history. That matters when you need to prove process integrity under NIST 800-53, support FISMA requirements, and maintain controls aligned with FedRAMP cloud expectations. You get structured approvals, exception handling, and logs that stand up to internal review and external assessment in US Federal, DIB, healthcare, and financial services environments."
     },
     {
       icon: Zap,
-      title: "Integrate Everything: CRMs, Apps, and Data Sources",
-      description: "Connect your entire tech stack through API integrations with platforms like Salesforce, HubSpot, Google Workspace, Slack, Microsoft Teams, and hundreds of other business applications. Our automation platforms ensure seamless data synchronization across CRM systems, project management tools, communication channels, and databases. Whether using n8n for visual workflow design, Make for integrations, or custom Python scripts for specialized requirements, we create automated task management systems that eliminate manual data entry and ensure real-time information flow across your organization."
+      title: "AI Agents Inside Private Networks",
+      description: "If your workflows involve sensitive operational data, public AI endpoints are the wrong fit. We deploy AI agents inside private networks so your data stays inside your environment. These agents classify requests, validate submissions, summarize supporting documents, and help move work forward without exposing controlled information to third-party consumer tools. Speed without sacrificing control — exactly what regulated operations need."
     },
     {
       icon: Clock,
-      title: "Complete Audit Trails",
-      description: "Monitoring and logging system that tracks every workflow execution, decision point, and data transformation with audit trails and performance analytics. Monitoring capabilities provide real-time visibility into workflow status, execution times, error rates, and system performance. Reporting and analytics enable continuous optimization while ensuring compliance requirements are met. Alerting systems notify stakeholders of exceptions, delays, or performance issues, enabling proactive management and rapid resolution of workflow disruptions."
+      title: "RPA for Controlled and Legacy Environments",
+      description: "Some environments depend on legacy systems, internal portals, air-gapped processes, or controlled workflows where modern SaaS connectors are not an option. We build robotic process automation that interacts with desktop applications, internal systems, and brittle platforms standard automation tools cannot touch. We automate the work inside your environment while preserving the control, traceability, and security boundaries expected in federal, DIB, healthcare, and financial services operations."
     }
   ];
 
@@ -42,13 +42,13 @@ const WorkflowAutomation = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Workflow Automation Solutions | End-to-End AI Systems | Autom8ion Lab</title>
-        <meta name="description" content="Streamline operations with enterprise-grade AI workflow automation. Connect systems, eliminate repetitive tasks, and improve productivity company-wide." />
-        <meta name="keywords" content="enterprise workflow automation tools, end-to-end automation platforms, ai workflow automation solutions, automated task management systems, business process automation software" />
+        <title>Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <meta name="description" content="Secure workflow and process automation for US Federal, DIB, healthcare, and financial services teams. Multi-step approval workflows, private-network AI agents, and RPA aligned to FedRAMP, NIST 800-53, and FISMA. Live in 30 days." />
+        <meta name="keywords" content="workflow automation, FedRAMP automation, NIST 800-53 workflow, FISMA automation, DIB workflow automation, private network AI agents, RPA controlled environments, multi-step approval workflows, audit trail automation, SDVOSB" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/workflow-automation')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Workflow Automation Solutions | End-to-End AI Systems" />
-        <meta property="og:description" content="Streamline operations with enterprise-grade AI workflow automation. Connect systems, eliminate repetitive tasks, and improve productivity company-wide." />
+        <meta property="og:title" content="Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:description" content="Secure, professional-grade workflow and process automation for regulated environments. Multi-step approval workflows, private-network AI agents, RPA — aligned to FedRAMP, NIST 800-53, and FISMA. SDVOSB Pending." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/workflow-automation" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -56,8 +56,8 @@ const WorkflowAutomation = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="Workflow Automation Solutions | End-to-End AI Systems | Autom8ion Lab" />
-        <meta name="twitter:description" content="Streamline operations with enterprise-grade AI workflow automation. Connect systems, eliminate repetitive tasks, and improve productivity company-wide." />
+        <meta name="twitter:title" content="Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta name="twitter:description" content="Secure workflow and process automation for regulated environments. Multi-step approvals, private-network AI agents, RPA — aligned to FedRAMP, NIST 800-53, and FISMA." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
         
         <script type="application/ld+json">
@@ -163,13 +163,13 @@ const WorkflowAutomation = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI-Powered <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Workflow Automation</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Workflow Automation</span>
               <br />
-              for Smarter, Faster Operations
+              Built for Regulated Operations
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Enterprise workflow automation tools that connect your systems, eliminate repetitive tasks, and boost productivity company-wide. End-to-end automation platforms designed for growing SMBs and enterprise teams.
+              Secure, professional-grade workflow and process automation for US Federal, DIB, healthcare, and financial services teams. Multi-step approval workflows, private-network AI agents, and RPA for controlled environments — aligned to FedRAMP, NIST 800-53, and FISMA.
             </p>
 
 
@@ -188,13 +188,13 @@ const WorkflowAutomation = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              Streamline Every Step of Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Business Workflow</span>
+              Stop Babysitting <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Bottlenecks</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Autom8ion Lab designs intelligent automation platforms that eliminate repetitive manual tasks across your organization. Our workflow automation tools transform disconnected systems into unified solutions that handle everything from lead intake and approvals to reporting and notifications. By connecting every application in your tech stack (CRMs, project management tools, communication platforms, and databases), we create automated task management systems that reduce complexity, minimize human error, and free your team to focus on high-value strategic work.
+              Most operations teams are running on borrowed time. Your stack is a fragile web of duct-taped tools, half-baked automations, and manual spreadsheets that require a human to chase approvals, update records, and document decisions by hand. When one field changes or one reviewer misses a step, the whole process stalls. You aren't running an automated business; you're babysitting a chain of operational bottlenecks. Generic automation tools fail fast when your process includes approvals, exceptions, access controls, documentation requirements, and compliance evidence.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Unlike generic business process automation software that requires extensive technical knowledge, our platform delivers custom-built workflows tailored to your operational needs. Using tools like n8n for visual workflow design, Make for integrations, and custom Python scripts for specialized requirements, we create scalable automation solutions that grow with your business. Whether you're a growing SMB looking to eliminate manual overhead or an enterprise department seeking to optimize cross-functional processes, our workflow automation solutions provide complete visibility, control, and continuous optimization.
+              At Autom8tion Lab, we don't just "link apps." We engineer end-to-end systems around your exact business logic, your compliance requirements, and your internal controls. We build secure, professional-grade workflow and process automation for US Federal agencies, Defense Industrial Base contractors, healthcare organizations, and financial services teams that need multi-step approval workflows, complete audit trails, private-network AI agents, and RPA for controlled environments. Veteran-owned, SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
             </p>
           </div>
         </div>
@@ -393,10 +393,10 @@ const WorkflowAutomation = () => {
               Why Choose Autom8ion Lab's <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Workflow Platform</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Unlike generic business process automation software that offers template-based solutions with limited customization, Autom8tion Lab delivers enterprise workflow automation tools tailored to your specific operational needs. Our end-to-end automation platforms connect every system in your tech stack—from disconnected applications to unified AI workflow automation solutions that work seamlessly together. We combine consultative clarity (showing teams exactly how to save time) with enterprise-level authority (proven scalability and reliability). Whether you're a growing SMB eliminating manual overhead or an enterprise department optimizing cross-functional processes, our platform adapts to your unique requirements.
+              Most agencies sell access to a platform they did not build and cannot secure for your environment. We take a different approach. We build workflow and process automation on infrastructure you control because regulated operations demand control, traceability, and isolation. Our 30-day launch framework moves you from approval chaos to secure, auditable automation: process audit and control mapping in week one, build and engineering in weeks two and three, validation and deployment in week four. We don't just build the happy path — we build access controls, logging, retry logic, and exception handling so the system performs under real operational pressure.
             </p>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              We don't just provide access to automation platforms—we build comprehensive automated task management systems that integrate seamlessly with Salesforce, HubSpot, Google Workspace, Slack, and hundreds of other business applications. Our clients typically see a 300% improvement in process efficiency and 80% reduction in manual task overhead within the first 60 days. With advanced monitoring, complete audit trails, and continuous optimization, our AI workflow automation solutions deliver unprecedented visibility into workflow performance while ensuring compliance and reliability at every step.
+              We are veteran-owned and SDVOSB Pending, with federal identifiers ready (UEI: YY2DR3KSENH7, CAGE: 9YCS7). Our clients target a 10x ROI: hundreds of hours a month saved, reduced approval friction, and stronger compliance evidence. Our systems scale from 100 tasks a day to 100,000 without sacrificing traceability or control. If we're not delivering measurable outcomes against NIST 800-53, FISMA, and FedRAMP-aligned cloud expectations, we haven't done our job.
             </p>
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <h3 className="text-2xl font-bold text-white mb-4">

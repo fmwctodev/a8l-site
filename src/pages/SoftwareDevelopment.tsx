@@ -12,18 +12,18 @@ const SoftwareDevelopment = () => {
   const features = [
     {
       icon: Layers,
-      title: "Full-Stack Development",
-      description: "Comprehensive end-to-end software development using cutting-edge frameworks including React, Angular, Node.js, Python, and cloud-native technologies. Our full-stack approach covers frontend user interfaces, backend APIs, database design, and system architecture to create cohesive software solutions that deliver exceptional user experiences while maintaining robust performance, scalability, and security standards across web, desktop, and mobile platforms."
+      title: "Custom Platforms for Regulated Workflows",
+      description: "Federal teams run on forms, approvals, records, and deadlines — generic software slows you down. We build custom internal tools, CRM and case management platforms, role-based access controls, and FedRAMP-, FISMA-, and NIST 800-53-aligned workflows. Security architecture is defined on day one — identity, encryption, logging, segmentation, and system design planned before features are built. We don't force federal workflows into a generic CRM. We build the platform around your mission and compliance requirements."
     },
     {
       icon: Shield,
-      title: "Secure & Scalable Architecture",
-      description: "Enterprise-grade security implementation with advanced encryption protocols, multi-factor authentication, role-based access controls, and comprehensive audit logging systems. Our scalable architecture utilizes microservices design patterns, containerization technologies, and cloud-native deployment strategies that enable seamless horizontal and vertical scaling. Advanced monitoring and performance optimization ensure consistent system reliability and security compliance across all operational environments and user load scenarios."
+      title: "Enterprise Software Engineering for Federal Operations",
+      description: "Federal operations teams don't need another dashboard — you need systems that control work, enforce policy, support mission execution, and remove bottlenecks. We build internal platforms that become the operating layer for agency workflows: workflow portals, team-specific tools, CRM systems, and case management environments that centralize records, automate handoffs, and create clean audit trails. Unified operational data, custom workflow engines, structured case and record management, and legacy modernization with modern API wrappers."
     },
     {
       icon: Zap,
-      title: "Agile Development Process",
-      description: "Streamlined agile development methodology incorporating continuous integration and deployment pipelines, automated testing frameworks, and iterative development cycles that accelerate time-to-market while maintaining code quality. Our DevOps practices include automated build processes, comprehensive testing suites, and deployment automation that enables rapid feature delivery, bug fixes, and system updates while ensuring stability and reliability throughout the development lifecycle and production deployment phases."
+      title: "Scalable Cloud-Native Builds + AI Integration",
+      description: "We build scalable cloud-native software designed for the modern era — directly for AWS, Azure, or GCP. Serverless architectures, microservices, containerization, 99.9% uptime through built-in redundancy. Security by design with FedRAMP, FISMA, and NIST 800-53 controls integrated from day one. We integrate custom LLM systems directly into your codebase so your software can think, categorize data, and interact in natural language — and our API integrations sync with CRM, ERP, and existing platforms so your build becomes the hub of your digital ecosystem, not another silo."
     }
   ];
 
@@ -42,13 +42,13 @@ const SoftwareDevelopment = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Software Development Company USA | Custom Engineering Services</title>
-        <meta name="description" content="Autom8ion Lab builds scalable, secure, and high-performance software. From SaaS apps to enterprise platforms — full-stack development built around your goals." />
-        <meta name="keywords" content="software development company USA, custom software engineering services, enterprise software solutions, SaaS application development, full-stack software development" />
+        <title>Custom Software Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <meta name="description" content="AI-powered enterprise software, internal tools, and CRM/case management platforms for US Federal, DIB, healthcare, and financial services teams. Security architecture aligned to FedRAMP, FISMA, and NIST 800-53 from day one. SDVOSB Pending. Live in 30 days." />
+        <meta name="keywords" content="federal software development, DIB software, FedRAMP software development, FISMA software, NIST 800-53 platforms, custom CRM federal, case management federal, SDVOSB software development, mission support platform, regulated industry software" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/software-development')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Software Development Company USA | Custom Engineering Services" />
-        <meta property="og:description" content="Autom8ion Lab builds scalable, secure, and high-performance software. From SaaS apps to enterprise platforms — full-stack development built around your goals." />
+        <meta property="og:title" content="Custom Software Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:description" content="AI-powered enterprise platforms, internal tools, and case management built for compliance-driven workflows. FedRAMP, FISMA, NIST 800-53 from day one. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/software-development" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -151,13 +151,13 @@ const SoftwareDevelopment = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Custom Software Development
+              Custom Software for Federal Operations
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400">Solutions Built for Scale</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Leading software development company USA delivering scalable, secure, and high-performance custom software. From SaaS application development to enterprise platforms — full-stack software development built around your goals.
+              AI-powered enterprise software, internal tools, and CRM/case management platforms built for US Federal, DIB, healthcare, and financial services teams. Security architecture aligned to FedRAMP, FISMA, and NIST 800-53 from day one. SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -178,13 +178,13 @@ const SoftwareDevelopment = () => {
               Enterprise-Grade Software Tailored to Your Business
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              As a leading software development company USA, Autom8ion Lab specializes in custom software engineering services that prioritize reliability, performance, scalability, and usability. We build software that doesn't just meet requirements — it drives measurable business outcomes and competitive advantage.
+              Federal teams are stuck with software that almost works. You rely on off-the-shelf platforms that solve part of the problem while creating new security, integration, and compliance gaps. You duct-tape tools that don't talk, then wonder why mission workflows, approvals, and records management keep breaking. The traditional agency model is equally broken — months of discovery with account managers who never touch the code, then a bloated product that still doesn't fit your process.
             </p>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Our enterprise software solutions are designed for mission-critical operations, handling high transaction volumes, complex business logic, and stringent security requirements. Every line of code is written with scalability in mind, ensuring your software grows seamlessly alongside your business without requiring costly rewrites or architectural overhauls.
+              At Autom8tion Lab, we build AI-powered enterprise software and applications for US Federal, Defense Industrial Base, Healthcare, and Financial Services teams — including custom platforms, internal tools, and CRM or case management systems built for compliance-driven workflows. Our founder-led model gives you direct access to the engineers designing your system. Security architecture is defined on day one with FedRAMP, FISMA, and NIST 800-53 controls in mind, not patched in later. Veteran-owned, SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              We deliver software that performs under pressure. Our clients report 99.9% uptime, 60% faster processing speeds, and 40% cost reductions compared to off-the-shelf alternatives. When your business depends on software reliability, partner with a software development company USA that engineers for excellence.
+              Federal operations are unique. Regulated operations are too. Whether you're modernizing a federal workflow, supporting a DIB environment, or replacing brittle internal systems in healthcare or financial services, we have the engineering talent and direct approach needed to get you to the finish line. Full IP ownership — you own the code. Our 30-day launch framework moves you from architecture to deployment with senior engineers, not account managers, in every stage.
             </p>
           </div>
         </div>
