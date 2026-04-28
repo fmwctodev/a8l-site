@@ -92,7 +92,7 @@ const Footer = () => {
             </p>
 
             <p className="text-slate-400 mb-8 leading-relaxed max-w-md">
-              A veteran-owned engineering team building custom AI, automation, and software for federal agencies, defense contractors, healthcare systems, and financial institutions — with security architecture and compliance documentation built in from day one.
+              A veteran-owned engineering team building custom AI, automation, and software for construction, healthcare, finance, real estate, and US government clients — with security architecture and compliance documentation engineered from day one, not retrofitted.
             </p>
 
             <div className="space-y-4">
@@ -154,11 +154,12 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-6">Industries</h3>
             <div className="space-y-3">
-              <span className="block text-slate-500">Government (federal/state/local)</span>
-              <span className="block text-slate-500">Defense Industrial Base</span>
-              <span className="block text-slate-500">Healthcare &amp; Life Sciences</span>
-              <span className="block text-slate-500">Financial Services</span>
-              <p className="text-slate-500 text-xs pt-2 italic">Industry pages coming soon.</p>
+              <Link href="/industries/construction" className="block text-slate-400 hover:text-cyan-400 transition-colors">Construction</Link>
+              <Link href="/industries/healthcare" className="block text-slate-400 hover:text-cyan-400 transition-colors">Healthcare &amp; Life Sciences</Link>
+              <Link href="/industries/finance" className="block text-slate-400 hover:text-cyan-400 transition-colors">Finance</Link>
+              <Link href="/industries/real-estate-property" className="block text-slate-400 hover:text-cyan-400 transition-colors">Real Estate &amp; Property</Link>
+              <Link href="/industries/government" className="block text-slate-400 hover:text-cyan-400 transition-colors">US Government</Link>
+              <Link href="/industries/defense" className="block text-slate-400 hover:text-cyan-400 transition-colors">Defense Industrial Base</Link>
             </div>
           </div>
 

@@ -29,13 +29,13 @@ const ldSchema1 = {
               "@type": "ProfessionalService",
               "name": "Autom8ion Lab"
             },
-            "description": "Comprehensive cybersecurity compliance consulting with data protection audits, penetration testing, risk assessments, and IT governance frameworks aligned with NIST, CIS, HIPAA, and ISO 27001 standards.",
+            "description": "CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 Type II preparation. We engineer compliant systems and document them for audit. Not a CMMC RPO or C3PAO.",
             "areaServed": {
               "@type": "Place",
               "name": "Worldwide"
             },
             "url": "https://autom8ionlab.com/solutions/cybersecurity",
-            "industryStandards": ["NIST Cybersecurity Framework", "CIS Controls", "HIPAA", "ISO 27001", "GDPR", "SOC 2"],
+            "industryStandards": ["CMMC 2.0", "NIST 800-171 Rev 2", "NIST 800-53", "HIPAA", "SOC 2 Type II", "FedRAMP Moderate"],
             "serviceOutput": ["Security Risk Assessment", "Compliance Audit Reports", "Penetration Testing Reports", "Incident Response Plans", "Security Monitoring"],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
@@ -106,7 +106,7 @@ const features = [
     "NIST Cybersecurity Framework alignment ensures comprehensive security controls across Identify, Protect, Detect, Respond, and Recover functions with measurable maturity assessments",
     "CIS Controls implementation prioritizes the most effective security actions, from basic cyber hygiene to advanced threat defense, based on community-validated best practices",
     "HIPAA compliance for healthcare organizations includes encryption, access controls, audit logging, breach notification procedures, and Business Associate Agreements (BAAs)",
-    "ISO 27001 certification support with information security management systems (ISMS), risk assessment frameworks, and comprehensive documentation required for certification audits",
+    "FedRAMP-aligned environment design, System Security Plan drafts, control selection per NIST 800-53, and 3PAO prep for cloud services serving federal customers",
     "Penetration testing and monitoring services simulate real-world attacks quarterly or annually, providing detailed vulnerability reports and remediation guidance from certified ethical hackers",
     "Network security and risk assessment services evaluate firewalls, intrusion detection systems, network segmentation, and access controls while quantifying business risks and security ROI",
     "Data protection and compliance audits examine encryption implementations, access controls, data classification, privacy safeguards, and regulatory adherence with detailed compliance reports",
@@ -180,7 +180,7 @@ const features = [
                     Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Cybersecurity Compliance Consulting</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Our cybersecurity compliance consulting services help organizations meet and maintain compliance with NIST Cybersecurity Framework, CIS Controls, HIPAA, ISO 27001, GDPR, and SOC 2 standards. We translate complex regulatory requirements into actionable security controls that protect your business while demonstrating compliance to auditors, customers, and stakeholders. Our compliance experts conduct gap analyses, develop remediation roadmaps, and implement security controls that align with your industry's specific regulatory landscape.
+                    Our cybersecurity compliance engineering helps organizations meet and maintain compliance with CMMC 2.0, NIST 800-171 Rev 2, NIST 800-53, HIPAA / HITECH, SOC 2 Type II, FCRA, and FedRAMP Moderate. We translate framework requirements into implemented technical controls that pass audit, demonstrating compliance to assessors, customers, and stakeholders. Our compliance engineers conduct gap analyses against the relevant control catalog, develop remediation roadmaps, and implement controls that align with your industry's regulatory landscape.
                   </p>
                   <p className="text-lg text-slate-300 leading-relaxed">
                     Beyond checkbox compliance, we build IT governance and compliance frameworks that create sustainable security programs. Our approach includes policy development, security awareness training, access control implementation, and continuous compliance monitoring. We help you establish security baselines, document procedures, and maintain audit trails that satisfy regulatory requirements. With expertise spanning healthcare, financial services, government contractors, and technology companies, we understand the nuances of industry-specific compliance mandates. We also ensure your <Link href="/solutions/process-automation" className="text-cyan-400 hover:text-cyan-300 underline">automated processes</Link> follow secure governance principles to prevent security gaps in workflow automation.
@@ -236,60 +236,29 @@ const features = [
                     Regular data protection and compliance audits ensure your security controls remain effective and aligned with regulatory requirements. Our audit process examines access control implementations, data classification systems, encryption standards, and privacy safeguards across your entire technology stack. We verify that sensitive data—whether customer information, financial records, or intellectual property—receives appropriate protection through technical controls, policy enforcement, and employee training.
                   </p>
                   <p className="text-lg text-slate-300 leading-relaxed">
-                    Our compliance reporting provides stakeholders with clear evidence of security maturity and regulatory adherence. We document security control effectiveness, track remediation progress, and maintain compliance artifacts required for audits. Whether you need SOC 2 attestation, HIPAA compliance validation, or ISO 27001 certification support, our auditors deliver thorough assessments that satisfy regulatory requirements. We integrate with your <Link href="/solutions/data-management" className="text-cyan-400 hover:text-cyan-300 underline">data management systems</Link> to ensure data integrity and with <Link href="/solutions/cloud-systems" className="text-cyan-400 hover:text-cyan-300 underline">cloud infrastructure</Link> for secure hosting of audit artifacts and compliance documentation.
+                    Our compliance documentation provides stakeholders with clear evidence of control implementation and audit-readiness. We document control effectiveness, track remediation progress, and maintain the artifacts assessors require — System Security Plans, POA&Ms, control narratives, and evidence collection. Whether you need SOC 2 Type II attestation prep, HIPAA validation, CMMC Level 2 readiness, or NIST 800-171 implementation evidence, our work produces audit-ready output. We integrate with your <Link href="/solutions/cloud-systems" className="text-cyan-400 hover:text-cyan-300 underline">cloud infrastructure</Link> for secure hosting of audit artifacts and with your CI/CD pipelines for evidence collection.
                   </p>
                 </div>
               </div>
             </section>
       
-            {/* Incident Response Section */}
-            <section className="py-24 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Incident Response Planning and <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Monitoring</span>
-                  </h2>
-                  <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Real-time security monitoring, threat detection, and structured incident response frameworks that minimize damage and ensure rapid recovery from security incidents.
-                  </p>
-                </div>
-      
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-white font-bold text-lg">1</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">24/7 Security Monitoring</h3>
-                    <p className="text-slate-400 text-sm">Real-time monitoring systems track network traffic, endpoint behavior, and system logs to detect anomalies and potential security incidents. SIEM platforms aggregate security events for analysis and correlation.</p>
-                  </div>
-      
-                  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-white font-bold text-lg">2</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Incident Response Playbooks</h3>
-                    <p className="text-slate-400 text-sm">Documented response procedures for common attack scenarios including ransomware, data breaches, and insider threats. Clear escalation paths, containment strategies, and communication protocols ensure coordinated response.</p>
-                  </div>
-      
-                  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-400 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-white font-bold text-lg">3</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Threat Intelligence Integration</h3>
-                    <p className="text-slate-400 text-sm">Integration with threat intelligence feeds provides early warning of emerging threats, known attack patterns, and indicators of compromise specific to your industry and technology stack.</p>
-                  </div>
-      
-                  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-white font-bold text-lg">4</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Recovery Frameworks</h3>
-                    <p className="text-slate-400 text-sm">Business continuity and disaster recovery plans ensure rapid restoration of critical systems. Backup verification, recovery time objectives, and failover procedures minimize downtime and data loss.</p>
-                  </div>
-                </div>
+            {/* Required disclosure block per LOCKED v3 §"Cybersecurity page".
+                Visible in body, not just FAQ. */}
+            <section className="py-12 bg-amber-950/20 border-y border-amber-900/30">
+              <div className="max-w-4xl mx-auto px-6">
+                <h2 className="text-xl font-semibold text-amber-300 mb-3">
+                  Important: We are not a CMMC RPO or C3PAO
+                </h2>
+                <p className="text-slate-300 leading-relaxed">
+                  We are not currently a CMMC Registered Practitioner Organization (RPO) or a C3PAO. We
+                  engineer systems to NIST 800-171 controls and produce the documentation your assessor will
+                  need. We work alongside RPO/C3PAO partners when independent assessment is required, and we
+                  can refer you to assessment partners.
+                </p>
               </div>
             </section>
-      
+
+
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
@@ -324,9 +293,9 @@ const features = [
                   </div>
       
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">SaaS & Technology: SOC 2, ISO 27001 & GDPR</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Construction & Real Estate: HUD, FCRA & State Compliance</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Technology companies need cybersecurity compliance consulting to earn customer trust and close enterprise deals. Our data protection and compliance audits prepare you for SOC 2 Type II audits, ISO 27001 certification, and GDPR compliance. We implement IT governance frameworks that define security policies, risk management processes, and vendor management procedures. Penetration testing validates application security while network security and risk assessment services protect cloud infrastructure. Continuous monitoring and compliance reporting demonstrate ongoing security maturity to customers and auditors.
+                      Federally-funded construction and multifamily property management operate under HUD compliance, Davis-Bacon prevailing wage, FCRA tenant screening, and state-by-state lien waiver and landlord-tenant law variance. We engineer the technical controls — adverse action workflows, audit trails, document retention, evidence collection — that auditors and HUD inspectors verify. Compliance documentation produced as we build, not retrofitted at the end.
                     </p>
                   </div>
                 </div>
@@ -341,7 +310,7 @@ const features = [
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Autom8ion Lab</span>
                   </h2>
                   <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                    Our cybersecurity compliance consulting provides comprehensive protection aligned with NIST, CIS, HIPAA, and ISO 27001 standards. Protect, comply, and scale securely.
+                    Our cybersecurity compliance consulting provides comprehensive protection aligned with CMMC 2.0, NIST 800-171, HIPAA, and SOC 2. Protect, comply, and scale securely.
                   </p>
                   <Link href="/get-in-touch" className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
                     Book Your Security Consultation
@@ -366,7 +335,7 @@ const features = [
                     Why Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Cybersecurity Compliance Consulting</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Unlike generic security consultants who implement template-based solutions, Autom8ion Lab delivers cybersecurity compliance consulting tailored to your specific threat landscape, regulatory requirements, and business objectives. Our security engineers combine technical expertise with deep knowledge of NIST, CIS, HIPAA, ISO 27001, and industry-specific compliance mandates. We work closely with IT managers, compliance officers, and business owners to ensure every security control provides robust protection while maintaining operational efficiency.
+                    Unlike generic security consultants who implement template-based solutions, Autom8ion Lab delivers cybersecurity compliance consulting tailored to your specific threat landscape, regulatory requirements, and business objectives. Our security engineers combine technical expertise with deep knowledge of CMMC 2.0, NIST 800-171 Rev 2, NIST 800-53, HIPAA, SOC 2, FCRA, and industry-specific compliance mandates. We work closely with IT managers, compliance officers, and business owners to ensure every security control provides robust protection while maintaining operational efficiency.
                   </p>
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed">
                     We don't just check compliance boxes—we build sustainable security programs that protect critical assets and demonstrate compliance to auditors, customers, and stakeholders. Our clients benefit from data protection and compliance audits, penetration testing and monitoring, network security and risk assessment, and IT governance frameworks that reduce risk while enabling business growth. With proactive protection, real-time monitoring, and expert incident response, we help you protect, comply, and scale securely.

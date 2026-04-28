@@ -5,21 +5,21 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact Autom8ion Lab | Get a Custom Project Quote',
   description:
-    'Ready to transform your business with custom AI and automation? Get in touch with Autom8ion Lab to discuss your project and receive a free consultation.',
+    'Talk to us about a custom AI, automation, or software project for compliance-driven environments. We respond within one business day with a fit assessment.',
   keywords:
     'contact AI company, custom project quote, AI solutions contact, automation consultation, business inquiry, AI development quote, custom automation contact, project discussion',
   alternates: { canonical: 'https://autom8ionlab.com/get-in-touch' },
   openGraph: {
     title: 'Contact Autom8ion Lab | Get a Custom Project Quote',
     description:
-      'Ready to transform your business with custom AI and automation? Get in touch with Autom8ion Lab to discuss your project and receive a free consultation.',
+      'Talk to us about a custom AI, automation, or software project for compliance-driven environments. We respond within one business day with a fit assessment.',
     url: 'https://autom8ionlab.com/get-in-touch',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
     title: 'Contact Autom8ion Lab | Get a Custom Project Quote',
     description:
-      'Ready to transform your business with custom AI and automation? Get in touch with Autom8ion Lab to discuss your project and receive a free consultation.',
+      'Talk to us about a custom AI, automation, or software project for compliance-driven environments. We respond within one business day with a fit assessment.',
   },
 };
 

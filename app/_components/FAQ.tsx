@@ -9,39 +9,50 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Eight homepage FAQs verbatim from LOCKED v3 §"FAQs". The FAQPage schema for
+  // these lives in app/page.tsx so the questions are crawlable in the initial
+  // HTML without depending on this component's hydration state.
   const faqs = [
     {
-      question: "How is custom automation different from using tools like Zapier or Make?",
-      answer: "Zapier and Make work great for simple stuff. But they break when your business logic gets complicated. We build systems that understand exactly how you work, handle the weird edge cases, and scale when you grow. Instead of tying together multiple tools that barely talk to each other, you get something built specifically for how your business actually operates."
+      question: 'What industries do you work with?',
+      answer:
+        'Construction, healthcare, finance, real estate and property management, US federal/state/local government, and the Defense Industrial Base. We don\'t take work outside those areas — the focus is what makes us useful.',
     },
     {
-      question: "How long does it typically take to build a custom AI or automation system?",
-      answer: "Most systems go live in 30 days. Depends on how complex it is, but here's the typical timeline: Discovery and Planning (Days 1-3), Blueprint and Scope (Days 4-7), Build and Integration (Days 8-25), Launch and Tuning (Days 26-30+). We move fast but we don't cut corners."
+      question: 'Are you registered for federal contracting?',
+      answer:
+        'Yes. UEI: YY2DR3KSENH7. CAGE: 9YCS7. DUNS: 05-289-2750. SDVOSB certification pending. Veteran-owned.',
     },
     {
-      question: "What makes your AI agents different from generic chatbots?",
-      answer: "We train them on your actual business data, products, and customer conversations. They learn your industry terms, remember context throughout discussions, and handle complex back-and-forth. Generic chatbots follow scripts. Ours adapt based on real interactions and give responses that feel like talking to someone who knows your business."
+      question: 'Are you a CMMC RPO or C3PAO?',
+      answer:
+        'No. We are software and AI builders, not assessors. We engineer systems that satisfy NIST 800-171 controls and produce the documentation auditors expect, working alongside your assessor or a partner C3PAO. We can refer you to assessment partners.',
     },
     {
-      question: "Do you work with existing systems or do we need to start from scratch?",
-      answer: "We specialize in connecting to what you already have. Salesforce, Shopify, custom databases, old legacy systems, whatever. We build the bridges that make everything talk to each other. You don't replace what works. We just add automation that fits with what you're already using."
+      question: "What's your typical engagement size and duration?",
+      answer:
+        'We scope to your contract structure — task orders, IDIQ, BPA, commercial fixed-price, or T&M. Most projects ship in 8–14 weeks. CMMC remediation runs 4–9 months. FedRAMP-aligned builds run 6+ months. Quote provided after the discovery call.',
     },
     {
-      question: "What kind of ROI can we expect from custom automation?",
-      answer: "Most clients see 10x productivity improvements within 90 days. Results vary depending on what you're automating, but typical outcomes include 60-90% less manual work, 300% faster processing, and real cost savings from not needing as many people doing repetitive tasks."
+      question: 'Do you have past performance with [specific industry / agency]?',
+      answer:
+        'We can discuss applicable past performance after a qualifying call. Many engagements are NDA-protected; we provide details and references on a need-to-know basis after vendor onboarding begins.',
     },
     {
-      question: "Is our data secure with AI and automation systems?",
-      answer: "Yes. We use bank-level encryption, SOC 2 protocols, and keep your data completely under your control. Your proprietary info stays in your environment. We can deploy on your own servers or in private clouds. You maintain full control over everything while still getting the automation benefits."
+      question: 'Can you work on classified contracts?',
+      answer:
+        'Not at this time. We work on unclassified contracts including CUI handling (NIST 800-171, CMMC L1–L2), FedRAMP Moderate, and HIPAA-aligned environments. For classified work, we partner with cleared firms.',
     },
     {
-      question: "What ongoing support do you provide after launch?",
-      answer: "We monitor the system, optimize performance, and add features as needed. As your business grows and changes, we make sure the automation keeps working well. We'll also train your team and provide documentation so you can maintain things long-term."
+      question: 'Where are you based?',
+      answer:
+        'United States — primary location is Plant City, Florida. We also maintain a development and operations office in Montreal, Quebec. Sales and project delivery is US-only.',
     },
     {
-      question: "Can you handle industry-specific compliance requirements?",
-      answer: "Yes. We've worked with HIPAA for healthcare, SOX for financial services, GDPR for data privacy, and other frameworks. Compliance is built in from the start. That means audit trails, access controls, and reporting capabilities that meet regulatory requirements."
-    }
+      question: 'Do you respond to RFPs/RFIs?',
+      answer:
+        'Yes. Send the SOW or RFI documentation to sean@autom8ionlab.com or use the contact form. We respond within one business day with a fit assessment and proposed approach.',
+    },
   ];
 
   return (

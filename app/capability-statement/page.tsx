@@ -283,10 +283,12 @@ export default function Page() {
                   <h2 className="text-2xl font-bold text-white mb-6">Industries Served</h2>
                   <ul className="grid sm:grid-cols-2 gap-4">
                     {[
-                      'Federal, State & Local Government',
-                      'Defense Industrial Base (DoD primes and subcontractors)',
+                      'Construction',
                       'Healthcare & Life Sciences',
-                      'Financial Services',
+                      'Finance (banks, credit unions, fintech, insurance)',
+                      'Real Estate & Property Management',
+                      'US Federal, State & Local Government',
+                      'Defense Industrial Base (DoD primes and subcontractors)',
                     ].map((i) => (
                       <li
                         key={i}

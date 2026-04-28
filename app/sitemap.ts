@@ -3,17 +3,28 @@ import { getAllPosts } from '@/lib/posts';
 
 const BASE = 'https://autom8ionlab.com';
 
+// Six industries elevated to primary navigation per LOCKED v3.
+const INDUSTRIES = [
+  'construction',
+  'healthcare',
+  'finance',
+  'real-estate-property',
+  'government',
+  'defense',
+];
+
+// Three priority service pages + four supporting capabilities.
+// Pages still live for /process-automation, /mobile-app-development, /data-management
+// but are intentionally absent from the sitemap — they collapse into /capabilities
+// in a follow-up cleanup phase.
 const SOLUTIONS = [
-  'ai-agent-development',
-  'workflow-automation',
-  'process-automation',
-  'api-integrations',
-  'custom-llm-systems',
   'software-development',
-  'mobile-app-development',
+  'workflow-automation',
   'cybersecurity',
+  'ai-agent-development',
+  'custom-llm-systems',
+  'api-integrations',
   'cloud-systems',
-  'data-management',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -22,6 +33,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     { url: `${BASE}/`, lastModified: today, changeFrequency: 'weekly', priority: 1.0 },
+
+    // Industries — promoted above services per LOCKED v3 IA.
+    ...INDUSTRIES.map((slug) => ({
+      url: `${BASE}/industries/${slug}`,
+      lastModified: today,
+      changeFrequency: 'monthly' as const,
+      priority: 0.95,
+    })),
+
+    // Capability statement is high-priority federal procurement asset.
+    {
+      url: `${BASE}/capability-statement`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+
     { url: `${BASE}/get-in-touch`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
     {
       url: `${BASE}/schedule-consultation`,
@@ -30,18 +58,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     { url: `${BASE}/blog`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
-    {
-      url: `${BASE}/capability-statement`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+
     ...SOLUTIONS.map((slug) => ({
       url: `${BASE}/solutions/${slug}`,
       lastModified: today,
       changeFrequency: 'monthly' as const,
-      priority: 0.9,
+      priority: 0.85,
     })),
+
     { url: `${BASE}/join-us`, lastModified: today, changeFrequency: 'monthly', priority: 0.5 },
     {
       url: `${BASE}/privacy`,

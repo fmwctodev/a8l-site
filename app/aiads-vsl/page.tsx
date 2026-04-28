@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI-Powered Advertising Solutions',
-  description: 'Transform your advertising with AI-powered solutions from Autom8ion Lab.',
+  description: 'AI-powered advertising solutions from Autom8ion Lab.',
   alternates: { canonical: 'https://autom8ionlab.com/aiads-vsl' },
   robots: 'noindex, nofollow',
 };
@@ -19,7 +19,7 @@ export default function Page() {
                     AI-Powered Advertising Solutions
                   </h1>
                   <p className="text-xl text-slate-300 mb-8">
-                    Transform your advertising with cutting-edge AI technology.
+                    Custom AI for advertising teams that need more than templated tools.
                   </p>
                   <Link href="/get-in-touch"
                     className="inline-block bg-gradient-to-r from-blue-600 to-sky-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-sky-600 transition-all duration-300"

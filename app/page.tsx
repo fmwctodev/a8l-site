@@ -10,21 +10,21 @@ import Pricing from './_components/Pricing';
 import CTA from './_components/CTA';
 
 export const metadata: Metadata = {
-  title: 'Custom AI, Automation & Software for Compliance Environments',
+  title: 'Custom AI, Automation & Software for Compliance-Driven Industries',
   description:
-    'Veteran-owned. Custom AI, automation, and software engineered for CMMC, NIST 800-171, HIPAA, SOC 2. Built for federal, defense, healthcare, FinServ.',
+    'Veteran-owned. Custom AI, automation, and software for construction, healthcare, finance, real estate, and US government. SDVOSB certification pending.',
   alternates: { canonical: 'https://autom8ionlab.com/' },
   openGraph: {
-    title: 'Custom AI, Automation & Software for Compliance Environments | Autom8ion Lab',
+    title: 'Custom AI, Automation & Software for Compliance-Driven Industries | Autom8ion Lab',
     description:
-      'Veteran-owned. Custom AI, automation, and software engineered for CMMC, NIST 800-171, HIPAA, SOC 2. Built for federal agencies, defense contractors, healthcare systems, and financial institutions.',
+      'Veteran-owned engineering firm building custom AI, automation, and software for construction, healthcare, finance, real estate, US federal/state/local government, and the Defense Industrial Base.',
     url: 'https://autom8ionlab.com/',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
-    title: 'Custom AI, Automation & Software for Compliance Environments | Autom8ion Lab',
+    title: 'Custom AI, Automation & Software for Compliance-Driven Industries | Autom8ion Lab',
     description:
-      'Veteran-owned. Custom AI, automation, and software engineered for CMMC, NIST 800-171, HIPAA, SOC 2. SDVOSB certification pending. UEI YY2DR3KSENH7.',
+      'Veteran-owned. Custom AI, automation, and software for construction, healthcare, finance, real estate, government, and DIB. SDVOSB pending. UEI YY2DR3KSENH7.',
   },
 };
 
@@ -65,15 +65,22 @@ const organizationSchema = {
     'FedRAMP',
     'HIPAA compliance',
     'SOC 2 Type II',
+    'FCRA',
+    'HUD compliance',
+    'PCI-DSS',
+    'FFIEC',
     'FDA 21 CFR Part 11',
     'AI agents',
     'Workflow automation',
     'Custom enterprise software',
-    'SDVOSB',
+    'Construction technology',
+    'Healthcare technology',
+    'Real estate technology',
     'Federal contracting',
+    'SDVOSB',
   ],
   description:
-    'Veteran-owned, security-first AI, automation, and software engineering firm serving federal, defense, healthcare, and financial services. SDVOSB certification pending.',
+    'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US federal/state/local government, and the Defense Industrial Base.',
   foundingDate: '2023',
   sameAs: [
     'https://www.facebook.com/autom8ionlab',
@@ -94,18 +101,19 @@ const professionalServiceSchema = {
   email: 'sean@autom8ionlab.com',
   areaServed: ['US', 'CA'],
   description:
-    'Veteran-owned, security-first AI, automation, and software engineering firm serving federal, defense, healthcare, and financial services. SDVOSB certification pending. UEI YY2DR3KSENH7. CAGE 9YCS7.',
+    'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. SDVOSB certification pending. UEI YY2DR3KSENH7. CAGE 9YCS7.',
   knowsAbout: [
-    'AI Agent Development',
-    'Custom LLM Fine-Tuning',
-    'Workflow Automation',
-    'Robotic Process Automation',
-    'API Integration',
-    'Custom Software Development',
-    'Mobile App Development',
-    'Cybersecurity and Compliance',
-    'Cloud Infrastructure Management',
-    'Data Management and Analytics',
+    'AI Agent Development for Regulated Environments',
+    'Custom LLM Systems',
+    'Workflow & Process Automation',
+    'Custom API Integrations',
+    'Custom Enterprise Software & Application Development',
+    'Cybersecurity Compliance & Engineering',
+    'Cloud Infrastructure for FedRAMP, CMMC & HIPAA Workloads',
+    'Construction technology',
+    'Healthcare technology',
+    'Real estate technology',
+    'Federal contracting',
   ],
 };
 
@@ -131,10 +139,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How is custom automation different from using tools like Zapier or Make?',
+      name: 'What industries do you work with?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'While tools like Zapier and Make are great for simple connections, they often break when your business logic gets complex. We build custom systems that understand your unique workflows, handle edge cases, and scale with your business. Instead of duct-taping tools together, you get a purpose-built solution that actually works the way your business operates.',
+        text: 'Construction, healthcare, finance, real estate and property management, US federal/state/local government, and the Defense Industrial Base. We do not take work outside those areas — the focus is what makes us useful.',
       },
     },
     {
@@ -155,10 +163,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is our data secure with AI and automation systems?',
+      name: 'Are you a CMMC RPO or C3PAO?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Enterprise-grade security with bank-level encryption, SOC 2-aligned protocols, and complete data sovereignty. We deploy on-premises or in private clouds, ensuring you maintain full control over your data while benefiting from intelligent automation. Aligned to FedRAMP, NIST 800-53, FISMA, CMMC 2.0, HIPAA, and SOC 2 environments.',
+        text: 'No. We are software and AI builders, not assessors. We engineer systems that satisfy NIST 800-171 controls and produce the documentation auditors expect, working alongside your assessor or a partner C3PAO. We can refer you to assessment partners.',
       },
     },
     {

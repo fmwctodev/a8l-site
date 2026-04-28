@@ -174,10 +174,10 @@ const features = [
                     Federal teams are stuck with software that almost works. You rely on off-the-shelf platforms that solve part of the problem while creating new security, integration, and compliance gaps. You duct-tape tools that don't talk, then wonder why mission workflows, approvals, and records management keep breaking. The traditional agency model is equally broken — months of discovery with account managers who never touch the code, then a bloated product that still doesn't fit your process.
                   </p>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    At Autom8ion Lab, we build AI-powered enterprise software and applications for US Federal, Defense Industrial Base, Healthcare, and Financial Services teams — including custom platforms, internal tools, and CRM or case management systems built for compliance-driven workflows. Our founder-led model gives you direct access to the engineers designing your system. Security architecture is defined on day one with FedRAMP, FISMA, and NIST 800-53 controls in mind, not patched in later. Veteran-owned, SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
+                    At Autom8ion Lab, we build AI-powered enterprise software and applications for construction, healthcare, finance, real estate, US federal/state/local government, and the Defense Industrial Base — including custom platforms, internal tools, mobile apps, and CRM or case management systems built for compliance-driven workflows. Our founder-led model gives you direct access to the engineers designing your system. Security architecture is defined on day one with HIPAA, SOC 2, FedRAMP, FISMA, NIST 800-53, NIST 800-171, and FCRA controls in mind, not patched in later. Veteran-owned, SDVOSB pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
                   </p>
                   <p className="text-lg text-slate-300 leading-relaxed">
-                    Federal operations are unique. Regulated operations are too. Whether you're modernizing a federal workflow, supporting a DIB environment, or replacing brittle internal systems in healthcare or financial services, we have the engineering talent and direct approach needed to get you to the finish line. Full IP ownership — you own the code. Our 30-day launch framework moves you from architecture to deployment with senior engineers, not account managers, in every stage.
+                    Federal operations are unique. Regulated commercial operations are too. Whether you're modernizing a federal workflow, supporting a DIB environment, replacing brittle internal systems in healthcare or finance, or building field apps for construction crews, we have the engineering talent and direct approach to get you to the finish line. Full IP ownership — you own the code. Most engagements ship in 8&ndash;14 weeks; CMMC-bound builds run 4&ndash;9 months; FedRAMP-aligned builds run 6+ months. Senior engineers, not account managers, in every stage.
                   </p>
                 </div>
               </div>
@@ -388,7 +388,7 @@ const features = [
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
                     <h3 className="text-xl font-semibold text-white mb-4">Industry-Specific Solutions</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Develop specialized software solutions for healthcare, finance, manufacturing, and other industries with unique regulatory requirements and operational challenges. Industry-specific solutions include compliance monitoring, specialized workflows, and integration capabilities that address sector-specific needs while maintaining security and performance standards.
+                      Develop specialized software for healthcare, finance, real estate, construction, government, and the Defense Industrial Base — industries with unique regulatory requirements and operational challenges. Industry-specific work includes HIPAA technical safeguards (healthcare), FCRA-compliant tenant systems (real estate), Procore/Sage integrations (construction), CMMC-aligned development (DIB), and Section 508 accessibility (government).
                     </p>
                   </div>
                 </div>

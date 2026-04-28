@@ -302,16 +302,16 @@ const features = [
       
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">E-Commerce Platform Cloud Migration to AWS</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">DoD Subcontractor: GCC High Migration for CMMC Posture</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Our cloud migration and deployment experts transitioned a legacy e-commerce platform from on-premises infrastructure to AWS with zero downtime during peak shopping season. We implemented scalable cloud-based application hosting with auto-scaling that handles 10x traffic spikes, reduced infrastructure costs by 45% through reserved instances and rightsizing, and deployed DevOps automation with CI/CD pipelines that reduced deployment time from 4 hours to 15 minutes. The result: 99.99% uptime and the ability to launch new features weekly instead of monthly.
+                      We migrated a DoD subcontractor from commercial Microsoft 365 to GCC High to align with CMMC 2.0 Level 2 requirements for handling Controlled Unclassified Information. Tenant configuration, conditional access policies, DLP rules, audit log centralization, and identity hardening were implemented to map directly to NIST 800-171 access control and audit families. The deliverable included a System Security Plan draft and the evidence package required for the C3PAO assessment.
                     </p>
                   </div>
-      
+
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">SaaS Company Multi-Cloud Architecture</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Healthcare: HIPAA-Aligned AWS Landing Zone</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      We designed hybrid and multi-cloud architecture across AWS and Azure for a rapidly growing SaaS company serving enterprise customers. Our cloud infrastructure management services implemented geographic redundancy across 5 regions, created disaster recovery systems with 15-minute RTO, and deployed Kubernetes clusters on EKS and AKS for consistent application deployment. DevOps automation and CI/CD solutions enabled the engineering team to deploy 50+ times per day with automated testing and rollback capabilities. The multi-cloud strategy reduced vendor lock-in concerns and enabled enterprise contract closures.
+                      We designed a HIPAA-aligned AWS landing zone for a multi-specialty healthcare group, with PHI segmentation across VPCs, audit logging through CloudTrail and CloudWatch with long-term retention, encryption at rest (KMS) and in transit (TLS 1.3) on every PHI path, and access controls integrated with the customer's existing IdP. Infrastructure as Code (Terraform) made the environment reproducible and auditable. The output included BAA-aligned documentation and the technical safeguards inventory the customer's compliance team needed for their annual HIPAA review.
                     </p>
                   </div>
       
@@ -368,7 +368,7 @@ const features = [
                     Generic managed service providers will tell you to bolt compliance on later. We don't do that. We architect your environment around NIST 800-53 from the start so your security controls, deployment patterns, and operational procedures line up with FedRAMP and FISMA expectations. Effective cloud infrastructure for US Federal, DIB, healthcare, and financial services organizations is about more than just hosting — it's about building a defensible system boundary, enforcing least privilege, centralizing audit logs, and making every major control family visible in the architecture.
                   </p>
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                    Our 30-day launch framework moves you from commercial cloud chaos to a FedRAMP-ready foundation: boundary review and control mapping in week one, secure architecture design and landing zone build in week two, workload migration with controlled delivery pipelines in week three, monitoring and operational handover in week four. We use Infrastructure as Code (Terraform, Pulumi) so your environment is reproducible, version-controlled, and auditable. By the end of the month, you have centralized dashboards, alerting, log retention, and evidence-producing workflows aligned to NIST 800-53, FedRAMP, and FISMA continuous monitoring expectations.
+                    Engagements move from commercial cloud to a FedRAMP-ready foundation in four phases: boundary review and control mapping, secure architecture design and landing zone build, workload migration with controlled delivery pipelines, then monitoring and operational handover. Most builds run 8&ndash;14 weeks; FedRAMP-aligned builds run 6+ months. We use Infrastructure as Code (Terraform, Pulumi) so your environment is reproducible, version-controlled, and auditable. The output: centralized dashboards, alerting, log retention, and evidence-producing workflows aligned to NIST 800-53, FedRAMP, and FISMA continuous monitoring expectations.
                   </p>
                   <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
                     <p className="text-cyan-400 font-semibold mb-4 text-xl">Schedule Your Cloud Infrastructure Assessment</p>

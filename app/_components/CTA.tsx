@@ -54,21 +54,22 @@ const CTA = () => {
           </Link>
         </div>
 
-        {/* Trust Indicators */}
+        {/* Trust Indicators — federal registrations and trust signals only.
+            No fabricated stats per LOCKED v3 voice guide. */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-slate-800/30 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">30 Days</div>
-            <div className="text-slate-300">Average Launch Time</div>
+            <div className="text-2xl font-bold text-cyan-400 mb-2">Veteran-Owned</div>
+            <div className="text-slate-300">SDVOSB certification pending</div>
           </div>
-          
+
           <div className="bg-slate-800/30 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50">
-            <div className="text-3xl font-bold text-blue-400 mb-2">10x ROI</div>
-            <div className="text-slate-300">Typical Efficiency Gains</div>
+            <div className="text-2xl font-bold text-blue-400 mb-2 font-mono">UEI YY2DR3KSENH7</div>
+            <div className="text-slate-300">Registered US federal contractor</div>
           </div>
-          
+
           <div className="bg-slate-800/30 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50">
-            <div className="text-3xl font-bold text-amber-400 mb-2">24/7</div>
-            <div className="text-slate-300">Automated Operations</div>
+            <div className="text-2xl font-bold text-amber-400 mb-2">8–14 weeks</div>
+            <div className="text-slate-300">Most engagements ship in this range</div>
           </div>
         </div>
       </div>

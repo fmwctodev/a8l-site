@@ -300,16 +300,16 @@ const features = [
       
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">E-commerce & Retail: Shopping & Support Automation</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Construction: RFI &amp; Submittal AI Agents</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Deploy intelligent shopping assistants that help customers find products, answer detailed questions about specifications and availability, process orders, and handle returns. Our AI chatbot and virtual agent development provides personalized product recommendations based on browsing history, handles complex sizing questions, and guides customers through the entire purchase journey while reducing cart abandonment rates and increasing average order values through intelligent automation.
+                      Deploy AI agents that triage RFIs and submittals, route them to the right reviewer, and draft suggested responses grounded in the project plans, specs, and prior responses. Integrated with Procore, PlanGrid, and Buildertrend, the agents reduce coordinator overhead while keeping a human in the loop for every reply. All actions are logged for downstream document retention and audit.
                     </p>
                   </div>
-      
+
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">SaaS & Technology: Technical Support & Onboarding</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Defense Industrial Base: CUI Document Triage</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Create sophisticated technical support agents that troubleshoot software issues, guide users through complex features, and provide detailed implementation assistance. Our custom AI automation solutions understand technical terminology, access documentation and knowledge bases, and provide step-by-step guidance for software configuration. Integration with your existing <Link href="/solutions/workflow-automation" className="text-cyan-400 hover:text-cyan-300 underline">workflow automation</Link> systems ensures seamless escalation to human specialists when needed.
+                      Build AI agents that classify and triage documents inside CUI environments — DoD reporting submissions, technical specifications, contract correspondence — with full DFARS 252.204-7012 alignment. Deployed inside GCC High or FedRAMP-authorized environments using local LLMs or private-cloud-hosted commercial models. No external data transfer; all activity logged to NIST 800-171 audit families. Integration with your existing <Link href="/solutions/workflow-automation" className="text-cyan-400 hover:text-cyan-300 underline">workflow automation</Link> ensures escalation to human reviewers where required.
                     </p>
                   </div>
       
@@ -368,7 +368,7 @@ const features = [
                     The market is flooded with AI vendors selling demos dressed up as products. We are engineers who build production systems for US Federal, DIB, healthcare, and financial services operations. We don't do generic bots — we build controlled systems engineered around your workflows, access model, and documentation requirements. Built for federal and regulated environments: on-premises, private cloud, and FedRAMP deployment requirements instead of forcing you into a public SaaS box. Aligned to federal security expectations with traceability, repeatability, and operational discipline supporting FedRAMP, FISMA, and NIST 800-53 driven workflows.
                   </p>
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                    Founder-led with senior engineer access — you work directly with experienced builders, not a layer of coordinators. We are SDVOSB Pending, actively pursuing Service-Disabled Veteran-Owned Small Business status for the federal market. Federal identifiers ready: UEI: YY2DR3KSENH7, CAGE: 9YCS7. Our 30-day launch framework moves you from a broken workflow to a deployed AI agent and automation layer: audit and architecture in week one, custom development in week two, integration and grounding in week three, testing and deployment into your approved environment (on-premises, private cloud, or FedRAMP-aligned infrastructure) in week four.
+                    Founder-led with senior engineer access — you work directly with experienced builders, not a layer of coordinators. We are SDVOSB pending, registered as a US federal contractor (UEI: YY2DR3KSENH7, CAGE: 9YCS7, DUNS: 05-289-2750). Engagements run audit and architecture, then custom development, then integration and grounding, then testing and deployment into your approved environment (on-premises, private cloud, GCC High, or FedRAMP-aligned infrastructure). Most ship in 8&ndash;14 weeks; CMMC-bound builds run 4&ndash;9 months; FedRAMP-aligned builds run 6+ months.
                   </p>
                   <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
                     <h3 className="text-2xl font-bold text-white mb-4">

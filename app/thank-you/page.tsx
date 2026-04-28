@@ -65,7 +65,7 @@ export default function Page() {
                       <CheckCircle className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-4">Review Our Services</h3>
-                    <p className="text-slate-400 leading-relaxed">Take a look at our comprehensive service offerings and see how we can transform your business operations.</p>
+                    <p className="text-slate-400 leading-relaxed">Browse our solution and industry pages to see what we build for compliance-driven environments.</p>
                   </div>
       
                   <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-green-500/30 transition-all duration-300">

@@ -127,7 +127,7 @@ const features = [
     "Train large language models on proprietary datasets including industry documentation, customer interactions, and specialized knowledge bases to achieve domain expertise that generic AI cannot match",
     "Implement custom guardrails and safety protocols that enforce industry regulations, ethical guidelines, and operational constraints through real-time content filtering and response validation",
     "Deploy on-premises or private cloud infrastructure with complete data sovereignty guarantees, ensuring sensitive business information never leaves your controlled environment",
-    "Achieve 3-5x improvement in response accuracy for domain-specific queries through specialized training methodologies and continuous optimization based on real-world usage patterns",
+    "Improved response accuracy on your specific domain — measured against your existing baseline during scoping — through fine-tuning on approved corpora and continuous evaluation",
     "Integrate seamlessly with existing business systems including CRMs, ERPs, analytics platforms, and communication tools through secure API endpoints and custom middleware",
     "Maintain complete control over model behavior, training data, and deployment infrastructure with transparent fine-tuning processes and explainable AI capabilities",
     "Scale AI capabilities across departments and use cases with flexible deployment options that support varying performance requirements and user access patterns",
@@ -135,22 +135,25 @@ const features = [
     "Benefit from continuous model improvements and updates based on your specific business needs, user feedback, and evolving industry requirements without vendor lock-in"
   ];
 
+  // Industries served per LOCKED v3 — six total. Out-of-positioning categories
+  // (Legal & Professional Services, Technology & Software Development) removed
+  // per the LOCKED v3 copy optimization plan.
   const industries = [
     {
-      name: "Financial Services & Banking",
-      description: "Custom LLM system development for financial institutions requiring deep understanding of investment strategies, regulatory compliance, risk assessment, and market analysis. Models trained on financial terminology, accounting standards, and regulatory frameworks provide intelligent advisory services while maintaining strict compliance with SEC, FINRA, and banking regulations. Natural language processing solutions handle complex financial calculations, portfolio optimization, and fraud detection with enterprise-grade security."
+      name: "Defense Industrial Base",
+      description: "Custom LLM systems deployable in CUI environments for DoD primes and subcontractors handling Federal Contract Information or Controlled Unclassified Information. RAG systems, document classification, and AI-assisted SSP authoring built to stay inside CMMC 2.0 boundaries. We deploy on-premises, in GCC High, or in FedRAMP-authorized environments — no external data transfer, full audit logging, and the documentation your assessor will need."
+    },
+    {
+      name: "US Federal, State & Local Government",
+      description: "Custom LLM systems for civilian agencies, state government, and municipal IT processing case files, citizen requests, licensing backlogs, or records management workloads. Built for FedRAMP Moderate and StateRAMP authorized environments. We integrate with existing case management systems and produce the System Security Plan, control narratives, and Section 508 accessibility documentation required for federal-facing applications."
     },
     {
       name: "Healthcare & Life Sciences",
-      description: "AI model fine-tuning services for healthcare organizations developing clinical decision support, medical research assistance, and patient communication systems. Custom LLMs trained on medical literature, clinical guidelines, and treatment protocols understand complex medical terminology while maintaining HIPAA compliance and patient data privacy. Generative AI development services support drug discovery, clinical trial optimization, and personalized treatment planning with validated accuracy."
+      description: "HIPAA-aligned LLM systems for health systems, payers, and life sciences companies. Trained or fine-tuned on de-identified data, deployed inside the customer's PHI boundary, with audit logging that maps to HIPAA Security Rule access controls. Use cases include clinical documentation drafting, prior authorization workflows, claims processing, and operations automation that does not violate PHI handling. We sign BAAs."
     },
     {
-      name: "Legal & Professional Services",
-      description: "Large language model customization for law firms and legal departments requiring contract analysis, case law research, and regulatory compliance monitoring. Custom LLMs understand jurisdiction-specific legal frameworks, precedent analysis, and complex legal terminology while maintaining attorney-client privilege. Natural language processing solutions automate document review, legal research, and compliance tracking with audit-ready accuracy and comprehensive security protocols."
-    },
-    {
-      name: "Technology & Software Development",
-      description: "Generative AI development services for technology companies creating code generation tools, technical documentation assistants, and development workflow optimization. Custom LLMs trained on programming languages, software architectures, and development best practices provide intelligent code completion, bug detection, and automated testing capabilities. AI model fine-tuning services support DevOps automation, API documentation, and technical support with language-specific expertise."
+      name: "Finance",
+      description: "Custom LLM systems for community banks, credit unions, fintech, and insurance carriers operating under SOC 2 Type II, PCI-DSS, NYDFS Part 500, GLBA, and FFIEC scrutiny. Deployed on-premises or in private cloud, integrated with core banking (Fiserv, Jack Henry, FIS) or core insurance (Guidewire, Duck Creek) systems. AI tools designed deliberately to stay on the right side of SR 11-7 model risk requirements."
     }
   ];
 
@@ -440,7 +443,7 @@ const features = [
                     Generic AI providers offer access to pre-trained models but lack the infrastructure expertise for custom development. In-house AI teams face challenges with data pipeline complexity, training infrastructure costs, and deployment security. Autom8ion Lab combines innovative technical authority with practical implementation experience—we handle complete custom LLM system development from data preparation through secure deployment. Our team of AI researchers and ML engineers partners with your domain experts to ensure every model reflects your organization's unique intelligence.
                   </p>
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                    We deliver end-to-end generative AI development services that transform business requirements into production-ready AI systems. Technical founders and enterprise innovation teams choose Autom8ion Lab for credibility handling complex AI infrastructure, strategic guidance through model selection and optimization, and complete ownership of trained models and proprietary data. Our clients achieve 3-5x accuracy improvements over generic models while maintaining enterprise-grade security and regulatory compliance. With transparent pricing, predictable timelines, and measurable ROI, our AI model fine-tuning services deliver immediate value and long-term competitive advantage.
+                    We deliver custom LLM systems for environments where data residency, audit, and security matter — on-premises, GCC High, FedRAMP-authorized, and HIPAA-aligned deployments. Federal contractors, DoD subs, healthcare entities, and regulated financial firms choose Autom8ion Lab because we engineer the controls and document them: model lineage, training data provenance, evaluation evidence, audit logging that maps to NIST 800-171 and HIPAA Security Rule controls. Engagements scoped to your contract structure (task order, IDIQ, fixed-price, or T&amp;M); quotes provided after a discovery call.
                   </p>
                   <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
                     <h3 className="text-2xl font-bold text-white mb-4">
