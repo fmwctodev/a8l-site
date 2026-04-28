@@ -74,24 +74,36 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-6">
               <img
                 src="/logo/logo.png"
-                alt="Autom8tion Lab Logo"
+                alt="Autom8ion Lab Logo"
                 className="w-10 h-10 object-contain"
               />
-              <span className="text-2xl font-bold text-white">Autom8tion Lab</span>
+              <span className="text-2xl font-bold text-white">Autom8ion Lab</span>
             </div>
             
+            <p className="text-cyan-300 text-sm font-medium mb-2">
+              Veteran-Owned · SDVOSB Certification Pending
+            </p>
+            <p className="text-slate-400 text-sm mb-6">
+              Registered Federal Contractor · UEI:{' '}
+              <span className="font-mono">YY2DR3KSENH7</span> · CAGE:{' '}
+              <span className="font-mono">9YCS7</span>
+            </p>
+
             <p className="text-slate-400 mb-8 leading-relaxed max-w-md">
-              Elite provider of custom-built AI and automation solutions. We engineer bespoke systems that transform businesses from the ground up, no templates, just results.
+              A veteran-owned engineering team building custom AI, automation, and software for federal agencies, defense contractors, healthcare systems, and financial institutions — with security architecture and compliance documentation built in from day one.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-slate-400">
                 <Mail className="w-5 h-5 text-cyan-400" />
-                <a href="mailto:info@autom8ionlab.com" className="hover:text-cyan-400 transition-colors">info@autom8ionlab.com</a>
+                <a href="mailto:sean@autom8ionlab.com" className="hover:text-cyan-400 transition-colors">sean@autom8ionlab.com</a>
               </div>
               <div className="flex items-center space-x-3 text-slate-400">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <a href="tel:+18555086062" className="hover:text-cyan-400 transition-colors">+1 855-508-6062</a>
+              </div>
+              <div className="text-slate-400 text-sm pl-8">
+                Plant City, FL · Montreal, QC
               </div>
               <div className="flex items-center space-x-4 pt-2">
                 <a href="https://www.facebook.com/autom8ionlab" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
@@ -122,34 +134,29 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="col-span-2 grid grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-white font-semibold mb-6">AI & Automation</h3>
-              <div className="space-y-3">
-                <Link to="/solutions/ai-agent-development" className="block text-slate-400 hover:text-cyan-400 transition-colors">AI Agent Development</Link>
-                <Link to="/solutions/workflow-automation" className="block text-slate-400 hover:text-cyan-400 transition-colors">Workflow Automation</Link>
-                <Link to="/solutions/process-automation" className="block text-slate-400 hover:text-cyan-400 transition-colors">Process Automation</Link>
-                <Link to="/solutions/custom-llm-systems" className="block text-slate-400 hover:text-cyan-400 transition-colors">Custom LLM Systems</Link>
-              </div>
+          {/* Solutions */}
+          <div>
+            <h3 className="text-white font-semibold mb-6">Solutions</h3>
+            <div className="space-y-3">
+              <Link to="/solutions/software-development" className="block text-slate-400 hover:text-cyan-400 transition-colors">AI-Powered Software & Apps</Link>
+              <Link to="/solutions/workflow-automation" className="block text-slate-400 hover:text-cyan-400 transition-colors">Workflow Automation</Link>
+              <Link to="/solutions/cybersecurity" className="block text-slate-400 hover:text-cyan-400 transition-colors">Cybersecurity Compliance</Link>
+              <Link to="/solutions/ai-agent-development" className="block text-slate-400 hover:text-cyan-400 transition-colors">AI Agents</Link>
+              <Link to="/solutions/custom-llm-systems" className="block text-slate-400 hover:text-cyan-400 transition-colors">Custom LLM Systems</Link>
+              <Link to="/solutions/cloud-systems" className="block text-slate-400 hover:text-cyan-400 transition-colors">FedRAMP Cloud</Link>
+              <Link to="/solutions/api-integrations" className="block text-slate-400 hover:text-cyan-400 transition-colors">API Integrations</Link>
             </div>
+          </div>
 
-            <div>
-              <h3 className="text-white font-semibold mb-6">Development Services</h3>
-              <div className="space-y-3">
-                <Link to="/solutions/software-development" className="block text-slate-400 hover:text-cyan-400 transition-colors">Software Development</Link>
-                <Link to="/solutions/mobile-app-development" className="block text-slate-400 hover:text-cyan-400 transition-colors">Mobile App Development</Link>
-                <Link to="/solutions/api-integrations" className="block text-slate-400 hover:text-cyan-400 transition-colors">API Integrations</Link>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-6">Infrastructure & Security</h3>
-              <div className="space-y-3">
-                <Link to="/solutions/cybersecurity" className="block text-slate-400 hover:text-cyan-400 transition-colors">Cybersecurity & Compliance</Link>
-                <Link to="/solutions/cloud-systems" className="block text-slate-400 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link>
-                <Link to="/solutions/data-management" className="block text-slate-400 hover:text-cyan-400 transition-colors">Data Management & Analytics</Link>
-              </div>
+          {/* Industries */}
+          <div>
+            <h3 className="text-white font-semibold mb-6">Industries</h3>
+            <div className="space-y-3">
+              <span className="block text-slate-500">Government (federal/state/local)</span>
+              <span className="block text-slate-500">Defense Industrial Base</span>
+              <span className="block text-slate-500">Healthcare &amp; Life Sciences</span>
+              <span className="block text-slate-500">Financial Services</span>
+              <p className="text-slate-500 text-xs pt-2 italic">Industry pages coming soon.</p>
             </div>
           </div>
 
@@ -157,11 +164,12 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-6">Company</h3>
             <div className="space-y-3">
+              <Link to="/capability-statement" className="block text-slate-400 hover:text-cyan-400 transition-colors">Capability Statement</Link>
+              <Link to="/blog" className="block text-slate-400 hover:text-cyan-400 transition-colors">Blog</Link>
               <Link to="/#about" className="block text-slate-400 hover:text-cyan-400 transition-colors" onClick={() => window.location.pathname !== '/' && (window.location.href = '/#about')}>About</Link>
               <Link to="/#process" className="block text-slate-400 hover:text-cyan-400 transition-colors" onClick={() => window.location.pathname !== '/' && (window.location.href = '/#process')}>Our Process</Link>
-              <Link to="/blog" className="block text-slate-400 hover:text-cyan-400 transition-colors">Blog</Link>
               <Link to="/join-us" className="block text-slate-400 hover:text-cyan-400 transition-colors">Careers</Link>
-              <Link to="/get-in-touch" className="block text-slate-400 hover:text-cyan-400 transition-colors">Contact</Link>
+              <Link to="/schedule-consultation" className="block text-slate-400 hover:text-cyan-400 transition-colors">Schedule a Briefing</Link>
               <a
                 href="https://os.autom8ionlab.com/client-portal"
                 target="_blank"
@@ -176,8 +184,8 @@ const Footer = () => {
 
         <div className="border-t border-slate-800 pt-12 mt-12 relative z-50">
           <div className="max-w-2xl">
-            <h3 className="text-white font-semibold mb-4">Request Our Capabilities Statement</h3>
-            <p className="text-slate-400 mb-6">Unlock our full expertise. Request our detailed capabilities statement to see how we transform businesses.</p>
+            <h3 className="text-white font-semibold mb-4">Request our capability statement</h3>
+            <p className="text-slate-400 mb-6">Looking to add Autom8ion Lab to your vendor list, qualified vendor pool, or prime/sub team? Enter your details and we'll send the latest version of our capability statement directly to your inbox.</p>
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 relative z-50">
               <p className="text-slate-300 mb-4">Enter your details to receive our capabilities statement:</p>
               {submitError && (
@@ -236,7 +244,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
           <div className="text-slate-400 text-sm mb-4 md:mb-0">
-            © 2025 Autom8tion Lab. All rights reserved.
+            © 2026 Sitehues Media Inc. (DBA Autom8ion Lab). All rights reserved.
           </div>
           
           <div className="flex items-center space-x-6">

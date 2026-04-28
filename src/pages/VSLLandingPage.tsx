@@ -9,8 +9,8 @@ const VSLLandingPage = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>AI-Powered Advertising Solutions | Autom8tion Lab</title>
-        <meta name="description" content="Transform your advertising with AI-powered solutions from Autom8tion Lab." />
+        <title>AI-Powered Advertising Solutions | Autom8ion Lab</title>
+        <meta name="description" content="Transform your advertising with AI-powered solutions from Autom8ion Lab." />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href={getCanonicalUrl('/aiads-vsl')} />
       </Helmet>

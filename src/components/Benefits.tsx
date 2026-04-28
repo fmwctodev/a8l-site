@@ -46,7 +46,7 @@ const Benefits = () => {
           <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Why Teams Choose
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Autom8tion Lab</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Autom8ion Lab</span>
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold text-slate-300 mb-6">
             Speed, Security, and Real Results

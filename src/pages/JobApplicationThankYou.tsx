@@ -10,7 +10,7 @@ const JobApplicationThankYou = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Application Received | Autom8tion Lab Careers</title>
+        <title>Application Received | Autom8ion Lab Careers</title>
         <meta name="description" content="Thank you for your job application. We're reviewing your resume and a team member will contact you shortly about next steps." />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href={getCanonicalUrl('/application-received')} />

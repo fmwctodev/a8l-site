@@ -10,7 +10,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="mb-6">
-              <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">About Autom8tion Lab</span>
+              <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">About Autom8ion Lab</span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
                 From Marketing to Machine Learning,
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> We Evolved With What Businesses Need</span>
@@ -19,7 +19,7 @@ const About = () => {
 
             <h3 className="text-2xl font-bold text-white mb-6">We Build Systems, Not Templates</h3>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Autom8tion Lab started as Sitehues Media, a creative agency building marketing systems that got results. When AI, cloud tech, and cybersecurity became critical for business survival, we shifted with it. Today we're an engineering team that builds custom automation, secure cloud systems, and enterprise security for founders and ops teams who need things done right.
+              Autom8ion Lab started as Sitehues Media, a creative agency building marketing systems that got results. When AI, cloud tech, and cybersecurity became critical for business survival, we shifted with it. Today we're an engineering team that builds custom automation, secure cloud systems, and enterprise security for founders and ops teams who need things done right.
             </p>
 
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">

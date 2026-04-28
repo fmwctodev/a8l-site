@@ -37,13 +37,13 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Contact Autom8tion Lab | Get a Custom Project Quote</title>
-        <meta name="description" content="Ready to transform your business with custom AI and automation? Get in touch with Autom8tion Lab to discuss your project and receive a free consultation." />
+        <title>Contact Autom8ion Lab | Get a Custom Project Quote</title>
+        <meta name="description" content="Ready to transform your business with custom AI and automation? Get in touch with Autom8ion Lab to discuss your project and receive a free consultation." />
         <meta name="keywords" content="contact AI company, custom project quote, AI solutions contact, automation consultation, business inquiry, AI development quote, custom automation contact, project discussion" />
         <link rel="canonical" href={getCanonicalUrl('/get-in-touch')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Contact Autom8tion Lab | Get a Custom Project Quote" />
-        <meta property="og:description" content="Ready to transform your business with custom AI and automation? Get in touch with Autom8tion Lab to discuss your project and receive a free consultation." />
+        <meta property="og:title" content="Contact Autom8ion Lab | Get a Custom Project Quote" />
+        <meta property="og:description" content="Ready to transform your business with custom AI and automation? Get in touch with Autom8ion Lab to discuss your project and receive a free consultation." />
         <meta property="og:url" content="https://autom8ionlab.com/get-in-touch" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -51,20 +51,20 @@ const Contact = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="Contact Autom8tion Lab | Get a Custom Project Quote" />
-        <meta name="twitter:description" content="Ready to transform your business with custom AI and automation? Get in touch with Autom8tion Lab to discuss your project and receive a free consultation." />
+        <meta name="twitter:title" content="Contact Autom8ion Lab | Get a Custom Project Quote" />
+        <meta name="twitter:description" content="Ready to transform your business with custom AI and automation? Get in touch with Autom8ion Lab to discuss your project and receive a free consultation." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
         <script type="application/ld+json">
           {buildJsonLd({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "name": "Contact Autom8tion Lab",
+            "name": "Contact Autom8ion Lab",
             "url": "https://autom8ionlab.com/get-in-touch",
-            "description": "Contact Autom8tion Lab for custom AI and automation solutions.",
+            "description": "Contact Autom8ion Lab for custom AI and automation solutions.",
             "mainEntity": {
               "@type": "Organization",
-              "name": "Autom8tion Lab",
+              "name": "Autom8ion Lab",
               "url": "https://autom8ionlab.com",
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -101,7 +101,7 @@ const Contact = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <img
             src="/logo/logo.png"
-            alt="Autom8tion Lab Logo"
+            alt="Autom8ion Lab Logo"
             className="w-20 h-20 object-contain mx-auto mb-8"
           />
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">

@@ -42,12 +42,12 @@ const Cybersecurity = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Cybersecurity & Compliance — FedRAMP, NIST 800-53, CMMC 2.0, HIPAA, SOC 2 | Autom8tion Lab</title>
+        <title>Cybersecurity & Compliance — FedRAMP, NIST 800-53, CMMC 2.0, HIPAA, SOC 2 | Autom8ion Lab</title>
         <meta name="description" content="Engineering-led cybersecurity and compliance for US Federal, DIB, healthcare, and financial services. FedRAMP, FISMA, NIST 800-53, CMMC 2.0 readiness, HIPAA safeguards, and SOC 2 prep — controls built and documented for audit. SDVOSB Pending." />
         <meta name="keywords" content="FedRAMP compliance, NIST 800-53 implementation, CMMC 2.0 readiness, FISMA compliance, HIPAA safeguards, SOC 2 prep, SSP POA&M, C3PAO assessment prep, defense industrial base cybersecurity, SDVOSB cybersecurity" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/cybersecurity')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Cybersecurity & Compliance — FedRAMP, NIST 800-53, CMMC 2.0, HIPAA, SOC 2 | Autom8tion Lab" />
+        <meta property="og:title" content="Cybersecurity & Compliance — FedRAMP, NIST 800-53, CMMC 2.0, HIPAA, SOC 2 | Autom8ion Lab" />
         <meta property="og:description" content="Engineering-led compliance for federal, DIB, healthcare, and financial services. We engineer compliant systems and document them for audit. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/cybersecurity" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -67,7 +67,7 @@ const Cybersecurity = () => {
             "serviceType": "Cybersecurity & Compliance Consulting",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Comprehensive cybersecurity compliance consulting with data protection audits, penetration testing, risk assessments, and IT governance frameworks aligned with NIST, CIS, HIPAA, and ISO 27001 standards.",
             "areaServed": {
@@ -144,8 +144,8 @@ const Cybersecurity = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Cybersecurity & Compliance — Engineered, Not Outsourced
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> for Modern Businesses</span>
+              Cybersecurity Compliance &
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Engineering</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -173,7 +173,7 @@ const Cybersecurity = () => {
               Security is not a checkbox. In 2026, it is the foundation of your entire operation. If you handle CUI, federal data, PHI, or sensitive customer data, your "good enough" security stack is already a liability. FedRAMP, FISMA, NIST 800-53, CMMC 2.0 readiness, HIPAA safeguards, and SOC 2 prep are now operational requirements, not optional projects. Most firms approach compliance by duct-taping generic tools together and scrambling before an audit. That fails because auditors do not certify intentions — they verify controls, evidence, and documentation.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              At Autom8tion Lab, we don't hand you a checklist and disappear. We engineer compliant systems and document them for audit so your environment matches what your policies say. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7. We support teams operating in US Federal, the Defense Industrial Base, Healthcare, and Financial Services — where security requirements directly impact contracts, approvals, and revenue. Most remediation projects take 4 to 9 months because the real work is fixing identity, access, logging, endpoint controls, encryption, vendor risk, and documentation at the same time. We handle both sides.
+              At Autom8ion Lab, we don't hand you a checklist and disappear. We engineer compliant systems and document them for audit so your environment matches what your policies say. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7. We support teams operating in US Federal, the Defense Industrial Base, Healthcare, and Financial Services — where security requirements directly impact contracts, approvals, and revenue. Most remediation projects take 4 to 9 months because the real work is fixing identity, access, logging, endpoint controls, encryption, vendor risk, and documentation at the same time. We handle both sides.
             </p>
           </div>
         </div>
@@ -345,7 +345,7 @@ const Cybersecurity = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Secure and Compliant With
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Autom8tion Lab</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Autom8ion Lab</span>
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Our cybersecurity compliance consulting provides comprehensive protection aligned with NIST, CIS, HIPAA, and ISO 27001 standards. Protect, comply, and scale securely.
@@ -370,10 +370,10 @@ const Cybersecurity = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Why Choose Autom8tion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Cybersecurity Compliance Consulting</span>
+              Why Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Cybersecurity Compliance Consulting</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Unlike generic security consultants who implement template-based solutions, Autom8tion Lab delivers cybersecurity compliance consulting tailored to your specific threat landscape, regulatory requirements, and business objectives. Our security engineers combine technical expertise with deep knowledge of NIST, CIS, HIPAA, ISO 27001, and industry-specific compliance mandates. We work closely with IT managers, compliance officers, and business owners to ensure every security control provides robust protection while maintaining operational efficiency.
+              Unlike generic security consultants who implement template-based solutions, Autom8ion Lab delivers cybersecurity compliance consulting tailored to your specific threat landscape, regulatory requirements, and business objectives. Our security engineers combine technical expertise with deep knowledge of NIST, CIS, HIPAA, ISO 27001, and industry-specific compliance mandates. We work closely with IT managers, compliance officers, and business owners to ensure every security control provides robust protection while maintaining operational efficiency.
             </p>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
               We don't just check compliance boxes—we build sustainable security programs that protect critical assets and demonstrate compliance to auditors, customers, and stakeholders. Our clients benefit from data protection and compliance audits, penetration testing and monitoring, network security and risk assessment, and IT governance frameworks that reduce risk while enabling business growth. With proactive protection, real-time monitoring, and expert incident response, we help you protect, comply, and scale securely.
@@ -381,7 +381,7 @@ const Cybersecurity = () => {
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <p className="text-cyan-400 font-semibold mb-4 text-xl">Book Your Security Assessment Today</p>
               <p className="text-slate-300 mb-6">
-                Join IT managers, compliance officers, and business owners who trust Autom8tion Lab for cybersecurity compliance consulting. Schedule a consultation to discuss your security challenges, explore our penetration testing services, and discover how our data protection audits can strengthen your compliance posture.
+                Join IT managers, compliance officers, and business owners who trust Autom8ion Lab for cybersecurity compliance consulting. Schedule a consultation to discuss your security challenges, explore our penetration testing services, and discover how our data protection audits can strengthen your compliance posture.
               </p>
               <Link to="/get-in-touch" className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
                 Schedule Your Cybersecurity Consultation

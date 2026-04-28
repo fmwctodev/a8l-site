@@ -42,12 +42,12 @@ const MobileAppDevelopment = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Mobile App Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <title>Mobile App Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab</title>
         <meta name="description" content="Custom iOS and Android apps built for federal-first security. FedRAMP-aware architecture, NIST 800-53 control alignment, FISMA-ready foundations. Role-based access, audit logging, offline capability. SDVOSB Pending. Live in 30 days." />
         <meta name="keywords" content="federal mobile app development, FedRAMP mobile, NIST 800-53 mobile, FISMA mobile, DIB mobile app, secure iOS Android development, React Native federal, SDVOSB mobile app, audit logging mobile, healthcare mobile app" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/mobile-app-development')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Mobile App Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:title" content="Mobile App Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta property="og:description" content="Custom iOS and Android apps built for federal-first security. FedRAMP-aware, NIST 800-53 aligned, FISMA-ready. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/mobile-app-development" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -67,7 +67,7 @@ const MobileAppDevelopment = () => {
             "serviceType": "Mobile Application Development",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Leading mobile app development agency delivering native iOS and Android applications plus cross-platform solutions using React Native and Flutter. Complete app design, development, and deployment services.",
             "operatingSystem": ["iOS", "Android"],
@@ -184,13 +184,13 @@ const MobileAppDevelopment = () => {
               End-to-End Mobile App Development Services
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Most business apps are garbage. They are slow, clunky, and feel like a website shoved into a mobile container. The traditional development cycle takes six to twelve months — by which time your business needs have shifted. At Autom8tion Lab, we don't do "slow." We build high-performance, custom iOS and Android apps for business automation that launch in as little as 30 days. We're not just writing code; we're building the remote control for your entire operation.
+              Most business apps are garbage. They are slow, clunky, and feel like a website shoved into a mobile container. The traditional development cycle takes six to twelve months — by which time your business needs have shifted. At Autom8ion Lab, we don't do "slow." We build high-performance, custom iOS and Android apps for business automation that launch in as little as 30 days. We're not just writing code; we're building the remote control for your entire operation.
             </p>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               Mobile is no longer just for checking email. In 2026, your mobile app is part of your compliance boundary. We build custom iOS and Android applications engineered for environments where security, auditability, and system integrity are not optional. Whether you need a secure field operations app that syncs with your workflow automation in real time or a controlled internal portal connected to your AI agents, we deliver mobile systems built for operational use, internal approval, and security-first deployment. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Faster builds. Better performance. Higher engagement. Our clients report 40% faster time-to-market, 99.9% app uptime, and user retention rates that exceed industry averages by 2-3x. When you need a mobile app development agency that delivers results, not just code, partner with Autom8tion Lab.
+              Faster builds. Better performance. Higher engagement. Our clients report 40% faster time-to-market, 99.9% app uptime, and user retention rates that exceed industry averages by 2-3x. When you need a mobile app development agency that delivers results, not just code, partner with Autom8ion Lab.
             </p>
           </div>
         </div>
@@ -446,16 +446,16 @@ const MobileAppDevelopment = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Why Businesses Choose Autom8tion Lab for App Development
+              Why Businesses Choose Autom8ion Lab for App Development
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Choosing the right mobile app development agency determines whether your app succeeds or stalls. Autom8tion Lab differentiates through transparent communication, collaborative workflows, and unwavering reliability. We assign dedicated project managers and senior iOS and Android app developers who become true partners in your success — not just contractors completing tickets.
+              Choosing the right mobile app development agency determines whether your app succeeds or stalls. Autom8ion Lab differentiates through transparent communication, collaborative workflows, and unwavering reliability. We assign dedicated project managers and senior iOS and Android app developers who become true partners in your success — not just contractors completing tickets.
             </p>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               Our track record speaks for itself: 40% faster launches, 99.9% uptime, 4.5+ star App Store ratings, and post-launch support that keeps apps optimized for new OS versions and evolving business needs. We don't disappear after launch — we provide ongoing maintenance, performance monitoring, and feature enhancements that keep your mobile app competitive for years.
             </p>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              Whether you're building consumer apps, enterprise mobility solutions, or industry-specific platforms, we bring the technical expertise and business insight that transforms good ideas into exceptional mobile experiences. When you need a mobile app development agency that delivers measurable results, choose Autom8tion Lab.
+              Whether you're building consumer apps, enterprise mobility solutions, or industry-specific platforms, we bring the technical expertise and business insight that transforms good ideas into exceptional mobile experiences. When you need a mobile app development agency that delivers measurable results, choose Autom8ion Lab.
             </p>
           </div>
         </div>
@@ -476,7 +476,7 @@ const MobileAppDevelopment = () => {
                 Start Your Mobile App Journey Today
               </h3>
               <p className="text-slate-300 mb-6">
-                Whether you're launching a startup MVP, modernizing an existing app, or building enterprise mobility solutions, Autom8tion Lab delivers cross-platform mobile app solutions and native app development services that exceed expectations. Our iOS and Android app developers are ready to bring your vision to life.
+                Whether you're launching a startup MVP, modernizing an existing app, or building enterprise mobility solutions, Autom8ion Lab delivers cross-platform mobile app solutions and native app development services that exceed expectations. Our iOS and Android app developers are ready to bring your vision to life.
               </p>
               <Link to="/get-in-touch" className="inline-block bg-gradient-to-r from-rose-600 to-pink-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-rose-700 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
                 Get Your Free Consultation

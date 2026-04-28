@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Page Not Found | Autom8tion Lab</title>
+        <title>Page Not Found | Autom8ion Lab</title>
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href={getCanonicalUrl('/404')} />
       </Helmet>

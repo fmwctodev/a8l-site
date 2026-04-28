@@ -11,18 +11,18 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Privacy Policy | Autom8tion Lab</title>
-        <meta name="description" content="Your privacy is fundamental to our business. Learn how Autom8tion Lab collects, uses, and protects your information with enterprise-grade security measures." />
-        <meta name="keywords" content="privacy policy, data protection, data security, information privacy, Autom8tion Lab privacy, GDPR compliance, data handling, privacy rights" />
+        <title>Privacy Policy | Autom8ion Lab</title>
+        <meta name="description" content="Your privacy is fundamental to our business. Learn how Autom8ion Lab collects, uses, and protects your information with enterprise-grade security measures." />
+        <meta name="keywords" content="privacy policy, data protection, data security, information privacy, Autom8ion Lab privacy, GDPR compliance, data handling, privacy rights" />
         <link rel="canonical" href={getCanonicalUrl('/privacy')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Privacy Policy | Autom8tion Lab" />
-        <meta property="og:description" content="Your privacy is fundamental to our business. Learn how Autom8tion Lab collects, uses, and protects your information with enterprise-grade security measures." />
+        <meta property="og:title" content="Privacy Policy | Autom8ion Lab" />
+        <meta property="og:description" content="Your privacy is fundamental to our business. Learn how Autom8ion Lab collects, uses, and protects your information with enterprise-grade security measures." />
         <meta property="og:url" content="https://autom8ionlab.com/privacy" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privacy Policy | Autom8tion Lab" />
-        <meta name="twitter:description" content="Your privacy is fundamental to our business. Learn how Autom8tion Lab collects, uses, and protects your information with enterprise-grade security measures." />
+        <meta name="twitter:title" content="Privacy Policy | Autom8ion Lab" />
+        <meta name="twitter:description" content="Your privacy is fundamental to our business. Learn how Autom8ion Lab collects, uses, and protects your information with enterprise-grade security measures." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
       </Helmet>
       
@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <img
             src="/logo/logo.png"
-            alt="Autom8tion Lab Logo"
+            alt="Autom8ion Lab Logo"
             className="w-20 h-20 object-contain mx-auto mb-8"
           />
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -299,7 +299,7 @@ const PrivacyPolicy = () => {
               <div className="text-slate-300 space-y-2">
                 <p><strong>Email:</strong> <a href="mailto:info@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@autom8ionlab.com</a></p>
                 <p><strong>Phone:</strong> <a href="tel:+18555086062" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 855-508-6062</a></p>
-                <p><strong>Mailing Address:</strong> Autom8tion Lab, 486 lake cir, Plant city, FL 33565</p>
+                <p><strong>Mailing Address:</strong> Autom8ion Lab, 486 lake cir, Plant city, FL 33565</p>
               </div>
             </div>
 

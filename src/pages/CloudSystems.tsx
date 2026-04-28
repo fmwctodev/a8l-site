@@ -42,12 +42,12 @@ const CloudSystems = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8tion Lab</title>
+        <title>Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8ion Lab</title>
         <meta name="description" content="Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads in AWS GovCloud, Azure Government, and commercial cloud. Governed landing zones, secure DevSecOps, continuous monitoring. SDVOSB Pending. Live in 30 days." />
         <meta name="keywords" content="FedRAMP cloud architecture, GovCloud infrastructure, NIST 800-53 cloud, FISMA cloud architecture, AWS GovCloud, Azure Government, secure DevSecOps, federal cloud landing zone, SDVOSB cloud services, continuous monitoring federal" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/cloud-systems')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8tion Lab" />
+        <meta property="og:title" content="Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8ion Lab" />
         <meta property="og:description" content="Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads. Governed landing zones, secure DevSecOps, continuous monitoring. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/cloud-systems" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -56,7 +56,7 @@ const CloudSystems = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8tion Lab" />
+        <meta name="twitter:title" content="Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8ion Lab" />
         <meta name="twitter:description" content="Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads. SDVOSB Pending." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -67,7 +67,7 @@ const CloudSystems = () => {
             "serviceType": "Cloud Infrastructure Management Services",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Comprehensive cloud infrastructure management services including cloud migration and deployment, DevOps automation, CI/CD pipelines, and hybrid multi-cloud architecture across AWS, Azure, and Google Cloud Platform.",
             "areaServed": {
@@ -143,7 +143,7 @@ const CloudSystems = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Cloud Infrastructure for FedRAMP & GovCloud Workloads
+              Cloud Infrastructure for FedRAMP, CMMC & HIPAA Workloads
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> for Scalable, Secure Growth</span>
             </h1>
 
@@ -172,7 +172,7 @@ const CloudSystems = () => {
               Most teams supporting US Federal agencies, the Defense Industrial Base, healthcare organizations, or financial services firms start with a commercial cloud setup that was never designed for FedRAMP scrutiny, NIST 800-53 control mapping, or FISMA accountability. You provision a few resources, apply basic security groups, and assume you can harden it later. That breaks fast when your workload has to survive architecture review, control validation, and continuous monitoring. If you are dealing with inherited cloud sprawl, unclear boundary definitions, or an environment that cannot map cleanly to NIST 800-53 controls, your infrastructure is no longer an asset — it's an audit risk.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              At Autom8tion Lab, we don't just "manage" your cloud — we design secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads supporting US Federal, DIB, healthcare, and financial services teams. We lock down the control plane, automate the evidence trail, and give you a foundation built for security, compliance, and operational resilience from day one. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
+              At Autom8ion Lab, we don't just "manage" your cloud — we design secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads supporting US Federal, DIB, healthcare, and financial services teams. We lock down the control plane, automate the evidence trail, and give you a foundation built for security, compliance, and operational resilience from day one. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
             </p>
           </div>
         </div>
@@ -343,7 +343,7 @@ const CloudSystems = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Partner With Autom8tion Lab for
+              Partner With Autom8ion Lab for
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> Expert Cloud Management</span>
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
@@ -369,7 +369,7 @@ const CloudSystems = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Why Choose Autom8tion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Cloud Infrastructure Management</span>
+              Why Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Cloud Infrastructure Management</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               Generic managed service providers will tell you to bolt compliance on later. We don't do that. We architect your environment around NIST 800-53 from the start so your security controls, deployment patterns, and operational procedures line up with FedRAMP and FISMA expectations. Effective cloud infrastructure for US Federal, DIB, healthcare, and financial services organizations is about more than just hosting — it's about building a defensible system boundary, enforcing least privilege, centralizing audit logs, and making every major control family visible in the architecture.
@@ -380,7 +380,7 @@ const CloudSystems = () => {
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <p className="text-cyan-400 font-semibold mb-4 text-xl">Schedule Your Cloud Infrastructure Assessment</p>
               <p className="text-slate-300 mb-6">
-                Join CTOs, IT directors, and growing businesses who trust Autom8tion Lab for cloud infrastructure management services. Get your free infrastructure assessment to explore cloud migration strategies, DevOps automation opportunities, and hybrid multi-cloud architecture options for your business.
+                Join CTOs, IT directors, and growing businesses who trust Autom8ion Lab for cloud infrastructure management services. Get your free infrastructure assessment to explore cloud migration strategies, DevOps automation opportunities, and hybrid multi-cloud architecture options for your business.
               </p>
               <Link to="/get-in-touch" className="inline-block bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Get Your Free Cloud Assessment

@@ -42,12 +42,12 @@ const DataManagement = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Data Management & Analytics for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <title>Data Management & Analytics for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab</title>
         <meta name="description" content="AI-powered business intelligence dashboards, document processing, and centralized data pipelines aligned to NIST 800-53, FedRAMP, and FISMA. Built for federal teams, DIB contractors, healthcare, and financial services. SDVOSB Pending. 30-day delivery." />
         <meta name="keywords" content="federal data management, FedRAMP analytics, NIST 800-53 dashboards, FISMA data pipelines, AI document processing, secure data analytics, government BI dashboards, SDVOSB data analytics, healthcare data management, financial services analytics" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/data-management')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Data Management & Analytics for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:title" content="Data Management & Analytics for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta property="og:description" content="AI-powered BI dashboards and centralized data pipelines aligned to NIST 800-53, FedRAMP, and FISMA. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/data-management" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -67,7 +67,7 @@ const DataManagement = () => {
             "serviceType": "Data Management & Analytics Consulting",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Comprehensive data management and analytics consulting services including business intelligence and reporting tools, data warehouse and ETL solutions, predictive analytics, and data visualization platforms that transform raw data into actionable business insights.",
             "areaServed": {
@@ -173,7 +173,7 @@ const DataManagement = () => {
               Federal teams, DIB contractors, healthcare organizations, and financial services firms operate in fragmented chaos. You use one platform for casework, another for finance, another for records, and several legacy systems that were never designed to share data cleanly. Your most important records are buried in PDFs, forms, contracts, scanned documents, and disconnected repositories. The "spreadsheet nightmare" creates manual entry errors, version control chaos, delayed reporting, and compliance risk when sensitive records move through inboxes and untracked spreadsheets.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              At Autom8tion Lab, we build AI-powered business intelligence dashboards and custom data systems that turn raw information into compliant, usable intelligence. We use AI-powered document processing to extract, classify, and organize critical data, and we build audit trails that support NIST 800-53 control requirements, FedRAMP cloud expectations, and FISMA reporting and governance requirements. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
+              At Autom8ion Lab, we build AI-powered business intelligence dashboards and custom data systems that turn raw information into compliant, usable intelligence. We use AI-powered document processing to extract, classify, and organize critical data, and we build audit trails that support NIST 800-53 control requirements, FedRAMP cloud expectations, and FISMA reporting and governance requirements. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
             </p>
           </div>
         </div>
@@ -370,10 +370,10 @@ const DataManagement = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Why Choose Autom8tion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Data Management & Analytics Consulting</span>
+              Why Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Data Management & Analytics Consulting</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              Unlike generic business intelligence tools that offer pre-built dashboards with limited customization, Autom8tion Lab delivers data management and analytics consulting tailored to your business metrics, data sources, and strategic objectives. Our data engineers and business intelligence experts work closely with business owners, data teams, and executives to design business intelligence and reporting tools, data warehouse and ETL solutions, predictive analytics for business, and data visualization and insights platforms that deliver actionable insights aligned with your growth goals.
+              Unlike generic business intelligence tools that offer pre-built dashboards with limited customization, Autom8ion Lab delivers data management and analytics consulting tailored to your business metrics, data sources, and strategic objectives. Our data engineers and business intelligence experts work closely with business owners, data teams, and executives to design business intelligence and reporting tools, data warehouse and ETL solutions, predictive analytics for business, and data visualization and insights platforms that deliver actionable insights aligned with your growth goals.
             </p>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
               We don't just connect data sources—we build comprehensive data ecosystems that transform raw information into strategic intelligence through predictive analytics, automated reporting, and intuitive dashboards built with Tableau, Power BI, and Looker. Our data management and analytics consulting typically delivers 50% reduction in reporting time, 300% improvement in data-driven decision velocity, and measurable ROI within 60 days. Business owners gain visibility into performance metrics, data teams receive scalable infrastructure, and executives access real-time insights that drive competitive advantage.
@@ -381,7 +381,7 @@ const DataManagement = () => {
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <p className="text-emerald-400 font-semibold mb-4 text-xl">Schedule Your Complimentary Data Audit</p>
               <p className="text-slate-300 mb-6">
-                Join business owners, data teams, and executives who trust Autom8tion Lab for data management and analytics consulting. Get your free data audit to explore business intelligence opportunities, data warehouse and ETL solutions, predictive analytics capabilities, and data visualization platforms that transform your decision-making.
+                Join business owners, data teams, and executives who trust Autom8ion Lab for data management and analytics consulting. Get your free data audit to explore business intelligence opportunities, data warehouse and ETL solutions, predictive analytics capabilities, and data visualization platforms that transform your decision-making.
               </p>
               <Link to="/get-in-touch" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-emerald-700 hover:to-teal-600 transition-all duration-300 transform hover:scale-105">
                 Get Your Free Data Audit

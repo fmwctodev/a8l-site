@@ -84,12 +84,12 @@ const CustomLLMSystems = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Custom LLM Systems for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <title>Custom LLM Systems for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab</title>
         <meta name="description" content="Local LLM systems with no external data transfer. AI-powered document processing for CUI, PHI, and financial data inside FedRAMP, NIST 800-53, and FISMA-aligned environments. SDVOSB Pending. Delivered in 8–14 weeks." />
         <meta name="keywords" content="local LLM deployment, FedRAMP LLM, NIST 800-53 AI, FISMA LLM, CUI document processing, private LLM federal, on-prem LLM, GovCloud LLM, secure document AI, SDVOSB LLM development, healthcare LLM, financial services LLM" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/custom-llm-systems')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Custom LLM Systems for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:title" content="Custom LLM Systems for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta property="og:description" content="Local LLM systems with no external data transfer. Secure document processing inside FedRAMP, NIST 800-53, and FISMA-aligned environments. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/custom-llm-systems" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -109,7 +109,7 @@ const CustomLLMSystems = () => {
             "serviceType": "Custom LLM Development",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Custom LLM system development with AI model fine-tuning services, large language model customization, and generative AI development for enterprise applications with secure deployment.",
             "areaServed": {
@@ -187,7 +187,7 @@ const CustomLLMSystems = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Custom LLM Systems for Regulated Environments
+              Custom LLM Systems for Sensitive Data Environments
               <br />
               for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Smarter, Secure AI</span>
             </h1>
@@ -218,7 +218,7 @@ const CustomLLMSystems = () => {
               Public AI is a liability in regulated environments. If you are feeding CUI, mission documents, acquisition records, PHI, financial data, or internal process data into ChatGPT or Claude, you are sending sensitive information outside your control boundary. For US Federal teams, the Defense Industrial Base, healthcare organizations, and financial services firms, "off-the-shelf" is not an option. Public models leave your environment, weaken security boundaries for sensitive data, and produce generic answers when you need precise processing of forms, SOPs, acquisition packages, technical manuals, and internal review processes.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              At Autom8tion Lab, we build custom LLM systems for regulated environments with one clear rule: no external data transfer. Your documents stay inside your approved infrastructure. Your prompts stay inside your approved infrastructure. Your outputs stay inside your approved infrastructure. We don't bolt generic AI onto sensitive workflows — we build secure, private AI-powered document processing systems engineered around your mission requirements, your compliance obligations, and your internal data handling standards. Veteran-owned and SDVOSB Pending, with federal identifiers ready (UEI: YY2DR3KSENH7, CAGE: 9YCS7).
+              At Autom8ion Lab, we build custom LLM systems for regulated environments with one clear rule: no external data transfer. Your documents stay inside your approved infrastructure. Your prompts stay inside your approved infrastructure. Your outputs stay inside your approved infrastructure. We don't bolt generic AI onto sensitive workflows — we build secure, private AI-powered document processing systems engineered around your mission requirements, your compliance obligations, and your internal data handling standards. Veteran-owned and SDVOSB Pending, with federal identifiers ready (UEI: YY2DR3KSENH7, CAGE: 9YCS7).
             </p>
           </div>
         </div>

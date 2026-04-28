@@ -51,12 +51,12 @@ const BlogList = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Blog | AI Automation & Cloud Infrastructure Insights | Autom8tion Lab</title>
+        <title>Blog | AI Automation & Cloud Infrastructure Insights | Autom8ion Lab</title>
         <meta name="description" content="Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity. Learn how to transform your business with intelligent automation solutions." />
         <meta name="keywords" content="AI automation blog, workflow automation insights, cloud infrastructure tips, cybersecurity best practices, business process automation, AI agents" />
         <link rel="canonical" href={getCanonicalUrl('/blog')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Blog | AI Automation & Cloud Infrastructure Insights | Autom8tion Lab" />
+        <meta property="og:title" content="Blog | AI Automation & Cloud Infrastructure Insights | Autom8ion Lab" />
         <meta property="og:description" content="Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity. Learn how to transform your business with intelligent automation solutions." />
         <meta property="og:url" content="https://autom8ionlab.com/blog" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -65,7 +65,7 @@ const BlogList = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="Blog | AI Automation & Cloud Infrastructure Insights | Autom8tion Lab" />
+        <meta name="twitter:title" content="Blog | AI Automation & Cloud Infrastructure Insights | Autom8ion Lab" />
         <meta name="twitter:description" content="Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -73,13 +73,13 @@ const BlogList = () => {
           {buildJsonLd({
             "@context": "https://schema.org",
             "@type": "Blog",
-            "name": "Autom8tion Lab Blog",
+            "name": "Autom8ion Lab Blog",
             "url": "https://autom8ionlab.com/blog",
             "description": "Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity.",
             "inLanguage": "en-US",
             "publisher": {
               "@type": "Organization",
-              "name": "Autom8tion Lab",
+              "name": "Autom8ion Lab",
               "url": "https://autom8ionlab.com",
               "logo": { "@type": "ImageObject", "url": "https://autom8ionlab.com/logo/logo.png" }
             },

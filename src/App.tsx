@@ -45,6 +45,9 @@ const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 // Lead capture pages
 const NISTChecklist = React.lazy(() => import('./pages/NISTChecklist'));
 
+// Federal contracting page
+const CapabilityStatement = React.lazy(() => import('./pages/CapabilityStatement'));
+
 // 404 page
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 
@@ -53,13 +56,13 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>AI Automation, Cloud & Cybersecurity Solutions | Autom8ion Lab</title>
-        <meta name="description" content="Autom8ion Lab builds custom AI automation, cloud infrastructure, and cybersecurity systems engineered for scale, speed, and measurable ROI." />
-        <meta name="keywords" content="AI automation and cloud infrastructure solutions, AI automation for business, workflow automation platform, enterprise cybersecurity services, cloud infrastructure management, custom LLM and data analytics solutions, AI agent development, process automation, custom software development, data management" />
+        <title>Custom AI, Automation & Software for Compliance Environments | Autom8ion Lab</title>
+        <meta name="description" content="Veteran-owned. Custom AI, automation, and software engineered for CMMC, NIST 800-171, HIPAA, SOC 2. Built for federal, defense, healthcare, FinServ." />
+        <meta name="keywords" content="SDVOSB software development, veteran-owned AI services, CMMC compliance software, NIST 800-171 implementation, HIPAA software development, SOC 2 SaaS, FedRAMP application development, federal contractor AI, DIB custom software" />
         <link rel="canonical" href={getCanonicalUrl('/')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="AI Automation, Cloud & Cybersecurity Solutions | Autom8ion Lab" />
-        <meta property="og:description" content="Autom8ion Lab builds custom AI automation, cloud infrastructure, and cybersecurity systems engineered for scale, speed, and measurable ROI." />
+        <meta property="og:title" content="Custom AI, Automation & Software for Compliance Environments | Autom8ion Lab" />
+        <meta property="og:description" content="Veteran-owned. Custom AI, automation, and software engineered for CMMC, NIST 800-171, HIPAA, SOC 2. Built for federal agencies, defense contractors, healthcare systems, and financial institutions." />
         <meta property="og:url" content="https://autom8ionlab.com/" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta property="og:image:width" content="1200" />
@@ -67,34 +70,75 @@ const HomePage = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="AI Automation, Cloud & Cybersecurity Solutions | Autom8ion Lab" />
-        <meta name="twitter:description" content="Autom8ion Lab builds custom AI automation, cloud infrastructure, and cybersecurity systems engineered for scale, speed, and measurable ROI." />
+        <meta name="twitter:title" content="Custom AI, Automation & Software for Compliance Environments | Autom8ion Lab" />
+        <meta name="twitter:description" content="Veteran-owned. Custom AI, automation, and software engineered for CMMC, NIST 800-171, HIPAA, SOC 2. SDVOSB certification pending. UEI YY2DR3KSENH7." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
         <script type="application/ld+json">
           {buildJsonLd({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Autom8tion Lab",
+            "name": "Autom8ion Lab",
+            "legalName": "Sitehues Media Inc.",
+            "alternateName": "Sitehues Media Inc. (DBA Autom8ion Lab)",
             "url": "https://autom8ionlab.com",
             "logo": {
               "@type": "ImageObject",
               "url": "https://autom8ionlab.com/logo/logo.png"
             },
+            "founder": {
+              "@type": "Person",
+              "name": "Sean Richard",
+              "url": "https://www.linkedin.com/in/a8l-sean-richard/"
+            },
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "addressLocality": "Plant City",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+              },
+              {
+                "@type": "PostalAddress",
+                "addressLocality": "Montreal",
+                "addressRegion": "QC",
+                "addressCountry": "CA"
+              }
+            ],
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-855-508-6062",
-              "contactType": "customer service",
-              "email": "info@autom8ionlab.com",
-              "areaServed": "Worldwide",
-              "availableLanguage": ["en"]
+              "contactType": "Sales",
+              "email": "sean@autom8ionlab.com",
+              "areaServed": ["US", "CA"],
+              "availableLanguage": ["English", "French"]
             },
-            "description": "Autom8ion Lab builds custom AI automation, cloud infrastructure, and cybersecurity systems engineered for scale, speed, and measurable ROI.",
+            "identifier": [
+              { "@type": "PropertyValue", "propertyID": "UEI", "value": "YY2DR3KSENH7" },
+              { "@type": "PropertyValue", "propertyID": "CAGE", "value": "9YCS7" },
+              { "@type": "PropertyValue", "propertyID": "DUNS", "value": "05-289-2750" }
+            ],
+            "knowsAbout": [
+              "CMMC 2.0 compliance",
+              "NIST 800-171",
+              "NIST 800-53",
+              "FedRAMP",
+              "HIPAA compliance",
+              "SOC 2 Type II",
+              "FDA 21 CFR Part 11",
+              "AI agents",
+              "Workflow automation",
+              "Custom enterprise software",
+              "SDVOSB",
+              "Federal contracting"
+            ],
+            "description": "Veteran-owned, security-first AI, automation, and software engineering firm serving federal, defense, healthcare, and financial services. SDVOSB certification pending.",
             "foundingDate": "2023",
             "sameAs": [
               "https://www.facebook.com/autom8ionlab",
               "https://www.instagram.com/autom8ionlab",
               "https://www.linkedin.com/company/autom8ionlab",
+              "https://www.linkedin.com/in/a8l-sean-richard/",
               "https://twitter.com/autom8ionlab",
               "https://tiktok.com/@autom8ionlab"
             ]
@@ -104,13 +148,12 @@ const HomePage = () => {
           {buildJsonLd({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "Autom8tion Lab",
+            "name": "Autom8ion Lab",
             "url": "https://autom8ionlab.com",
             "telephone": "+1-855-508-6062",
-            "email": "info@autom8ionlab.com",
-            "priceRange": "$15,000 - $150,000",
-            "areaServed": "Worldwide",
-            "description": "Custom AI automation, cloud infrastructure, and cybersecurity systems engineered for measurable business ROI.",
+            "email": "sean@autom8ionlab.com",
+            "areaServed": ["US", "CA"],
+            "description": "Veteran-owned, security-first AI, automation, and software engineering firm serving federal, defense, healthcare, and financial services. SDVOSB certification pending. UEI YY2DR3KSENH7. CAGE 9YCS7.",
             "knowsAbout": [
               "AI Agent Development",
               "Custom LLM Fine-Tuning",
@@ -226,7 +269,7 @@ const HomePage = () => {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "url": "https://autom8ionlab.com",
-            "name": "Autom8tion Lab",
+            "name": "Autom8ion Lab",
             "description": "Custom AI automation, cloud infrastructure, and cybersecurity systems for businesses",
             "potentialAction": {
               "@type": "SearchAction",
@@ -309,10 +352,10 @@ const HomePage = () => {
               },
               {
                 "@type": "Question",
-                "name": "What is the typical cost of implementing enterprise AI automation?",
+                "name": "What is the typical engagement size and duration?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Enterprise AI automation investment varies based on complexity, integration requirements, and scale. Most projects range from $15,000 to $150,000, with typical deployments launching in 30 days. The ROI is substantial\u2014clients routinely see 10x productivity gains, 60-90% reduction in manual tasks, and cost savings that exceed the initial investment within 90 days through improved efficiency and reduced operational overhead."
+                  "text": "We scope work to your contract structure \u2014 task orders, IDIQ, BPA, fixed-price, or T&M. Most engagements run 8\u201314 weeks. CMMC remediation runs 4\u20139 months. FedRAMP-aligned builds run 6+ months. Quotes are scope-driven and provided after a discovery call. We work transparently on price."
                 }
               }
             ]
@@ -367,6 +410,7 @@ function App() {
           <Route path="/solutions/data-management" element={<DataManagement />} />
           <Route path="/aiads-vsl" element={<VSLLandingPage />} />
           <Route path="/nist-checklist" element={<NISTChecklist />} />
+          <Route path="/capability-statement" element={<CapabilityStatement />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />

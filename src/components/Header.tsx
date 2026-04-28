@@ -45,7 +45,7 @@ const Header = () => {
         <Link to="/" className="flex items-center space-x-2">
           <img
             src="/logo/logo.png"
-            alt="Autom8tion Lab Logo"
+            alt="Autom8ion Lab Logo"
             className="w-12 h-12 object-contain"
           />
           <span className="text-2xl font-bold text-white">Autom8ion Lab</span>
@@ -82,24 +82,25 @@ const Header = () => {
             )}
           </div>
           <Link to="/#process" className="hover:text-cyan-400 transition-colors" onClick={() => window.location.pathname !== '/' && (window.location.href = '/#process')}>Process</Link>
-          <Link to="/#pricing" className="hover:text-cyan-400 transition-colors" onClick={() => window.location.pathname !== '/' && (window.location.href = '/#pricing')}>Pricing</Link>
+          <Link to="/#pricing" className="hover:text-cyan-400 transition-colors" onClick={() => window.location.pathname !== '/' && (window.location.href = '/#pricing')}>Engagement</Link>
+          <Link to="/capability-statement" className="hover:text-cyan-400 transition-colors">Capability Statement</Link>
         </div>
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <a 
-            href="https://os.autom8ionlab.com/client-portal" 
-            target="_blank" 
+          <a
+            href="https://os.autom8ionlab.com/client-portal"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-slate-300 hover:text-cyan-400 transition-colors font-medium"
           >
             Login
           </a>
-          <Link 
-            to="/get-in-touch"
+          <Link
+            to="/schedule-consultation"
             className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
           >
-            Get In Touch
+            Schedule a briefing
           </Link>
         </div>
 
@@ -169,34 +170,42 @@ const Header = () => {
               Process
             </Link>
             
-            <Link 
-              to="/#pricing" 
+            <Link
+              to="/#pricing"
               className="block text-slate-300 hover:text-cyan-400 transition-colors py-2"
               onClick={() => {
                 closeMobileMenu();
                 window.location.pathname !== '/' && (window.location.href = '/#pricing');
               }}
             >
-              Pricing
+              Engagement
+            </Link>
+
+            <Link
+              to="/capability-statement"
+              className="block text-slate-300 hover:text-cyan-400 transition-colors py-2"
+              onClick={closeMobileMenu}
+            >
+              Capability Statement
             </Link>
 
             {/* Mobile Buttons */}
             <div className="pt-4 border-t border-slate-700 space-y-3">
-              <a 
-                href="https://os.autom8ionlab.com/client-portal" 
-                target="_blank" 
+              <a
+                href="https://os.autom8ionlab.com/client-portal"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="block text-slate-300 hover:text-cyan-400 transition-colors py-2 font-medium"
                 onClick={closeMobileMenu}
               >
                 Login
               </a>
-              <Link 
-                to="/get-in-touch"
+              <Link
+                to="/schedule-consultation"
                 className="block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 text-center"
                 onClick={closeMobileMenu}
               >
-                Get In Touch
+                Schedule a briefing
               </Link>
             </div>
           </div>

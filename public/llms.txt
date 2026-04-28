@@ -1,25 +1,54 @@
 # Autom8ion Lab
 
-> Custom AI automation, cloud infrastructure, and cybersecurity systems engineered for measurable business ROI.
+> Veteran-owned, security-first AI, automation, and software engineering firm serving compliance-heavy industries: federal/state/local government, the Defense Industrial Base, healthcare and life sciences, and financial services.
 
-Autom8ion Lab builds bespoke AI and automation systems that transform businesses from the ground up. We engineer purpose-built solutions—not generic software—across AI agent development, workflow automation, custom LLM systems, cloud infrastructure, cybersecurity, and software development. Most custom builds launch within 30 days. Clients typically achieve 10x productivity gains and 60-90% reduction in manual tasks within 90 days of deployment.
+Autom8ion Lab — operated by Sitehues Media Inc. — builds AI agents, workflow automation, and custom software for environments where security architecture and compliance documentation are not afterthoughts. We engineer systems that operate inside CMMC, NIST 800-171, HIPAA, SOC 2, and FedRAMP environments without breaking the controls that allow our clients to win contracts, pass audits, or maintain certifications. Most engagements ship in 8–14 weeks; CMMC remediation runs 4–9 months; FedRAMP-aligned builds run 6+ months.
 
-## Services
+## Core Services
 
-- [AI Agent Development](https://autom8ionlab.com/solutions/ai-agent-development): Custom conversational AI agents—chatbots, voice assistants, and autonomous task agents—built on GPT-4 and Claude, fine-tuned on proprietary business data for lead qualification, customer support, and workflow automation. Handles up to 80% of routine inquiries automatically.
-- [Custom LLM Systems](https://autom8ionlab.com/solutions/custom-llm-systems): Design, fine-tuning, and private deployment of large language models trained on domain-specific datasets. Includes supervised fine-tuning, RLHF, RAG systems, and on-premises deployment for complete data sovereignty. Achieves 3-5x accuracy improvement over generic AI for domain queries.
-- [Workflow Automation](https://autom8ionlab.com/solutions/workflow-automation): End-to-end business process automation using n8n, Make, and custom Python pipelines. Connects CRMs, ERPs, databases, and SaaS tools through API integrations with complete audit trails and real-time monitoring.
-- [Process Automation (RPA)](https://autom8ionlab.com/solutions/process-automation): Robotic Process Automation combined with AI to handle repetitive tasks across legacy systems, web interfaces, and document workflows. Reduces manual processing time by up to 90%.
-- [API Integrations](https://autom8ionlab.com/solutions/api-integrations): RESTful API development, GraphQL, webhooks, and enterprise system integrations that unify Salesforce, Shopify, HubSpot, Google Workspace, and custom databases into a single operational layer.
-- [Custom Software Development](https://autom8ionlab.com/solutions/software-development): Full-stack SaaS platforms, enterprise applications, and internal tools built with React, Node.js, Python, and cloud-native architectures. Scalable, secure, and optimized for performance.
-- [Mobile App Development](https://autom8ionlab.com/solutions/mobile-app-development): Cross-platform iOS and Android applications using React Native and native development. High-performance apps designed to scale with business requirements.
-- [Cybersecurity & Compliance](https://autom8ionlab.com/solutions/cybersecurity): Penetration testing, risk assessments, vulnerability scanning, and compliance audits aligned with NIST Cybersecurity Framework, CIS Controls, HIPAA, ISO 27001, SOC 2, and GDPR. Ethical hacking, SIEM monitoring, and incident response planning.
-- [Cloud Infrastructure Management](https://autom8ionlab.com/solutions/cloud-systems): Cloud architecture design and management across AWS, Azure, and hybrid environments. Kubernetes orchestration, CI/CD pipelines, DevOps automation, infrastructure-as-code, and 24/7 monitoring with cost optimization.
-- [Data Management & Analytics](https://autom8ionlab.com/solutions/data-management): Centralized data pipelines, AI-powered dashboards, business intelligence platforms, and predictive analytics. Transforms raw data into actionable insights for strategic decision-making.
+- [AI-Powered Enterprise Software & Applications](https://autom8ionlab.com/solutions/software-development): Custom platforms, internal tools, mobile apps, and customer-facing applications with AI integrated where it creates real leverage. Security architecture engineered from day one, not added at the end.
+- [Workflow & Process Automation](https://autom8ionlab.com/solutions/workflow-automation): Custom workflow automation, AI agents, and process automation deployed where SaaS tools cannot go — on-premises, private cloud, and FedRAMP-aligned environments. Multi-step approval workflows with full audit trails. AI agents inside private networks. RPA for environments where commercial RPA is not approved.
+- [Cybersecurity Compliance & Engineering](https://autom8ionlab.com/solutions/cybersecurity): CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 Type II preparation. We engineer compliant systems and document them for audit. Not a CMMC RPO or C3PAO — we work alongside your assessor or partner with established RPO/C3PAO firms when independent assessment is required.
 
-## Pricing
+## Adjacent Capabilities
 
-Most projects range from $15,000 to $150,000 depending on complexity, integration requirements, and scale. Clients routinely achieve ROI exceeding the initial investment within 90 days.
+- [AI Agent Development for Regulated Environments](https://autom8ionlab.com/solutions/ai-agent-development): Mission-grounded, permission-aware AI agents fine-tuned for on-premises, FedRAMP, or HIPAA-compliant deployments. Auditable and documented.
+- [Custom LLM Systems for Sensitive Data Environments](https://autom8ionlab.com/solutions/custom-llm-systems): Custom and fine-tuned LLM systems for environments where data residency, audit, and security matter. On-premises and private cloud deployments with no external data transfer.
+- [Custom API Integrations for Compliance-Heavy Stacks](https://autom8ionlab.com/solutions/api-integrations): REST, GraphQL, and webhook-based integrations for environments where Zapier and Workato cannot deploy. Bridges to legacy government systems where no SaaS connector exists.
+- [Cloud Infrastructure for FedRAMP, CMMC & HIPAA Workloads](https://autom8ionlab.com/solutions/cloud-systems): AWS GovCloud, Azure Government, commercial cloud — designed for FedRAMP, CMMC, and HIPAA workloads with full controls documentation.
+
+## Industries Served
+
+- [Federal, State & Local Government](https://autom8ionlab.com/#industries): Custom software, AI, and automation for federal agencies, state government, and municipal IT. Engineered for FedRAMP, FISMA, NIST 800-53, StateRAMP, and NIST 800-171 (CUI) environments. Registered federal contractor with full SAM.gov credentials.
+- [Defense Industrial Base](https://autom8ionlab.com/#industries): CMMC 2.0 readiness, NIST 800-171 implementation, and custom software development for DoD primes and subcontractors. The November 2026 Phase 2 deadline is closer than it looks.
+- [Healthcare & Life Sciences](https://autom8ionlab.com/#industries): HIPAA-compliant software, AI tools for clinical operations, and FDA 21 CFR Part 11 systems for health systems, payers, providers, pharma, and medical device companies.
+- [Financial Services](https://autom8ionlab.com/#industries): Custom software, AI, and automation for banks, fintech, insurers, and wealth management firms. SOC 2 Type II, PCI-DSS, NYDFS, and GLBA-aligned engineering.
+
+## Compliance Frameworks We Build To
+
+CMMC 2.0 (Levels 1–3) · NIST 800-171 Rev 2 · NIST 800-53 · FedRAMP Moderate / High · HIPAA / HITECH · FDA 21 CFR Part 11 · SOC 2 Type II · PCI-DSS
+
+## Federal Contracting Registrations
+
+- Legal Name: Sitehues Media Inc. (DBA Autom8ion Lab)
+- Type: Veteran-Owned Small Business; SDVOSB certification pending
+- DUNS: 05-289-2750
+- UEI: YY2DR3KSENH7
+- CAGE / NCAGE: 9YCS7
+- Recommended NAICS primaries: 541511, 541512, 541519, 541611, 541690 (final assignment by founder)
+
+## Engagement Models
+
+We scope work to your contract structure — single-system task orders, multi-year IDIQ and BPA arrangements, fixed-price commercial engagements, or time-and-materials advisory work. Registered with SAM.gov. Quotes are scope-driven and provided after a discovery call. We work transparently on price.
+
+## Differentiators
+
+- Software builders with in-house cybersecurity compliance arm
+- Engineered for audit from day one — not retrofitted
+- Veteran-owned (SDVOSB certification pending)
+- Dual US/Canada presence for cross-border engagements; bilingual capability for Quebec
+- Founder-led: senior engineering access on every engagement
+- Past performance available upon request after a qualifying conversation (NDA-governed)
 
 ## Results
 
@@ -91,13 +120,20 @@ Long-form technical guides on secure AI deployment, NIST AI RMF, CMMC 2.0 compli
 ### Earlier Reading
 - [AI Agents vs. Traditional Workflow Automation in 2026](https://autom8ionlab.com/blog/ai-agents-vs-traditional-workflow-automation-2026): Practical comparison with performance data on when to choose AI agents over rule-based workflow automation.
 
+## Company Information
+
+- Founder: Sean Richard (https://www.linkedin.com/in/a8l-sean-richard/)
+- Locations: Plant City, FL, United States · Montreal, Quebec, Canada
+- Best fit: federal agencies, DoD primes and subcontractors, health systems and life-sciences companies, banks, fintechs, and regulated services firms
+- Differentiator: software and AI builders with in-house cybersecurity compliance arm
+
 ## Contact
 
 - Website: https://autom8ionlab.com
-- Email: info@autom8ionlab.com
+- Email: sean@autom8ionlab.com
 - Phone: +1 855-508-6062
-- Contact form: https://autom8ionlab.com/get-in-touch
-- Schedule a consultation: https://autom8ionlab.com/schedule-consultation
+- Capability statement: https://autom8ionlab.com/capability-statement
+- Schedule a capability briefing: https://autom8ionlab.com/schedule-consultation
 - Blog: https://autom8ionlab.com/blog
 - Careers: https://autom8ionlab.com/join-us
 

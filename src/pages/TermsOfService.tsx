@@ -11,18 +11,18 @@ const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Terms of Service | Autom8tion Lab</title>
-        <meta name="description" content="These terms govern your use of Autom8tion Lab services and establish the legal framework for our business relationship. Clear, reasonable terms that protect both parties." />
-        <meta name="keywords" content="terms of service, legal terms, service agreement, Autom8tion Lab terms, user agreement, service conditions, legal framework, business terms" />
+        <title>Terms of Service | Autom8ion Lab</title>
+        <meta name="description" content="These terms govern your use of Autom8ion Lab services and establish the legal framework for our business relationship. Clear, reasonable terms that protect both parties." />
+        <meta name="keywords" content="terms of service, legal terms, service agreement, Autom8ion Lab terms, user agreement, service conditions, legal framework, business terms" />
         <link rel="canonical" href={getCanonicalUrl('/terms')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Terms of Service | Autom8tion Lab" />
-        <meta property="og:description" content="These terms govern your use of Autom8tion Lab services and establish the legal framework for our business relationship. Clear, reasonable terms that protect both parties." />
+        <meta property="og:title" content="Terms of Service | Autom8ion Lab" />
+        <meta property="og:description" content="These terms govern your use of Autom8ion Lab services and establish the legal framework for our business relationship. Clear, reasonable terms that protect both parties." />
         <meta property="og:url" content="https://autom8ionlab.com/terms" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms of Service | Autom8tion Lab" />
-        <meta name="twitter:description" content="These terms govern your use of Autom8tion Lab services and establish the legal framework for our business relationship. Clear, reasonable terms that protect both parties." />
+        <meta name="twitter:title" content="Terms of Service | Autom8ion Lab" />
+        <meta name="twitter:description" content="These terms govern your use of Autom8ion Lab services and establish the legal framework for our business relationship. Clear, reasonable terms that protect both parties." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
       </Helmet>
       
@@ -38,7 +38,7 @@ const TermsOfService = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <img
             src="/logo/logo.png"
-            alt="Autom8tion Lab Logo"
+            alt="Autom8ion Lab Logo"
             className="w-20 h-20 object-contain mx-auto mb-8"
           />
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -83,7 +83,7 @@ const TermsOfService = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-invert prose-lg max-w-none mb-8">
             <p className="text-slate-300 leading-relaxed">
-              Welcome to Autom8tion Lab! These Terms of Service ("Terms") govern your access to and use of our website, services, and products. Please read them carefully.
+              Welcome to Autom8ion Lab! These Terms of Service ("Terms") govern your access to and use of our website, services, and products. Please read them carefully.
             </p>
           </div>
           
@@ -92,7 +92,7 @@ const TermsOfService = () => {
             <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
               <p className="text-slate-300 mb-4">
-                By accessing or using Autom8tion Lab's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
+                By accessing or using Autom8ion Lab's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
               </p>
               <p className="text-slate-300">
                 These terms apply to all visitors, users, and others who access or use our services, including our website, custom AI solutions, automation systems, and related services.
@@ -102,9 +102,9 @@ const TermsOfService = () => {
             <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4">2. Definitions</h2>
               <ul className="text-slate-300 space-y-2">
-                <li>• <strong>"Services"</strong> refers to all products, platforms, software, solutions, and consulting offered by Autom8tion Lab.</li>
+                <li>• <strong>"Services"</strong> refers to all products, platforms, software, solutions, and consulting offered by Autom8ion Lab.</li>
                 <li>• <strong>"Client" or "User"</strong> refers to any individual or entity using our services.</li>
-                <li>• <strong>"We," "us," or "our"</strong> refers to Autom8tion Lab LLC.</li>
+                <li>• <strong>"We," "us," or "our"</strong> refers to Autom8ion Lab LLC.</li>
               </ul>
             </div>
 
@@ -118,7 +118,7 @@ const TermsOfService = () => {
             <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4">4. Description of Services</h2>
               <p className="text-slate-300 mb-4">
-                Autom8tion Lab provides custom AI and automation solutions, including but not limited to:
+                Autom8ion Lab provides custom AI and automation solutions, including but not limited to:
               </p>
               <ul className="text-slate-300 space-y-2">
                 <li>• Custom AI agent development and deployment</li>
@@ -174,7 +174,7 @@ const TermsOfService = () => {
               <h2 className="text-2xl font-bold text-white mb-4">7. Intellectual Property</h2>
               <h3 className="text-xl font-semibold text-cyan-400 mb-3">Our IP</h3>
               <p className="text-slate-300 mb-4">
-                All content, tools, software, designs, trademarks, and methodologies on our platform are owned or licensed by Autom8tion Lab and protected by intellectual property laws.
+                All content, tools, software, designs, trademarks, and methodologies on our platform are owned or licensed by Autom8ion Lab and protected by intellectual property laws.
               </p>
 
               <h3 className="text-xl font-semibold text-cyan-400 mb-3">Client IP</h3>
@@ -265,14 +265,14 @@ const TermsOfService = () => {
 
               <h3 className="text-xl font-semibold text-cyan-400 mb-3">Limitation of Liability</h3>
               <p className="text-slate-300">
-                To the fullest extent permitted by law, Autom8tion Lab is not liable for any indirect, incidental, special, or consequential damages, including loss of profits or data.
+                To the fullest extent permitted by law, Autom8ion Lab is not liable for any indirect, incidental, special, or consequential damages, including loss of profits or data.
               </p>
             </div>
 
             <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4">15. Indemnification</h2>
               <p className="text-slate-300">
-                You agree to indemnify and hold harmless Autom8tion Lab, its directors, employees, and affiliates against any claims, losses, or liabilities arising from your use of our services, violation of these Terms, or infringement of third-party rights.
+                You agree to indemnify and hold harmless Autom8ion Lab, its directors, employees, and affiliates against any claims, losses, or liabilities arising from your use of our services, violation of these Terms, or infringement of third-party rights.
               </p>
             </div>
 
@@ -341,14 +341,14 @@ const TermsOfService = () => {
                 If you have any questions about these Terms, please contact:
               </p>
               <div className="text-slate-300 space-y-2">
-                <p><strong>Autom8tion Lab Legal Department</strong></p>
+                <p><strong>Autom8ion Lab Legal Department</strong></p>
                 <p>📧 Email: <a href="mailto:info@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@autom8ionlab.com</a></p>
                 <p>📞 Phone: <a href="tel:+18555086062" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 855-508-6062</a></p>
-                <p>🏢 Address: Autom8tion Lab, 486 lake cir, plant city, fl 33565</p>
+                <p>🏢 Address: Autom8ion Lab, 486 lake cir, plant city, fl 33565</p>
               </div>
               <div className="mt-6 pt-6 border-t border-slate-700">
                 <p className="text-slate-300 text-center">
-                  Thank you for trusting Autom8tion Lab. We look forward to powering your automation journey!
+                  Thank you for trusting Autom8ion Lab. We look forward to powering your automation journey!
                 </p>
               </div>
             </div>

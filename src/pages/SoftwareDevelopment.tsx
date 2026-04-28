@@ -42,12 +42,12 @@ const SoftwareDevelopment = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Custom Software Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <title>Custom Software Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab</title>
         <meta name="description" content="AI-powered enterprise software, internal tools, and CRM/case management platforms for US Federal, DIB, healthcare, and financial services teams. Security architecture aligned to FedRAMP, FISMA, and NIST 800-53 from day one. SDVOSB Pending. Live in 30 days." />
         <meta name="keywords" content="federal software development, DIB software, FedRAMP software development, FISMA software, NIST 800-53 platforms, custom CRM federal, case management federal, SDVOSB software development, mission support platform, regulated industry software" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/software-development')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Custom Software Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:title" content="Custom Software Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta property="og:description" content="AI-powered enterprise platforms, internal tools, and case management built for compliance-driven workflows. FedRAMP, FISMA, NIST 800-53 from day one. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/software-development" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -67,7 +67,7 @@ const SoftwareDevelopment = () => {
             "serviceType": "Software Development",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab",
+              "name": "Autom8ion Lab",
               "areaServed": {
                 "@type": "Place",
                 "name": "United States"
@@ -151,7 +151,7 @@ const SoftwareDevelopment = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Custom Software for Federal Operations
+              AI-Powered Enterprise Software & Application Development
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400">Solutions Built for Scale</span>
             </h1>
@@ -181,7 +181,7 @@ const SoftwareDevelopment = () => {
               Federal teams are stuck with software that almost works. You rely on off-the-shelf platforms that solve part of the problem while creating new security, integration, and compliance gaps. You duct-tape tools that don't talk, then wonder why mission workflows, approvals, and records management keep breaking. The traditional agency model is equally broken — months of discovery with account managers who never touch the code, then a bloated product that still doesn't fit your process.
             </p>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              At Autom8tion Lab, we build AI-powered enterprise software and applications for US Federal, Defense Industrial Base, Healthcare, and Financial Services teams — including custom platforms, internal tools, and CRM or case management systems built for compliance-driven workflows. Our founder-led model gives you direct access to the engineers designing your system. Security architecture is defined on day one with FedRAMP, FISMA, and NIST 800-53 controls in mind, not patched in later. Veteran-owned, SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
+              At Autom8ion Lab, we build AI-powered enterprise software and applications for US Federal, Defense Industrial Base, Healthcare, and Financial Services teams — including custom platforms, internal tools, and CRM or case management systems built for compliance-driven workflows. Our founder-led model gives you direct access to the engineers designing your system. Security architecture is defined on day one with FedRAMP, FISMA, and NIST 800-53 controls in mind, not patched in later. Veteran-owned, SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
               Federal operations are unique. Regulated operations are too. Whether you're modernizing a federal workflow, supporting a DIB environment, or replacing brittle internal systems in healthcare or financial services, we have the engineering talent and direct approach needed to get you to the finish line. Full IP ownership — you own the code. Our 30-day launch framework moves you from architecture to deployment with senior engineers, not account managers, in every stage.
@@ -434,7 +434,7 @@ const SoftwareDevelopment = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Why Businesses Choose Autom8tion Lab as Their Development Partner
+              Why Businesses Choose Autom8ion Lab as Their Development Partner
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               As a trusted software development company USA, we differentiate ourselves through transparent project management, collaborative processes, and unwavering reliability. Unlike agencies that treat you as a ticket number, we assign dedicated engineering teams who learn your business deeply and become true partners in your success.
@@ -443,7 +443,7 @@ const SoftwareDevelopment = () => {
               Our collaborative approach means you're involved at every milestone — from architecture design to sprint reviews to deployment planning. We communicate proactively, deliver on commitments, and solve problems before they become blockers. Clients consistently rate our communication and project management as industry-leading, with 95% stating they'd recommend us to peers.
             </p>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              We measure success by your business outcomes, not just code delivered. Our clients typically achieve 300% ROI within the first year through increased efficiency, reduced operational costs, and new revenue opportunities enabled by custom software. When you need a reliable software development company USA that delivers measurable results, choose Autom8tion Lab.
+              We measure success by your business outcomes, not just code delivered. Our clients typically achieve 300% ROI within the first year through increased efficiency, reduced operational costs, and new revenue opportunities enabled by custom software. When you need a reliable software development company USA that delivers measurable results, choose Autom8ion Lab.
             </p>
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <h3 className="text-2xl font-bold text-white mb-4">

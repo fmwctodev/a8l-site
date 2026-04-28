@@ -10,7 +10,7 @@ const ThankYou = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Thank You | Autom8tion Lab</title>
+        <title>Thank You | Autom8ion Lab</title>
         <meta name="description" content="Thank you for your request. We're sending your capabilities statement to your email address right now." />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href={getCanonicalUrl('/thank-you')} />

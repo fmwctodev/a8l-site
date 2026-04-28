@@ -109,12 +109,12 @@ const Careers = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Careers at Autom8tion Lab | Build the Future of AI & Automation</title>
+        <title>Careers at Autom8ion Lab | Build the Future of AI & Automation</title>
         <meta name="description" content="Join our team of innovators, engineers, and visionaries who are transforming how businesses operate through intelligent automation and custom AI solutions." />
         <meta name="keywords" content="AI careers, automation jobs, tech jobs remote, AI engineering careers, join AI team, innovation jobs, remote AI positions, automation engineer jobs, AI developer careers" />
         <link rel="canonical" href={getCanonicalUrl('/join-us')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Careers at Autom8tion Lab | Build the Future of AI & Automation" />
+        <meta property="og:title" content="Careers at Autom8ion Lab | Build the Future of AI & Automation" />
         <meta property="og:description" content="Join our team of innovators, engineers, and visionaries who are transforming how businesses operate through intelligent automation and custom AI solutions." />
         <meta property="og:url" content="https://autom8ionlab.com/join-us" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -123,7 +123,7 @@ const Careers = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="Careers at Autom8tion Lab | Build the Future of AI & Automation" />
+        <meta name="twitter:title" content="Careers at Autom8ion Lab | Build the Future of AI & Automation" />
         <meta name="twitter:description" content="Join our team of innovators, engineers, and visionaries who are transforming how businesses operate through intelligent automation and custom AI solutions." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -139,7 +139,7 @@ const Careers = () => {
               "jobLocationType": "TELECOMMUTE",
               "hiringOrganization": {
                 "@type": "Organization",
-                "name": "Autom8tion Lab",
+                "name": "Autom8ion Lab",
                 "sameAs": "https://autom8ionlab.com"
               },
               "jobLocation": {
@@ -178,7 +178,7 @@ const Careers = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <img
             src="/logo/logo.png"
-            alt="Autom8tion Lab Logo"
+            alt="Autom8ion Lab Logo"
             className="w-20 h-20 object-contain mx-auto mb-8"
           />
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">

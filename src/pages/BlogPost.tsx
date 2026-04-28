@@ -197,11 +197,11 @@ const BlogPost = () => {
               "name": post.author,
               ...(post.author_title ? { "jobTitle": post.author_title } : {}),
               ...(post.author_linkedin ? { "sameAs": post.author_linkedin } : {}),
-              "worksFor": { "@type": "Organization", "name": "Autom8tion Lab" }
+              "worksFor": { "@type": "Organization", "name": "Autom8ion Lab" }
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Autom8tion Lab",
+              "name": "Autom8ion Lab",
               "logo": { "@type": "ImageObject", "url": "https://autom8ionlab.com/logo/logo.png" }
             },
             "description": post.excerpt,

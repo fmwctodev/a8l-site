@@ -42,12 +42,12 @@ const AIAgentDevelopment = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>AI Agent Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <title>AI Agent Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab</title>
         <meta name="description" content="Custom AI agents and workflow automation for US Federal, DIB, healthcare, and financial services teams. Mission-grounded, permission-aware, and aligned to FedRAMP, FISMA, and NIST 800-53. SDVOSB Pending. Live in 30 days." />
         <meta name="keywords" content="federal AI agents, DIB AI development, FedRAMP AI agents, NIST 800-53 AI, FISMA AI workflow, custom AI agents, mission-grounded AI, SDVOSB AI development, regulated industry AI, healthcare AI agents" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/ai-agent-development')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="AI Agent Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:title" content="AI Agent Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta property="og:description" content="Custom AI agents engineered for controlled environments. Mission-grounded, permission-aware, and aligned to FedRAMP, FISMA, and NIST 800-53. SDVOSB Pending. UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/ai-agent-development" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -56,7 +56,7 @@ const AIAgentDevelopment = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="AI Agent Development for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta name="twitter:title" content="AI Agent Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta name="twitter:description" content="Custom AI agents engineered for controlled environments. Mission-grounded, permission-aware, aligned to FedRAMP, FISMA, NIST 800-53. SDVOSB Pending." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
         
@@ -67,7 +67,7 @@ const AIAgentDevelopment = () => {
             "serviceType": "AI Agent Development",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Custom conversational agents—chatbots, voice assistants, support bots—built on LLMs and fine-tuned to your business data with human-like accuracy and context awareness.",
             "areaServed": {
@@ -142,9 +142,9 @@ const AIAgentDevelopment = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Custom AI Agents
+              AI Agent Development
               <br />
-              Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Controlled Environments</span>
+              for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Regulated Environments</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -369,7 +369,7 @@ const AIAgentDevelopment = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Why Choose Autom8tion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI Agent Development</span>
+              Why Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI Agent Development</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               The market is flooded with AI vendors selling demos dressed up as products. We are engineers who build production systems for US Federal, DIB, healthcare, and financial services operations. We don't do generic bots — we build controlled systems engineered around your workflows, access model, and documentation requirements. Built for federal and regulated environments: on-premises, private cloud, and FedRAMP deployment requirements instead of forcing you into a public SaaS box. Aligned to federal security expectations with traceability, repeatability, and operational discipline supporting FedRAMP, FISMA, and NIST 800-53 driven workflows.

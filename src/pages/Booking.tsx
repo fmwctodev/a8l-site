@@ -20,17 +20,17 @@ const Booking = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Book a Strategy Call | Autom8tion Lab</title>
+        <title>Book a Strategy Call | Autom8ion Lab</title>
         <meta name="description" content="Book a free strategy call to discuss your automation needs and get a custom roadmap for your business. 30-minute consultation with our AI and automation experts." />
         <meta name="keywords" content="book strategy call, free consultation, automation roadmap, AI experts, business automation consultation, custom automation planning, AI strategy session, automation assessment" />
         <link rel="canonical" href={getCanonicalUrl('/schedule-consultation')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Book a Strategy Call | Autom8tion Lab" />
+        <meta property="og:title" content="Book a Strategy Call | Autom8ion Lab" />
         <meta property="og:description" content="Book a free strategy call to discuss your automation needs and get a custom roadmap for your business. 30-minute consultation with our AI and automation experts." />
         <meta property="og:url" content="https://autom8ionlab.com/schedule-consultation" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Book a Strategy Call | Autom8tion Lab" />
+        <meta name="twitter:title" content="Book a Strategy Call | Autom8ion Lab" />
         <meta name="twitter:description" content="Book a free strategy call to discuss your automation needs and get a custom roadmap for your business. 30-minute consultation with our AI and automation experts." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
 
@@ -40,8 +40,8 @@ const Booking = () => {
             "@type": "WebPage",
             "name": "Book a Strategy Call",
             "url": "https://autom8ionlab.com/schedule-consultation",
-            "description": "Book a free 30-minute strategy call with Autom8tion Lab AI and automation experts.",
-            "publisher": { "@type": "Organization", "name": "Autom8tion Lab", "url": "https://autom8ionlab.com" }
+            "description": "Book a free 30-minute strategy call with Autom8ion Lab AI and automation experts.",
+            "publisher": { "@type": "Organization", "name": "Autom8ion Lab", "url": "https://autom8ionlab.com" }
           })}
         </script>
         <script type="application/ld+json">
@@ -68,7 +68,7 @@ const Booking = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <img
             src="/logo/logo.png"
-            alt="Autom8tion Lab Logo"
+            alt="Autom8ion Lab Logo"
             className="w-20 h-20 object-contain mx-auto mb-8"
           />
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">

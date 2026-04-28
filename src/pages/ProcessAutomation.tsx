@@ -61,12 +61,12 @@ const ProcessAutomation = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Process Automation for Compliance-Heavy Industries | Autom8tion Lab</title>
+        <title>Process Automation for Compliance-Heavy Industries | Autom8ion Lab</title>
         <meta name="description" content="Framework-anchored process automation for US Federal, DIB, healthcare, and financial services. Custom integrations between internal systems and regulated platforms aligned to FedRAMP, NIST 800-53, and FISMA. SDVOSB Pending. Live in 30 days." />
         <meta name="keywords" content="federal process automation, FedRAMP RPA, NIST 800-53 automation, FISMA process automation, DIB workflow automation, compliance-heavy automation, regulated industry RPA, audit-ready automation, SDVOSB automation, custom integration federal" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/process-automation')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Process Automation for Compliance-Heavy Industries | Autom8tion Lab" />
+        <meta property="og:title" content="Process Automation for Compliance-Heavy Industries | Autom8ion Lab" />
         <meta property="og:description" content="Framework-anchored automation for federal, DIB, healthcare, and financial services. Custom integrations aligned to FedRAMP, NIST 800-53, and FISMA. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/process-automation" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -86,7 +86,7 @@ const ProcessAutomation = () => {
             "serviceType": "Process Automation Solutions",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Intelligent process automation software solutions that automate repetitive tasks and optimize workflows with AI and RPA for finance, HR, operations, and manufacturing.",
             "areaServed": {
@@ -193,7 +193,7 @@ const ProcessAutomation = () => {
               Your business is paying an invisible compliance tax. Every time an employee rekeys data between portals, manually checks records against a policy requirement, or copies documents from one system into another, you lose time, accuracy, and audit readiness. In compliance-heavy industries, repetitive work is not just inefficient — it creates risk. Manual work is the reason regulated operations slow down. Generic automation tools break under real-world requirements. They fail when workflows depend on conditional logic, multiple systems of record, approval chains, or secure regulated environments with strict process rules.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              At Autom8tion Lab, we don't deploy fragile templates — we build custom automation frameworks that hold up in environments where traceability, security, and reliability are non-negotiable. We engineer secure automation around your actual process, your actual rules, and your existing stack. Veteran-owned with SDVOSB Pending status for federal set-asides. Federal identifiers: UEI YY2DR3KSENH7, CAGE 9YCS7. That matters when the work demands operational discipline, accountability, and systems built to perform under scrutiny.
+              At Autom8ion Lab, we don't deploy fragile templates — we build custom automation frameworks that hold up in environments where traceability, security, and reliability are non-negotiable. We engineer secure automation around your actual process, your actual rules, and your existing stack. Veteran-owned with SDVOSB Pending status for federal set-asides. Federal identifiers: UEI YY2DR3KSENH7, CAGE 9YCS7. That matters when the work demands operational discipline, accountability, and systems built to perform under scrutiny.
             </p>
           </div>
         </div>
@@ -346,7 +346,7 @@ const ProcessAutomation = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Why Businesses Choose Autom8tion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">RPA Solutions</span>
+              Why Businesses Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">RPA Solutions</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               Generic RPA platforms provide tools but leave implementation to you. Off-the-shelf solutions offer templates that rarely match your unique business logic. Autom8ion Lab delivers done-for-you implementation of process automation software solutions tailored specifically to your operational workflows, industry requirements, and integration needs. Our team combines deep technical expertise in robotic process automation tools with practical understanding of business operations across finance, healthcare, manufacturing, and professional services.

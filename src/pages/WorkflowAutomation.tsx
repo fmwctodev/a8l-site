@@ -42,12 +42,12 @@ const WorkflowAutomation = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <title>Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab</title>
         <meta name="description" content="Secure workflow and process automation for US Federal, DIB, healthcare, and financial services teams. Multi-step approval workflows, private-network AI agents, and RPA aligned to FedRAMP, NIST 800-53, and FISMA. Live in 30 days." />
         <meta name="keywords" content="workflow automation, FedRAMP automation, NIST 800-53 workflow, FISMA automation, DIB workflow automation, private network AI agents, RPA controlled environments, multi-step approval workflows, audit trail automation, SDVOSB" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/workflow-automation')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:title" content="Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta property="og:description" content="Secure, professional-grade workflow and process automation for regulated environments. Multi-step approval workflows, private-network AI agents, RPA — aligned to FedRAMP, NIST 800-53, and FISMA. SDVOSB Pending." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/workflow-automation" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -56,7 +56,7 @@ const WorkflowAutomation = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta name="twitter:title" content="Workflow Automation for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta name="twitter:description" content="Secure workflow and process automation for regulated environments. Multi-step approvals, private-network AI agents, RPA — aligned to FedRAMP, NIST 800-53, and FISMA." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
         
@@ -67,7 +67,7 @@ const WorkflowAutomation = () => {
             "serviceType": "Workflow Automation",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Enterprise workflow automation tools that connect systems, eliminate repetitive tasks, and improve productivity. End-to-end automation platforms using n8n, Make, or Python.",
             "areaServed": {
@@ -163,9 +163,9 @@ const WorkflowAutomation = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Workflow Automation</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Workflow & Process Automation</span>
               <br />
-              Built for Regulated Operations
+              for Compliance Environments
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -194,7 +194,7 @@ const WorkflowAutomation = () => {
               Most operations teams are running on borrowed time. Your stack is a fragile web of duct-taped tools, half-baked automations, and manual spreadsheets that require a human to chase approvals, update records, and document decisions by hand. When one field changes or one reviewer misses a step, the whole process stalls. You aren't running an automated business; you're babysitting a chain of operational bottlenecks. Generic automation tools fail fast when your process includes approvals, exceptions, access controls, documentation requirements, and compliance evidence.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              At Autom8tion Lab, we don't just "link apps." We engineer end-to-end systems around your exact business logic, your compliance requirements, and your internal controls. We build secure, professional-grade workflow and process automation for US Federal agencies, Defense Industrial Base contractors, healthcare organizations, and financial services teams that need multi-step approval workflows, complete audit trails, private-network AI agents, and RPA for controlled environments. Veteran-owned, SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
+              At Autom8ion Lab, we don't just "link apps." We engineer end-to-end systems around your exact business logic, your compliance requirements, and your internal controls. We build secure, professional-grade workflow and process automation for US Federal agencies, Defense Industrial Base contractors, healthcare organizations, and financial services teams that need multi-step approval workflows, complete audit trails, private-network AI agents, and RPA for controlled environments. Veteran-owned, SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
             </p>
           </div>
         </div>

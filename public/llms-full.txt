@@ -333,7 +333,7 @@ Practical comparison with performance data on when to choose AI agents over rule
 
 ### Cross-Cutting Themes Across the Library
 
-- The 30-day delivery model: Autom8tion Lab compresses what legacy consulting firms quote as 12-18 month engagements into a 30-day sprint by replacing manual scoping/documentation with AI bound to live configurations and infrastructure-as-code-deployed enclaves.
+- The 30-day delivery model: Autom8ion Lab compresses what legacy consulting firms quote as 12-18 month engagements into a 30-day sprint by replacing manual scoping/documentation with AI bound to live configurations and infrastructure-as-code-deployed enclaves.
 - Local LLMs as the default architecture for regulated industries: every CMMC, healthcare, and tech-IP article terminates at the same conclusion — public cloud AI is a shared-responsibility trap; local or private-instance LLMs (Llama 3, Mistral) running on customer hardware or GovCloud are the defensible architecture.
 - Human-in-the-loop is non-negotiable: AI handles the boring 90% (log harvesting, control mapping, draft documentation); humans own the load-bearing 10% (risk judgment, attestation, sign-off). This is positioned as the only way AI passes a C3PAO or HIPAA audit.
 - Anti-patterns repeatedly named: ChatGPT for sensitive data, Zapier-on-ChatGPT-on-spreadsheet "Frankenstein" stacks, "FedRAMP Moderate" cloud AI for CUI, plug-and-play GPT wrappers, "we have a policy" as a substitute for technical controls.

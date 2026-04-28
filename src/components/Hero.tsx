@@ -73,26 +73,40 @@ const Hero = () => {
       <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Automation, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Cloud Systems</span> & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-amber-400">Cybersecurity</span> Built for Scale
+            Custom AI, Automation & Software — <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Engineered for CMMC, NIST, HIPAA, and SOC 2</span> Environments
           </h1>
 
-          <h2 className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed font-semibold">
-            Custom AI & Cloud Infrastructure That Actually Fits Your Business
-          </h2>
-          <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Custom AI automation and cloud systems built for how you work. No templates. Just speed, security, and scalability.
+          <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            A veteran-owned engineering team building AI agents, workflow automation, and custom applications for federal agencies, defense contractors, healthcare systems, and financial institutions. Security architecture and compliance documentation are the foundation, not the afterthought.
           </p>
 
-          <h3 className="text-lg text-cyan-400 mb-6 font-semibold">Let's Build Something That Works for You</h3>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          {/* Trust bar */}
+          <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-xs md:text-sm text-cyan-300 mb-10 max-w-4xl mx-auto">
+            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">Veteran-Owned</span>
+            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">SDVOSB Certification Pending</span>
+            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">Registered Federal Contractor · UEI: YY2DR3KSENH7 · CAGE: 9YCS7</span>
+            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">Florida & Montreal</span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              to="/schedule-consultation"
+              to="/capability-statement"
               className="group bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center space-x-2"
             >
-              <span>Book a Strategy Call</span>
+              <span>Request our capability statement</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+            <Link
+              to="/schedule-consultation"
+              className="border border-slate-600 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
+            >
+              Schedule a capability briefing (30 min)
+            </Link>
           </div>
+
+          <p className="text-sm text-slate-400 mt-6 max-w-3xl mx-auto">
+            No-pressure briefing. We'll walk through your compliance environment, your top automation, software, or AI priority, and tell you whether we're a fit — even if the answer is "you need a different vendor."
+          </p>
 
           {/* Floating AI Elements */}
           <div className="absolute top-20 left-10 animate-float">

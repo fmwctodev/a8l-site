@@ -42,12 +42,12 @@ const APIIntegrations = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Helmet>
-        <title>Enterprise API Integration for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab</title>
+        <title>Enterprise API Integration for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab</title>
         <meta name="description" content="Secure API bridges for legacy federal systems, real-time data syncing, and custom middleware aligned to FedRAMP, NIST 800-53, and FISMA. Veteran-owned, SDVOSB Pending. Live in 30 days." />
         <meta name="keywords" content="enterprise API integration, FedRAMP API integration, NIST 800-53 integration, FISMA middleware, legacy system bridges, secure API development, custom middleware development, real-time data syncing, SDVOSB API services" />
         <link rel="canonical" href={getCanonicalUrl('/solutions/api-integrations')} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Enterprise API Integration for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta property="og:title" content="Enterprise API Integration for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta property="og:description" content="Secure API bridges for legacy federal systems, real-time data syncing, and custom middleware aligned to FedRAMP, NIST 800-53, and FISMA. SDVOSB Pending — UEI: YY2DR3KSENH7." />
         <meta property="og:url" content="https://autom8ionlab.com/solutions/api-integrations" />
         <meta property="og:image" content="https://autom8ionlab.com/logo/logo.png" />
@@ -56,7 +56,7 @@ const APIIntegrations = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@autom8ionlab" />
-        <meta name="twitter:title" content="Enterprise API Integration for Federal, DIB, Healthcare & Financial Services | Autom8tion Lab" />
+        <meta name="twitter:title" content="Enterprise API Integration for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab" />
         <meta name="twitter:description" content="Secure API bridges, real-time data syncing, custom middleware. Aligned to FedRAMP, NIST 800-53, and FISMA. SDVOSB Pending." />
         <meta name="twitter:image" content="https://autom8ionlab.com/logo/logo.png" />
         
@@ -67,7 +67,7 @@ const APIIntegrations = () => {
             "serviceType": "API Integration Services",
             "provider": {
               "@type": "ProfessionalService",
-              "name": "Autom8tion Lab"
+              "name": "Autom8ion Lab"
             },
             "description": "Secure, scalable API integration solutions for business. Connect systems seamlessly with RESTful API development, third-party integrations, and enterprise API management services.",
             "areaServed": {
@@ -146,7 +146,7 @@ const APIIntegrations = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Enterprise API Integration for Regulated Environments
+              Custom API Integrations for Compliance-Heavy Stacks
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400"> for Modern Businesses</span>
             </h1>
 
@@ -176,7 +176,7 @@ const APIIntegrations = () => {
               Your business is likely running on a dozen platforms that don't talk to each other. In compliance-heavy environments, that problem gets worse fast. You have an ERP, a quality system, a project platform, a document repository, and a legacy database that still runs critical operations. Half were never designed to connect. The other half only offer weak export-import workflows. Every day, your team wastes hours moving data by hand, reconciling records, and creating compliance risk just to keep operations moving.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              At Autom8tion Lab, we build enterprise API integration services for companies that need secure automation inside regulated environments. We focus on connecting US Federal, DIB, Healthcare, and Financial Services systems, legacy platforms, and internal tools where no SaaS connector exists. We don't rely on generic plug-ins — we engineer custom integration layers that move data securely, support workflow and process automation goals, and align with FedRAMP, NIST 800-53, and FISMA requirements. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
+              At Autom8ion Lab, we build enterprise API integration services for companies that need secure automation inside regulated environments. We focus on connecting US Federal, DIB, Healthcare, and Financial Services systems, legacy platforms, and internal tools where no SaaS connector exists. We don't rely on generic plug-ins — we engineer custom integration layers that move data securely, support workflow and process automation goals, and align with FedRAMP, NIST 800-53, and FISMA requirements. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
             </p>
           </div>
         </div>
@@ -406,7 +406,7 @@ const APIIntegrations = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Why Choose Autom8tion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">API Integration Solutions</span>
+              Why Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">API Integration Solutions</span>
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               We don't do generic. We don't do "good enough." Most vendors will hand you a low-code consultant and hope a connector already exists. We take the harder path because it is the one that works. We build custom integration architecture for enterprise environments — especially when the systems you depend on were never designed to talk to each other. We understand the stakes: in compliance-driven operations, fragile connectors and manual workarounds are not just inefficient, they create risk.
