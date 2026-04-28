@@ -1,0 +1,23 @@
+<!--
+  Static form definition for Netlify Forms detection (required by
+  @netlify/plugin-nextjs v5). Netlify scans this file at build time and
+  registers any <form data-netlify="true"> definitions it finds. The Footer's
+  client-side form posts URL-encoded data to /__forms.html at runtime, which
+  Netlify intercepts and routes to the matching definition below.
+
+  Do not delete. Keep field list in sync with app/_components/Footer.tsx.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify Forms</title>
+  </head>
+  <body>
+    <form name="capabilities-statement" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="capabilities-statement" />
+      <input name="name" type="text" />
+      <input name="email" type="email" />
+    </form>
+  </body>
+</html>
