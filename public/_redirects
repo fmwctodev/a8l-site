@@ -13,15 +13,27 @@
 /job-application-thank-you                /application-received               301
 /privacy-policy                           /privacy                            301
 /terms-of-service                         /terms                              301
+
+# Legacy /services/* redirects to /solutions/*. The three retired services
+# (process-automation, mobile-app-development, data-management) collapse into
+# /capabilities per LOCKED v3 §"Information Architecture".
 /services/ai-agent-development            /solutions/ai-agent-development     301
 /services/workflow-automation             /solutions/workflow-automation      301
-/services/rpa-solutions                   /solutions/process-automation       301
 /services/api-integrations                /solutions/api-integrations         301
 /services/custom-llm-systems              /solutions/custom-llm-systems       301
 /services/software-development            /solutions/software-development     301
-/services/mobile-app-development          /solutions/mobile-app-development   301
+/services/rpa-solutions                   /capabilities                       301
+/services/mobile-app-development          /capabilities                       301
+/services/data-management                 /capabilities                       301
 
-# Discontinued services -- return 410 Gone
+# Retired solution routes — collapsed into /capabilities under LOCKED v3.
+# Keeping 301s (not 410s) because some external links exist; we want them
+# to find the closest equivalent rather than vanish.
+/solutions/process-automation             /capabilities                       301
+/solutions/mobile-app-development         /capabilities                       301
+/solutions/data-management                /capabilities                       301
+
+# Permanently discontinued services -- return 410 Gone
 /solutions/ai-content-creation            /                                   410
 /solutions/ai-ads-management              /                                   410
 /solutions/ai-powered-seo                 /                                   410

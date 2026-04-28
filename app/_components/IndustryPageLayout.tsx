@@ -21,6 +21,15 @@ export type IndustryPageData = {
   /** Tailwind gradient color tokens for the hero. */
   heroAccent: string;
   iconAccent: string;
+
+  /* ---------- Optional deep-content sections (LOCKED v3 §"Industry Page Specifications") ---------- */
+
+  /** Problem framing — 150–250 words explaining the gap this industry's buyers face. */
+  problemFraming?: { heading: string; paragraphs: string[] };
+  /** Expanded What-We-Build sections with prose under each line item. Used in addition to (or instead of) the simple bullet list. */
+  whatWeBuildDetailed?: { name: string; body: string }[];
+  /** Named integrations specific to this vertical (Procore, Epic, Yardi, Fiserv, etc.). */
+  namedIntegrations?: { category: string; items: string[] }[];
 };
 
 export default function IndustryPageLayout({ data }: { data: IndustryPageData }) {
@@ -88,21 +97,87 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
         </div>
       </section>
 
-      <section className="py-20 bg-slate-900/50">
+      {data.problemFraming && (
+        <section className="py-20 bg-slate-900/50">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              {data.problemFraming.heading}
+            </h2>
+            <div className="space-y-5 text-slate-300 leading-relaxed text-lg">
+              {data.problemFraming.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             What we build for {data.breadcrumbName.toLowerCase()}
           </h2>
-          <ul className="space-y-4 text-slate-300">
-            {data.whatWeBuild.map((item) => (
-              <li key={item} className="flex items-start space-x-3">
-                <CheckCircle2 className={`w-6 h-6 ${data.iconAccent} flex-shrink-0 mt-0.5`} />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+
+          {data.whatWeBuildDetailed ? (
+            <div className="space-y-6">
+              {data.whatWeBuildDetailed.map((section) => (
+                <div
+                  key={section.name}
+                  className="bg-slate-900/40 border border-slate-800 rounded-lg p-6"
+                >
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2
+                      className={`w-6 h-6 ${data.iconAccent} flex-shrink-0 mt-1`}
+                    />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">{section.name}</h3>
+                      <p className="text-slate-300 leading-relaxed">{section.body}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <ul className="space-y-4 text-slate-300">
+              {data.whatWeBuild.map((item) => (
+                <li key={item} className="flex items-start space-x-3">
+                  <CheckCircle2 className={`w-6 h-6 ${data.iconAccent} flex-shrink-0 mt-0.5`} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </section>
+
+      {data.namedIntegrations && (
+        <section className="py-20 bg-slate-950">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Named systems we integrate with
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {data.namedIntegrations.map((cat) => (
+                <div
+                  key={cat.category}
+                  className="bg-slate-900/40 border border-slate-800 rounded-lg p-6"
+                >
+                  <h3 className="text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-3">
+                    {cat.category}
+                  </h3>
+                  <ul className="space-y-1.5 text-slate-300">
+                    {cat.items.map((item) => (
+                      <li key={item} className="text-sm">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-6">

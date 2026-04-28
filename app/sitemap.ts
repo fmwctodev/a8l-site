@@ -13,10 +13,9 @@ const INDUSTRIES = [
   'defense',
 ];
 
-// Three priority service pages + four supporting capabilities.
-// Pages still live for /process-automation, /mobile-app-development, /data-management
-// but are intentionally absent from the sitemap — they collapse into /capabilities
-// in a follow-up cleanup phase.
+// Three priority service pages + four supporting capabilities. The retired
+// solutions (/process-automation, /mobile-app-development, /data-management)
+// 301 redirect to /capabilities per public/_redirects.
 const SOLUTIONS = [
   'software-development',
   'workflow-automation',
@@ -25,6 +24,14 @@ const SOLUTIONS = [
   'custom-llm-systems',
   'api-integrations',
   'cloud-systems',
+];
+
+// Resource pages introduced under the LOCKED v3 IA expansion.
+const RESOURCE_PAGES = [
+  '/capabilities',
+  '/about',
+  '/faq',
+  '/case-studies',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -49,6 +56,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+
+    // Resource pages
+    ...RESOURCE_PAGES.map((path) => ({
+      url: `${BASE}${path}`,
+      lastModified: today,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
 
     { url: `${BASE}/get-in-touch`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
     {

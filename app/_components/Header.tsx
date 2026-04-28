@@ -4,42 +4,99 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
-const solutions = [
-  { title: 'AI Agent Development', path: '/solutions/ai-agent-development' },
-  { title: 'Workflow Automation', path: '/solutions/workflow-automation' },
-  { title: 'Process Automation', path: '/solutions/process-automation' },
-  { title: 'Custom LLM Systems', path: '/solutions/custom-llm-systems' },
-  { title: 'Software Development', path: '/solutions/software-development' },
-  { title: 'Mobile App Development', path: '/solutions/mobile-app-development' },
-  { title: 'API Integrations', path: '/solutions/api-integrations' },
-  { title: 'Cybersecurity & Compliance', path: '/solutions/cybersecurity' },
-  { title: 'Cloud Infrastructure', path: '/solutions/cloud-systems' },
-  { title: 'Data Management & Analytics', path: '/solutions/data-management' },
+// LOCKED v3 §"Information Architecture" — Industries promoted to primary nav
+// position (left of Solutions). This is the single biggest IA change from
+// prior versions. Discontinued service pages (process-automation,
+// mobile-app-development, data-management) collapsed into /capabilities.
+const industries = [
+  { title: 'Construction', path: '/industries/construction' },
+  { title: 'Healthcare & Life Sciences', path: '/industries/healthcare' },
+  { title: 'Finance', path: '/industries/finance' },
+  { title: 'Real Estate & Property', path: '/industries/real-estate-property' },
+  { title: 'US Government', path: '/industries/government' },
+  { title: 'Defense Industrial Base', path: '/industries/defense' },
 ];
 
+const solutions = [
+  { title: 'AI-Powered Software & Apps', path: '/solutions/software-development' },
+  { title: 'Workflow Automation', path: '/solutions/workflow-automation' },
+  { title: 'Cybersecurity Compliance', path: '/solutions/cybersecurity' },
+  { title: 'AI Agent Development', path: '/solutions/ai-agent-development' },
+  { title: 'Custom LLM Systems', path: '/solutions/custom-llm-systems' },
+  { title: 'API Integrations', path: '/solutions/api-integrations' },
+  { title: 'Cloud Infrastructure', path: '/solutions/cloud-systems' },
+  { title: 'All Capabilities', path: '/capabilities' },
+];
+
+const resources = [
+  { title: 'Blog', path: '/blog' },
+  { title: 'Capability Statement', path: '/capability-statement' },
+  { title: 'Case Studies', path: '/case-studies' },
+  { title: 'About', path: '/about' },
+  { title: 'FAQ', path: '/faq' },
+];
+
+type DropdownKey = 'industries' | 'solutions' | 'resources' | null;
+
 export default function Header() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<DropdownKey>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [openMobileSection, setOpenMobileSection] = useState<DropdownKey>('industries');
+  const navRef = useRef<HTMLDivElement>(null);
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
-    setIsMobileSolutionsOpen(false);
   }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const toggleDropdown = (key: DropdownKey) => {
+    setOpenDropdown(openDropdown === key ? null : key);
+  };
+
+  const renderDropdownButton = (key: DropdownKey, label: string) => (
+    <button
+      onClick={() => toggleDropdown(key)}
+      className="flex items-center space-x-1 hover:text-cyan-400 transition-colors"
+      aria-expanded={openDropdown === key}
+      aria-haspopup="true"
+    >
+      <span>{label}</span>
+      <ChevronDown
+        className={`w-4 h-4 transition-transform ${openDropdown === key ? 'rotate-180' : ''}`}
+      />
+    </button>
+  );
+
+  const renderDropdownPanel = (
+    key: DropdownKey,
+    items: { title: string; path: string }[],
+  ) =>
+    openDropdown === key && (
+      <div className="absolute top-full left-0 mt-2 bg-slate-800 rounded-lg shadow-xl py-2 z-[9999] min-w-[280px] border border-slate-700">
+        {items.map((item) => (
+          <Link
+            key={item.path}
+            href={item.path}
+            className="block px-4 py-2 text-slate-300 hover:bg-slate-700 hover:text-cyan-400 transition-colors text-sm"
+            onClick={() => setOpenDropdown(null)}
+          >
+            {item.title}
+          </Link>
+        ))}
+      </div>
+    );
+
   return (
-    <nav className="relative z-50 px-6 py-8 max-w-7xl mx-auto">
+    <nav className="relative z-50 px-6 py-8 max-w-7xl mx-auto" ref={navRef}>
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
           <img
@@ -50,42 +107,26 @@ export default function Header() {
           <span className="text-2xl font-bold text-white">Autom8ion Lab</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8 text-slate-300">
-          <Link href="/#about" className="hover:text-cyan-400 transition-colors">About</Link>
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center space-x-1 hover:text-cyan-400 transition-colors"
-              aria-label={isDropdownOpen ? 'Close solutions menu' : 'Open solutions menu'}
-              aria-expanded={isDropdownOpen}
-              aria-haspopup="true"
-            >
-              <span>Solutions</span>
-              <ChevronDown className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
-
-            {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 bg-slate-800 rounded-lg shadow-xl py-2 z-[9999] min-w-[240px] border border-slate-700">
-                {solutions.map((solution, index) => (
-                  <Link
-                    key={index}
-                    href={solution.path}
-                    className="block px-4 py-2 text-slate-300 hover:bg-slate-700 hover:text-cyan-400 transition-colors text-sm"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    {solution.title}
-                  </Link>
-                ))}
-              </div>
-            )}
+        {/* Desktop Navigation — Industries promoted left of Solutions per LOCKED v3 IA. */}
+        <div className="hidden md:flex space-x-7 text-slate-300 items-center">
+          <div className="relative">
+            {renderDropdownButton('industries', 'Industries')}
+            {renderDropdownPanel('industries', industries)}
           </div>
-          <Link href="/#process" className="hover:text-cyan-400 transition-colors">Process</Link>
-          <Link href="/#pricing" className="hover:text-cyan-400 transition-colors">Engagement</Link>
-          <Link href="/capability-statement" className="hover:text-cyan-400 transition-colors">Capability Statement</Link>
+          <div className="relative">
+            {renderDropdownButton('solutions', 'Solutions')}
+            {renderDropdownPanel('solutions', solutions)}
+          </div>
+          <div className="relative">
+            {renderDropdownButton('resources', 'Resources')}
+            {renderDropdownPanel('resources', resources)}
+          </div>
+          <Link href="/get-in-touch" className="hover:text-cyan-400 transition-colors">
+            Contact
+          </Link>
         </div>
 
-        {/* Desktop Buttons */}
+        {/* Desktop CTAs */}
         <div className="hidden md:flex items-center space-x-4">
           <a
             href="https://os.autom8ionlab.com/client-portal"
@@ -99,7 +140,7 @@ export default function Header() {
             href="/schedule-consultation"
             className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
           >
-            Schedule a briefing
+            Schedule a discovery call
           </Link>
         </div>
 
@@ -114,52 +155,56 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — Industries section opens first by default per LOCKED v3 build prompts */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700 z-[9999] max-h-[80vh] overflow-y-auto">
-          <div className="px-6 py-4 space-y-4">
-            <Link href="/#about" className="block text-slate-300 hover:text-cyan-400 transition-colors py-2" onClick={closeMobileMenu}>
-              About
+          <div className="px-6 py-4 space-y-2">
+            {(
+              [
+                ['industries', 'Industries', industries],
+                ['solutions', 'Solutions', solutions],
+                ['resources', 'Resources', resources],
+              ] as const
+            ).map(([key, label, items]) => (
+              <div key={key} className="py-2 border-b border-slate-800 last:border-b-0">
+                <button
+                  onClick={() => setOpenMobileSection(openMobileSection === key ? null : key)}
+                  className="flex items-center justify-between w-full text-slate-200 hover:text-cyan-400 transition-colors py-2 font-medium"
+                  aria-expanded={openMobileSection === key}
+                >
+                  <span>{label}</span>
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      openMobileSection === key ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                {openMobileSection === key && (
+                  <div className="pl-4 space-y-2 mt-2">
+                    {items.map((item) => (
+                      <Link
+                        key={item.path}
+                        href={item.path}
+                        className="block text-slate-400 hover:text-cyan-400 transition-colors py-1 text-sm"
+                        onClick={closeMobileMenu}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            <Link
+              href="/get-in-touch"
+              className="block text-slate-200 hover:text-cyan-400 transition-colors py-2 font-medium border-b border-slate-800"
+              onClick={closeMobileMenu}
+            >
+              Contact
             </Link>
 
-            <div className="py-2">
-              <button
-                onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
-                className="flex items-center justify-between w-full text-slate-300 hover:text-cyan-400 transition-colors py-2 font-medium"
-                aria-label={isMobileSolutionsOpen ? 'Close solutions menu' : 'Open solutions menu'}
-                aria-expanded={isMobileSolutionsOpen}
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {isMobileSolutionsOpen && (
-                <div className="pl-4 space-y-2 mt-2">
-                  {solutions.map((solution, index) => (
-                    <Link
-                      key={index}
-                      href={solution.path}
-                      className="block text-slate-400 hover:text-cyan-400 transition-colors py-1 text-sm"
-                      onClick={closeMobileMenu}
-                    >
-                      {solution.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link href="/#process" className="block text-slate-300 hover:text-cyan-400 transition-colors py-2" onClick={closeMobileMenu}>
-              Process
-            </Link>
-            <Link href="/#pricing" className="block text-slate-300 hover:text-cyan-400 transition-colors py-2" onClick={closeMobileMenu}>
-              Engagement
-            </Link>
-            <Link href="/capability-statement" className="block text-slate-300 hover:text-cyan-400 transition-colors py-2" onClick={closeMobileMenu}>
-              Capability Statement
-            </Link>
-
-            <div className="pt-4 border-t border-slate-700 space-y-3">
+            <div className="pt-4 space-y-3">
               <a
                 href="https://os.autom8ionlab.com/client-portal"
                 target="_blank"
@@ -174,7 +219,7 @@ export default function Header() {
                 className="block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 text-center"
                 onClick={closeMobileMenu}
               >
-                Schedule a briefing
+                Schedule a discovery call
               </Link>
             </div>
           </div>
