@@ -5,6 +5,8 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-Robots-Tag: all
 
+# More-specific overrides for private pages. Netlify applies the most
+# specific matching path when the same header appears on multiple rules.
 /thank-you
   X-Robots-Tag: noindex, nofollow
 
@@ -14,6 +16,9 @@
 /aiads-vsl
   X-Robots-Tag: noindex, nofollow
 
+# Long-cache static assets served from /public. Next.js handles its own
+# /_next/static/* immutable caching automatically via @netlify/plugin-nextjs;
+# these rules cover the legacy /public assets (logos, downloads, fonts).
 /*.js
   Cache-Control: public, max-age=31536000, immutable
 
@@ -39,15 +44,3 @@
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=86400
-
-/index.html
-  Cache-Control: public, max-age=0, must-revalidate
-  Link: </assets/vendor-react-*.js>; rel=modulepreload; as=script
-  Link: </assets/index-*.js>; rel=modulepreload; as=script
-  Link: </assets/index-*.css>; rel=preload; as=style
-
-https://connect.facebook.net/*
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
-
-https://unpkg.com/*
-  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
