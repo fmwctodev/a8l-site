@@ -1,15 +1,22 @@
+# Netlify config for the Next.js (App Router) site.
+#
+# Routing is handled by @netlify/plugin-nextjs, which reads .next/ output and
+# serves App Router routes (static + SSG/ISR) directly. The SPA-era catch-all
+# redirect (/* -> /index.html 200) is intentionally gone.
+
 [build]
-publish = "dist"
-command = "npm run build"
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [functions]
-directory = "netlify/functions"
+  directory = "netlify/functions"
 
+# Prerender.io edge function stays registered for ~30 days post-cutover as a
+# safety net while Search Console reconfirms healthy indexation. Once stable,
+# remove this block and delete netlify/edge-functions/prerender.ts.
 [[edge_functions]]
-function = "prerender"
-path = "/*"
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  function = "prerender"
+  path = "/*"
