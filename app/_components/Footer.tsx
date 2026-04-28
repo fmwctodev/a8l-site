@@ -19,8 +19,9 @@ const Footer = () => {
     };
 
     try {
-      // Submit to Netlify Forms
-      await fetch('/', {
+      // Submit to Netlify Forms via the static endpoint registered in
+      // public/__forms.html (required by @netlify/plugin-nextjs v5).
+      await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData as any).toString()

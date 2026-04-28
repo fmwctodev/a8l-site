@@ -61,17 +61,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//prod.spline.design" />
       </head>
       <body className="bg-slate-950 text-white antialiased">
-        {/* Hidden form for Netlify Forms detection at build time */}
-        <form
-          name="capabilities-statement"
-          data-netlify="true"
-          hidden
-          aria-hidden="true"
-        >
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-        </form>
-
+        {/*
+          Netlify Forms definitions live in public/__forms.html (required by
+          @netlify/plugin-nextjs v5). The Footer client form posts to that
+          path at runtime; Netlify intercepts and stores the submission.
+        */}
         <Header />
         {children}
         <Footer />
