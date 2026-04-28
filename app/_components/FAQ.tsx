@@ -63,12 +63,12 @@ const FAQ = () => {
         <div className="text-center mb-16">
           <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Frequently Asked Questions</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
-            Common Questions About
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Custom Automation</span>
+            Common questions from{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              prospective clients
+            </span>
+            .
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Here are the questions we hear most often:
-          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -115,12 +115,6 @@ const FAQ = () => {
           </div>
         </div>
 
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-4 bg-slate-800/50 backdrop-blur-sm px-8 py-4 rounded-xl border border-slate-700/50">
-            <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
-            <span className="text-slate-300 font-medium">Have more questions? Let's talk.</span>
-          </div>
-        </div>
       </div>
     </section>
   );

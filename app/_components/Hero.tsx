@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowRight, Zap, TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { loadSplineScript } from '@/lib/splineLoader';
@@ -67,43 +67,59 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Hero Content */}
+      {/* Hero Content — LOCKED v3 §"Final Homepage Copy" §1 */}
       <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Custom AI, Automation & Software — <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Engineered for CMMC, NIST, HIPAA, and SOC 2</span> Environments
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            Custom AI, Automation &amp; Software for{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              Compliance-Driven Industries
+            </span>
+            .
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            A veteran-owned engineering team building AI agents, workflow automation, and custom applications for federal agencies, defense contractors, healthcare systems, and financial institutions. Security architecture and compliance documentation are the foundation, not the afterthought.
+            A veteran-owned engineering team building custom AI agents, workflow automation, and
+            applications for construction, healthcare, finance, real estate, and US government clients.
+            Security architecture and compliance documentation engineered from day one — not retrofitted.
           </p>
 
-          {/* Trust bar */}
-          <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-xs md:text-sm text-cyan-300 mb-10 max-w-4xl mx-auto">
-            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">Veteran-Owned</span>
-            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">SDVOSB Certification Pending</span>
-            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">Registered Federal Contractor · UEI: YY2DR3KSENH7 · CAGE: 9YCS7</span>
-            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">Florida & Montreal</span>
+          {/* Trust bar — above the fold per LOCKED v3 acceptance criteria */}
+          <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-xs md:text-sm text-cyan-300 mb-10 max-w-5xl mx-auto">
+            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">
+              Veteran-Owned
+            </span>
+            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">
+              SDVOSB Certification Pending
+            </span>
+            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">
+              Registered US Federal Contractor · UEI: <span className="font-mono">YY2DR3KSENH7</span> ·
+              CAGE: <span className="font-mono">9YCS7</span>
+            </span>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/capability-statement"
-              className="group bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center space-x-2"
-            >
-              <span>Request our capability statement</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            {/* Primary CTA per LOCKED v3 */}
             <Link
               href="/schedule-consultation"
+              className="group bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center space-x-2"
+            >
+              <span>Schedule a discovery call</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            {/* Secondary CTA per LOCKED v3 */}
+            <Link
+              href="/capability-statement"
               className="border border-slate-600 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
             >
-              Schedule a capability briefing (30 min)
+              Download capability statement
             </Link>
           </div>
 
+          {/* Hero subcopy per LOCKED v3 */}
           <p className="text-sm text-slate-400 mt-6 max-w-3xl mx-auto">
-            No-pressure briefing. We'll walk through your compliance environment, your top automation, software, or AI priority, and tell you whether we're a fit — even if the answer is "you need a different vendor."
+            30-minute call. We'll talk through your environment, your priority, and tell you whether we're
+            a fit — even if the answer is "you need a different vendor."
           </p>
 
           {/* Floating AI Elements */}

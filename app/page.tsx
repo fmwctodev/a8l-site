@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 import Hero from './_components/Hero';
-import About from './_components/About';
-import Problems from './_components/Problems';
-import Solutions from './_components/Solutions';
-import Benefits from './_components/Benefits';
+import IndustriesGrid from './_components/IndustriesGrid';
+import ProblemFraming from './_components/ProblemFraming';
+import ThreeServices from './_components/ThreeServices';
+import HowWeWork from './_components/HowWeWork';
+import ComplianceFrameworks from './_components/ComplianceFrameworks';
+import EngagementModels from './_components/EngagementModels';
+import CapabilityStatementCTA from './_components/CapabilityStatementCTA';
+import PastPerformance from './_components/PastPerformance';
 import FAQ from './_components/FAQ';
-import Process from './_components/Process';
-import Pricing from './_components/Pricing';
-import CTA from './_components/CTA';
+import FinalCta from './_components/FinalCta';
 
 export const metadata: Metadata = {
   title: 'Custom AI, Automation & Software for Compliance-Driven Industries',
@@ -50,8 +52,8 @@ const organizationSchema = {
     telephone: '+1-855-508-6062',
     contactType: 'Sales',
     email: 'sean@autom8ionlab.com',
-    areaServed: ['US', 'CA'],
-    availableLanguage: ['English', 'French'],
+    areaServed: 'US',
+    availableLanguage: ['English'],
   },
   identifier: [
     { '@type': 'PropertyValue', propertyID: 'UEI', value: 'YY2DR3KSENH7' },
@@ -87,8 +89,6 @@ const organizationSchema = {
     'https://www.instagram.com/autom8ionlab',
     'https://www.linkedin.com/company/autom8ionlab',
     'https://www.linkedin.com/in/a8l-sean-richard/',
-    'https://twitter.com/autom8ionlab',
-    'https://tiktok.com/@autom8ionlab',
   ],
 };
 
@@ -99,7 +99,7 @@ const professionalServiceSchema = {
   url: 'https://autom8ionlab.com',
   telephone: '+1-855-508-6062',
   email: 'sean@autom8ionlab.com',
-  areaServed: ['US', 'CA'],
+  areaServed: 'US',
   description:
     'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. SDVOSB certification pending. UEI YY2DR3KSENH7. CAGE 9YCS7.',
   knowsAbout: [
@@ -122,7 +122,8 @@ const websiteSchema = {
   '@type': 'WebSite',
   url: 'https://autom8ionlab.com',
   name: 'Autom8ion Lab',
-  description: 'Custom AI automation, cloud infrastructure, and cybersecurity systems for businesses',
+  description:
+    'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries.',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
@@ -133,6 +134,8 @@ const websiteSchema = {
   },
 };
 
+// FAQPage schema mirrors the 8 questions rendered by the FAQ component
+// (LOCKED v3 §"FAQs") — kept in sync so crawlers see the same Q&A as users.
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -142,23 +145,15 @@ const faqSchema = {
       name: 'What industries do you work with?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Construction, healthcare, finance, real estate and property management, US federal/state/local government, and the Defense Industrial Base. We do not take work outside those areas — the focus is what makes us useful.',
+        text: "Construction, healthcare, finance, real estate and property management, US federal/state/local government, and the Defense Industrial Base. We don't take work outside those areas — the focus is what makes us useful.",
       },
     },
     {
       '@type': 'Question',
-      name: 'How long does it typically take to build a custom AI or automation system?',
+      name: 'Are you registered for federal contracting?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Most engagements ship in 8–14 weeks. CMMC remediation runs 4–9 months. FedRAMP-aligned builds run 6+ months. Quotes are scope-driven and provided after a discovery call.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What makes your AI agents different from generic chatbots?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Our AI agents are fine-tuned on your specific business data and approved documentation, scoped to specific actions, and connected only to the systems they need. Unlike generic chatbots that follow scripts, our agents respond using your procedures and follow role-based access, approval logic, and documented business rules.',
+        text: 'Yes. UEI: YY2DR3KSENH7. CAGE: 9YCS7. DUNS: 05-289-2750. SDVOSB certification pending. Veteran-owned.',
       },
     },
     {
@@ -171,10 +166,42 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What is the typical engagement size and duration?',
+      name: "What's your typical engagement size and duration?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We scope work to your contract structure — task orders, IDIQ, BPA, fixed-price, or T&M. Most engagements run 8–14 weeks. CMMC remediation runs 4–9 months. FedRAMP-aligned builds run 6+ months. Quotes are scope-driven and provided after a discovery call. We work transparently on price.',
+        text: 'We scope to your contract structure — task orders, IDIQ, BPA, commercial fixed-price, or T&M. Most projects ship in 8–14 weeks. CMMC remediation runs 4–9 months. FedRAMP-aligned builds run 6+ months. Quote provided after the discovery call.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you have past performance with [specific industry / agency]?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We can discuss applicable past performance after a qualifying call. Many engagements are NDA-protected; we provide details and references on a need-to-know basis after vendor onboarding begins.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you work on classified contracts?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not at this time. We work on unclassified contracts including CUI handling (NIST 800-171, CMMC L1–L2), FedRAMP Moderate, and HIPAA-aligned environments. For classified work, we partner with cleared firms.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where are you based?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'United States — primary location is Plant City, Florida. We also maintain a development and operations office in Montreal, Quebec. Sales and project delivery is US-only.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you respond to RFPs/RFIs?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Send the SOW or RFI documentation to sean@autom8ionlab.com or use the contact form. We respond within one business day with a fit assessment and proposed approach.',
       },
     },
   ],
@@ -200,15 +227,22 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      {/*
+        LOCKED v3 §"Final Homepage Copy" — 11 sections in this exact order.
+        Industries are PROMOTED to position 2 (above services) per the IA change
+        called out in LOCKED v3 §"What's Locked vs. What Changed Since v2".
+      */}
       <Hero />
-      <About />
-      <Problems />
-      <Solutions />
-      <Benefits />
+      <IndustriesGrid />
+      <ProblemFraming />
+      <ThreeServices />
+      <HowWeWork />
+      <ComplianceFrameworks />
+      <EngagementModels />
+      <CapabilityStatementCTA />
+      <PastPerformance />
       <FAQ />
-      <Process />
-      <Pricing />
-      <CTA />
+      <FinalCta />
     </>
   );
 }
