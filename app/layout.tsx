@@ -3,6 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
+import { AnimatedMesh } from './_components/ui';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://autom8ionlab.com'),
@@ -60,7 +61,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="//prod.spline.design" />
       </head>
-      <body className="bg-slate-950 text-white antialiased">
+      <body className="relative isolate bg-slate-950 text-white antialiased">
+        {/* Cinematic ambient background — sits behind everything via z-index: -10. */}
+        <AnimatedMesh />
+
         {/* Hidden form for Netlify Forms detection at build time */}
         <form
           name="capabilities-statement"
