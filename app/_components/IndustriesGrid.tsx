@@ -6,6 +6,7 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { Reveal, Stagger, StaggerItem, PremiumCard } from './ui';
 
 type IndustryCard = {
   slug: string;
@@ -61,42 +62,49 @@ const industries: IndustryCard[] = [
 
 export default function IndustriesGrid() {
   return (
-    <section id="industries" className="py-24 bg-slate-950 relative">
+    <section id="industries" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Built for industries where outcomes matter as much as compliance.
-          </h2>
-          <p className="text-lg text-slate-300 leading-relaxed">
-            We work with six industries that share a common need: custom-built technology that drives
-            ROI without creating new compliance, security, or operational risks. Each industry gets an
-            audience-specific service approach — not a templated one.
-          </p>
-        </div>
+        <Reveal>
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Built for industries where outcomes matter as much as compliance.
+            </h2>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              We work with six industries that share a common need: custom-built technology that drives
+              ROI without creating new compliance, security, or operational risks. Each industry gets an
+              audience-specific service approach — not a templated one.
+            </p>
+          </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Stagger
+          staggerDelay={0.06}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {industries.map((industry) => (
-            <Link
-              key={industry.slug}
-              href={`/industries/${industry.slug}`}
-              className="group relative bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition-all duration-300 overflow-hidden"
-            >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${industry.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-              ></div>
-              <div className="relative z-10">
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {industry.name}
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">{industry.description}</p>
-                <span className="inline-flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300">
-                  Learn more
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
-            </Link>
+            <StaggerItem key={industry.slug}>
+              <Link href={`/industries/${industry.slug}`} className="group block h-full">
+                <PremiumCard variant="hover" className="h-full p-6 transition-transform duration-300 group-hover:scale-[1.015]">
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${industry.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
+                  />
+                  <div className="relative z-10">
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {industry.name}
+                    </h3>
+                    <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                      {industry.description}
+                    </p>
+                    <span className="inline-flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300">
+                      Learn more
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </PremiumCard>
+              </Link>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

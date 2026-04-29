@@ -90,10 +90,10 @@ const FAQ = () => {
                       {faq.question}
                     </h3>
                   </div>
-                  <ChevronDown 
-                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-400 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
                       openIndex === index ? 'rotate-180 text-cyan-400' : ''
-                    }`} 
+                    }`}
                   />
                 </button>
                 

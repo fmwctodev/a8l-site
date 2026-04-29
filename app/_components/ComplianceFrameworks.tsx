@@ -1,5 +1,10 @@
+'use client';
+
 // LOCKED v3 §"Final Homepage Copy" §6 — Compliance frameworks table.
 // Rows verbatim from LOCKED v3.
+
+import { motion, useReducedMotion, type Variants } from 'framer-motion';
+import { Reveal, Stagger, StaggerItem } from './ui';
 
 const frameworks: { name: string; applies: string; deliver: string }[] = [
   {
@@ -65,58 +70,91 @@ const frameworks: { name: string; applies: string; deliver: string }[] = [
 ];
 
 export default function ComplianceFrameworks() {
+  const reduceMotion = useReducedMotion();
+
+  const rowContainerVariants: Variants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: reduceMotion ? 0 : 0.04 },
+    },
+  };
+  const rowItemVariants: Variants = {
+    hidden: { opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 12 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
+  };
+
   return (
-    <section className="py-24 bg-slate-950 relative">
+    <section className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mb-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Frameworks our work is engineered to satisfy.
-          </h2>
-        </div>
+        <Reveal>
+          <div className="max-w-3xl mb-10">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              Frameworks our work is engineered to satisfy.
+            </h2>
+          </div>
+        </Reveal>
 
-        {/* Desktop table */}
-        <div className="hidden md:block overflow-hidden rounded-xl border border-slate-800">
-          <table className="w-full text-left">
-            <thead className="bg-slate-900/60">
-              <tr>
-                <th className="px-6 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider">
-                  Framework
-                </th>
-                <th className="px-6 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider">
-                  Where it applies
-                </th>
-                <th className="px-6 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider">
-                  What we deliver
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800">
-              {frameworks.map((f) => (
-                <tr key={f.name} className="hover:bg-slate-900/40 transition-colors">
-                  <td className="px-6 py-4 text-white font-semibold">{f.name}</td>
-                  <td className="px-6 py-4 text-slate-300 text-sm">{f.applies}</td>
-                  <td className="px-6 py-4 text-slate-300 text-sm">{f.deliver}</td>
+        {/* Desktop table — row-by-row reveal with hover accent bar */}
+        <Reveal>
+          <div className="hidden md:block overflow-hidden rounded-xl border border-slate-800 bg-gradient-to-br from-slate-900/60 to-slate-900/30 backdrop-blur-sm">
+            <table className="w-full text-left">
+              <thead className="bg-slate-900/60 border-b border-slate-800">
+                <tr>
+                  <th className="px-6 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider">
+                    Framework
+                  </th>
+                  <th className="px-6 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider">
+                    Where it applies
+                  </th>
+                  <th className="px-6 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider">
+                    What we deliver
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <motion.tbody
+                className="divide-y divide-slate-800"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-60px' }}
+                variants={rowContainerVariants}
+              >
+                {frameworks.map((f) => (
+                  <motion.tr
+                    key={f.name}
+                    variants={rowItemVariants}
+                    className="group relative hover:bg-slate-900/60 transition-colors"
+                  >
+                    {/* Hover accent bar (left edge) */}
+                    <td className="relative px-6 py-4 text-white font-semibold">
+                      <span
+                        aria-hidden="true"
+                        className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"
+                      />
+                      {f.name}
+                    </td>
+                    <td className="px-6 py-4 text-slate-300 text-sm">{f.applies}</td>
+                    <td className="px-6 py-4 text-slate-300 text-sm">{f.deliver}</td>
+                  </motion.tr>
+                ))}
+              </motion.tbody>
+            </table>
+          </div>
+        </Reveal>
 
-        {/* Mobile stacked cards */}
-        <div className="md:hidden grid gap-4">
+        {/* Mobile stacked cards — same stagger via Stagger primitive */}
+        <Stagger staggerDelay={0.05} className="md:hidden grid gap-4">
           {frameworks.map((f) => (
-            <div
-              key={f.name}
-              className="bg-slate-900/40 border border-slate-800 rounded-lg p-5"
-            >
-              <div className="text-white font-semibold mb-2">{f.name}</div>
-              <div className="text-cyan-400 text-xs uppercase tracking-wider mb-1">Where it applies</div>
-              <div className="text-slate-300 text-sm mb-3">{f.applies}</div>
-              <div className="text-cyan-400 text-xs uppercase tracking-wider mb-1">What we deliver</div>
-              <div className="text-slate-300 text-sm">{f.deliver}</div>
-            </div>
+            <StaggerItem key={f.name}>
+              <div className="bg-gradient-to-br from-slate-900/60 to-slate-900/30 backdrop-blur-sm border border-slate-800 rounded-lg p-5">
+                <div className="text-white font-semibold mb-2">{f.name}</div>
+                <div className="text-cyan-400 text-xs uppercase tracking-wider mb-1">Where it applies</div>
+                <div className="text-slate-300 text-sm mb-3">{f.applies}</div>
+                <div className="text-cyan-400 text-xs uppercase tracking-wider mb-1">What we deliver</div>
+                <div className="text-slate-300 text-sm">{f.deliver}</div>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

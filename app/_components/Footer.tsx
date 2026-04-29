@@ -68,7 +68,22 @@ const Footer = () => {
 
   return (
     <>
-    <footer className="bg-black border-t border-slate-800">
+    {/* Animated trust band — subtle gradient sweep above the footer marks the
+        veteran-owned + federal contractor signal even after the trust pills
+        were removed from the hero. */}
+    <div className="relative overflow-hidden border-t border-slate-800/60 bg-gradient-to-r from-slate-950 via-cyan-950/30 to-slate-950">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent bg-[length:200%_100%] animate-gradient-shift"
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-4 text-center text-xs md:text-sm text-cyan-200/90 font-medium tracking-wide">
+        Veteran-Owned · SDVOSB Certification Pending · Registered US Federal Contractor —{' '}
+        <span className="font-mono">UEI YY2DR3KSENH7</span> ·{' '}
+        <span className="font-mono">CAGE 9YCS7</span>
+      </div>
+    </div>
+
+    <footer className="bg-black/80 backdrop-blur-sm border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-5 gap-12">
           {/* Company Info */}

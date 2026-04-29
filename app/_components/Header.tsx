@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
 // LOCKED v3 §"Information Architecture" — Industries promoted to primary nav
 // position (left of Solutions). This is the single biggest IA change from
@@ -42,7 +43,15 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<DropdownKey>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileSection, setOpenMobileSection] = useState<DropdownKey>('industries');
+  // Tracks whether the user has scrolled past the hero so we intensify the
+  // backdrop-blur and add a subtle border for definition.
+  const [scrolled, setScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    setScrolled(latest > 80);
+  });
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
@@ -79,24 +88,41 @@ export default function Header() {
   const renderDropdownPanel = (
     key: DropdownKey,
     items: { title: string; path: string }[],
-  ) =>
-    openDropdown === key && (
-      <div className="absolute top-full left-0 mt-2 bg-slate-800 rounded-lg shadow-xl py-2 z-[9999] min-w-[280px] border border-slate-700">
-        {items.map((item) => (
-          <Link
-            key={item.path}
-            href={item.path}
-            className="block px-4 py-2 text-slate-300 hover:bg-slate-700 hover:text-cyan-400 transition-colors text-sm"
-            onClick={() => setOpenDropdown(null)}
-          >
-            {item.title}
-          </Link>
-        ))}
-      </div>
-    );
+  ) => (
+    <AnimatePresence>
+      {openDropdown === key && (
+        <motion.div
+          className="absolute top-full left-0 mt-2 bg-slate-900/95 backdrop-blur-md rounded-lg shadow-2xl shadow-cyan-500/10 py-2 z-[9999] min-w-[280px] border border-slate-700/80"
+          initial={{ opacity: 0, scale: 0.96, y: -6 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.96, y: -6 }}
+          transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+        >
+          {items.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className="block px-4 py-2 text-slate-300 hover:bg-slate-800/80 hover:text-cyan-400 transition-colors text-sm"
+              onClick={() => setOpenDropdown(null)}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
 
   return (
-    <nav className="relative z-50 px-6 py-8 max-w-7xl mx-auto" ref={navRef}>
+    <motion.nav
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60 shadow-lg shadow-slate-950/30'
+          : 'bg-transparent'
+      }`}
+      initial={false}
+    >
+    <div className="px-6 py-6 max-w-7xl mx-auto" ref={navRef}>
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
           <img
@@ -225,6 +251,7 @@ export default function Header() {
           </div>
         </div>
       )}
-    </nav>
+    </div>
+    </motion.nav>
   );
 }
