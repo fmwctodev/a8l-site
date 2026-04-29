@@ -904,3 +904,45 @@ input:focus {
   font-weight: 500;
 }
 .expert-quote footer span[itemprop='name'] { color: #22d3ee; }
+
+/* ------------------------------------------------------------------ */
+/* CSS-only fade-up — used above-the-fold to avoid framer-motion's    */
+/* opacity:0 initial state hiding LCP elements until hydration. The   */
+/* server renders content visible at opacity:0, the keyframe animates */
+/* immediately on first paint, and reduced-motion users see the final */
+/* state instantly. No JS required, no hydration wait.                */
+/*                                                                     */
+/* Per the 2026-04-29 PageSpeed audit: framer-motion's <Reveal>       */
+/* on the hero was the hidden cause of mobile LCP 6.9s — the H1 +     */
+/* subhead + CTAs were all opacity:0 until JS hydrated.               */
+/* ------------------------------------------------------------------ */
+
+@keyframes css-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: css-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fade-up-delay-1 { animation-delay: 0.12s; }
+.fade-up-delay-2 { animation-delay: 0.24s; }
+.fade-up-delay-3 { animation-delay: 0.36s; }
+.fade-up-delay-4 { animation-delay: 0.48s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .fade-up-delay-1,
+  .fade-up-delay-2,
+  .fade-up-delay-3,
+  .fade-up-delay-4 {
+    animation: none;
+  }
+}
