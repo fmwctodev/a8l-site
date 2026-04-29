@@ -39,10 +39,10 @@ export default function CapabilityStatementCTA() {
           <p className="text-sm text-slate-400">
             For RFP responses or vendor onboarding documentation:{' '}
             <a
-              href="mailto:sean@autom8ionlab.com"
+              href="mailto:info@autom8ionlab.com"
               className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4"
             >
-              sean@autom8ionlab.com
+              info@autom8ionlab.com
             </a>
           </p>
         </div>

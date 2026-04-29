@@ -51,7 +51,7 @@ const organizationSchema = {
     '@type': 'ContactPoint',
     telephone: '+1-855-508-6062',
     contactType: 'Sales',
-    email: 'sean@autom8ionlab.com',
+    email: 'info@autom8ionlab.com',
     areaServed: 'US',
     availableLanguage: ['English'],
   },
@@ -98,7 +98,7 @@ const professionalServiceSchema = {
   name: 'Autom8ion Lab',
   url: 'https://autom8ionlab.com',
   telephone: '+1-855-508-6062',
-  email: 'sean@autom8ionlab.com',
+  email: 'info@autom8ionlab.com',
   areaServed: 'US',
   description:
     'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. SDVOSB certification pending. UEI YY2DR3KSENH7. CAGE 9YCS7.',
@@ -201,7 +201,7 @@ const faqSchema = {
       name: 'Do you respond to RFPs/RFIs?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Send the SOW or RFI documentation to sean@autom8ionlab.com or use the contact form. We respond within one business day with a fit assessment and proposed approach.',
+        text: 'Yes. Send the SOW or RFI documentation to info@autom8ionlab.com or use the contact form. We respond within one business day with a fit assessment and proposed approach.',
       },
     },
   ],

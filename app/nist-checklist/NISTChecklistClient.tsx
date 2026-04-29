@@ -138,7 +138,7 @@ const NISTChecklistClient = () => {
     const supabase = getSupabase();
     if (!supabase) {
       setLoading(false);
-      setError('Submission is temporarily unavailable. Please email us at sean@autom8ionlab.com.');
+      setError('Submission is temporarily unavailable. Please email us at info@autom8ionlab.com.');
       return;
     }
     const { error: insertError } = await supabase
@@ -148,7 +148,7 @@ const NISTChecklistClient = () => {
     setLoading(false);
 
     if (insertError) {
-      setError('Something went wrong. Please try again or email us at sean@autom8ionlab.com.');
+      setError('Something went wrong. Please try again or email us at info@autom8ionlab.com.');
       return;
     }
 

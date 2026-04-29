@@ -64,7 +64,7 @@ export function OrganizationSchema() {
       '@type': 'ContactPoint',
       telephone: '+1-855-508-6062',
       contactType: 'Sales',
-      email: 'sean@autom8ionlab.com',
+      email: 'info@autom8ionlab.com',
       areaServed: 'US',
       availableLanguage: ['English'],
     },
@@ -259,7 +259,7 @@ export function ProfessionalServiceSchema() {
     name: 'Autom8ion Lab',
     url: BASE,
     telephone: '+1-855-508-6062',
-    email: 'sean@autom8ionlab.com',
+    email: 'info@autom8ionlab.com',
     areaServed: 'US',
     description:
       'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. SDVOSB certification pending. UEI YY2DR3KSENH7. CAGE 9YCS7.',

@@ -32,11 +32,11 @@ export default function FinalCta() {
           </Link>
 
           <a
-            href="mailto:sean@autom8ionlab.com"
+            href="mailto:info@autom8ionlab.com"
             className="group inline-flex items-center space-x-2 border border-slate-600 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
           >
             <Mail className="w-5 h-5" />
-            <span>Email sean@autom8ionlab.com</span>
+            <span>Email info@autom8ionlab.com</span>
           </a>
         </div>
       </div>

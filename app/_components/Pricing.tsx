@@ -90,8 +90,8 @@ const Pricing = () => {
         <div className="text-center mt-12 max-w-3xl mx-auto">
           <p className="text-slate-400 text-sm leading-relaxed">
             For RFP responses or vendor onboarding documentation:{' '}
-            <a href="mailto:sean@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300">
-              sean@autom8ionlab.com
+            <a href="mailto:info@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300">
+              info@autom8ionlab.com
             </a>
           </p>
         </div>

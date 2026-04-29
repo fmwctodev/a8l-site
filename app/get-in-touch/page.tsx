@@ -34,7 +34,7 @@ const contactSchema = {
       '@type': 'ContactPoint',
       contactType: 'Sales',
       telephone: '+1-855-508-6062',
-      email: 'sean@autom8ionlab.com',
+      email: 'info@autom8ionlab.com',
       availableLanguage: ['English', 'French'],
       areaServed: ['US', 'CA'],
     },
@@ -54,7 +54,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    details: 'mailto:sean@autom8ionlab.com',
+    details: 'mailto:info@autom8ionlab.com',
     description: 'Response within one business day',
   },
   { icon: Phone, title: 'Call Us', details: 'tel:+18555086062', description: 'Mon-Fri, 9AM-6PM EST' },

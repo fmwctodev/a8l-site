@@ -48,7 +48,7 @@ const ldSchema1 = {
               '@type': 'ContactPoint',
               telephone: '+1-855-508-6062',
               contactType: 'Sales',
-              email: 'sean@autom8ionlab.com',
+              email: 'info@autom8ionlab.com',
               availableLanguage: ['English', 'French'],
             },
             identifier: [
@@ -326,10 +326,10 @@ export default function Page() {
                       <div className="flex items-center gap-3">
                         <Mail className="w-5 h-5 text-cyan-400" />
                         <a
-                          href="mailto:sean@autom8ionlab.com"
+                          href="mailto:info@autom8ionlab.com"
                           className="hover:text-cyan-400"
                         >
-                          sean@autom8ionlab.com
+                          info@autom8ionlab.com
                         </a>
                       </div>
                       <div className="flex items-center gap-3">
@@ -351,8 +351,8 @@ export default function Page() {
                   <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
                     For RFP responses, vendor onboarding documentation, or to add Autom8ion Lab to your qualified vendor pool,
                     email{' '}
-                    <a href="mailto:sean@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300">
-                      sean@autom8ionlab.com
+                    <a href="mailto:info@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300">
+                      info@autom8ionlab.com
                     </a>
                     .
                   </p>

@@ -96,7 +96,7 @@ const groups: FaqGroup[] = [
       {
         question: 'Do you respond to RFPs/RFIs?',
         answer:
-          'Yes. Send the SOW or RFI documentation to sean@autom8ionlab.com or use the contact form. We respond within one business day with a fit assessment and proposed approach.',
+          'Yes. Send the SOW or RFI documentation to info@autom8ionlab.com or use the contact form. We respond within one business day with a fit assessment and proposed approach.',
       },
       {
         question: 'Do you support GSA Schedule procurement?',
