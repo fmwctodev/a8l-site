@@ -10,66 +10,66 @@ import CTA from '@/app/_components/CTA';
 import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Compliance & Engineering',
+  title: 'Cybersecurity & Compliance for Commercial Business Assets',
   description:
-    'CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 prep. We engineer compliant systems and document them for audit. Not a CMMC RPO or C3PAO.',
+    'Cybersecurity and compliance systems that protect commercial business assets in healthcare, finance, and tech. SOC 2 readiness, HIPAA security, audit-ready documentation. 30-day audit, 4-9 month remediation.',
   keywords:
-    'CMMC compliance services, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 Type II preparation, cybersecurity compliance engineering, FedRAMP environment design, control implementation',
+    'cybersecurity and compliance services, SOC 2 readiness, HIPAA security, audit-ready documentation, commercial cybersecurity, business security engineering, control implementation, evidence collection',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/cybersecurity' },
   openGraph: {
-    title: 'Cybersecurity Compliance & Engineering | Autom8ion Lab',
+    title: 'Cybersecurity & Compliance for Commercial Business Assets | Autom8ion Lab',
     description:
-      'CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 prep. We engineer compliant systems and document them for audit.',
+      'Cybersecurity and compliance systems that protect commercial business assets in healthcare, finance, and tech. We implement controls and document the evidence trail at the same time.',
     url: 'https://autom8ionlab.com/solutions/cybersecurity',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
-    title: 'Cybersecurity Compliance & Engineering | Autom8ion Lab',
+    title: 'Cybersecurity & Compliance for Commercial Business Assets | Autom8ion Lab',
     description:
-      'CMMC readiness, NIST 800-171, HIPAA, SOC 2. Engineering-led compliance — not policies, implemented controls.',
+      'SOC 2, HIPAA, and audit-ready documentation for commercial business assets in healthcare, finance, and tech.',
   },
 };
 
 /* -------------------------------------------------- */
-/* Page data (LOCKED v3 §3.3)                         */
+/* Page data                                          */
 /* -------------------------------------------------- */
 
 const whatWeBuild = [
   {
     icon: ShieldCheck,
-    title: 'CMMC readiness assessment and remediation',
+    title: 'SOC 2 readiness and control implementation',
     body:
-      'A practical assessment of your environment against the 110 NIST 800-171 Rev 2 requirements, mapped control by control. The output is a gap report, a prioritized remediation roadmap, and a scoping document that defines your CUI boundary clearly. Remediation is hands-on engineering — not template policies. Levels 1 and 2 cover most subcontractor scopes; Level 3 work occasional.',
-  },
-  {
-    icon: FileText,
-    title: 'NIST 800-171 controls implementation',
-    body:
-      'Implementation across all 14 control families — access control (AC), audit and accountability (AU), configuration management (CM), identification and authentication (IA), incident response (IR), system and information integrity (SI), and the rest. Each control has an implementation that runs in your environment and a control narrative that documents what was implemented, where, and how an assessor can verify it.',
+      'For SaaS, service businesses, and growing tech teams. We implement the controls that protect customer data and business systems in real environments — MFA across all critical systems, role-based access and least-privilege permissions, encryption for data at rest and in transit, centralized logging and audit retention, endpoint hardening and secure configurations with change control, vendor access controls and third-party risk processes, plus policies, risk registers, and evidence mapped to actual operations.',
   },
   {
     icon: Lock,
-    title: 'HIPAA technical safeguards (engineered, not written)',
+    title: 'HIPAA security and compliance support',
     body:
-      'The HIPAA Security Rule technical safeguards — access control, audit controls, integrity controls, transmission security — implemented in code, infrastructure, and platform configuration. Encryption strategy mapped to your data flows. Access logs structured to satisfy the audit controls standard. BAA-aligned documentation produced as part of the deliverable. We write the systems your compliance team will defend, not policies they\'ll have to retrofit later.',
-  },
-  {
-    icon: Network,
-    title: 'SOC 2 Type II preparation',
-    body:
-      'Control design across the relevant Trust Service Criteria (typically Security plus one or two of Availability, Confidentiality, Processing Integrity), evidence collection automation, and the documentation package your auditor will request. We work alongside your CPA firm — they perform the attestation; we make sure the controls are in place and the evidence is collectable.',
-  },
-  {
-    icon: ShieldAlert,
-    title: 'FedRAMP-aligned environment design',
-    body:
-      "We are not ourselves a FedRAMP-authorized SaaS provider — we build custom systems that operate inside our clients' FedRAMP-authorized environments. The work covers landing zone design in AWS GovCloud or Azure Government, NIST 800-53 control selection and implementation, System Security Plan drafts, and 3PAO-prep packages. FedRAMP-aligned builds run 6+ months because the documentation burden is real.",
+      'For healthcare organizations and vendors handling protected health information. We engineer the control foundation required for protecting PHI with confidence — access control enforcement across users, devices, and systems, identification and authentication controls with MFA, configuration baselines and secure system settings, audit logging and record retention aligned to compliance requirements, encryption, data handling, backup, and boundary protections, plus workforce access controls and device management documented to map implemented controls to operational and regulatory expectations.',
   },
   {
     icon: FileText,
-    title: 'SSP, POA&M, and audit-ready documentation',
+    title: 'Audit-ready documentation support',
     body:
-      "The artifacts assessors read first. System Security Plan with implementation statements that name specific systems, configurations, and responsible roles — not template language. POA&M tracking every gap with realistic milestones. Control narratives that map cleanly to your environment. Evidence collection automated where possible. Documentation produced as the build progresses, not at the end.",
+      'For teams preparing policies, inventories, access reviews, risk records, and evidence packages. We prepare the documentation package your reviewer, customer, or auditor will expect to see — policies and procedures tied to actual system behavior, risk assessments and remediation tracking, asset, user, and vendor inventories, access review records and control evidence, and evidence collection that reduces audit friction. We do not separate the technical build from the paperwork. We implement the system and document the control set for audit at the same time.',
+  },
+  {
+    icon: Network,
+    title: 'Engineering the controls and the audit trail',
+    body:
+      'A compliant environment is not just secure. It is provable. That is the part most firms miss. We build the controls inside your stack, then create the documentation trail that supports them — System Security Plans (SSPs), Plans of Action and Milestones (POA&Ms), control narratives and policy sets, asset, access, and vendor documentation, and evidence collection for audits and assessments. If an auditor asks how a control works, who owns it, and where the evidence lives, you have an answer.',
+  },
+  {
+    icon: ShieldAlert,
+    title: '30-day audit and 4-9 month remediation',
+    body:
+      "Strong compliance programs are built in phases. We start with a 30-day audit to establish scope, identify failed controls, and map evidence gaps. Most organizations then need 4 to 9 months to close gaps, implement controls, validate evidence, and prepare for audit or customer review. Anyone promising a full enterprise remediation overnight is selling fiction. We handle both sides — we build the controls and the audit package that proves they work.",
+  },
+  {
+    icon: FileText,
+    title: 'Government & defense compliance support',
+    body:
+      "If you support federal agencies or the Defense Industrial Base, we also handle government-specific compliance programs — CMMC 2.0 readiness, FedRAMP-aligned security support, NIST 800-171 implementation, and audit-ready documentation support for SSPs, POA&Ms, inventories, and evidence packages. SDVOSB Pending, veteran-owned. UEI: YY2DR3KSENH7. CAGE: 9YCS7.",
   },
 ];
 
@@ -77,39 +77,39 @@ const comparisonRows: ComparisonRow[] = [
   {
     label: 'Control implementation',
     values: [
-      'Engineered in code, infrastructure, and platform config — implemented and verifiable in your environment.',
-      'Policy and procedure templates. Implementation left to your IT team.',
-      'Operational monitoring after the controls are in place. Not implementation.',
+      'Engineered into your stack — identity, endpoints, logging, encryption, configurations, backups, and workflow-level exposure all hardened by senior engineers.',
+      'Policies, risk registers, and gap reports. Implementation handed back to your IT team to execute.',
+      'Operational monitoring after the controls are in place — not implementation.',
     ],
   },
   {
     label: 'Documentation produced',
     values: [
-      'SSP, POA&M, and control narratives written against your real environment.',
-      'Templated SSP, sometimes lightly customized. May not match what your environment actually does.',
-      'Monitoring reports and incident logs. Not the documentation an assessor asks for.',
+      'SSPs, POA&Ms, control narratives, asset and vendor inventories, access reviews, and evidence packages mapped to your actual environment.',
+      'Templated policies and assessment decks. May not match what your environment actually does.',
+      'Monitoring reports and incident logs — not the documentation an auditor or customer reviewer asks for.',
     ],
   },
   {
-    label: 'CMMC RPO / C3PAO',
+    label: 'Engagement shape',
     values: [
-      'Not an RPO. Not a C3PAO. We engineer the controls; we partner with assessors when independent assessment is required.',
-      'Some are RPOs. Many are not.',
-      'Not an assessor.',
+      '30-day audit to scope and identify gaps; 4-9 month remediation to engineer controls, document evidence, and validate. Senior engineers stay on through audit prep.',
+      'Assessment and recommendations. Implementation work is on you or a separate vendor.',
+      'Ongoing managed service after the controls already exist.',
     ],
   },
   {
-    label: 'Software development',
+    label: 'Industry focus',
     values: [
-      'In-house. We can write the custom platforms, internal tools, and integrations your compliance posture requires.',
-      'Out of scope.',
-      'Out of scope.',
+      'Healthcare, finance, and tech where trust, uptime, and data protection directly affect growth — plus government & defense when required.',
+      'Varies. Often broad coverage with shallow depth.',
+      'Operational coverage across customer base — generally framework-agnostic.',
     ],
   },
   {
     label: 'Best fit',
     values: [
-      'Companies that need the controls implemented and the systems built — typically pre-assessment, pre-RFP, or pre-audit.',
+      'Companies that need controls implemented and the evidence package built — typically pre-vendor-questionnaire, pre-customer-review, or pre-audit.',
       'Companies that already have an internal IT/security team to implement what the consultant recommends.',
       'Companies that already have controls in place and need ongoing monitoring.',
     ],
@@ -120,27 +120,27 @@ const faqs = [
   {
     question: 'Are you a CMMC RPO or C3PAO?',
     answer:
-      "No. We are software and AI builders with an in-house cybersecurity compliance arm — not assessors. We engineer systems that satisfy NIST 800-171 controls and produce the documentation auditors expect, working alongside your assessor or a partner C3PAO. We can refer you to assessment partners.",
+      "We are not currently a CMMC Registered Practitioner Organization (RPO) or a C3PAO. We implement systems aligned to NIST 800-171 controls and produce the documentation your assessor will need. We work alongside RPO/C3PAO partners when independent assessment is required.",
   },
   {
     question: 'Are you an MSSP or do you offer 24/7 monitoring?',
     answer:
-      "No, we don't run a SOC and we don't sell ongoing monitoring as a service. We engineer the systems and the controls; we hand off to your existing security operations or to an MSSP partner for monitoring after deployment. If you need 24/7 monitoring, we can recommend partners.",
+      "Most cybersecurity firms are essentially insurance brokers — they tell you what you need to buy and then walk away. We are builders, not an MSSP. We engineer the controls and create the audit package that proves they work. If you need 24/7 monitoring after deployment, we work alongside MSSP partners.",
   },
   {
-    question: "What's a typical CMMC Level 2 remediation timeline?",
+    question: "What's a typical SOC 2 or HIPAA remediation timeline?",
     answer:
-      'Most CMMC Level 2 remediation projects run 4–9 months depending on environment complexity, the maturity of existing controls, and the scope of CUI handling. Smaller scopes with clean baselines can compress; multi-environment migrations and GCC High cutovers can extend.',
+      'We start with a 30-day audit to identify control gaps, evidence failures, and system exposure. Most full remediation programs take 4 to 9 months because real compliance means fixing identity, access, logging, encryption, endpoint controls, vendor risk, and documentation together.',
   },
   {
-    question: 'Do you handle SOC 2 attestation?',
+    question: 'Do you handle SOC 2 attestation directly?',
     answer:
-      'We handle the engineering and evidence work that gets you ready for SOC 2 attestation. The attestation itself is performed by an independent CPA firm — we work alongside them, not in their place. Most clients use this engagement to get from zero to audit-ready before bringing in their auditor.',
+      'No — SOC 2 attestation is performed by an independent CPA firm. We handle the engineering and evidence work that gets you ready for the attestation, working alongside your auditor. Most clients use the engagement to get from zero to audit-ready before bringing in their CPA firm.',
   },
   {
-    question: 'Can you operate inside our existing security tooling?',
+    question: 'How do you protect business assets that matter most?',
     answer:
-      'Yes. We integrate with your SIEM, IdP, EDR/XDR, and ticketing systems rather than imposing ours. Common stacks: Microsoft Sentinel + Entra ID, Splunk + Okta, Sumo Logic, CrowdStrike Falcon, Rapid7, Tenable. We make the controls visible in tools your team already uses.',
+      'We focus on customer and patient data, financial systems and payment workflows, internal applications and cloud environments, vendor-connected systems and third-party access, and audit trails, policies, and evidence for customer and partner reviews. By integrating security into your API integrations and software development from day one, we save you from the "security tax" most companies pay later.',
   },
 ];
 
@@ -155,12 +155,12 @@ export default function Page() {
         trail={[
           { name: 'Home', href: '/' },
           { name: 'Solutions', href: '/#services' },
-          { name: 'Cybersecurity Compliance & Engineering', href: '/solutions/cybersecurity' },
+          { name: 'Cybersecurity & Compliance', href: '/solutions/cybersecurity' },
         ]}
       />
       <ServiceSchema
-        name="Cybersecurity Compliance & Engineering"
-        serviceType="CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 preparation"
+        name="Cybersecurity & Compliance for Commercial Business Assets"
+        serviceType="SOC 2 readiness, HIPAA security and compliance, audit-ready documentation, control engineering"
         url="https://autom8ionlab.com/solutions/cybersecurity"
         industry="All"
       />
@@ -174,24 +174,25 @@ export default function Page() {
               <span className="mx-2">/</span>
               <span className="text-slate-300">Solutions</span>
               <span className="mx-2">/</span>
-              <span className="text-slate-300">Cybersecurity Compliance &amp; Engineering</span>
+              <span className="text-slate-300">Cybersecurity &amp; Compliance</span>
             </nav>
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Cybersecurity Compliance &amp; Engineering
+              Cybersecurity &amp; Compliance Services That Protect Commercial Business Assets
             </h1>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
-              CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 prep. We
-              engineer compliant systems and document them for audit.
+              We implement the controls and document the evidence trail at the same time. SOC 2 readiness,
+              HIPAA security, and audit-ready documentation for healthcare, finance, and tech teams where
+              trust, uptime, and data protection directly affect growth.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* DEFINITION BLOCK (~200 words) — LOCKED v3 §3.3 step 1 */}
+      {/* DEFINITION BLOCK */}
       <section className="py-16 relative">
         <div className="max-w-4xl mx-auto px-6 relative">
           {/* Vertical gradient accent bar */}
@@ -202,27 +203,33 @@ export default function Page() {
           <div className="pl-8">
             <Reveal>
               <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                Autom8ion Lab provides cybersecurity compliance engineering for organizations operating
-                under CMMC 2.0, NIST 800-171, NIST 800-53, HIPAA, SOC 2, FCRA, and FedRAMP. We are
-                software builders with an in-house cybersecurity compliance arm — not a security
-                consulting firm and not an MSSP. The output of an engagement is implemented controls in
-                your environment, the documentation an assessor expects (System Security Plan,
-                POA&amp;M, control narratives, evidence packages), and a system you can defend in audit.
+                Security is not a checkbox. It is revenue protection, operational continuity, customer
+                trust, and brand protection. If you handle sensitive customer data, financial records,
+                health information, or internal business systems, weak controls put your business at
+                risk fast. Most firms fail compliance because they duct-tape tools that do not talk,
+                write policies no one follows, and react only after a vendor questionnaire, audit
+                request, or security incident lands. That approach breaks fast. Reviewers verify
+                implemented controls, evidence, ownership, and documentation. They do not grade effort.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-lg text-slate-300 leading-relaxed">
-                Engagements typically span CMMC Level 2 readiness for DoD subcontractors, HIPAA-aligned
-                infrastructure for healthcare clients, SOC 2 Type II preparation for SaaS companies
-                pursuing enterprise contracts, FedRAMP-aligned environment design for vendors selling
-                into civilian agencies, and the technical safeguards work that sits across all of them.
+                At Autom8ion Lab, we build cybersecurity and compliance systems that match how your
+                operation actually works. We do not hand you a template. We implement the controls and
+                document the evidence trail at the same time. We lead with commercial security and
+                compliance for teams in healthcare, finance, and tech. We protect customer and patient
+                data, financial systems and payment workflows, internal applications and cloud
+                environments, vendor-connected systems and third-party access, and the audit trails,
+                policies, and evidence for customer and partner reviews. Government-specific frameworks
+                like CMMC, FedRAMP, and NIST 800-171 are addressed in our Government &amp; Defense
+                section below.
               </p>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* REQUIRED DISCLOSURE BLOCK — LOCKED v3 §3.3 CRITICAL — pulse-glow shell */}
+      {/* REQUIRED DISCLOSURE BLOCK — pulse-glow shell */}
       <section className="py-12 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
@@ -239,9 +246,9 @@ export default function Page() {
                   </h2>
                   <p className="text-slate-300 leading-relaxed">
                     We are not currently a CMMC Registered Practitioner Organization (RPO) or a C3PAO.
-                    We engineer systems to NIST 800-171 controls and produce the documentation your
-                    assessor will need. We work alongside RPO/C3PAO partners when independent
-                    assessment is required, and we can refer you to assessment partners.
+                    We implement systems aligned to NIST 800-171 controls and produce the documentation
+                    your assessor will need. We work alongside RPO/C3PAO partners when independent
+                    assessment is required.
                   </p>
                 </div>
               </div>
@@ -250,43 +257,43 @@ export default function Page() {
         </div>
       </section>
 
-      {/* WHO THIS IS FOR */}
+      {/* WHAT USUALLY BREAKS COMPLIANCE PROGRAMS */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What usually breaks compliance programs</h2>
           </Reveal>
           <Stagger className="grid sm:grid-cols-2 gap-4 text-slate-300" staggerDelay={0.06}>
             {[
               {
-                name: 'DoD primes and subcontractors',
+                name: 'Documentation that does not match reality',
                 body:
-                  'Facing CMMC Phase 2 flow-down requirements. CUI handling that needs NIST 800-171 controls implemented and documented for assessment.',
+                  'Policies say one thing. Systems do another. Reviewers verify what is actually implemented, not what is written down.',
               },
               {
-                name: 'Healthcare entities and business associates',
+                name: 'Weak identity controls',
                 body:
-                  'PHI handling that needs HIPAA Security Rule technical safeguards engineered into infrastructure and applications, not just documented in policy.',
+                  'Shared accounts, inconsistent MFA, and over-permissioned access. Identity is where most audit findings start.',
               },
               {
-                name: 'SaaS and service organizations',
+                name: 'Unmanaged devices and vendors',
                 body:
-                  'Pursuing enterprise contracts that require SOC 2 Type II attestation. Need control implementation and evidence collection before bringing in the CPA auditor.',
+                  'Endpoints and third parties with direct paths to sensitive data. Vendor access is a control surface most firms underestimate.',
               },
               {
-                name: 'Federal-facing software vendors',
+                name: 'Missing audit evidence',
                 body:
-                  'Building products that must operate inside FedRAMP Moderate or High authorized environments. Need the controls implemented and the SSP drafted.',
+                  'No clean record of control ownership, monitoring, or remediation. When an auditor asks how a control works and who owns it, you need an answer.',
               },
               {
-                name: 'Tenant screening and consumer-data businesses',
+                name: 'No implementation layer',
                 body:
-                  'FCRA adverse action workflow, audit trail, and dispute handling implemented in code and verifiable for regulator review.',
+                  'A consultant identifies gaps, but nobody actually fixes them. We close those gaps by building the controls and producing the evidence package reviewers expect.',
               },
               {
-                name: 'Banks, fintech, and insurance carriers',
+                name: 'Last-minute scrambles',
                 body:
-                  'NYDFS Part 500, GLBA, FFIEC IT Examination Handbook, and SR 11-7 model risk requirements where the technical implementation is more useful than another policy binder.',
+                  'Reactive compliance work creates audit findings, customer-questionnaire delays, and partner-trust gaps. Maintain a defensible state of readiness instead.',
               },
             ].map((role) => (
               <StaggerItem key={role.name}>
@@ -300,7 +307,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* WHAT WE BUILD (~600 words across subsections) */}
+      {/* WHAT WE BUILD */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
@@ -329,7 +336,58 @@ export default function Page() {
         </div>
       </section>
 
-      {/* COMPARISON TABLE — LOCKED v3 §3.3 step 5 */}
+      {/* 30-DAY AUDIT TIMELINE */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              The 30-day audit and 4-9 month remediation timeline
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">
+              Strong compliance programs are built in phases. We start with a 30-day audit to establish
+              scope, identify failed controls, and map evidence gaps. Most organizations then need 4 to
+              9 months to close gaps, implement controls, validate evidence, and prepare for audit or
+              customer review. Anyone promising a full enterprise remediation overnight is selling
+              fiction.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.06}>
+            {[
+              {
+                step: 'Step 1: 30-Day Audit and Scope Mapping',
+                body:
+                  'We assess your current environment against SOC 2 control expectations, HIPAA security requirements, and your actual operational risk. We identify failed controls, missing evidence, ownership issues, and system-level risks.',
+              },
+              {
+                step: 'Step 2: Control Engineering',
+                body:
+                  'Our senior engineers harden the environment. We fix identity, endpoints, logging, encryption, configurations, backups, and workflow-level exposure.',
+              },
+              {
+                step: 'Step 3: Documentation and Evidence',
+                body:
+                  'We produce the documentation package that matches the implemented state of the system — policies, inventories, risk records, access reviews, and audit-ready evidence.',
+              },
+              {
+                step: 'Step 4: Validation and Audit Prep',
+                body:
+                  'We run internal reviews, validate the controls, close remaining gaps, and prepare your team for auditor, customer, and partner security questions.',
+              },
+            ].map((s) => (
+              <StaggerItem key={s.step}>
+                <PremiumCard variant="hover" className="p-6 h-full">
+                  <h3 className="text-white font-semibold mb-2">{s.step}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{s.body}</p>
+                </PremiumCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* COMPARISON TABLE */}
       <section className="py-20 relative">
         <div className="max-w-6xl mx-auto px-6">
           <Reveal>
@@ -351,7 +409,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* COMPLIANCE FRAMEWORKS WE BUILD TO */}
+      {/* FRAMEWORKS */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
@@ -361,20 +419,14 @@ export default function Page() {
           </Reveal>
           <Stagger className="grid sm:grid-cols-2 gap-3 text-sm" staggerDelay={0.04}>
             {[
-              'CMMC 2.0 (Levels 1–3)',
-              'NIST 800-171 Rev 2',
-              'NIST 800-53',
-              'FedRAMP Moderate / High',
-              'HIPAA / HITECH',
-              'HITRUST CSF',
               'SOC 2 Type II',
+              'HIPAA / HITECH',
+              'CMMC 2.0',
+              'NIST 800-171',
+              'NIST 800-53',
+              'FedRAMP-aligned',
               'PCI-DSS',
-              'FCRA',
-              'FFIEC IT Examination Handbook',
-              'NYDFS 23 NYCRR Part 500',
-              'GLBA Safeguards Rule',
-              'DFARS 252.204-7012 / 7021',
-              'Section 508',
+              'HITRUST CSF',
             ].map((f) => (
               <StaggerItem key={f}>
                 <PremiumCard variant="hover" className="px-4 py-3 text-slate-200 flex items-center space-x-2">
@@ -387,7 +439,95 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SERVICE-SPECIFIC FAQ */}
+      {/* WHY OUR APPROACH IS DIFFERENT */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why our approach is different
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              Most cybersecurity firms are essentially insurance brokers. They tell you what you need to
+              buy and then walk away. At Autom8ion Lab, we are builders. We do not just help you chase a
+              checklist — we help you build a system that protects your business assets and stands up to
+              review. By integrating security into your <Link href="/solutions/api-integrations" className="text-cyan-400 hover:text-cyan-300 underline">API integrations</Link> and{' '}
+              <Link href="/solutions/software-development" className="text-cyan-400 hover:text-cyan-300 underline">software development</Link>{' '}
+              from day one, we save you from the &quot;security tax&quot; that most companies pay later.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.06}>
+            {[
+              {
+                name: 'Senior engineer access',
+                body:
+                  'You will never be handed off to an account manager. You speak directly with the engineers building your security.',
+              },
+              {
+                name: 'Commercial-first protection',
+                body:
+                  'We prioritize the controls that protect healthcare, finance, and tech environments where sensitive data, uptime, and customer trust are on the line.',
+              },
+              {
+                name: 'Direct communication',
+                body:
+                  "We don't hide behind jargon. If something is broken, we tell you it's broken and we show you how we're fixing it.",
+              },
+              {
+                name: 'Engineering, not advisory',
+                body:
+                  'We do not separate the technical build from the paperwork. We implement the system and document the control set for audit at the same time.',
+              },
+            ].map((it) => (
+              <StaggerItem key={it.name}>
+                <PremiumCard variant="hover" className="p-5 h-full">
+                  <h3 className="text-white font-semibold mb-2">{it.name}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{it.body}</p>
+                </PremiumCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* GOVERNMENT & DEFENSE BLOCK */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Government &amp; Defense
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              If you support federal agencies or the Defense Industrial Base, we also handle
+              government-specific compliance programs. That includes CMMC 2.0 readiness, FedRAMP-aligned
+              security support, NIST 800-171 implementation, and audit-ready documentation support for
+              SSPs, POA&amp;Ms, inventories, and evidence packages.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-3 text-sm" staggerDelay={0.04}>
+            {[
+              'UEI: YY2DR3KSENH7',
+              'CAGE: 9YCS7',
+              'SDVOSB Pending — veteran-owned',
+              'FedRAMP-aware deployment support',
+              'NIST-focused control alignment',
+              'CMMC 2.0 readiness work',
+            ].map((f) => (
+              <StaggerItem key={f}>
+                <PremiumCard variant="hover" className="px-4 py-3 text-slate-200 flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <span>{f}</span>
+                </PremiumCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* FAQ */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
@@ -406,35 +546,37 @@ export default function Page() {
         </div>
       </section>
 
-      {/* INTERNAL LINKING — to industry hubs */}
+      {/* INTERNAL LINKING */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Industry-specific compliance work
+              Quick links for your security strategy
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-slate-300 leading-relaxed mb-8">
-              The framework you operate under depends on your industry. Each industry hub goes deeper on
-              the specific controls, named systems, and audit posture that apply.
+              You need a partner that understands the intersection of engineering and compliance.
+              Whether you need SOC 2 readiness, HIPAA security support, or a stronger control
+              environment for healthcare, finance, or tech, we have the roadmap and the build team
+              ready.
             </p>
           </Reveal>
           <Stagger className="grid sm:grid-cols-2 gap-3" staggerDelay={0.05}>
             {[
-              { slug: 'defense', name: 'Defense Industrial Base', desc: 'CMMC 2.0, NIST 800-171, DFARS' },
-              { slug: 'healthcare', name: 'Healthcare & Life Sciences', desc: 'HIPAA, HITRUST, FDA Part 11' },
-              { slug: 'finance', name: 'Finance', desc: 'SOC 2, PCI-DSS, NYDFS Part 500, FFIEC' },
-              { slug: 'government', name: 'US Government', desc: 'FedRAMP, FISMA, NIST 800-53, Section 508' },
-              { slug: 'real-estate-property', name: 'Real Estate & Property', desc: 'FCRA, HUD, Fair Housing' },
-              { slug: 'construction', name: 'Construction', desc: 'HUD, OSHA, Davis-Bacon' },
-            ].map((ind) => (
-              <StaggerItem key={ind.slug}>
-                <Link href={`/industries/${ind.slug}`} className="group block h-full">
+              { href: '/solutions/ai-agent-development', name: 'AI Security & AI Agent Development', desc: 'Custom AI agents engineered for SOC 2-aligned environments' },
+              { href: '/solutions/cloud-systems', name: 'Secure Cloud Systems', desc: 'Scalable cloud infrastructure for tech and healthcare teams' },
+              { href: '/solutions/api-integrations', name: 'API Integrations', desc: 'Custom integration layers with audit logging and access controls' },
+              { href: '/solutions/software-development', name: 'Software Development', desc: 'Custom software with security baked in from day one' },
+              { href: '/solutions/workflow-automation', name: 'Workflow Automation', desc: 'Custom automation with audit trails and approval logic' },
+              { href: '/solutions/custom-llm-systems', name: 'Custom LLM Systems', desc: 'Private AI for sensitive enterprise data' },
+            ].map((it) => (
+              <StaggerItem key={it.href}>
+                <Link href={it.href} className="group block h-full">
                   <PremiumCard variant="hover" className="p-4 flex items-center justify-between">
                     <div>
-                      <div className="text-white font-semibold group-hover:text-cyan-400">{ind.name}</div>
-                      <div className="text-slate-400 text-sm">{ind.desc}</div>
+                      <div className="text-white font-semibold group-hover:text-cyan-400">{it.name}</div>
+                      <div className="text-slate-400 text-sm">{it.desc}</div>
                     </div>
                     <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                   </PremiumCard>
@@ -450,25 +592,25 @@ export default function Page() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">
-              Need controls implemented and documented?
+              Stop guessing. Start hardening.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-slate-300 leading-relaxed mb-8">
-              30-minute discovery call. Tell us your environment, your framework, and your timeline.
-              We&apos;ll map the engagement and tell you whether we&apos;re a fit — or whether you need
-              a different kind of vendor.
+              Every day you wait is another day your business data is exposed and your operations are at
+              risk. Don&apos;t wait for a breach or a failed audit to take this seriously. Let&apos;s
+              build a system that protects your revenue and your reputation.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
             <MagneticButton href="/schedule-consultation" variant="primary">
-              Schedule a discovery call
+              Schedule a Consultation
               <ArrowRight className="w-5 h-5" />
             </MagneticButton>
             <p className="mt-6 text-sm text-slate-400">
-              Full federal registrations:{' '}
+              Federal contractor identifiers:{' '}
               <Link href="/capability-statement" className="text-cyan-400 link-underline">
-                capability statement for federal registrations
+                UEI YY2DR3KSENH7 · CAGE 9YCS7 · SDVOSB Pending
               </Link>
             </p>
           </Reveal>

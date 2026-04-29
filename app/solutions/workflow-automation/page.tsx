@@ -19,170 +19,164 @@ import CTA from '@/app/_components/CTA';
 import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
-  title: 'Workflow & Process Automation for Compliance Environments',
+  title: 'Workflow Automation for Founders & Ops Teams | n8n + Python | 30-Day Launch',
   description:
-    'Custom workflow automation and AI agents deployed in HIPAA, SOC 2, CMMC, NIST 800-171, and FedRAMP environments. Auditable and audit-ready.',
+    'Custom workflow automation for founders and ops teams. Built with n8n, Python, secure integrations, audit logging, and custom orchestration. 30-day launch. SDVOSB Pending. UEI: YY2DR3KSENH7.',
   keywords:
-    'workflow automation compliance, custom workflow automation, AI agents private network, RPA federal, FedRAMP workflow automation, NIST 800-171 workflow, HIPAA automation, document processing pipeline, BSA AML compliance reporting automation',
+    'workflow automation for founders and ops teams, custom n8n and python workflow automation, custom workflow automation, n8n automation, python automation, secure integrations, audit logging, real-time syncing, 30-day workflow launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/workflow-automation' },
   openGraph: {
-    title: 'Workflow & Process Automation for Compliance Environments | Autom8ion Lab',
+    title: 'Workflow Automation for Founders & Ops Teams | Autom8ion Lab',
     description:
-      "Custom workflow automation and AI agents deployed where SaaS tools can't go — on-premises, private cloud, FedRAMP-aligned environments. Auditable and audit-ready.",
+      'Custom workflow automation engineered around your business logic, your stack, and your operating reality. Built with n8n and Python. 30-day launch.',
     url: 'https://autom8ionlab.com/solutions/workflow-automation',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
-    title: 'Workflow & Process Automation for Compliance Environments | Autom8ion Lab',
+    title: 'Workflow Automation for Founders & Ops Teams | Autom8ion Lab',
     description:
-      'Custom workflow automation deployed where SaaS tools cannot go. On-premises, private cloud, FedRAMP-aligned.',
+      'Custom workflow automation with n8n and Python. Removes repetitive work, keeps every handoff visible, improves measurable productivity.',
   },
 };
 
 const whatWeBuild = [
   {
     icon: GitBranch,
-    title: 'Multi-step approval workflows with full audit trails',
+    title: 'Workflow Automation with n8n and Python',
     body:
-      "Approval workflows that survive audit — every transition logged, every approver and timestamp recorded, every comment retained per your retention schedule. Common scopes: financial approvals against authority matrices, clinical sign-off chains, federal contract change order workflows, RFI/submittal review for construction, claims adjudication chains. Built so an auditor can reconstruct any decision after the fact.",
-  },
-  {
-    icon: Lock,
-    title: 'AI agents operating inside private networks',
-    body:
-      'AI agents using local LLMs (Llama, Mistral, custom fine-tunes) or private-cloud-hosted commercial models (Anthropic via AWS Bedrock GovCloud, OpenAI via Azure OpenAI Service) — operating entirely within your bounded environment. No external data transfer. All activity logged to NIST 800-171 audit families or HIPAA Security Rule audit controls. The agents handle document classification, intake triage, drafted responses, and routing decisions; humans review every output that affects an external party.',
-  },
-  {
-    icon: Network,
-    title: "Custom integrations between systems where no SaaS connector exists",
-    body:
-      'The integration work that breaks Zapier, Workato, and generic iPaaS — legacy mainframe systems (DB2, VSAM, IMS), proprietary on-prem applications without REST APIs, file-based exchange (SFTP, NDM/Connect:Direct), and the kind of custom data transformations that vendors haven\'t templated. Built with controlled boundaries, encrypted tunnels, and the audit trail that satisfies FedRAMP, NIST 800-53, FISMA, or NYDFS Part 500 requirements.',
-  },
-  {
-    icon: FileText,
-    title: 'Document processing pipelines',
-    body:
-      "Intake → classification → extraction → validation → routing pipelines for high-volume document workflows. Loan files, claims documentation, HUD-50059 forms, FCRA disclosures, healthcare prior auth packets, federal procurement responses. Confidence scoring per extraction, human review gates on adverse outcomes, and full audit trail from intake to final disposition.",
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Compliance reporting automation',
-    body:
-      'Automated generation, routing, and submission of recurring compliance reports — BSA/AML CTR/SAR for financial services, OFAC sanctions screening, EIV income verification for HUD-funded properties, certified payroll under Davis-Bacon, DBE/MBE/WBE participation reporting. Tied to authoritative source data so the reports reflect what actually happened, not a separate parallel record-keeping process.',
+      "We use n8n for flexible orchestration and Python for custom logic, API handling, data processing, and integrations that off-the-shelf tools cannot support. That gives you a system built around your actual workflow instead of forcing your workflow into a generic connector library. We do not patch together a fragile stack. We build automation that handles approvals, exceptions, retries, notifications, and data movement in one controlled system.",
   },
   {
     icon: WorkflowIcon,
-    title: "Internal RPA where commercial RPA tools can't go",
+    title: 'Custom Logic That Matches Your Business',
     body:
-      "Custom RPA in environments where UiPath, Automation Anywhere, and Blue Prism either aren't approved or don't fit. Common drivers: CMMC L2 boundaries, FedRAMP-bounded operations, or compliance posture that rules out unattended bots running outside the approved environment. We build the orchestration in your bounded environment with the audit logging your assessor expects.",
+      "Your workflows are not generic, so your automation should not be generic either. We build around your approval rules, routing conditions, edge cases, naming conventions, handoff points, and reporting requirements. Instead of asking your team to change how they work to fit a tool, we make the system fit how your business already runs.",
   },
   {
-    icon: GitBranch,
-    title: 'Webhook + scheduled job orchestration',
+    icon: Network,
+    title: 'Secure Integrations for Legacy and Modern Environments',
     body:
-      "Event-driven automation built on durable execution patterns (Temporal, AWS Step Functions, custom state machines) so workflow state survives process restarts and can be inspected at any step. The scheduling and orchestration layer is yours — runs in your environment, integrates with your IdP, and produces audit logs that flow to your SIEM.",
+      "Ops teams rarely work in one clean stack. You deal with CRMs, spreadsheets, forms, inboxes, internal tools, file repositories, and systems with limited API access. We automate across those environments without breaking what already works. Instead of replacing everything, we connect the systems you already use and remove the manual work between them.",
+  },
+  {
+    icon: FileText,
+    title: 'Audit Trails and Approval Logic Built In',
+    body:
+      "Route requests automatically to the right reviewer based on role, threshold, location, document type, or custom business logic. Eliminate manual data entry between forms, CRMs, spreadsheets, email, and internal systems. Enforce approval logic — require the right sequence of reviewers, validate required fields, and block incomplete submissions. Create clear audit trails that log actions, timestamps, decisions, status changes, and exceptions.",
+  },
+  {
+    icon: Lock,
+    title: 'Security and Scalability Built In',
+    body:
+      'Workflow automation fails when security is treated like a bolt-on. We build it in from the start. Role-based access and permissions. Audit logging and event traceability. Encryption in transit and at rest. Custom validation and approval controls. Documented workflow logic. We also build for scale — a workflow that handles 50 requests a week should still perform when it handles 5,000.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Improve Team Productivity at Scale',
+    body:
+      "Remove repetitive admin work so your people spend more time on execution and less time pushing data around. Automate lead routing and sales handoffs between forms, CRM records, and account owners. Move intake data from web forms into internal systems without manual re-entry. Trigger reminders and escalations when approvals sit too long. Rebuild weekly status reporting without someone chasing updates in email.",
   },
 ];
 
 const comparisonRows: ComparisonRow[] = [
   {
-    label: 'Deployment environment',
+    label: 'Build approach',
     values: [
-      'On-premises, private cloud, GCC High, FedRAMP-authorized, HIPAA-aligned. Wherever your compliance posture requires.',
-      'Vendor-managed cloud only. Your data leaves your environment.',
-      'Vendor-managed cloud, with private connectivity options at higher tiers.',
+      'Custom-built systems engineered around your business logic. n8n + Python with custom orchestration, audit logging, and secure integrations.',
+      'Pre-built templates and connectors. Vendor controls the platform; you adapt your workflow to fit it.',
+      'Configurable enterprise platform with managed connectors. Customization runs through change requests.',
     ],
   },
   {
-    label: 'Audit trail depth',
+    label: 'Logic depth',
     values: [
-      'Full audit trail mapped to your compliance framework (NIST 800-171 AU, HIPAA Security Rule audit controls, SOC 2 CC, etc.). Logs flow to your SIEM.',
-      'Vendor-defined audit logs. Useful but not always sufficient for assessor review.',
-      'Strong audit logs at enterprise tier. Vendor-managed retention.',
+      'Approval chains, routing logic, validation rules, exceptions, retries, notifications, and audit trails — all coded around how your business actually operates.',
+      'Shallow logic. Real workflows with approvals, exceptions, role-based access, and edge cases break the no-code template fast.',
+      'Strong logic, but expressed through vendor abstractions. Edge cases hit the customization ceiling.',
     ],
   },
   {
-    label: 'Integration with non-SaaS systems',
+    label: 'Integration coverage',
     values: [
-      'Native. We build integrations to mainframes, legacy on-prem databases, file-based systems, proprietary APIs.',
-      'Limited to the connectors the vendor maintains. Custom connectors are extra work.',
-      'Better than SaaS. Still limited at the edges where on-prem legacy systems live.',
+      "Connects CRMs, spreadsheets, forms, inboxes, internal tools, file repositories, and systems with limited API access. We automate across what you actually use.",
+      "Limited to the connectors the vendor maintains. Custom connectors are extra work.",
+      "Better than no-code. Still limited at the edges where on-prem or legacy systems live.",
     ],
   },
   {
-    label: 'AI / LLM use in workflow',
+    label: 'Security baseline',
     values: [
-      'Local LLMs or private-cloud-hosted commercial models inside your bounded environment. No external data transfer.',
-      'Vendor LLM with vendor data terms. Often not BAA-eligible or FedRAMP-authorized.',
-      'Vendor LLM or BYO API key to a commercial LLM. Same data-residency caveats.',
+      'Role-based access, audit logging and event traceability, encryption in transit and at rest, custom validation and approval controls, documented workflow logic.',
+      'Vendor-managed cloud, vendor-defined audit logs. Useful but not always sufficient for your environment.',
+      'Strong audit logs at enterprise tier with vendor-managed retention.',
     ],
   },
   {
-    label: 'Total cost over 3 years',
+    label: 'Time to launch',
     values: [
-      'Higher up-front; flat ongoing. You own the workflow logic.',
-      'Predictable per-step or per-execution. Compounds with volume.',
-      'Predictable enterprise contracts. Significantly cheaper than custom for high-volume simple workflows.',
+      '30-day average launch. Workflow audit, n8n/Python build sprint, validation and testing, launch and documentation.',
+      'Days to launch a basic flow. Production-grade workflows with edge cases take much longer.',
+      'Weeks to months depending on platform and integration scope.',
     ],
   },
   {
     label: 'Best fit',
     values: [
-      "Companies whose compliance posture rules out commercial automation SaaS, or whose workflow has too many edge cases for SaaS to handle.",
-      'Simple, well-defined integrations between SaaS apps. Marketing ops, internal notifications.',
-      'Mid-complexity enterprise integration where SaaS-cloud is acceptable.',
+      "Founders and ops teams whose workflows have approvals, exceptions, role-based access, and edge cases that no-code tools break on.",
+      'Simple, well-defined integrations between SaaS apps. Marketing ops, internal notifications, basic notifications.',
+      'Mid-large enterprises with capacity to run platform programs and managed services contracts.',
     ],
   },
 ];
 
 const faqs = [
   {
-    question: 'Can you replace what we built in Zapier?',
+    question: 'How is this different from Zapier or Make?',
     answer:
-      'Often, yes. Custom workflow automation gives you full control over the audit trail, data flow, and environment. The tradeoff is higher up-front cost. We help you decide which workflows are worth migrating off commercial SaaS — typically the ones touching CUI, PHI, or regulator-sensitive data, or workflows with edge cases Zapier consistently breaks on.',
+      "Generic automation tools break in growing companies because real workflows are not simple. They involve approvals, exceptions, role-based access, edge cases, and systems that were never designed to work together. The minute you try to force your operations into a no-code template with shallow logic, the process fails. Your team still ends up chasing approvals, re-entering data, and fixing exceptions by hand. We build custom n8n and Python workflow automation that removes those bottlenecks at the source.",
   },
   {
-    question: 'Do you build n8n / Make.com workflows?',
+    question: 'How fast can you launch?',
     answer:
-      'We build with whatever orchestration framework fits the compliance environment. n8n self-hosted, Make on a private deployment, custom Python / Node orchestration, AWS Step Functions, or Temporal — choice depends on what your environment supports and what audit posture you need.',
+      "30 days on average. We do not drag your team through endless discovery. If your workflow is broken, you need it fixed fast. Our delivery model is built for speed, clarity, and execution — workflow audit in week 1, n8n/Python build sprint in weeks 2-3, validation and testing in week 4.",
   },
   {
-    question: 'Can your AI agents operate without external API calls?',
+    question: 'Do you only build with n8n?',
     answer:
-      'Yes. AI agents using local LLMs (Llama, Mistral, custom fine-tunes) or private-cloud-hosted commercial models (Anthropic via AWS Bedrock, OpenAI via Azure OpenAI Service) operate entirely within your bounded environment. No external data transfer.',
+      "We use n8n for flexible orchestration and Python for custom logic, API handling, data processing, and integrations that off-the-shelf tools cannot support. The mix depends on what your environment supports and what your workflow requires. We engineer for real operations, not just the happy path.",
   },
   {
-    question: 'How do you handle long-running workflows?',
+    question: 'Can you connect to systems with limited API access?',
     answer:
-      'Durable execution patterns — Temporal, AWS Step Functions, or custom state machines depending on environment. Workflow state survives process restarts and can be inspected at any step. Failure modes have explicit retry, escalation, and dead-letter handling.',
+      'Yes. Ops teams rarely work in one clean stack — CRMs, spreadsheets, forms, inboxes, internal tools, file repositories, and systems with limited API access. We automate across those environments without breaking what already works. Instead of replacing everything, we connect the systems you already use and remove the manual work between them.',
   },
   {
-    question: 'Can you integrate with [legacy system X]?',
+    question: 'How do you handle audit and security?',
     answer:
-      'Most likely. Legacy system integration via DB-level access, file-based exchange, or wrapper API patterns is a common engagement type. Discovery call confirms approach.',
+      'Workflow automation fails when security is treated like a bolt-on. We build it in from the start — role-based access and permissions, audit logging and event traceability, encryption in transit and at rest, custom validation and approval controls, and documented workflow logic. Every action is logged, every handoff is visible, and every workflow step follows the right path the first time.',
   },
 ];
 
 const buyers = [
   {
-    name: 'Federal contractors and DoD subs',
+    name: 'Founders losing time to manual handoffs',
     body:
-      "Compliance posture rules out Zapier, Workato, and most commercial RPA. You need orchestration in your bounded environment with the audit trail your CMMC or FedRAMP assessor expects.",
+      "Your team chases approvals in email, copies data between tools, updates records by hand, and rebuilds the same status reports every week. That is not operational efficiency — that is administrative drag. If your team spends more than five hours a week moving information between systems or proving who approved what and when, you have a workflow problem.",
   },
   {
-    name: 'Healthcare entities with strict PHI boundaries',
+    name: 'Ops teams stuck on no-code templates',
     body:
-      "Workflow has to operate inside the BAA boundary. Commercial automation tools either don't sign BAAs or don't pass IT security review. You need PHI-aware workflow inside your environment.",
+      "Generic automation tools break in growing companies. Real workflows involve approvals, exceptions, role-based access, edge cases, and systems that were never designed to talk to each other. The minute you try to force operations into a shallow template, your team still ends up chasing approvals, re-entering data, and fixing exceptions by hand.",
   },
   {
-    name: 'Financial firms with regulator scrutiny',
+    name: 'Fast-moving teams that need control and traceability',
     body:
-      "Examiners read every artifact in your audit trail. Workflow logs need to demonstrate the controls actually ran — not just that the policy says they should have. SaaS automation often falls short of this bar.",
+      "Most automation vendors sell access to a platform they do not control and cannot adapt to your environment. We do the opposite. We build custom workflow automation around your requirements because growing operations demand control, traceability, and speed from day one.",
   },
   {
-    name: 'Companies with high-edge-case workflow',
+    name: 'Teams scaling beyond what manual work supports',
     body:
-      "Your workflow has enough exceptions and edge cases that SaaS automation breaks on the corner cases. The result is a Zapier flow that runs 80% of the time and a parallel manual process for the other 20%.",
+      "A workflow that handles 50 requests a week should still perform when it handles 5,000. We engineer systems that grow with your operation without losing control, visibility, or reliability. Lead routing, intake processing, shared mailbox triage, and internal reporting workflows that no longer need manual handoffs.",
   },
 ];
 
@@ -193,12 +187,12 @@ export default function Page() {
         trail={[
           { name: 'Home', href: '/' },
           { name: 'Solutions', href: '/#services' },
-          { name: 'Workflow & Process Automation', href: '/solutions/workflow-automation' },
+          { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
         ]}
       />
       <ServiceSchema
-        name="Workflow & Process Automation for Compliance Environments"
-        serviceType="Custom workflow automation, AI agents, integration layers, RPA"
+        name="Workflow Automation for Founders and Ops Teams"
+        serviceType="Custom n8n and Python workflow automation, secure integrations, audit logging, custom orchestration"
         url="https://autom8ionlab.com/solutions/workflow-automation"
         industry="All"
       />
@@ -216,11 +210,12 @@ export default function Page() {
             <span className="text-slate-300">Workflow Automation</span>
           </nav>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Workflow &amp; Process Automation for Compliance Environments
+            Workflow Automation for Founders and Ops Teams
           </h1>
           <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
-            Custom workflow automation and AI agents deployed in HIPAA, SOC 2, CMMC, NIST 800-171, and
-            FedRAMP environments. Auditable and audit-ready.
+            We replace manual work with custom systems engineered around your business logic, your
+            stack, and your operating reality. Built with n8n, Python, secure integrations, audit
+            logging, and custom orchestration. We launch in 30 days.
           </p>
         </div>
       </section>
@@ -229,19 +224,19 @@ export default function Page() {
       <section className="py-16 bg-black">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-lg text-slate-300 leading-relaxed mb-6">
-            Autom8ion Lab builds custom workflow automation, AI agents, and process automation deployed
-            where SaaS automation tools (Zapier, Make, Workato) cannot go: on-premises, private cloud,
-            and FedRAMP-aligned environments where outbound API calls to commercial SaaS are not
-            permitted. Workflows with full audit trails. AI agents inside private networks with no
-            external data transfer.
+            Founders and ops teams lose time every day to broken handoffs, manual approvals, spreadsheet
+            tracking, and disconnected systems that do not talk. You know the pattern: your team chases
+            approvals in email, copies data between tools, updates records by hand, and rebuilds the
+            same status reports every week. That is not operational efficiency. That is administrative
+            drag.
           </p>
           <p className="text-lg text-slate-300 leading-relaxed">
-            The work covers multi-step approval chains with audit-trail depth assessors actually
-            recognize, document processing pipelines for high-volume regulated workflows, custom
-            integrations between systems where no SaaS connector exists, internal RPA in environments
-            where commercial RPA tools aren\'t approved, and compliance reporting automation (BSA/AML,
-            OFAC, CTR/SAR, EIV verification, certified payroll). Engagement scopes range from
-            single-system task orders to multi-month builds with embedded compliance documentation.
+            At Autom8ion Lab, we build workflow automation for founders and ops teams that replaces
+            manual work with custom systems engineered around your business logic, your stack, and your
+            operating reality. We build with n8n, Python, secure integrations, audit logging, and
+            custom orchestration so your workflows run the way your business actually works. We do not
+            sell generic templates. We build custom automation that removes repetitive work, keeps every
+            handoff visible, and improves measurable productivity. We launch in 30 days.
           </p>
         </div>
       </section>
@@ -269,7 +264,9 @@ export default function Page() {
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we build</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Custom workflow automation built for fast-moving teams
+            </h2>
           </Reveal>
           <Stagger className="space-y-6" staggerDelay={0.08}>
             {whatWeBuild.map((item) => {
@@ -294,35 +291,97 @@ export default function Page() {
         </div>
       </section>
 
-      {/* COMPLIANCE CONSIDERATIONS */}
+      {/* 30-DAY LAUNCH PLAN */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Compliance considerations</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              The 30-day launch plan for workflow automation
+            </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-slate-300 leading-relaxed mb-8">
-              Audit-trail requirements per framework. Data residency considerations. Identity
-              propagation through workflow steps so every action is attributable. Encryption of
-              in-flight data between workflow steps. Retention policies aligned to the records schedule
-              that governs the data.
+              We do not drag your team through endless discovery. If your workflow is broken, you need
+              it fixed fast. Our delivery model is built for speed, clarity, and execution. We launch in
+              30 days on average because speed matters. If your team is still chasing status updates and
+              re-entering data by hand, the system is not finished.
             </p>
           </Reveal>
-          <Stagger className="grid sm:grid-cols-2 gap-3" staggerDelay={0.04}>
+          <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.06}>
             {[
-              'Audit trail depth per framework (NIST 800-171 AU, HIPAA Security Rule, SOC 2 CC, FCRA)',
-              'Identity propagation through workflow steps (every step attributable to a user or service principal)',
-              'Encryption of in-flight workflow data',
-              'Data residency and data sovereignty per jurisdiction',
-              'Retention policies aligned to records schedule (NARA, state archives, HIPAA retention, FCRA)',
-              'Failure-mode handling (retry, escalation, dead-letter) without losing the audit record',
-              'Idempotency on every external write',
-              'Observability: workflow metrics flowing to your monitoring stack',
-            ].map((item) => (
-              <StaggerItem key={item}>
-                <PremiumCard variant="hover" className="p-4 flex items-start space-x-2 h-full">
-                  <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-300 text-sm">{item}</span>
+              {
+                step: 'Week 1: Workflow Audit',
+                body:
+                  'We identify manual steps, handoff failures, approval bottlenecks, duplicate entry points, and process gaps. Then we map the future-state workflow around your users, systems, routing rules, and reporting needs.',
+              },
+              {
+                step: 'Week 2-3: n8n/Python Build Sprint',
+                body:
+                  'We build the workflow engine, integrations, business logic, logging, alerts, and exception handling. We engineer for real operations, not just the happy path.',
+              },
+              {
+                step: 'Week 4: Validation & Testing',
+                body:
+                  'We test approvals, failed submissions, rejected branches, missing data, duplicate records, and edge cases. We verify that every rule works as designed.',
+              },
+              {
+                step: 'Launch & Documentation',
+                body:
+                  'We deploy the system and deliver the operating documentation your team needs to run it with confidence.',
+              },
+            ].map((s) => (
+              <StaggerItem key={s.step}>
+                <PremiumCard variant="hover" className="p-6 h-full">
+                  <h3 className="text-white font-semibold mb-2">{s.step}</h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">{s.body}</p>
+                </PremiumCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* USE CASES */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Workflow automation use cases
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              What does this look like in practice? Three high-value commercial use cases — plus a
+              federal-aware option when your environment requires it.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.06}>
+            {[
+              {
+                name: 'Lead Routing and Internal Approval Workflows',
+                body:
+                  'We automate lead intake, quote approvals, vendor requests, policy exceptions, and internal sign-offs. Every approval step is routed correctly, logged automatically, and visible in real time.',
+              },
+              {
+                name: 'Intake Processing and Operations Handoffs',
+                body:
+                  'We automate form intake, document review, record creation, status updates, notifications, and escalations. Your team stops re-entering the same information across disconnected systems.',
+              },
+              {
+                name: 'Shared Mailbox and Back-Office Automation',
+                body:
+                  'We automate repetitive work tied to inboxes, spreadsheets, internal tools, and older systems. That includes triage, assignment, status reconciliation, and data movement where standard SaaS automation tools fall apart.',
+              },
+              {
+                name: 'Federal-Aware Workflow When Required',
+                body:
+                  'For teams that need federal-aware delivery, we keep that capability in scope without making it the headline. SDVOSB Pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7. NIST-focused control alignment and FedRAMP-aware deployment paths when the environment requires them.',
+              },
+            ].map((u) => (
+              <StaggerItem key={u.name}>
+                <PremiumCard variant="hover" className="p-6 h-full">
+                  <h3 className="text-white font-semibold mb-2">{u.name}</h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">{u.body}</p>
                 </PremiumCard>
               </StaggerItem>
             ))}
@@ -335,7 +394,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Custom workflow vs. Zapier/Make vs. enterprise iPaaS
+              Custom workflow automation vs. Zapier/Make vs. enterprise iPaaS
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -352,7 +411,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SERVICE-SPECIFIC FAQ */}
+      {/* FAQ */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
@@ -371,48 +430,24 @@ export default function Page() {
         </div>
       </section>
 
-      {/* INTERNAL LINKING — to industries + AI agents + API integrations */}
+      {/* INTERNAL LINKING */}
       <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Industry-specific workflow work
+            Adjacent solutions
           </h2>
           <p className="text-slate-300 leading-relaxed mb-8">
-            The compliance framework you operate under shapes the workflow architecture. Each industry
-            hub covers the named systems we integrate with and the assessor posture that drives the
-            audit trail design.
+            Workflow automation often connects directly to AI agents, custom integrations, and the
+            broader software stack. Here is where to go next.
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              { slug: 'defense', name: 'Defense Industrial Base', desc: 'CMMC 2.0, NIST 800-171, GCC High workflow' },
-              { slug: 'healthcare', name: 'Healthcare & Life Sciences', desc: 'HIPAA-aware workflow, EHR integration' },
-              { slug: 'finance', name: 'Finance', desc: 'BSA/AML reporting, FFIEC-aligned workflow' },
-              { slug: 'government', name: 'US Government', desc: 'FedRAMP-bounded workflow, NARA records' },
-              { slug: 'real-estate-property', name: 'Real Estate & Property', desc: 'FCRA workflow, HUD compliance reporting' },
-              { slug: 'construction', name: 'Construction', desc: 'RFI/submittal workflow, certified payroll' },
-            ].map((ind) => (
-              <Link
-                key={ind.slug}
-                href={`/industries/${ind.slug}`}
-                className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
-              >
-                <div>
-                  <div className="text-white font-semibold group-hover:text-cyan-400">{ind.name}</div>
-                  <div className="text-slate-400 text-sm">{ind.desc}</div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            ))}
-          </div>
-
-          <div className="mt-10 grid sm:grid-cols-2 gap-3">
             <Link
               href="/solutions/ai-agent-development"
               className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
             >
               <div>
                 <div className="text-white font-semibold group-hover:text-cyan-400">AI Agent Development</div>
-                <div className="text-slate-400 text-sm">Agents inside private networks</div>
+                <div className="text-slate-400 text-sm">Custom AI agents that execute real work inside your environment</div>
               </div>
               <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -422,7 +457,47 @@ export default function Page() {
             >
               <div>
                 <div className="text-white font-semibold group-hover:text-cyan-400">API Integrations</div>
-                <div className="text-slate-400 text-sm">Custom integration layers</div>
+                <div className="text-slate-400 text-sm">Custom integration layers around your existing tech stack</div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/solutions/custom-llm-systems"
+              className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
+            >
+              <div>
+                <div className="text-white font-semibold group-hover:text-cyan-400">Custom LLM Systems</div>
+                <div className="text-slate-400 text-sm">Private LLM deployment with SOC 2 protocols</div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/solutions/software-development"
+              className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
+            >
+              <div>
+                <div className="text-white font-semibold group-hover:text-cyan-400">Software Development</div>
+                <div className="text-slate-400 text-sm">Custom software development for scaling companies</div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/solutions/cloud-systems"
+              className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
+            >
+              <div>
+                <div className="text-white font-semibold group-hover:text-cyan-400">Cloud Systems</div>
+                <div className="text-slate-400 text-sm">Scalable cloud infrastructure for tech and healthcare</div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/solutions/cybersecurity"
+              className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
+            >
+              <div>
+                <div className="text-white font-semibold group-hover:text-cyan-400">Cybersecurity &amp; Compliance</div>
+                <div className="text-slate-400 text-sm">SOC 2 readiness, HIPAA security, audit-ready documentation</div>
               </div>
               <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -435,21 +510,30 @@ export default function Page() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">
-              Workflow automation that has to survive an audit?
+              Stop running workflows by hand
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-slate-300 leading-relaxed mb-8">
-              30-minute discovery call. Tell us your environment, your compliance framework, and the
-              workflow you&apos;re looking to automate. We&apos;ll map the engagement and tell you
-              whether we&apos;re a fit.
+              Your team should not be wasting hours on status chasing, copy-paste tasks, and broken
+              approval chains. We fix that with custom workflow automation for founders and ops teams
+              built around n8n, Python, and your actual business logic. We launch fast. We build around
+              your real process. Schedule a consultation and we&apos;ll map the bottlenecks, the
+              workflow logic, and the fastest path to automation. Your business needs workflows that
+              move faster and produce measurable productivity gains. We build them.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
             <MagneticButton href="/schedule-consultation" variant="primary">
-              Schedule a discovery call
+              Schedule a Consultation
               <ArrowRight className="w-5 h-5" />
             </MagneticButton>
+            <p className="mt-6 text-sm text-slate-400">
+              Federal contractor identifiers:{' '}
+              <Link href="/capability-statement" className="text-cyan-400 link-underline">
+                UEI YY2DR3KSENH7 · CAGE 9YCS7 · SDVOSB Pending
+              </Link>
+            </p>
           </Reveal>
         </div>
       </section>

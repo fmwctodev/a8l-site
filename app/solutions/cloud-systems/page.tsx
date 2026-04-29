@@ -5,67 +5,67 @@ import CTA from '@/app/_components/CTA';
 import RelatedSolutions from '@/app/_components/RelatedSolutions';
 
 export const metadata: Metadata = {
-  title: 'Cloud Infrastructure for FedRAMP & GovCloud Workloads',
-  description: 'Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads in AWS GovCloud, Azure Government, and commercial cloud. Governed landing zones, secure DevSecOps, continuous monitoring. SDVOSB Pending. Live in 30 days.',
-  keywords: 'FedRAMP cloud architecture, GovCloud infrastructure, NIST 800-53 cloud, FISMA cloud architecture, AWS GovCloud, Azure Government, secure DevSecOps, federal cloud landing zone, SDVOSB cloud services, continuous monitoring federal',
+  title: 'Scalable Cloud Infrastructure for Tech & Healthcare Teams | 30-Day Secure Launch',
+  description: 'Custom cloud infrastructure for fast-moving tech companies and healthcare teams. Secure landing zones, hardened networks, governed identity, deployment pipelines. 30-day average launch. Founder-led delivery. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+  keywords: 'scalable cloud infrastructure, secure cloud architecture, cloud infrastructure tech companies, cloud infrastructure healthcare, secure DevSecOps, cloud landing zone, infrastructure as code, controlled data architecture, continuous monitoring, 30-day cloud launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/cloud-systems' },
   openGraph: {
-    title: 'Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8ion Lab',
-    description: 'Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads. Governed landing zones, secure DevSecOps, continuous monitoring. SDVOSB Pending — UEI: YY2DR3KSENH7.',
+    title: 'Scalable Cloud Infrastructure for Tech & Healthcare Teams | Autom8ion Lab',
+    description: 'Secure cloud architecture for fast-moving tech companies and healthcare teams. 30-day average launch, founder-led delivery. SDVOSB Pending — UEI: YY2DR3KSENH7.',
     url: 'https://autom8ionlab.com/solutions/cloud-systems',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
-    title: 'Cloud Infrastructure for FedRAMP & GovCloud Workloads | Autom8ion Lab',
-    description: 'Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads. SDVOSB Pending.',
+    title: 'Scalable Cloud Infrastructure for Tech & Healthcare Teams | Autom8ion Lab',
+    description: 'Custom cloud infrastructure built for security, speed, and operational resilience. 30-day average launch.',
   },
 };
 
 const ldSchema1 = {
             "@context": "https://schema.org",
             "@type": "Service",
-            "serviceType": "Cloud Infrastructure Management Services",
+            "serviceType": "Scalable Cloud Infrastructure",
             "provider": {
               "@type": "ProfessionalService",
               "name": "Autom8ion Lab"
             },
-            "description": "Comprehensive cloud infrastructure management services including cloud migration and deployment, DevOps automation, CI/CD pipelines, and hybrid multi-cloud architecture across AWS, Azure, and Google Cloud Platform.",
+            "description": "Scalable cloud infrastructure for fast-moving tech companies and healthcare teams that need strong security without long rollout cycles. Secure landing zones, hardened networks, governed identity, encrypted data paths, and deployment pipelines built for rapid delivery.",
             "areaServed": {
               "@type": "Place",
               "name": "Worldwide"
             },
             "url": "https://autom8ionlab.com/solutions/cloud-systems",
-            "operatingSystem": ["Amazon Web Services (AWS)", "Microsoft Azure", "Google Cloud Platform", "Hybrid Cloud", "Multi-Cloud"],
+            "operatingSystem": ["Amazon Web Services (AWS)", "Microsoft Azure", "Hybrid Cloud", "Multi-Cloud"],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Cloud Infrastructure Management Services",
+              "name": "Scalable Cloud Infrastructure Services",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Cloud Migration and Deployment Services"
+                    "name": "Secure Cloud Architecture"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "DevOps Automation and CI/CD Solutions"
+                    "name": "Secure DevSecOps for Fast Commercial Delivery"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Hybrid and Multi-Cloud Architecture"
+                    "name": "Continuous Monitoring for Cloud Operations"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Scalable Cloud-Based Application Hosting"
+                    "name": "Controlled Data Architecture for Tech and Healthcare Systems"
                   }
                 }
               ]
@@ -86,31 +86,31 @@ export default function Page() {
 const features = [
     {
       icon: Server,
-      title: "FedRAMP-Aligned Cloud Architecture",
-      description: "Whether you build in AWS GovCloud, Azure Government, or a commercial environment that still has to satisfy federal-grade security requirements, we implement architecture around your authorization boundary, not a generic landing zone. We enforce least privilege, separation of duties, hardened network segmentation, and strong encryption boundaries — mapped to NIST 800-53 control families AC, AU, CM, IA, SC, and SI. We don't just hand you a login; we deliver a governed environment that stands up to FedRAMP scrutiny."
+      title: "Secure Cloud Architecture Starts With the Right Foundation",
+      description: "Bad architecture creates rework, security gaps, and delays that kill momentum. Strong architecture gives your team a clean path to deploy, secure, and operate without constant rebuilds. We build secure cloud environments in AWS, Azure, and hybrid configurations for companies that need speed without losing control. We enforce least privilege, separate duties, harden the management plane, segment workloads, and standardize encryption from the start. Instead of forcing your systems into a generic environment, we engineer the cloud around your application architecture, data sensitivity requirements, user access model, integration points, logging and retention obligations, change management process, and recovery and resilience targets."
     },
     {
       icon: Activity,
-      title: "Secure DevSecOps & Controlled Releases",
-      description: "Manual code promotion, shared deployment access, and changes without approval gates create audit findings every release. We build CI/CD pipelines with automated security scans, approval gates, segregation of duties, immutable infrastructure releases, rollback capabilities, and audit-ready logging. Every deployment action is recorded for traceability and evidence collection — turning your release process into a controlled system that supports NIST 800-53 change management and configuration management requirements."
+      title: "Secure DevSecOps for Fast Commercial Delivery",
+      description: "You cannot scale modern software with loose deployment practices. Manual releases, shared admin access, and undocumented changes create security exposure. We build secure DevSecOps and CI/CD pipelines for commercial application delivery that enforce control discipline without killing speed. Automated security checks scan every build for dependency issues, misconfigurations, secrets exposure, and policy violations. Approval gates move releases through documented review steps with separation of duties. Infrastructure as Code deploys cloud environments from version-controlled code. Immutable releases eliminate drift. Rollback controls keep incidents from becoming outages. Audit logging records every deployment event for evidence, traceability, and oversight."
     },
     {
       icon: Cloud,
-      title: "Continuous Monitoring & Control Enforcement",
-      description: "In regulated cloud environments, set-it-and-forget-it is a control failure. We monitor control drift, privileged activity, security events, log health, vulnerability posture, and resilience signals. When signals cross a threshold, our systems trigger alerts, tickets, and automated response paths fast. This is the difference between reactive firefighting and an operating model aligned to NIST 800-53, FedRAMP, and FISMA continuous monitoring expectations."
+      title: "Security Protocols Built Into the Cloud, Not Added After",
+      description: "Cloud security fails when teams rely on policies to compensate for weak architecture. Policies do not fix flat networks, broad permissions, or missing telemetry. The environment itself has to enforce the rules. We embed security at every layer: network segmentation across public, private, management, and restricted zones; boundary protection (WAF, firewall, ingress, egress, private connectivity); privileged access isolation through hardened paths with strong authentication and short-lived credentials; centralized logging into protected audit pipelines; encryption at rest and in transit with governed key management; secrets management; and resilience controls covering backup integrity, failover design, and recovery paths."
     }
   ];
 
   const benefits = [
-    "Cloud infrastructure management services across AWS, Azure, and Google Cloud Platform with certified cloud architects who design scalable, secure, and cost-optimized solutions",
-    "Cloud migration and deployment experts who seamlessly transition legacy systems to the cloud with minimal downtime, comprehensive testing, and risk mitigation strategies",
-    "DevOps automation and CI/CD solutions using Jenkins, GitLab CI, GitHub Actions, and Azure DevOps for automated testing, building, and deployment across all environments",
-    "Hybrid and multi-cloud architecture that balances on-premises infrastructure with multiple cloud providers for flexibility, redundancy, and cost optimization across geographic regions",
-    "Scalable cloud-based application hosting with auto-scaling, load balancing, and multi-region deployment ensuring 99.9% uptime and handling traffic spikes without performance degradation",
-    "Infrastructure-as-code implementation using Terraform and CloudFormation for version-controlled, repeatable infrastructure deployments that eliminate configuration drift and manual errors",
-    "Container orchestration with Kubernetes on EKS, AKS, and GKE for microservices architecture, automated scaling, and high-availability application deployment across cloud providers",
-    "Comprehensive monitoring and observability with Prometheus, Grafana, Datadog, and CloudWatch providing real-time visibility into infrastructure health and application performance",
-    "Cloud cost optimization reducing infrastructure spending by 30-50% through reserved instances, spot instances, resource rightsizing, and automated shutdown of non-production environments"
+    "Custom cloud infrastructure built around your applications, data flows, and operational requirements — no templates, no generic landing zones",
+    "Secure DevSecOps and CI/CD pipelines that enforce control discipline without killing release speed",
+    "Network segmentation, encryption at rest and in transit, and centralized logging baked into the environment from day one",
+    "Privileged access isolation with strong authentication, short-lived credentials, and hardened administrative paths",
+    "Continuous monitoring of control drift, privileged activity, security events, log health, vulnerability posture, and resilience status",
+    "Controlled data architecture for tech and healthcare workloads — separated compute and storage, classified data, defined retention",
+    "Infrastructure as Code for repeatable, auditable deployments instead of manual console clicks",
+    "30-day deployment framework — discovery and risk review, secure landing zone build, application environment setup, monitoring and handover",
+    "Founder-led delivery so you work directly with senior engineers from kickoff through deployment"
   ];
 
   return (
@@ -123,83 +123,83 @@ const features = [
                 <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
               </div>
-      
-      
-      
+
+
+
               <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
                 <div className="max-w-6xl mx-auto text-center">
                   <div className="mb-8 flex justify-center">
                     <div className="flex items-center space-x-2 bg-cyan-900/30 backdrop-blur-sm px-6 py-3 rounded-full border border-cyan-500/20">
                       <Cloud className="w-5 h-5 text-cyan-400" />
-                      <span className="text-cyan-400 font-medium">Cloud Infrastructure</span>
+                      <span className="text-cyan-400 font-medium">Scalable Cloud Infrastructure</span>
                     </div>
                   </div>
-      
+
                   <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    Cloud Infrastructure for FedRAMP, CMMC & HIPAA Workloads
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> for Scalable, Secure Growth</span>
+                    Scalable Cloud Infrastructure for
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> Tech and Healthcare Teams</span>
                   </h1>
-      
+
                   <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                    Secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads supporting US Federal, DIB, healthcare, and financial services teams. Governed landing zones in AWS GovCloud, Azure Government, or commercial cloud. SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7.
+                    Cloud infrastructure built for fast-moving tech companies and healthcare teams that need strong security without long rollout cycles. Secure landing zones, hardened networks, governed identity, encrypted data paths, and deployment pipelines that support rapid delivery from day one. 30-day average secure launch. Founder-led delivery.
                   </p>
-      
+
                   <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     <Link href="/get-in-touch" className="group bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center space-x-2">
-                      <span>Get Your Infrastructure Assessment</span>
+                      <span>Get Your Cloud Assessment</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
               </div>
             </section>
-      
-            {/* Expert Cloud Management Section */}
+
+            {/* Why Cloud Breaks at Scale Section */}
             <section className="py-16 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-4xl mx-auto">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                    Build a Strong Foundation With <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Expert Cloud Management</span>
+                    Why Commercial Cloud Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Breaks at Scale</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Most teams supporting US Federal agencies, the Defense Industrial Base, healthcare organizations, or financial services firms start with a commercial cloud setup that was never designed for FedRAMP scrutiny, NIST 800-53 control mapping, or FISMA accountability. You provision a few resources, apply basic security groups, and assume you can harden it later. That breaks fast when your workload has to survive architecture review, control validation, and continuous monitoring. If you are dealing with inherited cloud sprawl, unclear boundary definitions, or an environment that cannot map cleanly to NIST 800-53 controls, your infrastructure is no longer an asset — it's an audit risk.
+                    Cloud projects break when teams duct-tape tools together, overbuild too early, or bolt security on after launch. That creates weak boundaries, slow deployments, and expensive rework. If your company is scaling in tech or healthcare, your cloud environment needs to be secure, fast to deploy, and built around how your business actually runs. You&apos;ve likely seen the pattern already. Your team provisions cloud resources fast, but the environment starts to crack under growth. Identity is too broad. Network boundaries are unclear. Logs are scattered. Encryption is inconsistent. Deployments slow down. That is what happens when cloud infrastructure is treated like generic hosting instead of a secure operating system for the business.
                   </p>
                   <p className="text-lg text-slate-300 leading-relaxed">
-                    At Autom8ion Lab, we don't just "manage" your cloud — we design secure cloud architecture for FedRAMP, NIST 800-53, and FISMA-aligned workloads supporting US Federal, DIB, healthcare, and financial services teams. We lock down the control plane, automate the evidence trail, and give you a foundation built for security, compliance, and operational resilience from day one. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
+                    Generic providers sell prebuilt packages and call it done. We don&apos;t do templates. We build custom cloud infrastructure around your applications, your data flows, and your operational requirements from the start. Effective cloud infrastructure for tech companies and healthcare organizations requires clear environment boundaries, least-privilege access design, segmented network architecture, centralized logging and retention, encryption at rest and in transit, repeatable infrastructure as code, and continuous monitoring tied to real operations. If your current setup depends on tribal knowledge, manual fixes, and disconnected tools, it is already creating risk.
                   </p>
                 </div>
               </div>
             </section>
-      
-            {/* Cloud Migration Section */}
+
+            {/* Foundation Section */}
             <section className="py-20 bg-slate-900/50 relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-4xl mx-auto">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                    Cloud Migration and <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Deployment Services</span>
+                    Built Around Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Applications and Data</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Our cloud migration and deployment experts guide you through a seamless migration process from legacy systems to AWS, Azure, or Google Cloud Platform with minimal downtime and zero data loss. We begin with comprehensive assessment of your current infrastructure, applications, and data dependencies to develop a detailed migration roadmap. Our phased approach ensures business continuity throughout the transition, with thorough testing at each stage and rollback procedures to mitigate risk.
+                    If you are launching a product, modernizing internal systems, or scaling patient-facing platforms, the infrastructure decision comes first. We build secure cloud environments in AWS, Azure, and hybrid configurations for companies that need speed without losing control. For healthcare teams, that means protecting sensitive data and reducing operational risk. For tech companies, that means shipping faster on infrastructure that will not collapse under scale. This is not a best-practice checklist. It is a custom cloud foundation built for real operations.
                   </p>
                   <p className="text-lg text-slate-300 leading-relaxed">
-                    From lift-and-shift migrations to complete application modernization, our cloud infrastructure management services handle everything—infrastructure provisioning, data migration, application reconfiguration, and post-migration optimization. We implement infrastructure-as-code using Terraform and CloudFormation for repeatable deployments, configure auto-scaling and load balancing for reliability, and establish monitoring systems for visibility. Our deployment automation ensures consistent environments across development, staging, and production while reducing manual errors and accelerating delivery. We also integrate with your <Link href="/solutions/data-management" className="text-cyan-400 hover:text-cyan-300 underline">data management systems</Link> for seamless cloud-based data flow.
+                    For broader governance support, see our <Link href="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity and compliance solutions</Link>. For more on how we connect infrastructure to production systems, check out our <Link href="/solutions/software-development" className="text-cyan-400 hover:text-cyan-300 underline">software development solutions</Link>.
                   </p>
                 </div>
               </div>
             </section>
-      
-            {/* DevOps Automation Section */}
+
+            {/* Features Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    DevOps Automation and <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Continuous Integration Pipelines</span>
+                    Secure Architecture, Controlled Releases, <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Continuous Control</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Advanced DevOps automation and CI/CD solutions that streamline code deployment, automate testing, and provide comprehensive monitoring for rapid, reliable software delivery.
+                    The cloud environment itself enforces the rules — through architecture, secure delivery pipelines, and continuous monitoring built in from day one.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-3 gap-8">
                   {features.map((feature, index) => {
                     const IconComponent = feature.icon;
@@ -223,130 +223,132 @@ const features = [
                 </div>
               </div>
             </section>
-      
-            {/* Hybrid and Multi-Cloud Section */}
+
+            {/* Controlled Data Architecture Section */}
             <section className="py-20 bg-slate-900/50 relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-4xl mx-auto">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                    Hybrid and <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Multi-Cloud Architecture Solutions</span>
+                    Controlled Data Architecture for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Tech and Healthcare Systems</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Our hybrid and multi-cloud architecture solutions provide the flexibility and redundancy that modern businesses require. We design infrastructure that seamlessly integrates on-premises systems with AWS, Azure, and Google Cloud Platform—enabling you to leverage the strengths of each platform while avoiding vendor lock-in. Hybrid architectures support gradual cloud migration, data sovereignty requirements, and latency-sensitive workloads that benefit from edge computing or on-premises processing.
+                    Tech and healthcare platforms fail when data architecture is vague. If your team cannot define where data lives, how it moves, who can access it, and how it is retained, the environment becomes difficult to secure and harder to scale. We integrate data management directly into your cloud infrastructure with control-first design decisions: separate compute from storage to reduce blast radius, apply encryption, key management, and access policies consistently, classify and segment sensitive data by mission need and user role, define retention, archival, and deletion paths, and preserve auditability without slowing down application performance.
                   </p>
                   <p className="text-lg text-slate-300 leading-relaxed">
-                    Multi-cloud strategies improve performance through geographic distribution, enhance resilience with cross-provider redundancy, and optimize costs by selecting the most cost-effective services from each provider. Our cloud infrastructure management services handle the complexity of multi-cloud networking, unified identity management, cross-cloud data synchronization, and centralized monitoring. We integrate with your <Link href="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity and compliance</Link> requirements and ensure your <Link href="/solutions/api-integrations" className="text-cyan-400 hover:text-cyan-300 underline">API integrations</Link> work seamlessly across cloud providers for optimal connectivity.
+                    Cloud security is not a one-time setup. Controls drift. Access changes. Services expand. Visibility gaps appear fast. That is why continuous monitoring is built into every environment we deploy — control drift, privileged activity, security events, log integrity, vulnerability posture, and resilience status. When thresholds are crossed, the system triggers alerts, tickets, and response actions fast.
                   </p>
                 </div>
               </div>
             </section>
-      
-            {/* Cloud Security Section */}
+
+            {/* 30-Day Deployment Framework Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Cloud Security and Compliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">You Can Trust</span>
+                    Our 30-Day <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Deployment Framework</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Enterprise-grade security protection through encryption, identity and access management, network security, and compliance alignment across all cloud infrastructure.
+                    We do not drag cloud projects into endless planning cycles. We build, secure, and deploy fast. Our 30-day deployment framework gives you a custom cloud environment your team can actually use, operate, and scale.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">1</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Encryption & Data Protection</h3>
-                    <p className="text-slate-400 text-sm">End-to-end encryption for data at rest and in transit using AWS KMS, Azure Key Vault, and Google Cloud KMS. Encrypted storage volumes, databases, and backups ensure data confidentiality.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Week 1: Discovery, Boundary Definition &amp; Risk Review</h3>
+                    <p className="text-slate-400 text-sm">We assess your current environment, application requirements, user roles, data flows, and compliance obligations. We identify control gaps, boundary issues, overprivileged access, logging failures, and infrastructure sprawl.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">2</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Identity & Access Management</h3>
-                    <p className="text-slate-400 text-sm">Comprehensive IAM policies with least-privilege access, multi-factor authentication, role-based permissions, and centralized identity federation across cloud providers.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Week 2: Custom Architecture &amp; Secure Landing Zone Build</h3>
+                    <p className="text-slate-400 text-sm">We design and build your cloud landing zone — account structure, VPC and subnet design, IAM architecture, encryption standards, baseline policies, and management plane hardening. Everything deployed through Infrastructure as Code.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">3</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Network Security Architecture</h3>
-                    <p className="text-slate-400 text-sm">Virtual private clouds, security groups, network ACLs, Web Application Firewalls, and DDoS protection that create secure network boundaries and prevent unauthorized access.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Week 3: Application Environment Setup</h3>
+                    <p className="text-slate-400 text-sm">We configure application environments, delivery pipelines, secrets management, logging integrations, and deployment controls — a secure system built for fast delivery without breaking security requirements.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">4</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Compliance Alignment</h3>
-                    <p className="text-slate-400 text-sm">Cloud infrastructure configured to meet HIPAA, PCI-DSS, SOC 2, and GDPR requirements with audit logging, compliance monitoring, and automated reporting capabilities.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Week 4: Monitoring, Evidence &amp; Operational Handover</h3>
+                    <p className="text-slate-400 text-sm">We finalize dashboards, alerts, retention, and evidence workflows so your team has immediate visibility into control health, security events, and system performance. You leave with a working environment, not a consulting slide deck.</p>
                   </div>
                 </div>
               </div>
             </section>
-      
+
+            {/* Use Cases Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Real-World <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Cloud Infrastructure Success Stories</span>
+                    Cloud Infrastructure for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Commercial Industries</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Discover how CTOs, IT directors, and growing businesses leverage our cloud infrastructure management services to scale operations, reduce costs, and accelerate innovation.
+                    Built around how Tech and Healthcare teams actually operate, with delivery patterns extending to Construction, Finance, and federal-aware workloads when required.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">DoD Subcontractor: GCC High Migration for CMMC Posture</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Tech: Secure Landing Zones for Fast Product Delivery</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      We migrated a DoD subcontractor from commercial Microsoft 365 to GCC High to align with CMMC 2.0 Level 2 requirements for handling Controlled Unclassified Information. Tenant configuration, conditional access policies, DLP rules, audit log centralization, and identity hardening were implemented to map directly to NIST 800-171 access control and audit families. The deliverable included a System Security Plan draft and the evidence package required for the C3PAO assessment.
+                      Custom cloud environments in AWS or Azure for fast-moving tech companies that need to ship without collapsing under scale. Hardened management plane, segmented networks, encrypted storage, and CI/CD pipelines that move developers fast while keeping releases auditable. Pair with our <Link href="/solutions/software-development" className="text-cyan-400 hover:text-cyan-300 underline">software development</Link> work when the application code and the infrastructure need to be engineered together.
                     </p>
                   </div>
 
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Healthcare: HIPAA-Aligned AWS Landing Zone</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Healthcare: Controlled Cloud for Sensitive Data</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      We designed a HIPAA-aligned AWS landing zone for a multi-specialty healthcare group, with PHI segmentation across VPCs, audit logging through CloudTrail and CloudWatch with long-term retention, encryption at rest (KMS) and in transit (TLS 1.3) on every PHI path, and access controls integrated with the customer's existing IdP. Infrastructure as Code (Terraform) made the environment reproducible and auditable. The output included BAA-aligned documentation and the technical safeguards inventory the customer's compliance team needed for their annual HIPAA review.
+                      Secure cloud environments built for healthcare teams scaling patient-facing platforms or modernizing internal systems. Separate compute from storage, classified data segmentation, encryption with governed key management, audit logging, and continuous monitoring tied to real operations. Backed by our <Link href="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity and compliance</Link> work for governance support.
                     </p>
                   </div>
-      
+
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Healthcare Startup Google Cloud Deployment</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Construction &amp; Finance: Operational Backbone</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Our cloud infrastructure management services built HIPAA-compliant cloud infrastructure on Google Cloud Platform for a healthcare technology startup. We implemented encryption at rest and in transit, configured Identity and Access Management with least-privilege principles, established audit logging for all data access, and deployed container orchestration with GKE for scalable cloud-based application hosting. Infrastructure-as-code with Terraform enabled consistent environment replication across development, staging, and production. The cloud deployment supported rapid growth from 1,000 to 100,000 users within 12 months.
+                      Cloud foundations built for commercial operations that need controlled boundaries, repeatable Infrastructure as Code, and centralized logging. We engineer around your data flows, integration points, and recovery targets so the environment supports your operating model, not the other way around. Connects cleanly with our <Link href="/solutions/api-integrations" className="text-cyan-400 hover:text-cyan-300 underline">API integrations</Link> work for legacy and modern stacks.
                     </p>
                   </div>
-      
+
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Financial Services Hybrid Cloud Solution</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Federal-Aware Cloud When You Need It</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      We designed hybrid and multi-cloud architecture for a financial services firm requiring on-premises data residency with cloud scalability. Our cloud migration and deployment experts integrated Azure cloud services with existing data centers using ExpressRoute, implemented DevOps automation with Azure DevOps for secure CI/CD pipelines, and configured hybrid networking with private connectivity. The solution maintained regulatory compliance while providing elastic compute capacity for batch processing workloads, reducing processing time from 12 hours to 2 hours and cutting infrastructure costs by 35%.
+                      For teams with federal requirements, we also support cloud environments that align with FedRAMP, NIST 800-53, and FISMA expectations. That work sits on the same core principle: build the architecture right from day one. We design environments with federal hosting and authorization paths in mind when required, with NIST-focused control alignment for logging, access control, encryption, segmentation, and traceability.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
-      
+
+            {/* Benefits Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Partner With Autom8ion Lab for
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> Expert Cloud Management</span>
+                    Commercial-First Infrastructure
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> With Federal Support When You Need It</span>
                   </h2>
                   <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                    Our cloud infrastructure management services empower your business to scale securely with DevOps automation, hybrid multi-cloud architecture, and expert cloud migration across AWS, Azure, and Google Cloud Platform.
+                    If your team is still duct-taping cloud tools together, chasing fixes manually, and trying to retrofit controls after deployment, the problem is not your people. The problem is the architecture. We build scalable cloud infrastructure that is custom, secure, and fast to deploy for tech companies and healthcare organizations. No templates. No generic MSP handoff. Just founder-led delivery and engineered systems aligned to your requirements.
                   </p>
-                  <Link href="/get-in-touch" className="bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                    Request Infrastructure Assessment
+                  <Link href="/schedule-consultation" className="bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                    Schedule a Consultation
                   </Link>
                 </div>
-      
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {benefits.slice(0, 8).map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-4 bg-slate-800/30 p-4 rounded-lg border border-slate-700/50">
@@ -357,32 +359,45 @@ const features = [
                 </div>
               </div>
             </section>
-      
+
+            {/* Why Choose Us Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                    Why Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Cloud Infrastructure Management</span>
+                    Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Autom8ion Lab</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Generic managed service providers will tell you to bolt compliance on later. We don't do that. We architect your environment around NIST 800-53 from the start so your security controls, deployment patterns, and operational procedures line up with FedRAMP and FISMA expectations. Effective cloud infrastructure for US Federal, DIB, healthcare, and financial services organizations is about more than just hosting — it's about building a defensible system boundary, enforcing least privilege, centralizing audit logs, and making every major control family visible in the architecture.
+                    Autom8ion Lab builds scalable cloud infrastructure for fast-moving tech companies and healthcare teams that need strong security without long rollout cycles. We deploy fast — our average secure launch is 30 days. Autom8ion Lab is founder-led, so you work directly with senior engineers from kickoff through deployment. We don&apos;t hand off to an MSP after the architecture diagram. We design secure landing zones, hardened networks, governed identity, encrypted data paths, and deployment pipelines that support rapid delivery from day one.
                   </p>
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                    Engagements move from commercial cloud to a FedRAMP-ready foundation in four phases: boundary review and control mapping, secure architecture design and landing zone build, workload migration with controlled delivery pipelines, then monitoring and operational handover. Most builds run 8&ndash;14 weeks; FedRAMP-aligned builds run 6+ months. We use Infrastructure as Code (Terraform, Pulumi) so your environment is reproducible, version-controlled, and auditable. The output: centralized dashboards, alerting, log retention, and evidence-producing workflows aligned to NIST 800-53, FedRAMP, and FISMA continuous monitoring expectations.
+                    For teams with federal requirements, we also support cloud environments that align with FedRAMP, NIST 800-53, and FISMA expectations. That work sits on the same core principle: build the architecture right from day one.
                   </p>
+                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 mb-8 text-left">
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Compliance &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Government Readiness</span>
+                    </h3>
+                    <ul className="space-y-3 text-slate-300">
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>UEI:</strong> YY2DR3KSENH7</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>CAGE:</strong> 9YCS7</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>SDVOSB Pending</strong> — veteran-owned</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>FedRAMP-aware deployment support</strong> for environments that need federal hosting and authorization paths.</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>NIST-focused control alignment:</strong> logging, access control, encryption, segmentation, and traceability that support regulated environments.</span></li>
+                    </ul>
+                  </div>
                   <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
-                    <p className="text-cyan-400 font-semibold mb-4 text-xl">Schedule Your Cloud Infrastructure Assessment</p>
+                    <p className="text-cyan-400 font-semibold mb-4 text-xl">If You Need Secure Cloud Infrastructure Live in 30 Days, Let&apos;s Talk About Fixing It</p>
                     <p className="text-slate-300 mb-6">
-                      Join CTOs, IT directors, and growing businesses who trust Autom8ion Lab for cloud infrastructure management services. Get your free infrastructure assessment to explore cloud migration strategies, DevOps automation opportunities, and hybrid multi-cloud architecture options for your business.
+                      Schedule a Consultation and let&apos;s build your cloud infrastructure the right way. Want to see more of what we do? Browse our other solutions to see how we engineer secure, custom systems.
                     </p>
-                    <Link href="/get-in-touch" className="inline-block bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                      Get Your Free Cloud Assessment
+                    <Link href="/schedule-consultation" className="inline-block bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                      Schedule a Consultation
                     </Link>
                   </div>
                 </div>
               </div>
             </section>
-      
+
             <CTA />
             <RelatedSolutions currentSlug="cloud-systems" />
     </>

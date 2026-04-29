@@ -5,31 +5,31 @@ import CTA from '@/app/_components/CTA';
 import RelatedSolutions from '@/app/_components/RelatedSolutions';
 
 export const metadata: Metadata = {
-  title: 'Custom LLM Systems for Federal, DIB, Healthcare & Financial Services',
-  description: 'Local LLM systems with no external data transfer. AI-powered document processing for CUI, PHI, and financial data inside FedRAMP, NIST 800-53, and FISMA-aligned environments. SDVOSB Pending. Delivered in 8–14 weeks.',
-  keywords: 'local LLM deployment, FedRAMP LLM, NIST 800-53 AI, FISMA LLM, CUI document processing, private LLM federal, on-prem LLM, GovCloud LLM, secure document AI, SDVOSB LLM development, healthcare LLM, financial services LLM',
+  title: 'Custom LLM Systems for Enterprise Business Data | Private AI for Tech, Healthcare & Finance',
+  description: 'Custom LLM systems for enterprise business data. Private deployment, SOC 2 protocols, encryption in transit and at rest, no public AI dependency. 30-day launch. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+  keywords: 'custom LLM systems, private LLM deployment, enterprise LLM, SOC 2 LLM, secure document workflows, private AI deployment, on-prem LLM, secure AI document processing, private enterprise AI',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/custom-llm-systems' },
   openGraph: {
-    title: 'Custom LLM Systems for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab',
-    description: 'Local LLM systems with no external data transfer. Secure document processing inside FedRAMP, NIST 800-53, and FISMA-aligned environments. SDVOSB Pending — UEI: YY2DR3KSENH7.',
+    title: 'Custom LLM Systems for Enterprise Business Data | Autom8ion Lab',
+    description: 'Private LLM deployment with SOC 2 protocols, encryption in transit and at rest. Built around your documents, workflows, and access controls. 30-day launch. SDVOSB Pending — UEI: YY2DR3KSENH7.',
     url: 'https://autom8ionlab.com/solutions/custom-llm-systems',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
-    title: 'Custom LLM Development | Fine-Tuned AI Model Solutions | Autom8ion Lab',
-    description: 'Build and fine-tune large language models with Autom8ion Lab. Custom LLM systems designed for performance, accuracy, and enterprise-grade security.',
+    title: 'Custom LLM Systems for Enterprise Business Data | Autom8ion Lab',
+    description: 'Private LLM deployment, SOC 2 protocols, encryption in transit and at rest. Built around your documents, workflows, and access controls.',
   },
 };
 
 const ldSchema1 = {
             "@context": "https://schema.org",
             "@type": "Service",
-            "serviceType": "Custom LLM Development",
+            "serviceType": "Custom LLM Systems for Enterprise Business Data",
             "provider": {
               "@type": "ProfessionalService",
               "name": "Autom8ion Lab"
             },
-            "description": "Custom LLM system development with AI model fine-tuning services, large language model customization, and generative AI development for enterprise applications with secure deployment.",
+            "description": "Custom LLM systems for enterprise business data. Private LLM deployment with SOC 2 protocols, secure retrieval architecture, and full control over model access, storage, logging, and integrations. Built around your documents, workflows, and operating requirements.",
             "areaServed": {
               "@type": "Place",
               "name": "Global"
@@ -37,34 +37,34 @@ const ldSchema1 = {
             "url": "https://autom8ionlab.com/solutions/custom-llm-systems",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Custom LLM Development Services",
+              "name": "Custom LLM Systems Services",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Domain-Specific Model Training"
+                    "name": "Private LLM Deployment for Data Privacy and SOC 2 Protocols"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "AI Model Fine-Tuning and Optimization"
+                    "name": "Custom LLM Systems Built Around Your Enterprise Data"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Enterprise Security and Compliance"
+                    "name": "Security Architecture for Private Enterprise AI"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Private Cloud LLM Deployment"
+                    "name": "Secure Document Workflows"
                   }
                 }
               ]
@@ -85,75 +85,72 @@ export default function Page() {
 const features = [
     {
       icon: Brain,
-      title: "Local LLM Deployment — No External Data Transfer",
-      description: "The standard for regulated AI is simple: no external data transfer. The model, retrieval layer, document pipeline, and user interface run inside your private environment, not on a public endpoint. Documents do not get forwarded to public APIs. Prompts do not get routed through third-party AI vendors. Outputs remain governed by your internal controls — critical when handling CUI, mission records, technical documentation, acquisition data, PHI, or financial data inside FedRAMP, NIST 800-53, and FISMA-aligned environments."
+      title: "Private LLM Deployment for Data Privacy and SOC 2 Protocols",
+      description: "The standard for enterprise AI is simple: keep sensitive business data inside your control boundary. That means the model, retrieval layer, document pipeline, and user interface run inside a private environment, not through a public endpoint. When we deploy a private LLM system or private-cloud architecture, your sensitive data stays inside your perimeter. Documents do not get forwarded to public APIs. Prompts do not get routed through third-party AI vendors. Outputs remain governed by your internal controls. We build private inference environments that prioritize data privacy, secure access, auditability, and SOC 2 protocols. You get AI capability without giving up control."
     },
     {
       icon: Cpu,
-      title: "AI-Powered Document Processing With Grounded Outputs",
-      description: "Generic models produce generic answers. We use your internal documentation, technical manuals, compliance records, SOPs, program files, policies, and structured systems to build an LLM workflow that reflects how your organization actually runs. Document extraction with context. Classification and routing. Grounded responses anchored to approved internal sources so the system answers based on your environment, not internet guesswork. Built for US Federal, DIB, healthcare, and financial services teams."
+      title: "Custom LLM Systems Built Around Your Enterprise Data",
+      description: "A business AI system is only useful if it understands your documents, your terminology, and your internal rules. We focus on secure document workflows backed by your operational data and business logic. We use your internal documentation, contracts, knowledge bases, compliance records, SOPs, support history, policies, and structured systems to build an LLM workflow that reflects how your business actually runs. Document extraction with context. Classification and routing. Grounded responses anchored to approved internal sources. Business-specific model behavior tuned to your processes instead of forcing your team into a generic chatbot."
     },
     {
       icon: Lock,
-      title: "Security Architecture for FedRAMP, NIST 800-53 & FISMA",
-      description: "A model alone does not solve the real problem. We build the full stack: private deployment boundaries on-prem or private cloud, FedRAMP-aligned environment design, NIST 800-53 control mapping across access, audit, configuration, incident response, and system integrity. Role-based access control. Encrypted data pipelines. Audit logging and traceability for every interaction, retrieval event, and workflow action. Custom API integrations connect the LLM to your source systems without bypassing your controls."
+      title: "Security Architecture for Private Enterprise AI",
+      description: "A model alone does not solve the real problem. You need security architecture that protects sensitive data and supports enterprise deployment requirements at every layer. Private deployment boundaries — on-premise or private cloud with strict network controls and no public AI dependency. Private LLM hosting inside your controlled environment. SOC 2 protocol alignment across access control, logging, change management, and secure data handling. Role-based access control. Encryption in transit and at rest. Audit logging and traceability for every interaction. Custom API integrations into your source systems without bypassing your controls."
     }
   ];
 
   const applications = [
     {
       icon: Zap,
-      title: "Intelligent Customer Support Systems",
-      description: "Deploy custom LLM systems trained on product documentation, support history, and industry knowledge to provide accurate, context-aware customer assistance. Models understand complex technical questions, remember conversation context across sessions, and escalate appropriately while maintaining brand voice and service quality standards."
+      title: "Document Extraction With Context",
+      description: "Pull key fields, clauses, requirements, and exceptions from complex files without relying on manual review. Built around your internal documentation, contracts, and operational records so the system understands your terminology, exceptions, and approved formats — not generic templates."
     },
     {
       icon: Database,
-      title: "Document Analysis and Summarization",
-      description: "Automate document processing, contract analysis, and information extraction with custom LLMs trained on legal terminology, financial reporting standards, and technical specifications. Intelligent summarization capabilities distill complex documents into actionable insights while maintaining accuracy and preserving critical details across large document repositories."
+      title: "Classification and Routing",
+      description: "Identify document types, tag sensitive records, and move data into the right downstream workflow automatically. Tied to your access model and approval logic so routing decisions follow your operating rules, with full audit logging on every action."
     },
     {
       icon: Network,
-      title: "Industry-Specific AI Copilots",
-      description: "Create specialized AI assistants for engineering, healthcare, finance, and legal professionals trained on domain-specific knowledge bases and best practices. Custom copilots provide intelligent recommendations, automate repetitive tasks, and accelerate decision-making while adapting to individual user preferences and organizational workflows."
+      title: "Grounded Responses",
+      description: "Anchor outputs to approved internal sources so the system answers based on your environment, not internet guesswork. Critical when handling customer records, contracts, internal documentation, financial data, regulated information, and proprietary workflows."
     },
     {
       icon: Shield,
-      title: "Secure Internal Knowledge Systems",
-      description: "Build private knowledge management systems that understand organizational information, policies, and procedures while maintaining strict access controls. Custom LLMs provide intelligent search, automated question answering, and knowledge discovery across internal documentation without exposing sensitive information to external AI services."
+      title: "Business-Specific Model Behavior",
+      description: "Tune prompts, retrieval logic, and workflows around your actual processes instead of forcing your team into a generic chatbot. This is the difference between a chatbot and a production system — built for private enterprise operations, controlled environments, and practical execution."
     }
   ];
 
   const benefits = [
-    "Train large language models on proprietary datasets including industry documentation, customer interactions, and specialized knowledge bases to achieve domain expertise that generic AI cannot match",
-    "Implement custom guardrails and safety protocols that enforce industry regulations, ethical guidelines, and operational constraints through real-time content filtering and response validation",
-    "Deploy on-premises or private cloud infrastructure with complete data sovereignty guarantees, ensuring sensitive business information never leaves your controlled environment",
-    "Improved response accuracy on your specific domain — measured against your existing baseline during scoping — through fine-tuning on approved corpora and continuous evaluation",
-    "Integrate seamlessly with existing business systems including CRMs, ERPs, analytics platforms, and communication tools through secure API endpoints and custom middleware",
-    "Maintain complete control over model behavior, training data, and deployment infrastructure with transparent fine-tuning processes and explainable AI capabilities",
-    "Scale AI capabilities across departments and use cases with flexible deployment options that support varying performance requirements and user access patterns",
-    "Reduce dependency on external AI providers through custom model ownership that provides cost predictability and eliminates data privacy concerns associated with cloud-based AI services",
-    "Benefit from continuous model improvements and updates based on your specific business needs, user feedback, and evolving industry requirements without vendor lock-in"
+    "Private data handling for sensitive prompts, documents, and outputs — no external data transfer",
+    "30-day launch timelines for clearly scoped use cases instead of open-ended AI experiments",
+    "Faster document processing through extraction, classification, retrieval, and summarization workflows",
+    "Stronger control of sensitive data through private deployment, RBAC, audit logging, and encryption in transit and at rest",
+    "Better governance through architecture designed for privacy, accountability, and secure internal use",
+    "SOC 2 protocol alignment across access control, logging, change management, and secure data handling",
+    "Encryption in transit and at rest inside your environment, with audit logging and traceability for every interaction",
+    "Custom API integrations into your source systems so the LLM connects without bypassing your controls",
+    "Founder-led delivery and senior engineering involvement from scoping through go-live"
   ];
 
-  // Industries served per LOCKED v3 — six total. Out-of-positioning categories
-  // (Legal & Professional Services, Technology & Software Development) removed
-  // per the LOCKED v3 copy optimization plan.
   const industries = [
     {
-      name: "Defense Industrial Base",
-      description: "Custom LLM systems deployable in CUI environments for DoD primes and subcontractors handling Federal Contract Information or Controlled Unclassified Information. RAG systems, document classification, and AI-assisted SSP authoring built to stay inside CMMC 2.0 boundaries. We deploy on-premises, in GCC High, or in FedRAMP-authorized environments — no external data transfer, full audit logging, and the documentation your assessor will need."
+      name: "Tech",
+      description: "Custom LLM systems for tech companies handling sensitive customer records, internal documentation, contracts, and proprietary operating knowledge. Private deployment inside your perimeter, SOC 2 protocol alignment, RBAC, and full audit logging — so engineering, support, and operations teams get AI capability without leaking data through public endpoints."
     },
     {
-      name: "US Federal, State & Local Government",
-      description: "Custom LLM systems for civilian agencies, state government, and municipal IT processing case files, citizen requests, licensing backlogs, or records management workloads. Built for FedRAMP Moderate and StateRAMP authorized environments. We integrate with existing case management systems and produce the System Security Plan, control narratives, and Section 508 accessibility documentation required for federal-facing applications."
+      name: "Construction",
+      description: "Document extraction, classification, and routing for construction operations — contracts, specs, submittals, and operational records. Grounded responses anchored to your project documentation, internal SOPs, and approved sources so the system answers based on your environment, not internet guesswork. Built for real workflows, not demos."
     },
     {
-      name: "Healthcare & Life Sciences",
-      description: "HIPAA-aligned LLM systems for health systems, payers, and life sciences companies. Trained or fine-tuned on de-identified data, deployed inside the customer's PHI boundary, with audit logging that maps to HIPAA Security Rule access controls. Use cases include clinical documentation drafting, prior authorization workflows, claims processing, and operations automation that does not violate PHI handling. We sign BAAs."
+      name: "Healthcare",
+      description: "Secure document workflows for healthcare teams handling sensitive records, internal documentation, and compliance artifacts. Private inference environments with encryption in transit and at rest, role-based access, and audit logging for every retrieval event and workflow action — so AI processing stays inside your security boundary."
     },
     {
       name: "Finance",
-      description: "Custom LLM systems for community banks, credit unions, fintech, and insurance carriers operating under SOC 2 Type II, PCI-DSS, NYDFS Part 500, GLBA, and FFIEC scrutiny. Deployed on-premises or in private cloud, integrated with core banking (Fiserv, Jack Henry, FIS) or core insurance (Guidewire, Duck Creek) systems. AI tools designed deliberately to stay on the right side of SR 11-7 model risk requirements."
+      description: "Custom LLM systems for finance operations handling contracts, financial files, support data, and proprietary operating knowledge. Private LLM hosting inside your controlled environment, SOC 2 protocol alignment, and integrations with your source systems through secure APIs — designed deliberately to keep sensitive business information inside your control boundary."
     }
   ];
 
@@ -169,30 +166,30 @@ const features = [
                 <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
               </div>
-      
-      
-      
+
+
+
               {/* Hero Content */}
               <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
                 <div className="max-w-6xl mx-auto text-center">
                   <div className="mb-8 flex justify-center">
                     <div className="flex items-center space-x-2 bg-blue-900/30 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-500/20">
                       <Brain className="w-5 h-5 text-cyan-400" />
-                      <span className="text-cyan-400 font-medium">Custom LLM System Development</span>
+                      <span className="text-cyan-400 font-medium">Custom LLM Systems</span>
                     </div>
                   </div>
-      
+
                   <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    Custom LLM Systems for Sensitive Data Environments
+                    Custom LLM Systems for
                     <br />
-                    for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Smarter, Secure AI</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Enterprise Business Data</span>
                   </h1>
-      
+
                   <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                    Local LLM systems with no external data transfer. AI-powered document processing for CUI, PHI, and financial data inside FedRAMP, NIST 800-53, and FISMA-aligned environments. Veteran-owned, SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7.
+                    Private LLM systems built around your documents, workflows, and access controls. Your data stays under your control — your documents, prompts, and outputs stay in your environment. Strong encryption in transit and at rest, aligned with SOC 2 protocols. 30-day launch.
                   </p>
-      
-      
+
+
                   <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     <Link href="/get-in-touch" className="group bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center space-x-2">
                       <span>Start Building Your Custom LLM</span>
@@ -202,66 +199,36 @@ const features = [
                 </div>
               </div>
             </section>
-      
+
             {/* Introduction/Overview Section */}
             <section className="py-16 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                    Build Large Language Models <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Tailored to Your Data</span>
+                    Public AI Breaks <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Business Workflows</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Public AI is a liability in regulated environments. If you are feeding CUI, mission documents, acquisition records, PHI, financial data, or internal process data into ChatGPT or Claude, you are sending sensitive information outside your control boundary. For US Federal teams, the Defense Industrial Base, healthcare organizations, and financial services firms, "off-the-shelf" is not an option. Public models leave your environment, weaken security boundaries for sensitive data, and produce generic answers when you need precise processing of forms, SOPs, acquisition packages, technical manuals, and internal review processes.
+                    Public AI creates risk when your team is working with sensitive business data. If employees are feeding contracts, customer records, internal documentation, financial data, support history, or operational knowledge into ChatGPT or Claude, your information is leaving your control boundary. That is a privacy problem, a governance problem, and a security problem. Off-the-shelf AI is not built for enterprise data. You need a custom LLM system that runs inside your environment and is built around your documents, workflows, and access controls from day one.
                   </p>
                   <p className="text-lg text-slate-300 leading-relaxed">
-                    At Autom8ion Lab, we build custom LLM systems for regulated environments with one clear rule: no external data transfer. Your documents stay inside your approved infrastructure. Your prompts stay inside your approved infrastructure. Your outputs stay inside your approved infrastructure. We don't bolt generic AI onto sensitive workflows — we build secure, private AI-powered document processing systems engineered around your mission requirements, your compliance obligations, and your internal data handling standards. Veteran-owned and SDVOSB Pending, with federal identifiers ready (UEI: YY2DR3KSENH7, CAGE: 9YCS7).
+                    At Autom8ion Lab, we build custom LLM systems for enterprise business data with one clear rule: your data stays under your control. Your documents stay in your environment. Your prompts stay in your environment. Your outputs stay in your environment. We don&apos;t bolt generic AI onto critical workflows. We build private AI systems around your business logic, your internal data, and your operating requirements. Our systems are built for teams that need private LLM deployment, secure retrieval architecture, and full control over model access, storage, logging, and integrations. We design environments with strong encryption in transit and at rest, and we align implementation with SOC 2 protocols.
                   </p>
                 </div>
               </div>
             </section>
-      
-            {/* Problem/Solution Video Section - Commented out until videos are ready */}
-            {/*
-            <section className="py-16 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    See How We Solve Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI Intelligence Challenges</span>
-                  </h2>
-                  <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-                    Watch our explainer video to understand how custom LLM systems deliver domain-specific AI capabilities that generic models can't match.
-                  </p>
-                </div>
-                <div className="max-w-5xl mx-auto">
-                  <div className="relative bg-slate-800/50 p-4 rounded-2xl border border-slate-700/50">
-                    <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
-                      <iframe
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?rel=0&modestbranding=1"
-                        title="Custom LLM Systems - Problem/Solution Explainer Video"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="absolute top-0 left-0 w-full h-full rounded-xl"
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            */}
-      
+
             {/* Features Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Fine-Tuning and <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Custom Model Training Services</span>
+                    Private Deployment, Custom Training, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Full-Stack Security</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Our precision-tuning approach adjusts for tone, task specificity, and operational goals through advanced training methodologies and continuous optimization protocols.
+                    We don&apos;t route sensitive work through generic AI services. We build secure systems that align with cybersecurity, privacy requirements, SOC 2 protocols, and real-world enterprise data handling standards.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-3 gap-8">
                   {features.map((feature, index) => {
                     const IconComponent = feature.icon;
@@ -285,67 +252,67 @@ const features = [
                 </div>
               </div>
             </section>
-      
-            {/* How It Works Section */}
+
+            {/* How It Works Section / 30-Day Launch Framework */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Enterprise-Grade <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Performance and Compliance</span>
+                    The Autom8ion Lab <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">30-Day Launch Framework</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    From data pipeline development to secure deployment and governance, we ensure security, scalability, and compliance at every stage of custom LLM implementation.
+                    Most AI projects stall because the architecture is wrong from the start. We move faster by building around your real security boundary, your real business workflows, and your real data requirements from day one. Our average launch timeline is 30 days for scoped enterprise LLM implementations.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">1</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Data Analysis & Pipeline Development</h3>
-                    <p className="text-slate-400 text-sm">Comprehensive analysis of proprietary datasets, knowledge bases, and business requirements to design optimal training data pipelines. We architect data ingestion, preprocessing, and validation systems that prepare high-quality training data while maintaining security and compliance throughout the process.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Phase 1: Use Case &amp; Security Scoping (Days 1-5)</h3>
+                    <p className="text-slate-400 text-sm">We identify the workflows, documents, systems, and user groups that matter most. We define the security boundary, access model, and operational outcomes you need.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">2</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Model Training & Fine-Tuning</h3>
-                    <p className="text-slate-400 text-sm">Advanced AI model fine-tuning using supervised learning, reinforcement learning from human feedback (RLHF), and continuous optimization. Our training protocols adjust model behavior for accuracy, tone, and task specificity while reducing hallucinations and improving consistency across diverse operational scenarios.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Phase 2: Environment Setup &amp; Model Deployment (Days 6-12)</h3>
+                    <p className="text-slate-400 text-sm">We provision your private environment, define storage and retrieval architecture, and deploy the model stack into your approved infrastructure.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">3</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Security & Compliance Integration</h3>
-                    <p className="text-slate-400 text-sm">Implementation of enterprise-grade security measures including encryption, access controls, and audit logging. We ensure compliance with GDPR, HIPAA, SOC 2, and industry-specific regulations while implementing custom guardrails that enforce ethical AI practices and operational safety requirements.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Phase 3: Workflow Build &amp; Integration (Days 13-24)</h3>
+                    <p className="text-slate-400 text-sm">We build ingestion, classification, retrieval, and response workflows. Then we connect the LLM system to your workflow automation, internal tools, and source systems.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">4</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Deployment & Continuous Optimization</h3>
-                    <p className="text-slate-400 text-sm">Private cloud or on-premises deployment with continuous monitoring and iterative improvements. We track performance metrics, analyze usage patterns, and refine model behavior based on real-world feedback to maximize effectiveness while maintaining security and compliance standards.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Phase 4: Validation, Hardening &amp; Go-Live (Days 25-30)</h3>
+                    <p className="text-slate-400 text-sm">We validate access controls, test output quality, harden the environment, and move the system into production with your team trained and operational.</p>
                   </div>
                 </div>
               </div>
             </section>
-      
+
             {/* Applications Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Generative AI Applications <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">That Transform Operations</span>
+                    Secure Document Workflows <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Backed by Your Data</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    From customer support bots and document summarization to coding assistants and industry-specific AI copilots, custom LLMs revolutionize business workflows.
+                    This is not a generic chatbot. It is a custom LLM system built for private enterprise operations, controlled environments, and practical execution.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-2 gap-8">
                   {applications.map((application, index) => {
                     const IconComponent = application.icon;
@@ -366,19 +333,19 @@ const features = [
                 </div>
               </div>
             </section>
-      
+
             {/* Industry Applications Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Industry-Specific <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">LLM Solutions</span>
+                    Custom LLM Systems for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Commercial Industries</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Custom LLM system development tailored to the unique requirements, regulations, and operational demands of your industry.
+                    Built for Tech, Construction, Healthcare, and Finance teams that need AI capability without giving up control of their data.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-2 gap-8">
                   {industries.map((industry, index) => (
                     <div key={index} className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
@@ -391,7 +358,7 @@ const features = [
                 </div>
               </div>
             </section>
-      
+
             {/* Integration Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
@@ -400,28 +367,28 @@ const features = [
                     Integrations With Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Existing Systems</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                    Seamless integration with CRMs, ERPs, analytics platforms, and cloud systems through secure API endpoints and custom middleware. Our natural language processing solutions connect to your existing data pipelines without requiring major infrastructure changes. Custom LLMs integrate with <Link href="/solutions/data-management" className="text-cyan-400 hover:text-cyan-300 underline">data management systems</Link> for training data preparation, <Link href="/solutions/ai-agent-development" className="text-cyan-400 hover:text-cyan-300 underline">AI agent development</Link> platforms for application deployment, and <Link href="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity infrastructure</Link> for secure model hosting.
+                    We build custom <Link href="/solutions/api-integrations" className="text-cyan-400 hover:text-cyan-300 underline">API integrations</Link> so the LLM connects to your source systems without bypassing your controls. Pair with our <Link href="/solutions/ai-agent-development" className="text-cyan-400 hover:text-cyan-300 underline">AI agent development</Link> work when you need agents that execute decisions on top of LLM outputs, our <Link href="/solutions/workflow-automation" className="text-cyan-400 hover:text-cyan-300 underline">workflow automation</Link> when LLM outputs need to drive downstream tasks, our <Link href="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity and compliance</Link> work for governance support, and our <Link href="/solutions/cloud-systems" className="text-cyan-400 hover:text-cyan-300 underline">scalable cloud infrastructure</Link> when private deployment needs the right foundation underneath it.
                   </p>
                 </div>
               </div>
             </section>
-      
-            {/* Benefits Section - Keep but change title */}
+
+            {/* Benefits Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Transform Operations with
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Custom AI Intelligence</span>
+                    Measurable Outcomes:
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Why It Matters</span>
                   </h2>
                   <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                    Large language model customization delivers domain expertise, operational control, and data security that generic AI platforms cannot provide.
+                    We do not measure success by demo quality. We measure it by security, speed, and operational impact. Teams that replace public AI with Autom8ion Lab&apos;s custom LLM systems gain real control and real results.
                   </p>
-                  <Link href="/get-in-touch" className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
-                    Schedule LLM Consultation
+                  <Link href="/schedule-consultation" className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
+                    Schedule a Consultation
                   </Link>
                 </div>
-      
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-4 bg-slate-800/30 p-4 rounded-lg border border-slate-700/50">
                       <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
@@ -431,36 +398,55 @@ const features = [
                 </div>
               </div>
             </section>
-      
-            {/* Why Choose Us Section - Remove old content after this */}
+
+            {/* Why Choose Us Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                    Strategic Partner for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Complex AI Infrastructure</span>
+                    Build Your Private <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Enterprise AI System</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Generic AI providers offer access to pre-trained models but lack the infrastructure expertise for custom development. In-house AI teams face challenges with data pipeline complexity, training infrastructure costs, and deployment security. Autom8ion Lab combines innovative technical authority with practical implementation experience—we handle complete custom LLM system development from data preparation through secure deployment. Our team of AI researchers and ML engineers partners with your domain experts to ensure every model reflects your organization's unique intelligence.
+                    Your AI system should not send sensitive business data outside your environment. You need a partner who understands software development, security architecture, private AI deployment, and the operational reality inside growing companies. Instead of forcing public AI into workflows it was never designed to handle, build a custom system that runs securely inside your stack. We deliver custom LLM systems for enterprise business data with private deployment options, encryption in transit and at rest, and practical automation built around your operations.
                   </p>
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                    We deliver custom LLM systems for environments where data residency, audit, and security matter — on-premises, GCC High, FedRAMP-authorized, and HIPAA-aligned deployments. Federal contractors, DoD subs, healthcare entities, and regulated financial firms choose Autom8ion Lab because we engineer the controls and document them: model lineage, training data provenance, evaluation evidence, audit logging that maps to NIST 800-171 and HIPAA Security Rule controls. Engagements scoped to your contract structure (task order, IDIQ, fixed-price, or T&amp;M); quotes provided after a discovery call.
+                    If your team is still using public AI to process sensitive business data, you have a security gap. You also have an execution problem. Stop exposing sensitive data. Start processing it securely.
                   </p>
+                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 mb-8 text-left">
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Defense and <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Government</span>
+                    </h3>
+                    <p className="text-slate-300 mb-6">
+                      For defense contractors, federal agencies, and regulated teams with government-specific requirements, we also support deployments that account for federal security and procurement realities. This includes architecture planning and implementation support for:
+                    </p>
+                    <ul className="space-y-3 text-slate-300">
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>FedRAMP-aware deployment support</strong> for environments that need federal hosting and authorization paths.</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>NIST-focused control alignment</strong> where your contract or operating environment requires it.</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>Private AI deployment</strong> for sensitive government data.</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>UEI:</strong> YY2DR3KSENH7</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>CAGE:</strong> 9YCS7</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>SDVOSB Pending</strong> — veteran-owned</span></li>
+                    </ul>
+                    <p className="text-slate-300 mt-6">
+                      If you need a commercial-first AI system with a path into defense or government requirements, we can build for that from the start.
+                    </p>
+                  </div>
                   <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Start Building Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Custom LLM System Today</span>
+                      Ready to Secure Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI Future?</span>
                     </h3>
-                    <p className="text-cyan-400 font-semibold mb-2">Ready to unlock domain-specific AI capabilities?</p>
+                    <p className="text-cyan-400 font-semibold mb-2">Stop exposing sensitive data. Start processing it securely.</p>
                     <p className="text-slate-300 mb-6">
-                      Join AI-forward organizations leveraging custom LLM system development for competitive advantage. Our large language model customization services handle data pipelines, model training, and secure deployment efficiently and strategically. Schedule a consultation to discover how natural language processing solutions tailored to your business can transform operations while maintaining complete data sovereignty.
+                      Schedule a consultation with us today. If you need a custom enterprise LLM system, secure private deployment, or a 30-day launch plan for a high-value AI use case, get in touch and let&apos;s see if this works for you.
                     </p>
-                    <Link href="/get-in-touch" className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
+                    <Link href="/schedule-consultation" className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
                       Book Your Custom LLM Consultation
                     </Link>
                   </div>
                 </div>
               </div>
             </section>
-      
+
             <CTA />
             <RelatedSolutions currentSlug="custom-llm-systems" />
     </>

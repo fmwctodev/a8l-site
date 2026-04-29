@@ -5,19 +5,19 @@ import CTA from '@/app/_components/CTA';
 import RelatedSolutions from '@/app/_components/RelatedSolutions';
 
 export const metadata: Metadata = {
-  title: 'AI Agent Development for Federal, DIB, Healthcare & Financial Services',
-  description: 'Custom AI agents and workflow automation for US Federal, DIB, healthcare, and financial services teams. Mission-grounded, permission-aware, and aligned to FedRAMP, FISMA, and NIST 800-53. SDVOSB Pending. Live in 30 days.',
-  keywords: 'federal AI agents, DIB AI development, FedRAMP AI agents, NIST 800-53 AI, FISMA AI workflow, custom AI agents, mission-grounded AI, SDVOSB AI development, regulated industry AI, healthcare AI agents',
+  title: 'AI Agent Development for Commercial Operations | Tech, Construction, Healthcare & Finance',
+  description: 'Custom AI agents for commercial operations in Tech, Construction, Healthcare, and Finance. SOC 2-aligned security, 30-day launch, founder-led delivery. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+  keywords: 'custom AI agents, commercial AI agents, SOC 2 AI agents, AI agent development, business AI automation, private AI deployment, AI agents for tech, construction AI, healthcare AI agents, finance AI agents, 30-day AI launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/ai-agent-development' },
   openGraph: {
-    title: 'AI Agent Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab',
-    description: 'Custom AI agents engineered for controlled environments. Mission-grounded, permission-aware, and aligned to FedRAMP, FISMA, and NIST 800-53. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+    title: 'AI Agent Development for Commercial Operations | Autom8ion Lab',
+    description: 'Custom AI agents for Tech, Construction, Healthcare, and Finance. SOC 2-aligned, 30-day launch, founder-led delivery. SDVOSB Pending — UEI: YY2DR3KSENH7.',
     url: 'https://autom8ionlab.com/solutions/ai-agent-development',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
-    title: 'AI Agent Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab',
-    description: 'Custom AI agents engineered for controlled environments. Mission-grounded, permission-aware, aligned to FedRAMP, FISMA, NIST 800-53. SDVOSB Pending.',
+    title: 'AI Agent Development for Commercial Operations | Autom8ion Lab',
+    description: 'Custom AI agents engineered for commercial operations. SOC 2-aligned, 30-day launch. SDVOSB Pending.',
   },
 };
 
@@ -29,7 +29,7 @@ const ldSchema1 = {
               "@type": "ProfessionalService",
               "name": "Autom8ion Lab"
             },
-            "description": "Custom conversational agents—chatbots, voice assistants, support bots—built on LLMs and fine-tuned to your business data with human-like accuracy and context awareness.",
+            "description": "Custom AI agents for commercial operations in Tech, Construction, Healthcare, and Finance. Built around your workflows, documentation, and access model with SOC 2-aligned security practices and a 30-day launch timeline.",
             "areaServed": {
               "@type": "Place",
               "name": "Worldwide"
@@ -47,21 +47,21 @@ const ldSchema1 = {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "LLM-Powered Intelligence"
+                    "name": "Custom AI Agents for Real Business Work"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Human-Like Conversations"
+                    "name": "Built for Security and Operational Control"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Multi-Purpose Deployment"
+                    "name": "Company-Specific AI Agent Training"
                   }
                 }
               ]
@@ -82,31 +82,31 @@ export default function Page() {
 const features = [
     {
       icon: Brain,
-      title: "Mission-Grounded, Permission-Aware Agents",
-      description: "We build agents that operate inside the rules of your environment. They are trained on approved documentation, scoped to specific actions, and connected only to the systems they need. Agents respond using your procedures, internal documentation, and approved knowledge sources. Actions follow role-based access, approval logic, and documented business rules — not internet guesswork. Engineered for US Federal, DIB, healthcare, and financial services workflows where uncontrolled outputs are a non-starter."
+      title: "Custom AI Agents for Real Business Work",
+      description: "We build AI agents that do more than answer questions. They handle intake, classify requests, retrieve approved information, trigger actions, and move work through the right systems. Business-grounded outputs use your policies, SOPs, forms, and internal documentation. Role-based actions follow your access model, approval logic, and operating rules. Real execution: agents route cases, generate drafts, summarize records, update systems, and support decision workflows. Custom system design, built around your process. No templates. No generic behavior."
     },
     {
       icon: MessageSquare,
-      title: "Workflow Automation Aligned to FedRAMP, FISMA & NIST 800-53",
-      description: "Manual work breaks under volume. We automate the repetitive steps that slow regulated teams down: package routing, documentation review, exception handling, status tracking, internal notifications, and system-to-system task movement. Every workflow runs the same way every time — exactly what audit-ready federal operations require. We connect your tools through API integrations so work moves without copy-paste, missed steps, or disconnected records."
+      title: "Built for Security and Operational Control",
+      description: "Companies need systems that improve speed without creating security gaps. Our AI agent development is designed for environments where security, documentation, and execution discipline are non-negotiable. SOC 2-aligned security practices with logging, access control, encryption, segmentation, and traceability from the start. Workflow discipline that is repeatable, auditable, and operationally useful. System integration through our API Integrations so work moves without manual re-entry. Fast deployment in 30 days so you solve the bottleneck now, not next quarter."
     },
     {
       icon: Users,
-      title: "Business-Specific Agent Training on Your Approved Data",
-      description: "One-size-fits-all is reckless in regulated environments. A real AI system must reflect your operating model, your control framework, and your documentation standards. We use your proprietary data — policies, SOPs, system documentation, internal knowledge bases, and operational artifacts — to ground the AI's reasoning. This keeps outputs aligned to actual procedures, reduces unsupported responses, and makes the system materially more useful in FedRAMP, FISMA, and NIST 800-53 driven workflows."
+      title: "Company-Specific AI Agent Training",
+      description: "We do not believe in one-size-fits-all AI. In commercial environments, that approach breaks fast. A deployable AI agent must reflect your workflow, your approved documentation, and your operating rules. Every system we build is trained on your company-specific data and bounded by your business logic. We use your policies, SOPs, system documentation, knowledge bases, forms, and operational records to ground the agent's behavior. That keeps outputs aligned to approved procedures and gives you stronger control over what the AI can access, generate, and execute inside your environment."
     }
   ];
 
   const benefits = [
-    "Handle sophisticated lead qualification with intelligent screening that identifies high-value prospects through natural conversation, qualifying leads based on budget, timeline, and specific needs while seamlessly transferring qualified prospects to sales teams",
-    "Provide comprehensive 24/7 customer support with advanced context retention that remembers previous interactions, maintains conversation history across sessions, and provides consistent, personalized assistance that improves customer satisfaction and reduces support ticket volume",
-    "Automate complex internal workflows and task management including employee onboarding, IT support requests, HR inquiries, and process guidance, freeing up internal teams to focus on strategic initiatives while ensuring consistent information delivery",
-    "Dramatically reduce staffing costs and response times by handling up to 80% of routine customer inquiries automatically, providing instant responses to common questions while maintaining service quality and enabling human agents to focus on complex, high-value interactions",
-    "Custom fine-tuning on your specific business data, product catalogs, support documentation, and industry terminology ensures accurate, contextually relevant responses that align with your brand voice and business processes, delivering superior performance compared to generic chatbot solutions",
-    "Flexible deployment across web chat, mobile applications, voice systems, social media platforms, and email support with seamless omnichannel experiences that allow customers to switch between channels without losing conversation context or requiring information repetition",
-    "Advanced analytics and conversation insights that provide detailed reporting on customer interactions, common questions, satisfaction metrics, and optimization opportunities, enabling continuous improvement of customer service strategies and agent performance",
-    "Intelligent escalation protocols that recognize when human intervention is needed, seamlessly transferring complex issues to appropriate specialists while providing complete conversation context and customer history for efficient resolution",
-    "Multilingual capabilities and cultural adaptation that enable global customer support with natural language processing in multiple languages, ensuring consistent service quality across diverse markets and customer demographics"
+    "Replace manual intake, classification, and triage with custom AI agents grounded in your SOPs, policies, and approved internal documentation",
+    "Route cases, generate drafts, summarize records, update systems, and execute repeatable work with full traceability",
+    "Enforce role-based access, approval logic, and documented business rules on every action the agent takes",
+    "Connect agents into your existing tools through API integrations so work moves without manual re-entry or missed steps",
+    "Deploy on private cloud, on-premises, or controlled hosted environments with isolation, encryption, and audit-ready logging",
+    "Keep your data inside your environment — agents never train public models on your prompts, documents, or outputs",
+    "Free up high-value labor by removing the repetitive intake, manual review, status checks, and disconnected handoffs that drag operations down",
+    "Launch in 30 days with founder-led delivery — you work directly with senior builders, not a layer of account managers",
+    "Measurable productivity gains for commercial operations, with audit-ready architecture aligned to SOC 2 practices"
   ];
 
   return (
@@ -121,9 +121,9 @@ const features = [
                 <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
               </div>
-      
-      
-      
+
+
+
               {/* Hero Content */}
               <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
                 <div className="max-w-6xl mx-auto text-center">
@@ -133,18 +133,18 @@ const features = [
                       <span className="text-cyan-400 font-medium">AI Agent Development</span>
                     </div>
                   </div>
-      
+
                   <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                     AI Agent Development
                     <br />
-                    for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Regulated Environments</span>
+                    for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Commercial Operations</span>
                   </h1>
-      
+
                   <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                    Mission-grounded, permission-aware AI agents and workflow automation for US Federal, DIB, healthcare, and financial services teams. Aligned to FedRAMP, FISMA, and NIST 800-53. SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7.
+                    Custom AI agents for Tech, Construction, Healthcare, and Finance. We build agents that execute real work inside your environment, against your rules, with your documentation as the source of truth. Launch in 30 days. Secured with SOC 2-aligned practices.
                   </p>
-      
-      
+
+
                   <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     <Link href="/get-in-touch" className="group bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center space-x-2">
                       <span>Start Your AI Agent Project</span>
@@ -154,66 +154,36 @@ const features = [
                 </div>
               </div>
             </section>
-      
+
             {/* Introduction/Overview Section */}
             <section className="py-16 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                    Generic AI Is a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Liability</span>
+                    Generic AI Fails <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Commercial Operations</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Most teams try to "add AI" by duct-taping a public LLM wrapper onto an existing process. In US Federal environments, that approach fails fast. Generic tools do not understand your security boundaries, your authorization requirements, or your documentation standards. They produce uncontrolled outputs that aren't grounded in your approved procedures, introduce data-handling risk that conflicts with federal security requirements, and can't reliably execute approved workflows across your systems with the right permissions, approvals, and logs.
+                    Operational bottlenecks kill momentum. Your teams lose time in repetitive intake, manual review, status checks, and disconnected systems. Generic AI makes that worse. It gives you shallow answers, weak controls, and no operational accountability. Most AI vendors sell wrappers around public models. That does not work in real operating environments. If the system is not grounded in your actual workflows, scoped to your users, and deployed with the right controls, it becomes a liability fast.
                   </p>
                   <p className="text-lg text-slate-300 leading-relaxed">
-                    We don't build generic chatbots. We build custom AI agents and workflow automation systems for US Federal, DIB, Healthcare, and Financial Services teams — engineered around your mission workflow, your security controls, and your documentation requirements. Whether you need to route packages through review, automate program-office tasks, or execute repeatable workflows without manual handoffs, we build for organizations that need audit-aware systems in controlled environments. Veteran-owned, SDVOSB Pending, with UEI: YY2DR3KSENH7 and CAGE: 9YCS7.
+                    At Autom8ion Lab, we build custom AI agents for commercial operations. We solve workflow friction for companies in Tech, Construction, Healthcare, and Finance by building agents that execute real work inside your environment, against your rules, with your documentation as the source of truth. We do not ship generic bots. We build custom systems that fit how your business actually runs, launch in 30 days, and are secured with SOC 2-aligned practices.
                   </p>
                 </div>
               </div>
             </section>
-      
-            {/* Problem/Solution Video Section - Commented out until videos are ready */}
-            {/*
-            <section className="py-16 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    See How We Solve Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Customer Service Challenges</span>
-                  </h2>
-                  <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-                    Watch our explainer video to understand how custom AI agents transform customer interactions and reduce support overhead.
-                  </p>
-                </div>
-                <div className="max-w-5xl mx-auto">
-                  <div className="relative bg-slate-800/50 p-4 rounded-2xl border border-slate-700/50">
-                    <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
-                      <iframe
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?rel=0&modestbranding=1"
-                        title="AI Agent Development - Problem/Solution Explainer Video"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="absolute top-0 left-0 w-full h-full rounded-xl"
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            */}
-      
+
             {/* Features Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Chat, Voice, and Automation — <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Unified AI Experiences</span>
+                    Measurable Productivity Gains for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Commercial Operations</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Our AI chatbot and virtual agent development services deliver multi-channel experiences that handle customer support, lead qualification, scheduling, and operational tasks with intelligent automation.
+                    If your team is still pushing the same requests, forms, approvals, and updates by hand, you are spending high-value labor on low-value tasks. Our AI agents remove that drag and deliver measurable productivity gains by executing repeatable work with speed, consistency, and full traceability.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-3 gap-8">
                   {features.map((feature, index) => {
                     const IconComponent = feature.icon;
@@ -237,115 +207,115 @@ const features = [
                 </div>
               </div>
             </section>
-      
+
             {/* How It Works Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Our AI Agent Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Process</span>
+                    Launch in 30 Days, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Not 6 Months</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    From requirements analysis to deployment and optimization, our systematic approach ensures every AI agent delivers exceptional performance and user satisfaction.
+                    You do not need a bloated discovery cycle. You need a working system that fits your environment, supports your controls, and solves a specific operational problem fast. We launch custom AI agents in 30 days.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">1</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Requirements & Data Analysis</h3>
-                    <p className="text-slate-400 text-sm">We analyze your customer service needs, existing support documentation, and interaction patterns to develop comprehensive AI agent specifications and training data requirements tailored to your business objectives.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Week 1: Audit and Architecture</h3>
+                    <p className="text-slate-400 text-sm">We identify the highest-friction workflow, define data boundaries, map integrations, and align the solution to your security and compliance requirements.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">2</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Custom Model Training</h3>
-                    <p className="text-slate-400 text-sm">Our AI specialists fine-tune large language models using your proprietary data, industry knowledge, and customer interaction history to create intelligent agents that understand your business context and communication style.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Week 2: Custom AI Agent Development</h3>
+                    <p className="text-slate-400 text-sm">We build the agent logic, workflow rules, security model, and orchestration layer around your exact process.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">3</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Integration & Testing</h3>
-                    <p className="text-slate-400 text-sm">Comprehensive integration with your existing systems, platforms, and workflows, followed by extensive testing to ensure optimal performance, accuracy, and user experience across all deployment channels.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Week 3: Integration and Training</h3>
+                    <p className="text-slate-400 text-sm">We connect the agent to your stack, ground it in approved documentation, and configure access, approvals, and logging.</p>
                   </div>
-      
+
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-lg">4</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Deployment & Optimization</h3>
-                    <p className="text-slate-400 text-sm">Live deployment with continuous monitoring, performance analytics, and iterative improvements based on real-world interactions and user feedback to maximize effectiveness and customer satisfaction.</p>
+                    <h3 className="text-lg font-semibold text-white mb-3">Week 4: Testing and Deployment</h3>
+                    <p className="text-slate-400 text-sm">We validate performance, outputs, audit trails, and workflow execution, then deploy into the environment that fits your requirements.</p>
                   </div>
                 </div>
               </div>
             </section>
-      
+
             {/* Use Cases Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI Agent Architecture</span> for Long-Term Growth
+                    Custom AI Agents for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Commercial Industries</span>
                   </h2>
                   <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Our AI agent development services are built for enterprise scalability with robust integrations, data protection standards, and flexible deployment options that grow with your business.
+                    We build agents around how Tech, Construction, Healthcare, and Finance teams actually run — with federal-aware delivery available when your environment requires it.
                   </p>
                 </div>
-      
+
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Construction: RFI &amp; Submittal AI Agents</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Tech: Internal Operations &amp; Support Automation</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Deploy AI agents that triage RFIs and submittals, route them to the right reviewer, and draft suggested responses grounded in the project plans, specs, and prior responses. Integrated with Procore, PlanGrid, and Buildertrend, the agents reduce coordinator overhead while keeping a human in the loop for every reply. All actions are logged for downstream document retention and audit.
+                      Replace inboxes, spreadsheets, and manual review chains with AI agents that handle intake, classify requests, retrieve approved information, and trigger actions across your stack. Agents are grounded in your SOPs, internal documentation, and operational records — not internet guesswork — and connect into your existing tools through our <Link href="/solutions/api-integrations" className="text-cyan-400 hover:text-cyan-300 underline">API integrations</Link> so work moves without manual re-entry.
                     </p>
                   </div>
 
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Defense Industrial Base: CUI Document Triage</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Construction: RFI, Submittal &amp; Field Coordination</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Build AI agents that classify and triage documents inside CUI environments — DoD reporting submissions, technical specifications, contract correspondence — with full DFARS 252.204-7012 alignment. Deployed inside GCC High or FedRAMP-authorized environments using local LLMs or private-cloud-hosted commercial models. No external data transfer; all activity logged to NIST 800-171 audit families. Integration with your existing <Link href="/solutions/workflow-automation" className="text-cyan-400 hover:text-cyan-300 underline">workflow automation</Link> ensures escalation to human reviewers where required.
+                      Deploy AI agents that triage RFIs and submittals, route them to the right reviewer, and draft suggested responses grounded in project plans, specs, and prior responses. Custom-built around your access model so every action follows your approval logic, with audit-ready logging tied directly into your existing <Link href="/solutions/workflow-automation" className="text-cyan-400 hover:text-cyan-300 underline">workflow automation</Link>.
                     </p>
                   </div>
-      
+
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Healthcare & Professional Services: Patient Intake & Scheduling</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Healthcare: Intake, Documentation &amp; Operational Workflows</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Implement intelligent patient intake systems and appointment scheduling assistants that handle sensitive information with appropriate privacy safeguards. AI agents collect medical history, schedule appointments, provide pre-visit instructions, and answer common questions about procedures while maintaining HIPAA compliance. Our <Link href="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity-first approach</Link> ensures all patient data remains protected throughout automated interactions.
+                      AI agents that handle intake, classify documents, summarize records, and update systems with role-based access, approval logic, and traceable execution. Deployed inside private cloud or on-premises environments aligned to SOC 2 practices, integrated with our <Link href="/solutions/cybersecurity" className="text-cyan-400 hover:text-cyan-300 underline">cybersecurity and compliance</Link> work to keep sensitive data inside your control boundary.
                     </p>
                   </div>
-      
+
                   <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Operations & Internal Workflows: Task & Process Automation</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Finance &amp; Federal: Controlled Operations</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      Automate internal operations with AI agents that handle employee onboarding, IT support requests, HR inquiries, and complex workflow management. Our AI-powered process optimization integrates with <Link href="/solutions/process-automation" className="text-cyan-400 hover:text-cyan-300 underline">process automation systems</Link> to streamline repetitive tasks, reduce manual overhead, and deliver predictive analytics that identify bottlenecks and optimization opportunities across your organization.
+                      AI agents engineered for finance operations and federal-aware deployments where logging, encryption, segmentation, and traceability matter from day one. Where your environment requires it, we support FedRAMP-aware deployment paths and NIST-focused control alignment alongside the SOC 2-aligned practices we apply by default. Pair with our <Link href="/solutions/custom-llm-systems" className="text-cyan-400 hover:text-cyan-300 underline">custom LLM systems</Link> when sensitive business data must stay inside your perimeter.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
-      
+
             {/* Benefits Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Transform Your Business with
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Intelligent Automation</span>
+                    SOC 2 Security for
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Custom AI Systems</span>
                   </h2>
                   <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                    Our custom AI agents don't just follow scripts—they understand context, learn from interactions, and make intelligent decisions that drive real business results.
+                    Security is built into the architecture from day one. Your business cannot afford AI systems that leak data, skip controls, or create audit gaps. We build with SOC 2-aligned security practices, disciplined access control, and infrastructure choices that match your environment.
                   </p>
                   <Link href="/get-in-touch" className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
                     Schedule a Consultation
                   </Link>
                 </div>
-      
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {benefits.slice(0, 8).map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-4 bg-slate-800/30 p-4 rounded-lg border border-slate-700/50">
@@ -356,36 +326,51 @@ const features = [
                 </div>
               </div>
             </section>
-      
+
             {/* Why Choose Us Section */}
             <section className="py-24 bg-black relative">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                    Why Choose Autom8ion Lab for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI Agent Development</span>
+                    Why Companies Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Autom8ion Lab</span>
                   </h2>
                   <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    The market is flooded with AI vendors selling demos dressed up as products. We are engineers who build production systems for US Federal, DIB, healthcare, and financial services operations. We don't do generic bots — we build controlled systems engineered around your workflows, access model, and documentation requirements. Built for federal and regulated environments: on-premises, private cloud, and FedRAMP deployment requirements instead of forcing you into a public SaaS box. Aligned to federal security expectations with traceability, repeatability, and operational discipline supporting FedRAMP, FISMA, and NIST 800-53 driven workflows.
+                    The market is full of AI vendors pushing demos, wrappers, and generic copilots. We build production systems for companies that need secure execution, not flashy prototypes. We do not do generic bots — we build custom AI agents engineered around your workflow, documentation, and access model. 30-day average launch gets you from problem definition to deployed system fast. Measurable productivity gains remove repetitive labor and create operational improvements you can track. SOC 2-aligned security designs for protected environments with isolation, encryption, and traceable execution. Founder-led delivery means you work directly with senior builders.
                   </p>
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                    Founder-led with senior engineer access — you work directly with experienced builders, not a layer of coordinators. We are SDVOSB pending, registered as a US federal contractor (UEI: YY2DR3KSENH7, CAGE: 9YCS7, DUNS: 05-289-2750). Engagements run audit and architecture, then custom development, then integration and grounding, then testing and deployment into your approved environment (on-premises, private cloud, GCC High, or FedRAMP-aligned infrastructure). Most ship in 8&ndash;14 weeks; CMMC-bound builds run 4&ndash;9 months; FedRAMP-aligned builds run 6+ months.
+                    Companies that automate first execute faster, reduce administrative load, and free up skilled teams for higher-value work. Companies that stay stuck in manual workflows keep paying for delays, rework, and avoidable bottlenecks. You do not need more dashboards. You need AI agents that can do the work securely.
                   </p>
+                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 mb-8 text-left">
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Compliance &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Government Readiness</span>
+                    </h3>
+                    <p className="text-slate-300 mb-6">
+                      We also support organizations that need stronger compliance alignment or government-ready delivery. If your environment requires federal-aware architecture, we keep that capability in scope without making it the headline.
+                    </p>
+                    <ul className="space-y-3 text-slate-300">
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>UEI:</strong> YY2DR3KSENH7</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>CAGE:</strong> 9YCS7</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>FedRAMP-aware deployment support:</strong> We design environments with federal hosting and authorization paths in mind when required.</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>NIST-focused control alignment:</strong> Logging, access control, encryption, segmentation, and traceability that support regulated environments.</span></li>
+                      <li className="flex items-start space-x-3"><CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span><strong>SDVOSB Pending</strong></span></li>
+                    </ul>
+                  </div>
                   <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Get Started With a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Custom AI Agent Consultation</span>
+                      Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Build?</span>
                     </h3>
-                    <p className="text-cyan-400 font-semibold mb-2">Ready to transform your operations with AI agent development services?</p>
+                    <p className="text-cyan-400 font-semibold mb-2">Stop waiting. Start building.</p>
                     <p className="text-slate-300 mb-6">
-                      Join innovative businesses that have already revolutionized their customer service and operational efficiency with our custom AI automation solutions. Our AI chatbot and virtual agent development services deliver predictive analytics and AI insights that drive measurable business results. Schedule a consultation to see how we can create intelligent automation tailored to your specific industry requirements and business objectives.
+                      If your company is stuck managing work through inboxes, spreadsheets, manual review chains, and disconnected systems, it is time to fix the workflow. We build custom AI agents for companies that need secure automation, measurable productivity gains, and fast deployment. Let&apos;s talk about building an AI agent system that fits your business in 30 days.
                     </p>
-                    <Link href="/get-in-touch" className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
-                      Schedule Your AI Agent Consultation
+                    <Link href="/schedule-consultation" className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
+                      Book a Consultation Now
                     </Link>
                   </div>
                 </div>
               </div>
             </section>
-      
+
             <CTA />
             <RelatedSolutions currentSlug="ai-agent-development" />
     </>

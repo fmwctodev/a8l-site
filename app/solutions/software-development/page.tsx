@@ -19,23 +19,23 @@ import CTA from '@/app/_components/CTA';
 import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Enterprise Software & Application Development',
+  title: 'Custom Software Development for Scaling Companies | 30-Day Launch',
   description:
-    'Custom AI-powered software, internal tools, mobile apps for compliance environments. Built for HIPAA, SOC 2, FedRAMP, and FCRA from day one.',
+    'Custom software development for scaling companies built around your actual operating environment. No templates, no middlemen, 30-day average launch. Founder-led delivery. SDVOSB Pending. UEI: YY2DR3KSENH7.',
   keywords:
-    'custom software development for compliance, HIPAA software development, SOC 2 application development, FedRAMP application development, custom CRM development, custom case management software, AI document processing, internal tools development, mobile app development for regulated industries',
+    'custom software development for scaling companies, internal operations platforms, customer portals, role-based access control, custom business logic, integration-ready builds, secure cloud-native builds, 30-day software launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/software-development' },
   openGraph: {
-    title: 'AI-Powered Enterprise Software & Application Development | Autom8ion Lab',
+    title: 'Custom Software Development for Scaling Companies | Autom8ion Lab',
     description:
-      'Custom AI-powered software, internal tools, mobile apps for compliance environments. Built for HIPAA, SOC 2, FedRAMP, and FCRA from day one.',
+      'Custom software built around your actual operating environment. 30-day average launch, security-first architecture, direct access to senior engineers.',
     url: 'https://autom8ionlab.com/solutions/software-development',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
-    title: 'AI-Powered Enterprise Software & Application Development | Autom8ion Lab',
+    title: 'Custom Software Development for Scaling Companies | Autom8ion Lab',
     description:
-      'Custom AI-powered software, internal tools, mobile apps for compliance environments.',
+      'Custom software built around your operating environment. 30-day average launch, founder-led delivery.',
   },
 };
 
@@ -44,43 +44,43 @@ const whatWeBuild = [
     icon: Layers,
     title: 'Internal operations platforms',
     body:
-      'Custom-built platforms for compliance-heavy industries — case management, work order routing, claims processing, intake systems, supplier portals, and the kind of operational tooling SaaS vendors haven\'t templated. Role-based access tied to your IdP, full audit logging mapped to the relevant compliance framework, and the documentation your auditor will read first.',
+      'Custom systems for intake, approvals, routing, workflow visibility, and operational reporting. Built around how your team actually operates so adoption, speed, and cleaner execution come together — not forced into a commercial template.',
   },
   {
     icon: Database,
-    title: 'AI-powered document processing for regulated workflows',
+    title: 'Customer and team portals',
     body:
-      'Document classification, extraction, validation, and routing for high-volume regulated workflows — claims documentation, loan files, HUD-50059 forms, FCRA disclosures, healthcare prior authorization documentation. Designed to stay defensible in audit: confidence scoring, human review gates on adverse outcomes, full audit trail from intake to final disposition.',
-  },
-  {
-    icon: Smartphone,
-    title: 'Custom CRMs and case management systems',
-    body:
-      'Custom CRM builds for organizations whose workflow doesn\'t fit Salesforce or HubSpot — provider directory and credentialing for healthcare, member management for credit unions, case management for state agencies, and prospect/donor management for compliance-conscious nonprofits. Built on stack you can maintain (TypeScript / React / Postgres or .NET / Azure SQL), integrated with your existing systems rather than imposing ours.',
-  },
-  {
-    icon: Smartphone,
-    title: 'iOS and Android mobile applications that pass IT security review',
-    body:
-      "Native (Swift, Kotlin) or React Native apps built to pass corporate IT security review on the first round. Common scopes: field-service apps for construction crews (offline-first), patient-facing apps with HIPAA controls and BAA-aligned data handling, federal-facing apps with Section 508 / WCAG 2.1 AA compliance and VPAT documentation, employee-facing apps with mobile device management hooks. Code-signed, distributed via App Store / Play Store / MDM enterprise channels.",
+      'Centralized environments for requests, updates, documents, statuses, and communication. One source of truth across teams instead of email chains, spreadsheets, and disconnected tools.',
   },
   {
     icon: Lock,
-    title: 'Customer-facing portals for compliance-heavy industries',
+    title: 'Role-based access control',
     body:
-      'Patient portals, resident portals, vendor portals, and citizen-facing application portals where the compliance posture and the user experience both have to land. Identity proofing integrated with Login.gov / ID.me for federal, with EHR-bound IdPs for healthcare. Accessibility (WCAG 2.1 AA), audit logging, and the security review documentation the customer\'s IT team will demand.',
-  },
-  {
-    icon: Code2,
-    title: 'AI agent applications operating inside private networks',
-    body:
-      'AI agents deployed inside your environment — on-premises, GCC High, FedRAMP-authorized, or HIPAA-aligned — with no external data transfer. Local LLMs (Llama, Mistral, custom fine-tunes), private-cloud-hosted commercial models (Anthropic via AWS Bedrock GovCloud, OpenAI via Azure OpenAI Service), or hybrid patterns where the embedding model is local and the reasoning model is private-cloud. Audit logging maps to the relevant compliance framework.',
+      'Granular permissions mapped to actual teams, responsibilities, and least-privilege access. Security defined on day one — architecture, permissions, encryption, logging, and integration requirements set before code is written.',
   },
   {
     icon: WorkflowIcon,
-    title: "API gateways and integration layers for systems where SaaS connectors don't exist",
+    title: 'Workflow automation inside the app',
     body:
-      'Custom integration layers around legacy systems — mainframe interfaces (DB2, VSAM, IMS), legacy database integration, file-based exchange (SFTP, NDM), proprietary APIs, and the bridge architectures that let new applications talk to systems you can\'t replace yet. Designed with controlled boundaries, encrypted tunnels, and the audit trail that satisfies FedRAMP, NIST 800-53, FISMA, or NYDFS Part 500 requirements.',
+      'Approval rules, escalations, notifications, and exception handling built directly into the platform. Workflow rules, SLAs, and escalation logic coded into the system instead of bolted on after launch.',
+  },
+  {
+    icon: Code2,
+    title: 'Custom business logic',
+    body:
+      'Rules, calculations, routing paths, and actions designed around your real process instead of a template. We do not force your business into a commercial template — we build the system around how your team operates.',
+  },
+  {
+    icon: Smartphone,
+    title: 'Integration-ready builds',
+    body:
+      "Secure connections to your existing systems, APIs, and data sources without creating another silo. Through our API integrations work, your software moves data across operational tools, CRMs, ERPs, and internal systems instead of becoming another isolated app.",
+  },
+  {
+    icon: Layers,
+    title: 'Secure cloud-native builds for modern growth',
+    body:
+      'We architect systems for AWS, Azure, or GCP using the right mix of containers, APIs, managed services, and modular components. Scalable architecture that supports growth without rebuilding the entire stack, faster deployment cycles, lower operational overhead, security by design, and long-term flexibility for future integrations and product expansion.',
   },
 ];
 
@@ -88,101 +88,101 @@ const comparisonRows: ComparisonRow[] = [
   {
     label: 'Time to deploy',
     values: [
-      '8–14 weeks for typical scopes; 4–9 months for CMMC-bound builds; 6+ months for FedRAMP-aligned. Driven by your environment, not vendor schedule.',
-      'Days to deploy. But limited to what the vendor templated and the workflow rules they expose.',
-      '12–24+ months. Big-bang rollout against a multi-year roadmap.',
-    ],
-  },
-  {
-    label: 'Compliance fit',
-    values: [
-      'Compliance built into architecture. SSP, control narratives, evidence collection produced as we build.',
-      "Compliance limited to the vendor's certifications. BAAs/DPAs available; deeper controls work limited.",
-      'Compliance documentation usually thorough but not always aligned to your actual controls.',
+      '30-day average launch — production-ready system engineered around your workflow.',
+      'Days to deploy. Limited to what the vendor templated and the workflow rules they expose.',
+      '12-24+ months. Big-bang rollout against a multi-year roadmap.',
     ],
   },
   {
     label: 'Customization ceiling',
     values: [
-      'No ceiling. We write the system to match your workflow.',
+      'No ceiling. We build from scratch around your business logic — workflows, approvals, integrations, reporting.',
       'Hits the ceiling at config + light customization. Custom code requires premium contracts.',
       'High ceiling, but customization runs through change requests measured in weeks.',
     ],
   },
   {
-    label: 'Total cost over 3 years',
+    label: 'Security posture',
     values: [
-      'Higher up-front; flat ongoing. You own the code and the IP.',
-      'Predictable per-seat or per-transaction. Scales with volume; costs compound when you need exceptions.',
-      'Highest. License, services, ongoing maintenance, and change-request fees.',
-    ],
-  },
-  {
-    label: 'Vendor lock-in',
-    values: [
-      'None. You own the code and the documentation.',
-      'Significant. Exporting your data and re-implementing workflow elsewhere is real work.',
-      'Significant. Vendor-specific tech and proprietary formats.',
-    ],
-  },
-  {
-    label: 'Security review path',
-    values: [
-      'We produce the SSP, control narratives, and evidence package your security review or assessor will read.',
-      "You inherit the vendor's SOC 2 / HIPAA / FedRAMP attestation. Useful but not custom to your environment.",
+      'Security defined on day one — architecture, permissions, encryption, logging, and integration requirements baked into the foundation.',
+      "Inherits the vendor's certifications. Useful, but not custom to your environment.",
       'Vendor security questionnaires and attestations. Workable for established platforms.',
+    ],
+  },
+  {
+    label: 'Code & IP ownership',
+    values: [
+      'Full IP ownership. You own the code, the workflows, and the system.',
+      "Vendor owns the platform. Exporting your data and re-implementing workflow elsewhere is real work.",
+      "Vendor-specific tech and proprietary formats. Significant lock-in.",
+    ],
+  },
+  {
+    label: 'Engagement shape',
+    values: [
+      'Direct access to senior engineers. No account managers between you and the people building the system.',
+      'Account-managed support tiers. Implementation work via SI or system partners.',
+      'Sales engineer + implementation partner + ongoing services contract.',
+    ],
+  },
+  {
+    label: 'Best fit',
+    values: [
+      'Scaling companies whose workflows do not fit a commercial template — approvals, ops, service delivery, customer requests, records, reporting deadlines.',
+      'Standard workflows, low customization needs, fast time-to-value.',
+      'Mid-large enterprises with capacity to run multi-year platform programs.',
     ],
   },
 ];
 
 const faqs = [
   {
-    question: 'How do you handle code ownership and IP?',
+    question: "How fast can you actually launch?",
     answer:
-      'Client owns all custom code, repositories, and documentation produced. Standard MSA includes work-for-hire language. Open-source dependencies are declared up front with their licenses, and we avoid GPL/AGPL components unless explicitly approved.',
+      "Our average launch timeline is 30 days. That is not a stripped-down prototype — it is a production-ready system engineered around your workflow, built without templates, and launched on a timeline your team can actually use. Speed matters because long timelines destroy momentum, increase cost, and delay impact.",
   },
   {
-    question: 'Do you support legacy system integration?',
+    question: 'Do we own the code?',
     answer:
-      'Yes. Legacy database integration (DB2, Oracle, mainframe), legacy file format processing, and bridge architectures are common engagement types. Approach depends on what\'s accessible from outside the legacy system — direct DB access via service account, file-based exchange, wrapper API patterns, or COBOL/CICS shim if that\'s what survives.',
+      'Yes. Full IP ownership — you own the code, the workflows, and the system. Standard MSA includes work-for-hire language. Open-source dependencies are declared up front with their licenses.',
   },
   {
-    question: "What's your stack?",
+    question: 'How is this different from a typical dev shop?',
     answer:
-      'Application: TypeScript, React, Next.js, Node.js, Python (FastAPI/Django for AI workloads). Mobile: React Native or native (Swift, Kotlin) depending on requirements. Data: PostgreSQL, Redis, S3-compatible object storage. Cloud: AWS, Azure, GovCloud equivalents. We adjust to your existing stack rather than impose ours.',
+      'Most dev shops sell generic builds with custom branding. We do not. No templates — every system is built from scratch around your business logic. No middlemen — you work directly with senior engineers. No vague timelines — we launch in an average of 30 days. No bloated builds — we focus on software your team will actually use.',
   },
   {
-    question: 'How do you handle code review and testing?',
+    question: 'Can you connect to our existing tools?',
     answer:
-      'Mandatory code review on every PR. Unit and integration test coverage targets per engagement (typically 70%+ on application logic, 90%+ on critical paths). Security testing (SAST/DAST) where required by the compliance framework. Manual penetration testing via partners on production-bound builds.',
+      'Yes. Our integration-ready builds connect to your existing systems, APIs, and data sources without creating another silo. Through our API integrations work, your software moves data across operational tools, CRMs, ERPs, and internal systems. We build systems that become the operational hub, not isolated apps.',
   },
   {
-    question: 'Can you operate inside our existing SDLC?',
+    question: 'What about AI, automation, and integrations?',
     answer:
-      'Yes. We integrate with your Jira / GitHub / Azure DevOps, your code review process, your release cadence, and your security scanning tools. We bring our own opinions but defer to your standards on things that don\'t affect quality.',
+      'Modern software cannot operate in isolation. We connect custom software with custom LLM systems, workflow automation, and secure integrations so your platform can support users, trigger actions, and eliminate repetitive steps from the start.',
   },
 ];
 
 const buyers = [
   {
-    name: 'Companies whose existing SaaS stack doesn\'t fit',
+    name: 'Scaling companies forcing teams into someone else\'s workflow',
     body:
-      "Your industry-specific workflow has edge cases the vendor didn't templates for. The workarounds run on spreadsheets and email. The cost is real — both in productivity and in compliance risk when the workarounds don't survive an audit.",
+      "Off-the-shelf software stops fitting the way the business actually runs. You stack extra tools on top and clean up the gaps with manual work. We build secure applications, internal platforms, customer portals, operational systems, and workflow-driven software from scratch around your processes, users, and business logic.",
   },
   {
-    name: 'Teams replacing legacy systems',
+    name: 'Teams stuck paying for licenses, workarounds, and disconnected add-ons',
     body:
-      "A custom system from 1998–2010 still does the job, but the original developers have left, the documentation has decayed, and the platform stack is end-of-life. You can't rip-and-replace because the workflow knowledge is in the code. We bridge first, modernize incrementally.",
+      "Template software breaks fast once your company starts growing. It was not built for your approvals, handoffs, customer workflows, reporting needs, or internal operating rules. You end up paying for licenses, workarounds, disconnected add-ons, and manual fixes just to make generic software behave.",
   },
   {
-    name: 'Companies pursuing enterprise contracts',
+    name: 'Companies tired of expensive rework from typical dev firms',
     body:
-      "An enterprise prospect is asking for SOC 2 attestation, HIPAA BAA terms, or NYDFS Part 500-aligned controls. Your current platform doesn't pass IT security review. You need a system that does — and the documentation to demonstrate it.",
+      "The typical development firm creates a different problem. You spend months in discovery, work through account managers, and get a bloated application that still misses the core workflow. That is not custom software development. That is expensive rework.",
   },
   {
-    name: 'Regulated firms with AI use cases',
+    name: 'Teams that need software that fits their business',
     body:
-      "You have a use case for AI — document processing, prior authorization, fraud detection, claims triage — that commercial AI products can't deploy in your environment because of data residency, BAA, or model risk constraints. We build it inside your environment with the controls and documentation in place.",
+      "If your team runs on approvals, operations, service delivery, customer requests, records, and reporting deadlines, generic software slows everything down. You need custom software for scaling companies that need secure systems aligned to the way the business actually works.",
   },
 ];
 
@@ -193,12 +193,12 @@ export default function Page() {
         trail={[
           { name: 'Home', href: '/' },
           { name: 'Solutions', href: '/#services' },
-          { name: 'AI-Powered Enterprise Software & Application Development', href: '/solutions/software-development' },
+          { name: 'Software Development', href: '/solutions/software-development' },
         ]}
       />
       <ServiceSchema
-        name="AI-Powered Enterprise Software & Application Development"
-        serviceType="Custom software development, AI integration, mobile applications, integration layers"
+        name="Custom Software Development for Scaling Companies"
+        serviceType="Custom software, internal operations platforms, customer portals, integrations, secure cloud-native builds"
         url="https://autom8ionlab.com/solutions/software-development"
         industry="All"
       />
@@ -213,15 +213,15 @@ export default function Page() {
             <span className="mx-2">/</span>
             <span className="text-slate-300">Solutions</span>
             <span className="mx-2">/</span>
-            <span className="text-slate-300">AI-Powered Software &amp; Apps</span>
+            <span className="text-slate-300">Software Development</span>
           </nav>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            AI-Powered Enterprise Software &amp; Application Development
+            Custom Software Development for Scaling Companies
           </h1>
           <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
-            Custom AI-powered software, internal tools, mobile apps, and customer-facing applications
-            for compliance environments. Built for HIPAA, SOC 2, FedRAMP, NIST 800-171, and FCRA from
-            day one.
+            We build secure applications, internal platforms, customer portals, operational systems, and
+            workflow-driven software from scratch around your processes, users, and business logic. No
+            templates. 30-day average launch. Founder-led delivery — direct access to senior engineers.
           </p>
         </div>
       </section>
@@ -230,19 +230,21 @@ export default function Page() {
       <section className="py-16 bg-black">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-lg text-slate-300 leading-relaxed mb-6">
-            Autom8ion Lab builds custom-built platforms, internal tools, mobile apps, and customer-facing
-            applications — with AI capabilities integrated where they create real leverage. Full-stack
-            development with security architecture engineered from day one. Software builders who design
-            for HIPAA, SOC 2, CMMC, NIST 800-171, and FCRA from the first whiteboard sketch — not a body
-            shop, not a generic dev agency.
+            Scaling companies hit a wall when off-the-shelf software stops fitting the way the business
+            actually runs. You end up forcing your team into someone else&apos;s workflow, stacking
+            extra tools on top, and cleaning up the gaps with manual work. At Autom8ion Lab, we deliver
+            custom software development for scaling companies built around your actual operating
+            environment. We do not use templates. We build secure applications, internal platforms,
+            customer portals, operational systems, and workflow-driven software from scratch around your
+            processes, users, and business logic.
           </p>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Engagements span the six industries we work in: construction, healthcare, finance, real
-            estate, US government, and the Defense Industrial Base. The technical stack varies (TypeScript
-            / React / Postgres for most web work; Python / FastAPI for AI-heavy workloads; Swift / Kotlin
-            or React Native for mobile); the discipline doesn\'t — security architecture decided on day
-            one, audit-ready documentation produced as we build, and the deployment target chosen to
-            match your compliance posture.
+            We build fast. Our average launch timeline is 30 days. You get software that fits your team,
+            supports growth, and removes operational drag without adding more complexity. Security is
+            part of the foundation — we define architecture, permissions, encryption, logging, and
+            integration requirements on day one so your platform is stable, secure, and ready to scale.
+            No templates. No middlemen. No vague timelines. No bloated builds. If your current tools are
+            slowing execution, this is where you fix it.
           </p>
         </div>
       </section>
@@ -295,37 +297,92 @@ export default function Page() {
         </div>
       </section>
 
-      {/* COMPLIANCE CONSIDERATIONS */}
+      {/* 30-DAY LAUNCH FRAMEWORK */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Compliance considerations</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our 30-day launch framework</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-slate-300 leading-relaxed mb-8">
-              Security architecture decisions made at the start of the project — data classification,
-              encryption strategy, access control model, audit logging requirements, environment
-              segmentation. Compliance documentation produced in parallel with code: SSP drafts, control
-              narratives, evidence collection. The artifacts your auditor or AO will request, written
-              against your real environment rather than templated.
+              Speed matters. Long timelines destroy momentum, increase cost, and delay impact. We built
+              a delivery model that gets your first production-ready system live in an average of 30
+              days.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.06}>
+            {[
+              {
+                step: 'Architecture and Scope (Days 1-3)',
+                body:
+                  'You work directly with senior engineers to define your workflows, user roles, integrations, and business requirements.',
+              },
+              {
+                step: 'Security and Foundation (Days 4-10)',
+                body:
+                  'We stand up the environment, data model, permission structure, and core security controls.',
+              },
+              {
+                step: 'Core Build Sprint (Days 11-24)',
+                body:
+                  'We build the highest-value features first so your team sees working software fast.',
+              },
+              {
+                step: 'Testing and Validation (Days 25-28)',
+                body:
+                  'We run functional testing, integration testing, and security checks to validate readiness.',
+              },
+              {
+                step: 'Launch and Handoff (Days 29-30)',
+                body:
+                  'We deploy, document, and walk your team through the system so adoption starts immediately.',
+              },
+            ].map((s) => (
+              <StaggerItem key={s.step}>
+                <PremiumCard variant="hover" className="p-6 h-full">
+                  <h3 className="text-white font-semibold mb-2">{s.step}</h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">{s.body}</p>
+                </PremiumCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* BEYOND TRADITIONAL DEVELOPMENT */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Beyond traditional development: AI, automation, and integration
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              Modern software cannot operate in isolation. Your systems need to exchange data, reduce
+              manual work, and support smarter decisions across teams. We build that into the
+              application from the start.
             </p>
           </Reveal>
           <Stagger className="grid sm:grid-cols-2 gap-3" staggerDelay={0.04}>
             {[
-              'Data classification and PHI/CUI/PII boundary definition',
-              'Encryption at rest (KMS-backed) and in transit (TLS 1.3)',
-              'Access control model (RBAC, ABAC, least privilege)',
-              'Audit logging mapped to NIST 800-53 AU / HIPAA Security Rule / SOC 2 CC controls',
-              'Environment segmentation (dev / staging / production with appropriate isolation)',
-              'Vulnerability management and patching cadence',
-              'Backup, recovery, and continuity planning',
-              'Third-party dependency review and software supply chain controls',
-            ].map((item) => (
-              <StaggerItem key={item}>
-                <PremiumCard variant="hover" className="p-4 flex items-start space-x-2 h-full">
-                  <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-300 text-sm">{item}</span>
-                </PremiumCard>
+              { name: 'Custom LLM Systems', href: '/solutions/custom-llm-systems', desc: 'Connect private AI to your software so sensitive data stays under your control.' },
+              { name: 'Workflow Automation', href: '/solutions/workflow-automation', desc: 'Trigger actions and eliminate repetitive steps directly inside your application.' },
+              { name: 'API Integrations', href: '/solutions/api-integrations', desc: 'Move data across operational tools, CRMs, ERPs, and internal systems through secure integrations.' },
+              { name: 'AI Agent Development', href: '/solutions/ai-agent-development', desc: 'Build agents that operate inside your environment, against your rules, with your documentation as the source of truth.' },
+              { name: 'Cloud Systems', href: '/solutions/cloud-systems', desc: 'Secure cloud-native foundations for AWS, Azure, or GCP with security by design.' },
+              { name: 'Cybersecurity & Compliance', href: '/solutions/cybersecurity', desc: 'Implementation-grade SOC 2 readiness, HIPAA security, and audit-ready documentation.' },
+            ].map((it) => (
+              <StaggerItem key={it.href}>
+                <Link href={it.href} className="group block h-full">
+                  <PremiumCard variant="hover" className="p-4 flex items-center justify-between">
+                    <div>
+                      <div className="text-white font-semibold group-hover:text-cyan-400">{it.name}</div>
+                      <div className="text-slate-400 text-sm">{it.desc}</div>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  </PremiumCard>
+                </Link>
               </StaggerItem>
             ))}
           </Stagger>
@@ -337,7 +394,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Custom build vs. SaaS vs. enterprise platform
+              Custom build vs. SaaS template vs. enterprise platform
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -348,13 +405,48 @@ export default function Page() {
           </Reveal>
 
           <ComparisonTable
-            headers={['Dimension', 'Autom8ion Lab (custom)', 'SaaS platform', 'Enterprise platform']}
+            headers={['Dimension', 'Autom8ion Lab (custom)', 'SaaS template', 'Enterprise platform']}
             rows={comparisonRows}
           />
         </div>
       </section>
 
-      {/* SERVICE-SPECIFIC FAQ */}
+      {/* COMPLIANCE & GOVERNMENT READINESS */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Compliance &amp; government readiness
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              We also support organizations that need stronger compliance alignment or government-ready
+              delivery. If your environment requires federal-aware architecture, we keep that capability
+              in scope without making it the headline.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-3 text-sm" staggerDelay={0.04}>
+            {[
+              'UEI: YY2DR3KSENH7',
+              'CAGE: 9YCS7',
+              'SDVOSB Pending — veteran-owned',
+              'FedRAMP-aware deployment support',
+              'NIST-focused control alignment',
+              'SOC 2-aligned security practices by default',
+            ].map((f) => (
+              <StaggerItem key={f}>
+                <PremiumCard variant="hover" className="px-4 py-3 text-slate-200 flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                  <span>{f}</span>
+                </PremiumCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* FAQ */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
@@ -375,65 +467,33 @@ export default function Page() {
         </div>
       </section>
 
-      {/* INTERNAL LINKING — to industry hubs */}
-      <section className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Industry-specific software work
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8">
-            The right architecture, integrations, and compliance posture depend on your industry. Each
-            industry hub covers the named systems we work with, the frameworks we engineer to, and the
-            representative engagements that shape our approach.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              { slug: 'defense', name: 'Defense Industrial Base', desc: 'CMMC 2.0, NIST 800-171, GCC High' },
-              { slug: 'healthcare', name: 'Healthcare & Life Sciences', desc: 'HIPAA, EHR integration, FDA Part 11' },
-              { slug: 'finance', name: 'Finance', desc: 'SOC 2, PCI-DSS, core banking integration' },
-              { slug: 'government', name: 'US Government', desc: 'FedRAMP, FISMA, Section 508' },
-              { slug: 'real-estate-property', name: 'Real Estate & Property', desc: 'Yardi, RealPage, FCRA, HUD' },
-              { slug: 'construction', name: 'Construction', desc: 'Procore, Sage, HUD, OSHA' },
-            ].map((ind) => (
-              <Link
-                key={ind.slug}
-                href={`/industries/${ind.slug}`}
-                className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
-              >
-                <div>
-                  <div className="text-white font-semibold group-hover:text-cyan-400">{ind.name}</div>
-                  <div className="text-slate-400 text-sm">{ind.desc}</div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 relative border-t border-slate-900/50">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">
-              Building something custom that has to pass review?
+              Stop settling for off-the-shelf software
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-slate-300 leading-relaxed mb-8">
-              30-minute discovery call. Tell us your environment, your existing stack, and the framework
-              you operate under. We&apos;ll map the engagement and tell you whether we&apos;re a fit.
+              Scaling companies do not need another compromise. You need software that matches your
+              workflows, supports your operations, and gets your team moving faster. Autom8ion Lab
+              delivers custom software development for scaling companies with a 30-day average launch,
+              security-first architecture, and direct access to the senior engineers building your
+              system. If you are done duct-taping tools that do not talk, let&apos;s build the system
+              your team actually needs.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
             <MagneticButton href="/schedule-consultation" variant="primary">
-              Schedule a discovery call
+              Schedule a Consultation
               <ArrowRight className="w-5 h-5" />
             </MagneticButton>
             <p className="mt-6 text-sm text-slate-400">
-              Full federal registrations:{' '}
+              Federal contractor identifiers:{' '}
               <Link href="/capability-statement" className="text-cyan-400 link-underline">
-                capability statement for federal registrations
+                UEI YY2DR3KSENH7 · CAGE 9YCS7 · SDVOSB Pending
               </Link>
             </p>
           </Reveal>
