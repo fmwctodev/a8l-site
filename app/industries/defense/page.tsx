@@ -205,6 +205,30 @@ const data: IndustryPageData = {
   heroAccent: 'from-slate-950 via-red-950/30 to-slate-950',
   iconAccent: 'text-red-400',
 
+  relatedSolutions: [
+    {
+      slug: 'cybersecurity',
+      title: 'Cybersecurity Compliance Engineering',
+      anchor: 'CMMC 2.0 and NIST 800-171 implementation',
+      blurb:
+        'All 110 NIST 800-171 controls engineered into your environment with the SSP, POA&M, and evidence package a C3PAO will actually accept. We are not a CMMC RPO or C3PAO; we work alongside your assessor.',
+    },
+    {
+      slug: 'cloud-systems',
+      title: 'FedRAMP & GovCloud Architecture',
+      anchor: 'GovCloud and CMMC-aligned cloud architecture',
+      blurb:
+        'AWS GovCloud, Azure Government, and CMMC L2-aligned commercial cloud deployments for DoD primes and subs. Boundary documentation, encryption, and segmentation engineered to spec.',
+    },
+    {
+      slug: 'custom-llm-systems',
+      title: 'Custom LLM Systems',
+      anchor: 'CMMC-compliant local LLM systems',
+      blurb:
+        'On-premises and air-gapped LLM systems for environments where CUI cannot leave the boundary. Zero external data transfer; all model inference happens inside your authorized perimeter.',
+    },
+  ],
+
   comparison: {
     heading: 'CMMC engineering vs RPO/C3PAO consultancy vs MSSP',
     headers: [

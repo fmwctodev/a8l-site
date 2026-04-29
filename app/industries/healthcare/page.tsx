@@ -174,6 +174,30 @@ const data: IndustryPageData = {
   heroAccent: 'from-slate-950 via-emerald-950/30 to-slate-950',
   iconAccent: 'text-emerald-400',
 
+  relatedSolutions: [
+    {
+      slug: 'custom-llm-systems',
+      title: 'Custom LLM Systems',
+      anchor: 'HIPAA-compliant custom LLM systems',
+      blurb:
+        'Private, fine-tuned LLM systems hosted inside your perimeter — AWS GovCloud, Azure Government, on-prem, or air-gapped. PHI never touches a public training set. SOC 2 + HIPAA controls baked in.',
+    },
+    {
+      slug: 'ai-agent-development',
+      title: 'AI Agent Development',
+      anchor: 'AI agents for healthcare ops',
+      blurb:
+        'Agentic systems for prior auth, referral-to-renewal, eligibility verification, and SOAP-note generation. Trained on your payer mix, your specialty, your forms. Auditable per-prompt + per-PHI-access.',
+    },
+    {
+      slug: 'api-integrations',
+      title: 'Custom API Integrations',
+      anchor: 'EHR integration patterns',
+      blurb:
+        'Bidirectional EHR integrations: Epic FHIR + Bridges + Caboodle, Cerner Open Engine + CCL, Athena APIs, eClinicalWorks, NextGen. Designed around the auth and audit your security team will demand.',
+    },
+  ],
+
   comparison: {
     heading: 'Custom HIPAA AI vs template bots vs healthcare SaaS',
     headers: [

@@ -174,6 +174,30 @@ const data: IndustryPageData = {
   heroAccent: 'from-slate-950 via-orange-950/30 to-slate-950',
   iconAccent: 'text-orange-400',
 
+  relatedSolutions: [
+    {
+      slug: 'workflow-automation',
+      title: 'Enterprise Workflow Automation',
+      anchor: 'enterprise workflow automation',
+      blurb:
+        'Custom n8n + Python orchestration for RFI/submittal triage, daily-report assembly, change-order routing, and lien-waiver generation across Procore, Sage, and your field apps.',
+    },
+    {
+      slug: 'api-integrations',
+      title: 'Custom API Integrations',
+      anchor: 'API integrations for construction systems',
+      blurb:
+        'Direct integrations between Procore, Sage 300/Foundation/Viewpoint, ADP/Workday, BuildCalc/McCormick, and the bespoke field apps your foremen actually use. Bidirectional, versioned, audit-logged.',
+    },
+    {
+      slug: 'ai-agent-development',
+      title: 'AI Agent Development',
+      anchor: 'AI agents for construction operations',
+      blurb:
+        'AI agents that read voice notes, parse photos of site journals, and route extracted data to the right office system in real time. Replaces the 4–6 hours per project per day spent on manual re-entry.',
+    },
+  ],
+
   comparison: {
     heading: 'Custom build vs Procore add-ons vs in-house IT',
     headers: [

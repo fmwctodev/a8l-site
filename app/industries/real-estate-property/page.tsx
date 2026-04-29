@@ -175,6 +175,30 @@ const data: IndustryPageData = {
   heroAccent: 'from-slate-950 via-violet-950/30 to-slate-950',
   iconAccent: 'text-violet-400',
 
+  relatedSolutions: [
+    {
+      slug: 'ai-agent-development',
+      title: 'AI Agent Development',
+      anchor: 'AI agents for lease management and lead capture',
+      blurb:
+        '24/7 lead-capture agents that respond in <60 seconds, pre-qualify on income/credit/move-in date, and book tours direct to your PMS calendar. Lead-to-lease automation across Yardi, AppFolio, RealPage.',
+    },
+    {
+      slug: 'workflow-automation',
+      title: 'Enterprise Workflow Automation',
+      anchor: 'workflow automation for property management',
+      blurb:
+        'Custom workflow automation for FCRA adverse-action, LIHTC tenant-income certification, HUD-50059 generation, and state-by-state lease template variance — the operational gaps your PMS leaves open.',
+    },
+    {
+      slug: 'api-integrations',
+      title: 'Custom API Integrations',
+      anchor: 'PMS integrations for property platforms',
+      blurb:
+        'Bidirectional sync between Yardi, AppFolio, RealPage, Buildium, MRI, and Entrata and your marketing/CRM/screening stack. Real-time vacant/occupied flips across every channel.',
+    },
+  ],
+
   comparison: {
     heading: 'AI agents for real estate vs Yardi/AppFolio bolt-ons vs hiring more leasing agents',
     headers: [

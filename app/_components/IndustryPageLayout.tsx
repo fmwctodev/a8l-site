@@ -61,6 +61,14 @@ export type IndustryPageData = {
     headers: [string, string, string, string];
     rows: ComparisonRow[];
   };
+
+  /**
+   * Cross-links to 3 relevant `/solutions/*` pages — the implementation
+   * lines this industry buys most often. Each entry uses a target-keyword
+   * anchor (per Implementation Plan §8.2 anchor-text rules) so the link
+   * actually transfers ranking authority into the long-tail page.
+   */
+  relatedSolutions?: { slug: string; title: string; anchor: string; blurb: string }[];
 };
 
 export default function IndustryPageLayout({ data }: { data: IndustryPageData }) {
@@ -378,6 +386,48 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
           )}
         </div>
       </section>
+
+      {/* Solutions we deploy for [industry] — 3 cross-links to the
+          implementation lines this industry buys most often. Per
+          Implementation Plan §8.3 + §8.4 hub-and-spoke architecture. */}
+      {data.relatedSolutions && data.relatedSolutions.length > 0 && (
+        <section className="py-16 relative">
+          <div className="max-w-7xl mx-auto px-6">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                Solutions we deploy for {data.breadcrumbName}
+              </h2>
+              <p className="text-slate-400 max-w-3xl mb-10 leading-relaxed">
+                Most {data.breadcrumbName.toLowerCase()} engagements involve two or three of these
+                working together.
+              </p>
+            </Reveal>
+            <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" staggerDelay={0.06}>
+              {data.relatedSolutions.map((s) => (
+                <StaggerItem key={s.slug}>
+                  <Link
+                    href={`/solutions/${s.slug}`}
+                    className="group block h-full"
+                  >
+                    <PremiumCard variant="hover" className="p-6 h-full flex flex-col">
+                      <h3 className="text-white font-semibold mb-3 group-hover:text-cyan-300 transition-colors">
+                        {s.title}
+                      </h3>
+                      <p className="text-slate-300 text-sm leading-relaxed mb-4 flex-grow">
+                        {s.blurb}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-cyan-400 text-sm font-medium link-underline w-fit">
+                        Read more about {s.anchor}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </PremiumCard>
+                  </Link>
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </div>
+        </section>
+      )}
 
       <CTA />
     </>

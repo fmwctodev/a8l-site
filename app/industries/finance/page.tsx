@@ -175,6 +175,30 @@ const data: IndustryPageData = {
   heroAccent: 'from-slate-950 via-blue-950/30 to-slate-950',
   iconAccent: 'text-blue-400',
 
+  relatedSolutions: [
+    {
+      slug: 'custom-llm-systems',
+      title: 'Custom LLM Systems',
+      anchor: 'custom LLM systems for finance',
+      blurb:
+        'Private LLM systems for portfolio analytics, PE data normalization, KYC review, and SOX-aligned reporting — hosted inside your perimeter with the SOC 2 controls examiners expect.',
+    },
+    {
+      slug: 'workflow-automation',
+      title: 'Enterprise Workflow Automation',
+      anchor: 'workflow automation for finance ops',
+      blurb:
+        'Custom n8n + Python automation for fund-of-funds rollup, FedLine + ACH file workflow, FCRA-aligned underwriting flows, and the reconciliation loops Excel pipelines keep breaking on.',
+    },
+    {
+      slug: 'cybersecurity',
+      title: 'Cybersecurity Compliance Engineering',
+      anchor: 'SOC 2 + bank-level security engineering',
+      blurb:
+        'SOC 2 Type II readiness, NIST 800-171 implementation, and the audit-trail engineering that survives a federal regulator review. Built into the system architecture, not retrofitted at audit time.',
+    },
+  ],
+
   comparison: {
     heading: 'Custom AI for finance vs core-banking vendor add-ons vs Excel pipelines',
     headers: [

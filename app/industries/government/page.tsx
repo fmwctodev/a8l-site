@@ -179,6 +179,30 @@ const data: IndustryPageData = {
   heroAccent: 'from-slate-950 via-cyan-950/30 to-slate-950',
   iconAccent: 'text-cyan-400',
 
+  relatedSolutions: [
+    {
+      slug: 'cloud-systems',
+      title: 'FedRAMP & GovCloud Architecture',
+      anchor: 'FedRAMP and GovCloud cloud architecture',
+      blurb:
+        'AWS GovCloud, Azure Government, and FedRAMP-aligned commercial cloud architecture for AI workloads. SSP, POA&M, SAR-ready documentation produced as we build.',
+    },
+    {
+      slug: 'cybersecurity',
+      title: 'Cybersecurity Compliance Engineering',
+      anchor: 'NIST 800-53 compliance engineering',
+      blurb:
+        'NIST 800-53 + FISMA controls implemented in your environment with the documentation an ATO package actually requires. Veteran-led; SDVOSB pending.',
+    },
+    {
+      slug: 'software-development',
+      title: 'Custom Software Development',
+      anchor: 'custom software development for government',
+      blurb:
+        'Mission-aligned software for civilian agencies, state IT, and municipal IT. Built around your procurement model — task orders, IDIQ, BPA, fixed-price commercial. You own the IP.',
+    },
+  ],
+
   comparison: {
     heading: 'Custom build vs FedRAMP-certified SaaS vs in-house agency dev team',
     headers: [

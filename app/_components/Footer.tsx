@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, Linkedin, Facebook, Instagram, Loader2 } from 'lucide-react';
+import { conversionEvents } from '@/lib/analytics';
 
 const Footer = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,6 +48,11 @@ const Footer = () => {
         console.error('Webhook execution failed:', webhookError);
         setSubmitError(true);
       }
+
+      // Fire GA4 conversion event before the download/redirect — captures the
+      // submit even if the PDF download or thank-you redirect drops the page.
+      conversionEvents.formSubmitCapability();
+      conversionEvents.downloadCapabilityPdf();
 
       // Trigger automatic download
       const downloadLink = document.createElement('a');
@@ -117,11 +123,23 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-slate-400">
                 <Mail className="w-5 h-5 text-cyan-400" />
-                <a href="mailto:info@autom8ionlab.com" className="hover:text-cyan-400 transition-colors">info@autom8ionlab.com</a>
+                <a
+                  href="mailto:info@autom8ionlab.com"
+                  onClick={() => conversionEvents.emailClick()}
+                  className="hover:text-cyan-400 transition-colors"
+                >
+                  info@autom8ionlab.com
+                </a>
               </div>
               <div className="flex items-center space-x-3 text-slate-400">
                 <Phone className="w-5 h-5 text-cyan-400" />
-                <a href="tel:+18555086062" className="hover:text-cyan-400 transition-colors">+1 855-508-6062</a>
+                <a
+                  href="tel:+18555086062"
+                  onClick={() => conversionEvents.phoneClick()}
+                  className="hover:text-cyan-400 transition-colors"
+                >
+                  +1 855-508-6062
+                </a>
               </div>
               <div className="text-slate-400 text-sm pl-8">
                 Plant City, FL · Montreal, QC
