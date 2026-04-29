@@ -1,9 +1,10 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
 import { AnimatedMesh } from './_components/ui';
+import { OrganizationSchema, WebSiteSchema } from './_components/Schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://autom8ionlab.com'),
@@ -27,7 +28,26 @@ export const metadata: Metadata = {
     'DIB custom software',
   ],
   manifest: '/manifest.json',
-  icons: { icon: '/logo/logo.png' },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+    shortcut: ['/favicon.ico'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   openGraph: {
     type: 'website',
     siteName: 'Autom8ion Lab',
@@ -46,6 +66,16 @@ export const metadata: Metadata = {
   },
 };
 
+// Next.js App Router emits the viewport meta + theme-color from this export.
+// Per the LOCKED v3 SEO+AEO Implementation Plan §3.1 + §4.1.
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#0F172A',
+  colorScheme: 'dark',
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -60,6 +90,12 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="//prod.spline.design" />
+
+        {/* Sitewide JSON-LD: every page declares the Organization + WebSite
+            entities so AI engines can resolve us by @id from sub-page schemas
+            (Person, Article, Service, Breadcrumb). Per Implementation Plan §5.2. */}
+        <OrganizationSchema />
+        <WebSiteSchema />
       </head>
       <body className="relative isolate bg-slate-950 text-white antialiased">
         {/* Cinematic ambient background — sits behind everything via z-index: -10. */}

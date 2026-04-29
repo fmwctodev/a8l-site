@@ -33,18 +33,17 @@ export function OrganizationSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${BASE}/#organization`,
     name: 'Autom8ion Lab',
     legalName: 'Sitehues Media Inc.',
     alternateName: 'Sitehues Media Inc. (DBA Autom8ion Lab)',
     url: BASE,
-    logo: { '@type': 'ImageObject', url: `${BASE}/logo/logo.png` },
+    logo: { '@type': 'ImageObject', url: `${BASE}/logo/logo.png`, width: 600, height: 200 },
     description:
       'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US federal/state/local government, and the Defense Industrial Base.',
     foundingDate: '2023',
     founder: {
-      '@type': 'Person',
-      name: 'Sean Richard',
-      url: 'https://www.linkedin.com/in/a8l-sean-richard/',
+      '@id': `${BASE}/about#person`,
     },
     address: [
       {
@@ -217,6 +216,9 @@ export function ArticleSchema({
   dateModified,
   url,
   imageUrl,
+  articleSection,
+  keywords,
+  wordCount,
 }: {
   title: string;
   description: string;
@@ -224,25 +226,84 @@ export function ArticleSchema({
   dateModified?: string;
   url: string;
   imageUrl?: string;
+  articleSection?: string;
+  keywords?: string[] | string;
+  wordCount?: number;
 }) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': url,
     headline: title,
     description,
     datePublished,
     dateModified: dateModified ?? datePublished,
-    author: {
-      '@type': 'Person',
-      name: 'Sean Richard',
-      url: `${BASE}/about`,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Autom8ion Lab',
-      logo: { '@type': 'ImageObject', url: `${BASE}/logo/logo.png` },
-    },
+    inLanguage: 'en-US',
+    author: { '@id': `${BASE}/about#person` },
+    publisher: { '@id': `${BASE}/#organization` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    ...(imageUrl ? { image: imageUrl } : {}),
+    ...(articleSection ? { articleSection } : {}),
+    ...(keywords
+      ? { keywords: Array.isArray(keywords) ? keywords.join(', ') : keywords }
+      : {}),
+    ...(wordCount ? { wordCount } : {}),
+  };
+  return ldScript(schema);
+}
+
+/* ------------------------------------------------------------------ */
+/* PersonSchema — for the founder / author byline                     */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Render once on the page that is the canonical author bio (currently
+ * `/about` — `/about/sean-richard` is deferred per the Phase-1 SEO plan).
+ * Linked from ArticleSchema via `author.url`, so AI engines can stitch the
+ * Article → Person → Organization graph.
+ */
+export function PersonSchema({
+  name = 'Sean Richard',
+  jobTitle = 'Founder & Principal Engineer',
+  url = `${BASE}/about`,
+  imageUrl,
+  description = 'Veteran founder of Autom8ion Lab. Builds custom AI, automation, and software with audit-grade compliance documentation from day one.',
+  sameAs = ['https://www.linkedin.com/in/a8l-sean-richard/'],
+  knowsAbout = [
+    'Custom AI Agents',
+    'Large Language Models',
+    'Workflow Automation',
+    'n8n',
+    'Cybersecurity Compliance',
+    'CMMC 2.0',
+    'NIST 800-171',
+    'FedRAMP',
+    'HIPAA',
+    'Federal Contracting',
+  ],
+}: {
+  name?: string;
+  jobTitle?: string;
+  url?: string;
+  imageUrl?: string;
+  description?: string;
+  sameAs?: string[];
+  knowsAbout?: string[];
+} = {}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${url}#person`,
+    name,
+    givenName: name.split(' ')[0],
+    familyName: name.split(' ').slice(1).join(' '),
+    jobTitle,
+    url,
+    description,
+    worksFor: { '@id': `${BASE}/#organization` },
+    knowsAbout,
+    knowsLanguage: ['en'],
+    sameAs,
     ...(imageUrl ? { image: imageUrl } : {}),
   };
   return ldScript(schema);

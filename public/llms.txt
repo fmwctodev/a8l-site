@@ -12,7 +12,7 @@ Autom8ion Lab — operated by Sitehues Media Inc. — builds AI agents, workflow
 
 ## Adjacent Capabilities
 
-- [AI Agent Development for Regulated Environments](https://autom8ionlab.com/solutions/ai-agents)
+- [AI Agent Development for Regulated Environments](https://autom8ionlab.com/solutions/ai-agent-development)
 - [Custom LLM Systems for Sensitive Data Environments](https://autom8ionlab.com/solutions/custom-llm-systems)
 - [Custom API Integrations for Compliance-Heavy Stacks](https://autom8ionlab.com/solutions/api-integrations)
 - [Cloud Infrastructure for FedRAMP, CMMC & HIPAA Workloads](https://autom8ionlab.com/solutions/cloud-systems)

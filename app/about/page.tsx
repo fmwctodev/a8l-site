@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Award, MapPin, Linkedin } from 'lucide-react';
-import { BreadcrumbSchema } from '@/app/_components/Schema';
+import { BreadcrumbSchema, PersonSchema } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
 import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
 
@@ -34,6 +34,9 @@ export default function Page() {
           { name: 'Home', href: '/' },
           { name: 'About', href: '/about' },
         ]}
+      />
+      <PersonSchema
+        description="Sean Richard founded Autom8ion Lab to build the kind of compliance-first engineering team he could not find when he needed one. Veteran. Engineer. Builds custom AI, automation, and software for environments where security architecture and compliance documentation must be engineered from day one."
       />
 
       <section className="relative min-h-[50vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950">
