@@ -20,23 +20,29 @@ import RelatedSolutions from '@/app/_components/RelatedSolutions';
 import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
-  title: 'Custom Software Development for Scaling Companies | 30-Day Launch',
+  title: 'Custom Software Development for Regulated Industries',
   description:
-    'Custom software development for scaling companies built around your actual operating environment. No templates, no middlemen, 30-day average launch. Founder-led delivery. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+    'Full-stack custom software for SaaS, enterprise, and regulated environments. Security architecture and compliance documentation built in from day one.',
   keywords:
     'custom software development for scaling companies, internal operations platforms, customer portals, role-based access control, custom business logic, integration-ready builds, secure cloud-native builds, 30-day software launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/software-development' },
   openGraph: {
-    title: 'Custom Software Development for Scaling Companies | Autom8ion Lab',
+    title: 'Custom Software Development for Regulated Industries | Autom8ion Lab',
     description:
-      'Custom software built around your actual operating environment. 30-day average launch, security-first architecture, direct access to senior engineers.',
+      'Full-stack custom software for SaaS, enterprise, and regulated environments. Security architecture and compliance documentation built in from day one.',
     url: 'https://autom8ionlab.com/solutions/software-development',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Custom+Software+Development+for+Regulated+Industries&section=Solutions',
+      width: 1200,
+      height: 630,
+      alt: 'Custom Software Development for Regulated Industries',
+    }],
   },
   twitter: {
-    title: 'Custom Software Development for Scaling Companies | Autom8ion Lab',
+    title: 'Custom Software Development for Regulated Industries | Autom8ion Lab',
     description:
-      'Custom software built around your operating environment. 30-day average launch, founder-led delivery.',
+      'Full-stack custom software for SaaS, enterprise, and regulated environments. Security architecture and compliance documentation built in from day one.',
+    images: ['https://autom8ionlab.com/api/og?title=Custom+Software+Development+for+Regulated+Industries&section=Solutions'],
   },
 };
 
@@ -224,6 +230,24 @@ export default function Page() {
             workflow-driven software from scratch around your processes, users, and business logic. No
             templates. 30-day average launch. Founder-led delivery — direct access to senior engineers.
           </p>
+        </div>
+      </section>
+
+      {/* AEO DEFINITION BLOCK */}
+      <section className="py-12 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <section className="definition-block">
+              <p className="lead">
+                <strong>Custom software development for regulated industries</strong> is the design
+                and engineering of full-stack applications — internal platforms, customer portals,
+                operational systems, workflow-driven software — built around your business logic
+                with security architecture, audit logging, and compliance documentation engineered
+                from day one rather than retrofitted before launch. For scaling companies, it is the
+                only path off the SaaS treadmill that doesn&apos;t trade speed for security.
+              </p>
+            </section>
+          </Reveal>
         </div>
       </section>
 

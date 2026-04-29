@@ -23,6 +23,16 @@ export type IndustryPageData = {
   heroAccent: string;
   iconAccent: string;
 
+  /**
+   * Optional AEO definition block — one or two sentences in the
+   * "AI automation for [industry] is [concise definition]. For [buyer
+   * persona], [specific pain it solves]." pattern. Rendered as a
+   * styled callout in the first 200 words of the page so AI engines
+   * can lift it as a self-contained answer. Per Implementation Plan
+   * §6.1.
+   */
+  definition?: string;
+
   /* ---------- Optional deep-content sections (LOCKED v3 §"Industry Page Specifications") ---------- */
 
   /** Problem framing — 150–250 words explaining the gap this industry's buyers face. */
@@ -99,7 +109,14 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
       {/* Definition + buyer profile */}
       <section className="py-16 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <Reveal>
+          {data.definition && (
+            <Reveal>
+              <section className="definition-block">
+                <p className="lead">{data.definition}</p>
+              </section>
+            </Reveal>
+          )}
+          <Reveal delay={data.definition ? 0.05 : 0}>
             <p className="text-slate-300 leading-relaxed text-lg">{data.definitionParagraph}</p>
           </Reveal>
           <Reveal delay={0.1}>

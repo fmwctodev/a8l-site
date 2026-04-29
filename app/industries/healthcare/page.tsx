@@ -2,23 +2,29 @@ import type { Metadata } from 'next';
 import IndustryPageLayout, { type IndustryPageData } from '@/app/_components/IndustryPageLayout';
 
 export const metadata: Metadata = {
-  title: 'AI, Automation & Software for Healthcare & Life Sciences',
+  title: 'HIPAA-Compliant AI for Healthcare',
   description:
-    'HIPAA-compliant applications, AI for clinical and operational workflows, EHR integrations (Epic, Cerner, Athena), FDA 21 CFR Part 11 systems.',
+    'HIPAA-compliant AI agents and LLM systems for healthcare. Referral automation, prior auth, EHR integration. PHI never leaves your boundary.',
   keywords:
     'HIPAA compliant software development, Epic integration custom development, AI clinical documentation, FDA 21 CFR Part 11 software development, healthcare prior authorization automation, HITRUST custom software, Cerner Oracle Health integration, athenaNet API integration',
   alternates: { canonical: 'https://autom8ionlab.com/industries/healthcare' },
   openGraph: {
-    title: 'AI, Automation & Software for Healthcare & Life Sciences',
+    title: 'HIPAA-Compliant AI for Healthcare | Autom8ion Lab',
     description:
-      'HIPAA-compliant software, AI for clinical workflows, EHR integrations, FDA 21 CFR Part 11 systems for health systems, payers, life sciences, and medical devices.',
+      'HIPAA-compliant AI agents and LLM systems for healthcare. Referral automation, prior auth, EHR integration. PHI never leaves your boundary.',
     url: 'https://autom8ionlab.com/industries/healthcare',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=HIPAA-Compliant+AI+for+Healthcare&section=Industries',
+      width: 1200,
+      height: 630,
+      alt: 'AI, Automation & Custom Software for Healthcare & Life Sciences',
+    }],
   },
   twitter: {
-    title: 'AI, Automation & Software for Healthcare & Life Sciences',
+    title: 'HIPAA-Compliant AI for Healthcare | Autom8ion Lab',
     description:
-      'HIPAA-compliant software, AI for clinical workflows, EHR integrations, FDA 21 CFR Part 11 systems.',
+      'HIPAA-compliant AI agents and LLM systems for healthcare. Referral automation, prior auth, EHR integration. PHI never leaves your boundary.',
+    images: ['https://autom8ionlab.com/api/og?title=HIPAA-Compliant+AI+for+Healthcare&section=Industries'],
   },
 };
 
@@ -28,6 +34,9 @@ const data: IndustryPageData = {
   h1: 'AI, Automation & Custom Software for Healthcare & Life Sciences',
   heroSubhead:
     'HIPAA-compliant applications, AI for clinical and operational workflows, EHR integrations, FDA 21 CFR Part 11 validated systems for health systems, payers, providers, pharma, and medical device companies.',
+
+  definition:
+    'HIPAA-compliant AI for healthcare is the deployment of custom-engineered LLM systems and AI agents that automate clinical and operational workflows without ever exposing PHI to public training sets. For ambulatory networks, payers, and life-sciences firms, it replaces the patchwork of EHR copy-paste, manual prior auth, and faxed referrals with auditable, zero-retention automation.',
 
   definitionParagraph:
     'Autom8ion Lab builds HIPAA-compliant custom software, AI for clinical documentation and operational workflows, EHR integrations, and FDA 21 CFR Part 11 validated systems for health systems, payers, providers, life sciences, and medical device companies. EHR integration patterns we work in regularly: Epic (FHIR APIs, Bridges, Caboodle), Cerner / Oracle Health (Open Engine, FHIR, CCL), Athenahealth (athenaNet APIs), eClinicalWorks, NextGen. The work respects PHI handling, BAA requirements, and the clinical workflows that frontline staff depend on — compliance-aware but not paranoid.',

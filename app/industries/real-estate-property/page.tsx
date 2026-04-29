@@ -2,23 +2,29 @@ import type { Metadata } from 'next';
 import IndustryPageLayout, { type IndustryPageData } from '@/app/_components/IndustryPageLayout';
 
 export const metadata: Metadata = {
-  title: 'AI, Automation & Software for Real Estate & Property Management',
+  title: 'AI Agents for Real Estate',
   description:
-    'Property management automation, FCRA-compliant tenant screening, lease lifecycle, HUD compliance, AI document review for property managers, REITs, brokerages, proptech.',
+    'AI agents for real estate: lead capture, lead-to-lease automation, property data extraction, lease management. From first inquiry to renewed contract.',
   keywords:
     'Yardi integration custom, property management automation, tenant screening FCRA compliant, HUD compliance software, LIHTC compliance automation, real estate AI document review, affordable housing compliance software, RealPage integration, AppFolio integration, Entrata integration, MOR REAC documentation',
   alternates: { canonical: 'https://autom8ionlab.com/industries/real-estate-property' },
   openGraph: {
-    title: 'AI, Automation & Software for Real Estate & Property Management',
+    title: 'AI Agents for Real Estate | Autom8ion Lab',
     description:
-      'Property management automation, FCRA-compliant tenant screening, lease lifecycle, HUD compliance, AI document review.',
+      'AI agents for real estate: lead capture, lead-to-lease automation, property data extraction, lease management. From first inquiry to renewed contract.',
     url: 'https://autom8ionlab.com/industries/real-estate-property',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=AI+Agents+for+Real+Estate&section=Industries',
+      width: 1200,
+      height: 630,
+      alt: 'AI, Automation & Custom Software for Real Estate & Property Management',
+    }],
   },
   twitter: {
-    title: 'AI, Automation & Software for Real Estate & Property Management',
+    title: 'AI Agents for Real Estate | Autom8ion Lab',
     description:
-      'Property management automation, FCRA-compliant tenant screening, lease lifecycle, HUD compliance, AI document review.',
+      'AI agents for real estate: lead capture, lead-to-lease automation, property data extraction, lease management. From first inquiry to renewed contract.',
+    images: ['https://autom8ionlab.com/api/og?title=AI+Agents+for+Real+Estate&section=Industries'],
   },
 };
 
@@ -28,6 +34,9 @@ const data: IndustryPageData = {
   h1: 'AI, Automation & Custom Software for Real Estate & Property Management',
   heroSubhead:
     'Property management workflow automation, FCRA-compliant tenant screening, lease lifecycle automation, HUD compliance, and AI for document review — for property managers, REITs, brokerages, and proptech.',
+
+  definition:
+    'AI agents for real estate are autonomous systems that handle lead capture, qualification, tour scheduling, and lease execution end-to-end across your existing PMS. For multifamily operators and brokerages, they convert the 9pm inbound lead that used to bounce to voicemail into a pre-qualified tour booked for Wednesday.',
 
   definitionParagraph:
     'Autom8ion Lab builds property management workflow automation, tenant screening systems with FCRA compliance (adverse action, consumer disclosure, dispute handling), lease lifecycle automation, transaction management for brokerages, AI for document review (leases, contracts, HUD-50059, MOR/REAC), and platforms integrating with Yardi, RealPage, AppFolio, Buildium, MRI, Entrata, and ResMan. Affordable housing compliance covered (HUD, LIHTC, Section 8). The work is operational, integration-heavy, and compliance-conscious — buyers in this vertical have a property platform they\'ve standardized on, a multi-state legal patchwork they\'re trying not to violate, and operational margins thin enough that automation has to actually work.',

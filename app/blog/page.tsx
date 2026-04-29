@@ -6,21 +6,27 @@ import { Reveal, Stagger, StaggerItem, MagneticButton } from '@/app/_components/
 import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
-  title: 'Insights on Compliance-First AI, Automation & Software',
+  title: 'Engineering Insights',
   description:
-    'Insights on compliance-first software development, AI in regulated industries, CMMC implementation, automation for audit environments.',
+    'Engineering insights on custom AI, workflow automation, LLM systems, and compliance — written by builders for technical decision-makers.',
   alternates: { canonical: 'https://autom8ionlab.com/blog' },
   openGraph: {
-    title: 'Blog | AI Automation & Cloud Infrastructure Insights | Autom8ion Lab',
+    title: 'Engineering Insights | Autom8ion Lab',
     description:
-      'Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity. Learn how to transform your business with intelligent automation solutions.',
+      'Engineering insights on custom AI, workflow automation, LLM systems, and compliance — written by builders for technical decision-makers.',
     url: 'https://autom8ionlab.com/blog',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Engineering+Insights&section=Blog',
+      width: 1200,
+      height: 630,
+      alt: 'Autom8ion Lab Engineering Insights',
+    }],
   },
   twitter: {
-    title: 'Blog | AI Automation & Cloud Infrastructure Insights | Autom8ion Lab',
+    title: 'Engineering Insights | Autom8ion Lab',
     description:
-      'Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity.',
+      'Engineering insights on custom AI, workflow automation, LLM systems, and compliance — written by builders for technical decision-makers.',
+    images: ['https://autom8ionlab.com/api/og?title=Engineering+Insights&section=Blog'],
   },
 };
 

@@ -2,23 +2,29 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Schedule a Capability Briefing',
+  title: 'Schedule a Consultation',
   description:
-    'No-pressure briefing. We will walk through your compliance environment, your top automation, software, or AI priority, and tell you whether we are a fit.',
+    "Book a free 30-minute strategy call. We'll scope your custom AI, automation, or compliance project and tell you whether we're the right fit.",
   keywords:
     'schedule capability briefing, federal vendor briefing, automation consultation, AI strategy session, free consultation',
   alternates: { canonical: 'https://autom8ionlab.com/schedule-consultation' },
   openGraph: {
-    title: 'Schedule a Capability Briefing | Autom8ion Lab',
+    title: 'Schedule a Consultation | Autom8ion Lab',
     description:
-      'No-pressure briefing on your compliance environment and your top automation, software, or AI priority.',
+      "Book a free 30-minute strategy call. We'll scope your custom AI, automation, or compliance project and tell you whether we're the right fit.",
     url: 'https://autom8ionlab.com/schedule-consultation',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Schedule+a+Consultation&section=Contact',
+      width: 1200,
+      height: 630,
+      alt: 'Schedule a Consultation with Autom8ion Lab',
+    }],
   },
   twitter: {
-    title: 'Schedule a Capability Briefing | Autom8ion Lab',
+    title: 'Schedule a Consultation | Autom8ion Lab',
     description:
-      'No-pressure briefing on your compliance environment and your top automation, software, or AI priority.',
+      "Book a free 30-minute strategy call. We'll scope your custom AI, automation, or compliance project and tell you whether we're the right fit.",
+    images: ['https://autom8ionlab.com/api/og?title=Schedule+a+Consultation&section=Contact'],
   },
 };
 

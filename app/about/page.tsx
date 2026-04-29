@@ -6,23 +6,29 @@ import CTA from '@/app/_components/CTA';
 import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
-  title: 'About Autom8ion Lab',
+  title: { absolute: 'About Autom8ion Lab' },
   description:
     'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB pending.',
   keywords:
     'Autom8ion Lab, Sitehues Media Inc., Sean Richard, veteran-owned software, SDVOSB, compliance engineering firm, federal contractor',
   alternates: { canonical: 'https://autom8ionlab.com/about' },
   openGraph: {
-    title: 'About Autom8ion Lab | Veteran-owned engineering firm',
+    title: 'About Autom8ion Lab',
     description:
-      'Veteran-owned engineering firm building custom AI, automation, and software for construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. Founded by Sean Richard.',
+      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB pending.',
     url: 'https://autom8ionlab.com/about',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=About+Autom8ion+Lab&section=Company',
+      width: 1200,
+      height: 630,
+      alt: 'About Autom8ion Lab',
+    }],
   },
   twitter: {
-    title: 'About Autom8ion Lab | Veteran-owned engineering firm',
+    title: 'About Autom8ion Lab',
     description:
-      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard.',
+      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB pending.',
+    images: ['https://autom8ionlab.com/api/og?title=About+Autom8ion+Lab&section=Company'],
   },
 };
 

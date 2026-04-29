@@ -719,3 +719,188 @@ input:focus {
     transition: none !important;
   }
 }
+/* ------------------------------------------------------------------ */
+/* AEO content blocks — site-wide (not blog-scoped).                  */
+/*                                                                     */
+/* Per the LOCKED v3 SEO+AEO Implementation Plan §6, every key page    */
+/* should expose at least one of: definition block (first 200 words),  */
+/* numbered process or comparison table, FAQ block (matching FAQPage   */
+/* schema), and a stat block with attribution. AI engines lift these   */
+/* structures verbatim and prefer them over walls of prose.            */
+/* ------------------------------------------------------------------ */
+
+/* Definition block — self-contained "[Term] is [definition]" answer
+   that an LLM can quote without reading the rest of the page. Place
+   in the first 200 words of every solution / industry / blog page. */
+.definition-block {
+  margin: 2rem 0;
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid #06b6d4;          /* cyan-500 brand accent */
+  background: linear-gradient(90deg, rgba(6, 182, 212, 0.06), rgba(15, 23, 42, 0.4));
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+.definition-block .lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #e2e8f0;                           /* slate-200 */
+  margin: 0;
+}
+.definition-block .lead strong { color: #ffffff; font-weight: 700; }
+
+/* Numbered process — semantic <ol> with action-led step headings.
+   Five to ten steps maximum; AI engines truncate longer lists. */
+.numbered-process {
+  list-style: none;
+  counter-reset: process-step;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.numbered-process > li {
+  counter-increment: process-step;
+  position: relative;
+  padding: 1.25rem 1.5rem 1.25rem 4rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(51, 65, 85, 0.6);  /* slate-700 */
+  border-radius: 0.75rem;
+}
+.numbered-process > li::before {
+  content: counter(process-step);
+  position: absolute;
+  left: 1rem;
+  top: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: #020617;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.numbered-process > li h4,
+.numbered-process > li > strong {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.0625rem;
+}
+.numbered-process > li p {
+  color: #cbd5e1;                           /* slate-300 */
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Comparison block — wrapper for two- or three-column comparison
+   tables. Visible HTML must mirror any associated comparison table
+   data structure (see app/_components/ui/ComparisonTable.tsx). */
+.comparison-block {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 0.75rem;
+  overflow-x: auto;
+}
+.comparison-block table { width: 100%; border-collapse: collapse; }
+.comparison-block th,
+.comparison-block td {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+  font-size: 0.95rem;
+}
+.comparison-block th { color: #22d3ee; font-weight: 600; }
+.comparison-block td { color: #cbd5e1; }
+.comparison-block tr:last-child td { border-bottom: 0; }
+
+/* FAQ block — visible Q&A that must match the FAQPage JSON-LD
+   schema 1:1 or Google penalizes the schema as deceptive. */
+.faq-block {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.faq-block .faq-item {
+  padding: 1.25rem 1.5rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 0.75rem;
+}
+.faq-block .faq-item h3 {
+  color: #ffffff;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+.faq-block .faq-item p {
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Stat block — every numeric claim on the site needs source
+   attribution. AI engines deprioritize naked stats. */
+.stat-block {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 0.75rem;
+}
+.stat-block .stat-headline {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0 0 0.5rem 0;
+}
+.stat-block .stat-number {
+  font-size: 2.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+.stat-block .stat-label {
+  font-size: 1rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+.stat-block .stat-source {
+  font-size: 0.8125rem;
+  color: #94a3b8;                           /* slate-400 */
+  font-style: italic;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.5;
+}
+
+/* Expert quote — direct attributable quote from a named person.
+   E-E-A-T signal that AI engines treat as a citable unit. */
+.expert-quote {
+  margin: 2rem 0;
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid #22d3ee;
+  background: rgba(15, 23, 42, 0.45);
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+.expert-quote p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #f1f5f9;                           /* slate-100 */
+  margin: 0 0 0.75rem 0;
+  font-style: italic;
+}
+.expert-quote footer {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  font-style: normal;
+  font-weight: 500;
+}
+.expert-quote footer span[itemprop='name'] { color: #22d3ee; }

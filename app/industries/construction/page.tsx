@@ -2,23 +2,29 @@ import type { Metadata } from 'next';
 import IndustryPageLayout, { type IndustryPageData } from '@/app/_components/IndustryPageLayout';
 
 export const metadata: Metadata = {
-  title: 'AI, Automation & Software for Construction Firms',
+  title: 'AI Automation for Construction Firms',
   description:
-    'Project management automation, AI for takeoff and plan review, custom field apps. For mid-market and specialty contractors automating their workflows.',
+    'Site-to-office AI workflows for construction. Automate RFIs, submittals, OSHA reporting, and safety compliance. Built by engineers who get the field.',
   keywords:
     'construction project management automation, AI for construction takeoff, construction software development services, Procore integration custom, Sage 300 construction integration, construction RFI automation, HUD compliance software construction, certified payroll automation, lien waiver workflow, Davis-Bacon documentation',
   alternates: { canonical: 'https://autom8ionlab.com/industries/construction' },
   openGraph: {
-    title: 'AI, Automation & Software for Construction Firms',
+    title: 'AI Automation for Construction Firms | Autom8ion Lab',
     description:
-      'Project management automation, AI for takeoff and plan review, custom field apps for mid-market and specialty contractors.',
+      'Site-to-office AI workflows for construction. Automate RFIs, submittals, OSHA reporting, and safety compliance. Built by engineers who get the field.',
     url: 'https://autom8ionlab.com/industries/construction',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=AI+Automation+for+Construction+Firms&section=Industries',
+      width: 1200,
+      height: 630,
+      alt: 'AI, Automation & Custom Software for Construction Firms',
+    }],
   },
   twitter: {
-    title: 'AI, Automation & Software for Construction Firms',
+    title: 'AI Automation for Construction Firms | Autom8ion Lab',
     description:
-      'Project management automation, AI for takeoff and plan review, custom field apps for mid-market and specialty contractors.',
+      'Site-to-office AI workflows for construction. Automate RFIs, submittals, OSHA reporting, and safety compliance. Built by engineers who get the field.',
+    images: ['https://autom8ionlab.com/api/og?title=AI+Automation+for+Construction+Firms&section=Industries'],
   },
 };
 
@@ -28,6 +34,9 @@ const data: IndustryPageData = {
   h1: 'AI, Automation & Custom Software for Construction Firms',
   heroSubhead:
     'Project management automation, AI-powered takeoff and plan review, custom field apps, and accounting/PM integrations for mid-market and specialty contractors.',
+
+  definition:
+    "AI automation for construction is the deployment of custom-engineered systems that bridge field data — RFIs, submittals, daily logs, payroll — to office-side ERPs and accounting. For mid-market and specialty contractors, it kills the 4–6 hours per project per day that office staff currently spend re-keying field data into systems that don't talk to each other.",
 
   definitionParagraph:
     "Autom8ion Lab builds project management automation, AI for plan review and RFI/submittal processing, and custom field-service mobile apps for foremen and superintendents working in low-connectivity environments. Most engagements involve integrating accounting (Sage 300, Viewpoint, Foundation, ComputerEase) and project management (Procore, PlanGrid, Buildertrend, e-Builder) with custom workflow that fills the gap between them. We work in HUD-funded construction documentation, OSHA reporting, lien waiver state-by-state variance, certified payroll under Davis-Bacon, and the operational pieces commercial software vendors haven't templated. The tone is practical, outcome-focused, light on jargon — you have a project to deliver and a documentation burden to clear, not a digital transformation initiative.",

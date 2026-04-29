@@ -21,23 +21,29 @@ import CTA from '@/app/_components/CTA';
 import RelatedSolutions from '@/app/_components/RelatedSolutions';
 
 export const metadata: Metadata = {
-  title: 'Scalable Cloud Infrastructure for Tech & Healthcare Teams | 30-Day Secure Launch',
+  title: 'FedRAMP & GovCloud Architecture',
   description:
-    'Custom cloud infrastructure for fast-moving tech companies and healthcare teams. Secure landing zones, hardened networks, governed identity, deployment pipelines. 30-day average launch. Founder-led delivery. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+    'FedRAMP, GovCloud, and commercial cloud architecture for AI workloads. Designed for compliance from day one — AWS, Azure, hybrid.',
   keywords:
     'scalable cloud infrastructure, secure cloud architecture, cloud infrastructure tech companies, cloud infrastructure healthcare, secure DevSecOps, cloud landing zone, infrastructure as code, controlled data architecture, continuous monitoring, 30-day cloud launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/cloud-systems' },
   openGraph: {
-    title: 'Scalable Cloud Infrastructure for Tech & Healthcare Teams | Autom8ion Lab',
+    title: 'FedRAMP & GovCloud Architecture | Autom8ion Lab',
     description:
-      'Secure cloud architecture for fast-moving tech companies and healthcare teams. 30-day average launch, founder-led delivery. SDVOSB Pending — UEI: YY2DR3KSENH7.',
+      'FedRAMP, GovCloud, and commercial cloud architecture for AI workloads. Designed for compliance from day one — AWS, Azure, hybrid.',
     url: 'https://autom8ionlab.com/solutions/cloud-systems',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=FedRAMP+%26+GovCloud+Architecture&section=Solutions',
+      width: 1200,
+      height: 630,
+      alt: 'FedRAMP & GovCloud Architecture',
+    }],
   },
   twitter: {
-    title: 'Scalable Cloud Infrastructure for Tech & Healthcare Teams | Autom8ion Lab',
+    title: 'FedRAMP & GovCloud Architecture | Autom8ion Lab',
     description:
-      'Custom cloud infrastructure built for security, speed, and operational resilience. 30-day average launch.',
+      'FedRAMP, GovCloud, and commercial cloud architecture for AI workloads. Designed for compliance from day one — AWS, Azure, hybrid.',
+    images: ['https://autom8ionlab.com/api/og?title=FedRAMP+%26+GovCloud+Architecture&section=Solutions'],
   },
 };
 
@@ -234,6 +240,24 @@ export default function Page() {
             support rapid delivery from day one. 30-day average secure launch. Founder-led
             delivery.
           </p>
+        </div>
+      </section>
+
+      {/* AEO DEFINITION BLOCK */}
+      <section className="py-12 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <section className="definition-block">
+              <p className="lead">
+                <strong>FedRAMP and GovCloud cloud architecture</strong> is the design and operation
+                of cloud infrastructure that satisfies FedRAMP Moderate / High, DoD IL2–IL5, and
+                NIST 800-53 control baselines — typically AWS GovCloud, Azure Government, or
+                hardened commercial deployments — wired with the IAM, encryption, logging, and
+                segmentation that compliance reviewers actually check. For AI workloads on regulated
+                data, it is the perimeter that lets the rest of the build exist.
+              </p>
+            </section>
+          </Reveal>
         </div>
       </section>
 

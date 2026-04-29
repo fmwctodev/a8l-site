@@ -2,23 +2,29 @@ import type { Metadata } from 'next';
 import IndustryPageLayout, { type IndustryPageData } from '@/app/_components/IndustryPageLayout';
 
 export const metadata: Metadata = {
-  title: 'AI, Automation & Software Engineering for the Defense Industrial Base',
+  title: 'AI & Compliance Engineering for the DIB',
   description:
-    'CMMC 2.0 readiness, NIST 800-171 implementation, custom development for DoD primes and subs. Veteran-owned. November 2026 Phase 2 deadline approaching.',
+    'CMMC 2.0 and NIST 800-171 implementation for the Defense Industrial Base. Veteran-owned. SDVOSB pending. UEI YY2DR3KSENH7.',
   keywords:
     'CMMC compliance services, CMMC 2.0 remediation, NIST 800-171 implementation, DoD subcontractor compliance, CMMC Level 2 readiness, SDVOSB CMMC services, GCC High migration services, DFARS 252.204-7012 compliance',
   alternates: { canonical: 'https://autom8ionlab.com/industries/defense' },
   openGraph: {
-    title: 'AI, Automation & Software Engineering for the Defense Industrial Base',
+    title: 'AI & Compliance Engineering for the DIB | Autom8ion Lab',
     description:
-      'CMMC 2.0 readiness, NIST 800-171 implementation, custom development for DoD primes and subcontractors. November 2026 Phase 2 deadline approaching.',
+      'CMMC 2.0 and NIST 800-171 implementation for the Defense Industrial Base. Veteran-owned. SDVOSB pending. UEI YY2DR3KSENH7.',
     url: 'https://autom8ionlab.com/industries/defense',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=AI+%26+Compliance+Engineering+for+the+DIB&section=Industries',
+      width: 1200,
+      height: 630,
+      alt: 'AI, Automation & Software Engineering for the Defense Industrial Base',
+    }],
   },
   twitter: {
-    title: 'AI, Automation & Software Engineering for the Defense Industrial Base',
+    title: 'AI & Compliance Engineering for the DIB | Autom8ion Lab',
     description:
-      'CMMC 2.0 readiness, NIST 800-171 implementation, custom development for DoD primes and subcontractors.',
+      'CMMC 2.0 and NIST 800-171 implementation for the Defense Industrial Base. Veteran-owned. SDVOSB pending. UEI YY2DR3KSENH7.',
+    images: ['https://autom8ionlab.com/api/og?title=AI+%26+Compliance+Engineering+for+the+DIB&section=Industries'],
   },
 };
 
@@ -28,6 +34,9 @@ const data: IndustryPageData = {
   h1: 'AI, Automation & Software Engineering for the Defense Industrial Base',
   heroSubhead:
     'CMMC 2.0 readiness, NIST 800-171 implementation, and custom software development for DoD primes and subcontractors. Veteran-owned. SDVOSB pending. Built for the contractors facing the November 2026 Phase 2 deadline.',
+
+  definition:
+    'AI and compliance engineering for the Defense Industrial Base is the implementation of CMMC 2.0 Level 1–2 controls, NIST 800-171 system security plans, and audit-ready documentation alongside the AI and automation systems that DoD primes and subs need to stay competitive. For mid-tier contractors, it closes the gap between commercial productivity and federal compliance posture.',
 
   // DEFINITION BLOCK (~200 words — opens the page so AI tools and crawlers extract this first)
   definitionParagraph:

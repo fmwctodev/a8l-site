@@ -2,23 +2,29 @@ import type { Metadata } from 'next';
 import IndustryPageLayout, { type IndustryPageData } from '@/app/_components/IndustryPageLayout';
 
 export const metadata: Metadata = {
-  title: 'AI, Automation & Software for US Federal, State & Local Government',
+  title: 'AI & Compliance Engineering for US Government',
   description:
-    'Custom software, AI, and automation for civilian agencies, state government, municipal IT. FedRAMP, FISMA, NIST 800-53, StateRAMP. Registered US federal contractor.',
+    'Custom AI, automation, and software for federal civilian, state, and municipal IT. FedRAMP, FISMA, NIST 800-53 aligned. SDVOSB pending.',
   keywords:
     'FedRAMP application development, government custom software development, NIST 800-53 implementation, GSA Schedule technology vendor, Section 508 compliant custom development, SDVOSB IT services, veteran-owned software development federal, StateRAMP implementation',
   alternates: { canonical: 'https://autom8ionlab.com/industries/government' },
   openGraph: {
-    title: 'AI, Automation & Software for US Federal, State & Local Government',
+    title: 'AI & Compliance Engineering for US Government | Autom8ion Lab',
     description:
-      'Custom software, AI, and automation for civilian agencies, state government, and municipal IT. FedRAMP, FISMA, NIST 800-53, StateRAMP-aligned.',
+      'Custom AI, automation, and software for federal civilian, state, and municipal IT. FedRAMP, FISMA, NIST 800-53 aligned. SDVOSB pending.',
     url: 'https://autom8ionlab.com/industries/government',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=AI+%26+Compliance+Engineering+for+US+Government&section=Industries',
+      width: 1200,
+      height: 630,
+      alt: 'AI, Automation & Custom Software for US Federal, State & Local Government',
+    }],
   },
   twitter: {
-    title: 'AI, Automation & Software for US Federal, State & Local Government',
+    title: 'AI & Compliance Engineering for US Government | Autom8ion Lab',
     description:
-      'Custom software, AI, and automation for civilian agencies, state government, and municipal IT.',
+      'Custom AI, automation, and software for federal civilian, state, and municipal IT. FedRAMP, FISMA, NIST 800-53 aligned. SDVOSB pending.',
+    images: ['https://autom8ionlab.com/api/og?title=AI+%26+Compliance+Engineering+for+US+Government&section=Industries'],
   },
 };
 
@@ -28,6 +34,9 @@ const data: IndustryPageData = {
   h1: 'AI, Automation & Custom Software for US Federal, State & Local Government',
   heroSubhead:
     'Custom software, AI, and automation for civilian agencies, state government, and municipal IT teams. FedRAMP, FISMA, NIST 800-53, StateRAMP-aligned. Registered US federal contractor with SDVOSB pending status.',
+
+  definition:
+    'AI and compliance engineering for US government is the deployment of custom AI, automation, and software inside FedRAMP, FISMA, and NIST 800-53 boundaries. For federal civilian agencies, state IT, and municipal IT, it accelerates mission delivery without forcing teams into vendor-lock SaaS that doesn\'t fit the procurement model.',
 
   definitionParagraph:
     'Autom8ion Lab builds custom software, AI, and automation for US federal civilian agencies, state government IT, and municipal IT teams operating under FedRAMP, FISMA, NIST 800-53, NIST 800-171, StateRAMP, NARA records management, and Section 508 accessibility. The work covers case management modernization, citizen-facing portals, AI for backlog processing and document review, FedRAMP-aligned cloud services, and the legacy-system bridges that keep mainframe and database-driven workflows alive while new services are built around them. We are software builders with an in-house cybersecurity compliance arm and active SAM.gov registration — engineering and the federal documentation burden under one roof.',

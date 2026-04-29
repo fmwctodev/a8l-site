@@ -4,14 +4,26 @@ import { Download, Mail, Phone, MapPin, ArrowRight, Award, Shield, Building2, Wo
 
 export const metadata: Metadata = {
   title: 'Capability Statement',
+  description:
+    'Autom8ion Lab capability statement. Veteran-owned engineering for federal, DIB, healthcare, and financial services. UEI YY2DR3KSENH7 · CAGE 9YCS7.',
   alternates: { canonical: 'https://autom8ionlab.com/capability-statement' },
   openGraph: {
     title: 'Capability Statement | Autom8ion Lab',
+    description:
+      'Autom8ion Lab capability statement. Veteran-owned engineering for federal, DIB, healthcare, and financial services. UEI YY2DR3KSENH7 · CAGE 9YCS7.',
     url: 'https://autom8ionlab.com/capability-statement',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Capability+Statement&section=Company',
+      width: 1200,
+      height: 630,
+      alt: 'Autom8ion Lab Capability Statement',
+    }],
   },
   twitter: {
     title: 'Capability Statement | Autom8ion Lab',
+    description:
+      'Autom8ion Lab capability statement. Veteran-owned engineering for federal, DIB, healthcare, and financial services. UEI YY2DR3KSENH7 · CAGE 9YCS7.',
+    images: ['https://autom8ionlab.com/api/og?title=Capability+Statement&section=Company'],
   },
 };
 

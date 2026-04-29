@@ -25,23 +25,29 @@ import CTA from '@/app/_components/CTA';
 import RelatedSolutions from '@/app/_components/RelatedSolutions';
 
 export const metadata: Metadata = {
-  title: 'Custom LLM Systems for Enterprise Business Data | Private AI for Tech, Healthcare & Finance',
+  title: 'Custom LLM Systems for Regulated Data',
   description:
-    'Custom LLM systems for enterprise business data. Private deployment, SOC 2 protocols, encryption in transit and at rest, no public AI dependency. 30-day launch. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+    'Local LLM systems for HIPAA, CMMC, FedRAMP, and FISMA environments. No external data transfer. Built by veteran-led engineers. SDVOSB pending.',
   keywords:
     'custom LLM systems, private LLM deployment, enterprise LLM, SOC 2 LLM, secure document workflows, private AI deployment, on-prem LLM, secure AI document processing, private enterprise AI',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/custom-llm-systems' },
   openGraph: {
-    title: 'Custom LLM Systems for Enterprise Business Data | Autom8ion Lab',
+    title: 'Custom LLM Systems for Regulated Data | Autom8ion Lab',
     description:
-      'Private LLM deployment with SOC 2 protocols, encryption in transit and at rest. Built around your documents, workflows, and access controls. 30-day launch. SDVOSB Pending — UEI: YY2DR3KSENH7.',
+      'Local LLM systems for HIPAA, CMMC, FedRAMP, and FISMA environments. No external data transfer. Built by veteran-led engineers. SDVOSB pending.',
     url: 'https://autom8ionlab.com/solutions/custom-llm-systems',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Custom+LLM+Systems+for+Regulated+Data&section=Solutions',
+      width: 1200,
+      height: 630,
+      alt: 'Custom LLM Systems for Regulated Data',
+    }],
   },
   twitter: {
-    title: 'Custom LLM Systems for Enterprise Business Data | Autom8ion Lab',
+    title: 'Custom LLM Systems for Regulated Data | Autom8ion Lab',
     description:
-      'Private LLM deployment, SOC 2 protocols, encryption in transit and at rest. Built around your documents, workflows, and access controls.',
+      'Local LLM systems for HIPAA, CMMC, FedRAMP, and FISMA environments. No external data transfer. Built by veteran-led engineers. SDVOSB pending.',
+    images: ['https://autom8ionlab.com/api/og?title=Custom+LLM+Systems+for+Regulated+Data&section=Solutions'],
   },
 };
 
@@ -223,6 +229,23 @@ export default function Page() {
             environment. Strong encryption in transit and at rest, aligned with SOC 2 protocols.
             30-day launch.
           </p>
+        </div>
+      </section>
+
+      {/* AEO DEFINITION BLOCK */}
+      <section className="py-12 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <section className="definition-block">
+              <p className="lead">
+                <strong>A custom LLM system</strong> is a private, fine-tuned large-language-model
+                deployment hosted inside your own perimeter — on-premises, private cloud, or in a
+                controlled hosted environment — with your documentation as the training corpus and
+                zero data transfer to public model providers. It is the only architecture compatible
+                with HIPAA, CMMC, FedRAMP, and FISMA workloads that involve sensitive business data.
+              </p>
+            </section>
+          </Reveal>
         </div>
       </section>
 

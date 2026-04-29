@@ -21,23 +21,29 @@ import CTA from '@/app/_components/CTA';
 import RelatedSolutions from '@/app/_components/RelatedSolutions';
 
 export const metadata: Metadata = {
-  title: 'API Integrations for Commercial Tech Stacks | Tech, Construction, Healthcare & Finance',
+  title: 'Custom API Integration Services',
   description:
-    'Custom API integrations for commercial tech stacks. Secure bridges for legacy systems, real-time sync, and custom middleware. 30-day launch with bank-level encryption. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+    "Custom API integrations for systems Zapier and Make can't reach. RESTful, GraphQL, webhooks, and enterprise middleware — built secure, built to last.",
   keywords:
     'API integrations for commercial tech stacks, custom API integrations, secure API bridges, legacy system integration, custom middleware development, real-time data syncing, encrypted data flows, commercial API integration, 30-day API launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/api-integrations' },
   openGraph: {
-    title: 'API Integrations for Commercial Tech Stacks | Autom8ion Lab',
+    title: 'Custom API Integration Services | Autom8ion Lab',
     description:
-      'Custom API integrations for commercial tech stacks. Secure bridges for legacy systems, real-time sync, custom middleware. 30-day launch. SDVOSB Pending — UEI: YY2DR3KSENH7.',
+      "Custom API integrations for systems Zapier and Make can't reach. RESTful, GraphQL, webhooks, and enterprise middleware — built secure, built to last.",
     url: 'https://autom8ionlab.com/solutions/api-integrations',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Custom+API+Integration+Services&section=Solutions',
+      width: 1200,
+      height: 630,
+      alt: 'Custom API Integration Services',
+    }],
   },
   twitter: {
-    title: 'API Integrations for Commercial Tech Stacks | Autom8ion Lab',
+    title: 'Custom API Integration Services | Autom8ion Lab',
     description:
-      'Custom API integration layers for commercial tech stacks. Secure bridges, real-time sync, custom middleware. 30-day launch.',
+      "Custom API integrations for systems Zapier and Make can't reach. RESTful, GraphQL, webhooks, and enterprise middleware — built secure, built to last.",
+    images: ['https://autom8ionlab.com/api/og?title=Custom+API+Integration+Services&section=Solutions'],
   },
 };
 
@@ -230,6 +236,23 @@ export default function Page() {
             break when your workflows get complex — we build the architecture that actually works.
             Live in 30 days.
           </p>
+        </div>
+      </section>
+
+      {/* AEO DEFINITION BLOCK */}
+      <section className="py-12 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <section className="definition-block">
+              <p className="lead">
+                <strong>A custom API integration</strong> is purpose-built code — REST, GraphQL, or
+                message-bus — that connects two or more enterprise systems with security, retry,
+                validation, and audit logging that off-the-shelf connectors don&apos;t provide. It
+                is what we build when Zapier and Make can&apos;t reach a system, can&apos;t satisfy
+                a compliance review, or can&apos;t survive the volume.
+              </p>
+            </section>
+          </Reveal>
         </div>
       </section>
 

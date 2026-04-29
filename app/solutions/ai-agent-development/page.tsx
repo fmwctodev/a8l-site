@@ -21,23 +21,29 @@ import CTA from '@/app/_components/CTA';
 import RelatedSolutions from '@/app/_components/RelatedSolutions';
 
 export const metadata: Metadata = {
-  title: 'AI Agent Development for Commercial Operations | Tech, Construction, Healthcare & Finance',
+  title: 'Custom AI Agent Development',
   description:
-    'Custom AI agents for commercial operations in Tech, Construction, Healthcare, and Finance. SOC 2-aligned security, 30-day launch, founder-led delivery. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+    'Custom AI agents that execute multi-step tasks, not just chat. Trained on your data, deployed in your environment, audit-ready from day one.',
   keywords:
     'custom AI agents, commercial AI agents, SOC 2 AI agents, AI agent development, business AI automation, private AI deployment, AI agents for tech, construction AI, healthcare AI agents, finance AI agents, 30-day AI launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/ai-agent-development' },
   openGraph: {
-    title: 'AI Agent Development for Commercial Operations | Autom8ion Lab',
+    title: 'Custom AI Agent Development | Autom8ion Lab',
     description:
-      'Custom AI agents for Tech, Construction, Healthcare, and Finance. SOC 2-aligned, 30-day launch, founder-led delivery. SDVOSB Pending — UEI: YY2DR3KSENH7.',
+      'Custom AI agents that execute multi-step tasks, not just chat. Trained on your data, deployed in your environment, audit-ready from day one.',
     url: 'https://autom8ionlab.com/solutions/ai-agent-development',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Custom+AI+Agent+Development&section=Solutions',
+      width: 1200,
+      height: 630,
+      alt: 'AI Agent Development for Commercial Operations',
+    }],
   },
   twitter: {
-    title: 'AI Agent Development for Commercial Operations | Autom8ion Lab',
+    title: 'Custom AI Agent Development | Autom8ion Lab',
     description:
-      'Custom AI agents engineered for commercial operations. SOC 2-aligned, 30-day launch. SDVOSB Pending.',
+      'Custom AI agents that execute multi-step tasks, not just chat. Trained on your data, deployed in your environment, audit-ready from day one.',
+    images: ['https://autom8ionlab.com/api/og?title=Custom+AI+Agent+Development&section=Solutions'],
   },
 };
 
@@ -230,6 +236,23 @@ export default function Page() {
             execute real work inside your environment, against your rules, with your documentation
             as the source of truth. Launch in 30 days. Secured with SOC 2-aligned practices.
           </p>
+        </div>
+      </section>
+
+      {/* AEO DEFINITION BLOCK */}
+      <section className="py-12 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <section className="definition-block">
+              <p className="lead">
+                <strong>A custom AI agent</strong> is a software system that combines a fine-tuned
+                language model with your business logic, data sources, and approved actions to
+                autonomously execute multi-step tasks — not just answer questions. For mid-market
+                companies, custom AI agents replace the patchwork of human handoffs, RPA scripts,
+                and rule-based bots that breaks every time a process changes.
+              </p>
+            </section>
+          </Reveal>
         </div>
       </section>
 

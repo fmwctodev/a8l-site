@@ -2,23 +2,29 @@ import type { Metadata } from 'next';
 import IndustryPageLayout, { type IndustryPageData } from '@/app/_components/IndustryPageLayout';
 
 export const metadata: Metadata = {
-  title: 'AI, Automation & Software for Banks, Fintech & Insurers',
+  title: 'Custom AI for Financial Services',
   description:
-    'SOC 2 and PCI-DSS-aligned platforms, AI for underwriting and fraud, core banking integrations for community banks, credit unions, fintech, and insurers.',
+    'Custom AI for finance: portfolio analytics, PE data normalization, SOX-aligned automation. SOC 2 and bank-level security from day one.',
   keywords:
     'SOC 2 compliant software development, AI underwriting custom development, PCI-DSS application development, fintech custom software development, insurance claims automation AI, core banking integration custom, Fiserv integration, Jack Henry integration, FIS integration, Guidewire integration, Duck Creek integration, NYDFS Part 500 compliance',
   alternates: { canonical: 'https://autom8ionlab.com/industries/finance' },
   openGraph: {
-    title: 'AI, Automation & Software for Banks, Fintech & Insurers',
+    title: 'Custom AI for Financial Services | Autom8ion Lab',
     description:
-      'SOC 2 and PCI-DSS-aligned platforms, AI for underwriting and fraud, core banking integrations for community banks, credit unions, fintech, and insurers.',
+      'Custom AI for finance: portfolio analytics, PE data normalization, SOX-aligned automation. SOC 2 and bank-level security from day one.',
     url: 'https://autom8ionlab.com/industries/finance',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Custom+AI+for+Financial+Services&section=Industries',
+      width: 1200,
+      height: 630,
+      alt: 'AI, Automation & Custom Software for Banks, Fintech & Insurers',
+    }],
   },
   twitter: {
-    title: 'AI, Automation & Software for Banks, Fintech & Insurers',
+    title: 'Custom AI for Financial Services | Autom8ion Lab',
     description:
-      'SOC 2 and PCI-DSS-aligned platforms, AI for underwriting and fraud, core banking integrations.',
+      'Custom AI for finance: portfolio analytics, PE data normalization, SOX-aligned automation. SOC 2 and bank-level security from day one.',
+    images: ['https://autom8ionlab.com/api/og?title=Custom+AI+for+Financial+Services&section=Industries'],
   },
 };
 
@@ -28,6 +34,9 @@ const data: IndustryPageData = {
   h1: 'AI, Automation & Custom Software for Banks, Fintech & Insurers',
   heroSubhead:
     'SOC 2 and PCI-DSS-aligned platforms, AI for underwriting and fraud detection, core banking and core insurance integrations for community banks, credit unions, fintech, and insurance carriers.',
+
+  definition:
+    'Custom AI for financial services is the deployment of secure, auditable AI agents and LLM systems that handle portfolio analytics, PE data normalization, KYC review, and SOX-aligned reporting inside your own perimeter. For community banks, fintechs, and PE shops, it replaces brittle Excel pipelines and outsourced data shops with infrastructure that survives an audit.',
 
   definitionParagraph:
     "Autom8ion Lab builds custom platforms with SOC 2 / PCI-DSS controls, AI for underwriting, fraud detection, claims processing, and document review, and core banking and core insurance integrations (Fiserv, Jack Henry, FIS, Guidewire, Duck Creek) for community banks, credit unions, fintech, and insurance carriers. Compliance reporting automation (BSA, OFAC, CTR, SAR) and customer-facing applications passing FFIEC scrutiny. AI tools designed deliberately to stay on the right side of SR 11-7 model risk requirements where applicable. The work is precise, control-focused, and examiner-aware — engineering that treats the regulator as the third reader of every artifact we produce.",

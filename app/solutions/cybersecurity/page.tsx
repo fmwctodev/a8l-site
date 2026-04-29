@@ -11,23 +11,29 @@ import RelatedSolutions from '@/app/_components/RelatedSolutions';
 import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity & Compliance for Commercial Business Assets',
+  title: 'CMMC, NIST 800-171, HIPAA & SOC 2 Engineering',
   description:
-    'Cybersecurity and compliance systems that protect commercial business assets in healthcare, finance, and tech. SOC 2 readiness, HIPAA security, audit-ready documentation. 30-day audit, 4-9 month remediation.',
+    'CMMC 2.0, NIST 800-171, HIPAA, and SOC 2 readiness — engineered, documented, and audit-ready. Veteran-led cybersecurity for the DIB and commercial firms.',
   keywords:
     'cybersecurity and compliance services, SOC 2 readiness, HIPAA security, audit-ready documentation, commercial cybersecurity, business security engineering, control implementation, evidence collection',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/cybersecurity' },
   openGraph: {
-    title: 'Cybersecurity & Compliance for Commercial Business Assets | Autom8ion Lab',
+    title: 'CMMC, NIST 800-171, HIPAA & SOC 2 Engineering | Autom8ion Lab',
     description:
-      'Cybersecurity and compliance systems that protect commercial business assets in healthcare, finance, and tech. We implement controls and document the evidence trail at the same time.',
+      'CMMC 2.0, NIST 800-171, HIPAA, and SOC 2 readiness — engineered, documented, and audit-ready. Veteran-led cybersecurity for the DIB and commercial firms.',
     url: 'https://autom8ionlab.com/solutions/cybersecurity',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=CMMC%2C+NIST+800-171%2C+HIPAA+%26+SOC+2+Engineering&section=Solutions',
+      width: 1200,
+      height: 630,
+      alt: 'CMMC, NIST 800-171, HIPAA & SOC 2 Engineering',
+    }],
   },
   twitter: {
-    title: 'Cybersecurity & Compliance for Commercial Business Assets | Autom8ion Lab',
+    title: 'CMMC, NIST 800-171, HIPAA & SOC 2 Engineering | Autom8ion Lab',
     description:
-      'SOC 2, HIPAA, and audit-ready documentation for commercial business assets in healthcare, finance, and tech.',
+      'CMMC 2.0, NIST 800-171, HIPAA, and SOC 2 readiness — engineered, documented, and audit-ready. Veteran-led cybersecurity for the DIB and commercial firms.',
+    images: ['https://autom8ionlab.com/api/og?title=CMMC%2C+NIST+800-171%2C+HIPAA+%26+SOC+2+Engineering&section=Solutions'],
   },
 };
 
@@ -189,6 +195,24 @@ export default function Page() {
               HIPAA security, and audit-ready documentation for healthcare, finance, and tech teams where
               trust, uptime, and data protection directly affect growth.
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* AEO DEFINITION BLOCK */}
+      <section className="py-12 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <section className="definition-block">
+              <p className="lead">
+                <strong>Cybersecurity compliance engineering</strong> is the practice of designing
+                and implementing technical controls — RBAC, encryption, segmentation, audit logging,
+                SSP/POA&amp;M documentation — that satisfy CMMC 2.0, NIST 800-171, HIPAA, and SOC 2
+                frameworks at the architecture layer, not retrofitted at audit time. We engineer the
+                controls; we partner with assessors when independent assessment is required. We are
+                not a CMMC RPO or C3PAO.
+              </p>
+            </section>
           </Reveal>
         </div>
       </section>

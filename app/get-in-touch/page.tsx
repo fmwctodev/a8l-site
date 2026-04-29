@@ -4,23 +4,29 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
-  title: 'Contact Autom8ion Lab | Get a Custom Project Quote',
+  title: { absolute: 'Contact Autom8ion Lab' },
   description:
-    'Talk to us about a custom AI, automation, or software project for compliance-driven environments. We respond within one business day with a fit assessment.',
+    'Talk to Autom8ion Lab about your custom AI, automation, or LLM project. Free strategy call. Most projects launch in 30 days.',
   keywords:
     'contact AI company, custom project quote, AI solutions contact, automation consultation, business inquiry, AI development quote, custom automation contact, project discussion',
   alternates: { canonical: 'https://autom8ionlab.com/get-in-touch' },
   openGraph: {
-    title: 'Contact Autom8ion Lab | Get a Custom Project Quote',
+    title: 'Contact Autom8ion Lab',
     description:
-      'Talk to us about a custom AI, automation, or software project for compliance-driven environments. We respond within one business day with a fit assessment.',
+      'Talk to Autom8ion Lab about your custom AI, automation, or LLM project. Free strategy call. Most projects launch in 30 days.',
     url: 'https://autom8ionlab.com/get-in-touch',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Contact+Autom8ion+Lab&section=Contact',
+      width: 1200,
+      height: 630,
+      alt: 'Contact Autom8ion Lab',
+    }],
   },
   twitter: {
-    title: 'Contact Autom8ion Lab | Get a Custom Project Quote',
+    title: 'Contact Autom8ion Lab',
     description:
-      'Talk to us about a custom AI, automation, or software project for compliance-driven environments. We respond within one business day with a fit assessment.',
+      'Talk to Autom8ion Lab about your custom AI, automation, or LLM project. Free strategy call. Most projects launch in 30 days.',
+    images: ['https://autom8ionlab.com/api/og?title=Contact+Autom8ion+Lab&section=Contact'],
   },
 };
 

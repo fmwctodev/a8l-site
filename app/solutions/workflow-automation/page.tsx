@@ -20,23 +20,29 @@ import RelatedSolutions from '@/app/_components/RelatedSolutions';
 import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
-  title: 'Workflow Automation for Founders & Ops Teams | n8n + Python | 30-Day Launch',
+  title: 'Enterprise Workflow Automation',
   description:
-    'Custom workflow automation for founders and ops teams. Built with n8n, Python, secure integrations, audit logging, and custom orchestration. 30-day launch. SDVOSB Pending. UEI: YY2DR3KSENH7.',
+    'Enterprise workflow automation with n8n, Python, and custom integrations. For teams that have outgrown Zapier and need real business logic.',
   keywords:
     'workflow automation for founders and ops teams, custom n8n and python workflow automation, custom workflow automation, n8n automation, python automation, secure integrations, audit logging, real-time syncing, 30-day workflow launch',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/workflow-automation' },
   openGraph: {
-    title: 'Workflow Automation for Founders & Ops Teams | Autom8ion Lab',
+    title: 'Enterprise Workflow Automation | Autom8ion Lab',
     description:
-      'Custom workflow automation engineered around your business logic, your stack, and your operating reality. Built with n8n and Python. 30-day launch.',
+      'Enterprise workflow automation with n8n, Python, and custom integrations. For teams that have outgrown Zapier and need real business logic.',
     url: 'https://autom8ionlab.com/solutions/workflow-automation',
-    images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
+    images: [{
+      url: 'https://autom8ionlab.com/api/og?title=Enterprise+Workflow+Automation&section=Solutions',
+      width: 1200,
+      height: 630,
+      alt: 'Enterprise Workflow Automation',
+    }],
   },
   twitter: {
-    title: 'Workflow Automation for Founders & Ops Teams | Autom8ion Lab',
+    title: 'Enterprise Workflow Automation | Autom8ion Lab',
     description:
-      'Custom workflow automation with n8n and Python. Removes repetitive work, keeps every handoff visible, improves measurable productivity.',
+      'Enterprise workflow automation with n8n, Python, and custom integrations. For teams that have outgrown Zapier and need real business logic.',
+    images: ['https://autom8ionlab.com/api/og?title=Enterprise+Workflow+Automation&section=Solutions'],
   },
 };
 
@@ -218,6 +224,23 @@ export default function Page() {
             stack, and your operating reality. Built with n8n, Python, secure integrations, audit
             logging, and custom orchestration. We launch in 30 days.
           </p>
+        </div>
+      </section>
+
+      {/* AEO DEFINITION BLOCK */}
+      <section className="py-12 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <section className="definition-block">
+              <p className="lead">
+                <strong>Enterprise workflow automation</strong> is the deployment of custom n8n,
+                Python, and integration code that orchestrates the multi-step business processes
+                that no-code SaaS tools cannot govern. For scaling teams, it replaces the per-task
+                Zapier tax with infrastructure that scales without breaking, runs inside your own
+                boundary, and survives a SOC 2 audit.
+              </p>
+            </section>
+          </Reveal>
         </div>
       </section>
 
