@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Image from 'next/image';
 import { BreadcrumbSchema } from '@/app/_components/Schema';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
@@ -79,7 +80,7 @@ export default function ContactPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <Reveal>
-            <img src="/logo/logo.png" alt="Autom8ion Lab Logo" className="w-20 h-20 object-contain mx-auto mb-8" />
+            <Image src="/logo/logo.png" alt="Autom8ion Lab Logo" width={80} height={80} className="w-20 h-20 object-contain mx-auto mb-8" />
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
@@ -126,9 +127,12 @@ export default function Header() {
     <div className="px-6 py-6 max-w-7xl mx-auto" ref={navRef}>
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <img
+          <Image
             src="/logo/logo.png"
             alt="Autom8ion Lab Logo"
+            width={48}
+            height={48}
+            priority
             className="w-12 h-12 object-contain"
           />
           <span className="text-2xl font-bold text-white">Autom8ion Lab</span>

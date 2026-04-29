@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Users, Zap, Globe, Heart, ArrowRight, MapPin, Clock, Send, DollarSign } from 'lucide-react';
 import Modal from '@/app/_components/Modal';
 
@@ -90,7 +91,7 @@ export default function CareersClient() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <img src="/logo/logo.png" alt="Autom8ion Lab Logo" className="w-20 h-20 object-contain mx-auto mb-8" />
+          <Image src="/logo/logo.png" alt="Autom8ion Lab Logo" width={80} height={80} className="w-20 h-20 object-contain mx-auto mb-8" />
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Build the Future of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> AI & Automation</span>

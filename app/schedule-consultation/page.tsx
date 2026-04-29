@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Image from 'next/image';
 import { BreadcrumbSchema } from '@/app/_components/Schema';
 
 export const metadata: Metadata = {
@@ -46,7 +47,7 @@ export default function BookingPage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <img src="/logo/logo.png" alt="Autom8ion Lab Logo" className="w-20 h-20 object-contain mx-auto mb-8" />
+          <Image src="/logo/logo.png" alt="Autom8ion Lab Logo" width={80} height={80} className="w-20 h-20 object-contain mx-auto mb-8" />
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Schedule a
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Capability Briefing</span>

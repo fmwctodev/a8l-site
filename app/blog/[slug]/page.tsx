@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Clock, Calendar, ArrowLeft, CheckCircle2, TrendingUp, Award } from 'lucide-react';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
@@ -188,8 +189,15 @@ export default async function BlogPostPage({ params }: Props) {
                 <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-cyan-500/30 blur-3xl pointer-events-none" />
                 <div className="relative rounded-2xl overflow-hidden bg-slate-950">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent z-10 pointer-events-none" />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={post.hero_image} alt={post.title} className="w-full h-auto" />
+                  <Image
+                    src={post.hero_image}
+                    alt={post.title}
+                    width={1600}
+                    height={900}
+                    sizes="(max-width: 1024px) 100vw, 1024px"
+                    priority
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
 
