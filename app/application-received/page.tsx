@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Mail, Clock, Users, FileText } from 'lucide-react';
+import { Reveal, CelebrationBurst } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
   title: 'Application Received Careers',
@@ -21,20 +22,25 @@ export default function Page() {
               </div>
       
               <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-                <div className="flex justify-center mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full flex items-center justify-center shadow-lg">
+                <div className="relative flex justify-center mb-8">
+                  <CelebrationBurst />
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full flex items-center justify-center shadow-glow-cyan-lg z-10">
                     <CheckCircle className="w-10 h-10 text-white" />
                   </div>
                 </div>
-      
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Application
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> Received!</span>
-                </h1>
-      
-                <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                  Thank you for your interest in joining our team. We're reviewing your resume and a team member will contact you shortly about next steps.
-                </p>
+
+                <Reveal delay={0.3}>
+                  <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                    Application
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> Received!</span>
+                  </h1>
+                </Reveal>
+
+                <Reveal delay={0.45}>
+                  <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                    Thank you for your interest in joining our team. We're reviewing your resume and a team member will contact you shortly about next steps.
+                  </p>
+                </Reveal>
               </div>
             </section>
       
