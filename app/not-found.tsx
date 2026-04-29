@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <main className="relative pt-32 pb-20 overflow-hidden">
+      <div className="relative pt-32 pb-20 overflow-hidden">
         {/* Decorative grid + scan line — same visual language as HeroScene */}
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
           <svg
@@ -87,7 +87,7 @@ export default function Page() {
             </div>
           </Reveal>
         </div>
-      </main>
+      </div>
     </>
   );
 }

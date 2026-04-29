@@ -3,7 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
-import { AnimatedMesh } from './_components/ui';
+import AnimatedMesh from './_components/ui/AnimatedMeshLazy';
 import { OrganizationSchema, WebSiteSchema } from './_components/Schema';
 
 export const metadata: Metadata = {
@@ -113,15 +113,24 @@ export default function RootLayout({
         </form>
 
         <Header />
-        {children}
+        <main id="main">{children}</main>
         <Footer />
+
+        {/* All third-party analytics + pixels load AFTER window.onload via
+            strategy="lazyOnload" — keeps them out of the main-thread budget
+            for FCP/LCP/INP. Per PageSpeed 2026-04-29 audit: TBT was 790ms
+            on mobile with afterInteractive; lazyOnload removes them from
+            the critical path entirely. Conversion-event tracking still
+            works because gtag/dataLayer/fbq are stubbed by the wrapper in
+            lib/analytics.ts which queues calls until the real script
+            attaches. */}
 
         {/* Google Analytics 4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DF6GQ5DEFP"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4-init" strategy="afterInteractive">
+        <Script id="ga4-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
@@ -131,7 +140,7 @@ export default function RootLayout({
         </Script>
 
         {/* Google Tag Manager */}
-        <Script id="gtm-init" strategy="afterInteractive">
+        <Script id="gtm-init" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -142,7 +151,7 @@ export default function RootLayout({
         </Script>
 
         {/* Meta (Facebook) Pixel */}
-        <Script id="fb-pixel-init" strategy="afterInteractive">
+        <Script id="fb-pixel-init" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?

@@ -128,11 +128,12 @@ export default function Header() {
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
           <Image
-            src="/logo/logo.png"
+            src="/logo/logo-96.webp"
             alt="Autom8ion Lab Logo"
-            width={48}
-            height={48}
+            width={96}
+            height={96}
             priority
+            sizes="48px"
             className="w-12 h-12 object-contain"
           />
           <span className="text-2xl font-bold text-white">Autom8ion Lab</span>

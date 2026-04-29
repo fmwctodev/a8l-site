@@ -97,11 +97,12 @@ const Footer = () => {
         <div className="mb-12 max-w-3xl">
           <div className="flex items-center space-x-2 mb-4">
             <Image
-              src="/logo/logo.png"
+              src="/logo/logo-96.webp"
               alt="Autom8ion Lab Logo"
-              width={40}
-              height={40}
+              width={96}
+              height={96}
               loading="lazy"
+              sizes="40px"
               className="w-10 h-10 object-contain"
             />
             <span className="text-2xl font-bold text-white">Autom8ion Lab</span>

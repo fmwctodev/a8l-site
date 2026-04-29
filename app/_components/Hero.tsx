@@ -1,6 +1,18 @@
 'use client';
+import dynamic from 'next/dynamic';
 import { ArrowRight, Download } from 'lucide-react';
-import { HeroScene, MagneticButton, Reveal } from './ui';
+import { MagneticButton, Reveal } from './ui';
+
+// Lazy-load the bespoke SVG/CSS hero scene — it's decorative
+// (parallax framer-motion layered behind the H1 + CTAs) and pulls in
+// useScroll/useTransform from framer-motion. ssr: false strips it from the
+// server-rendered HTML so the H1 + CTAs hit the screen ~1s sooner per the
+// 2026-04-29 PageSpeed audit (mobile LCP was 9.3s, hero scene was the long
+// pole). Visual-only; imperceptible degradation while the chunk loads.
+const HeroScene = dynamic(() => import('./ui/HeroScene'), {
+  ssr: false,
+  loading: () => null,
+});
 
 /**
  * Hero — LOCKED v3 §"Final Homepage Copy" §1.
