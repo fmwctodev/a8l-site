@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
   title: 'Contact Autom8ion Lab | Get a Custom Project Quote',
@@ -85,41 +86,49 @@ export default function ContactPage() {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <img src="/logo/logo.png" alt="Autom8ion Lab Logo" className="w-20 h-20 object-contain mx-auto mb-8" />
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Talk to Us About
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Your Project</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Tell us about your environment, your compliance requirements, and your top automation, software, or AI priority. We&apos;ll respond within one business day with a capability assessment and proposed next steps.
-          </p>
+          <Reveal>
+            <img src="/logo/logo.png" alt="Autom8ion Lab Logo" className="w-20 h-20 object-contain mx-auto mb-8" />
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Talk to Us About
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Your Project</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Tell us about your environment, your compliance requirements, and your top automation, software, or AI priority. We&apos;ll respond within one business day with a capability assessment and proposed next steps.
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      <section className="py-16 bg-black">
+      <section className="py-16 relative">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <Stagger className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.07}>
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               const isLink = info.details.startsWith('mailto:') || info.details.startsWith('tel:');
               return (
-                <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                  {isLink ? (
-                    <a href={info.details} className="text-cyan-400 font-medium mb-1 hover:text-cyan-300 transition-colors block">
-                      {info.details.replace('mailto:', '').replace('tel:', '').replace('+18555086062', '+1 855-508-6062')}
-                    </a>
-                  ) : (
-                    <p className="text-cyan-400 font-medium mb-1">{info.details}</p>
-                  )}
-                  <p className="text-slate-400 text-sm">{info.description}</p>
-                </div>
+                <StaggerItem key={index}>
+                  <PremiumCard variant="hover" className="p-6 text-center group h-full">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-glow-cyan transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
+                    {isLink ? (
+                      <a href={info.details} className="text-cyan-400 font-medium mb-1 hover:text-cyan-300 transition-colors block link-underline w-fit mx-auto">
+                        {info.details.replace('mailto:', '').replace('tel:', '').replace('+18555086062', '+1 855-508-6062')}
+                      </a>
+                    ) : (
+                      <p className="text-cyan-400 font-medium mb-1">{info.details}</p>
+                    )}
+                    <p className="text-slate-400 text-sm">{info.description}</p>
+                  </PremiumCard>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
         </div>
       </section>
 

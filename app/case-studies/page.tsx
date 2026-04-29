@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Lock } from 'lucide-react';
 import { BreadcrumbSchema } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
+import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
@@ -77,86 +78,98 @@ export default function Page() {
 
       <section className="relative min-h-[40vh] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-12">
-          <nav className="text-sm text-slate-400 mb-6">
-            <Link href="/" className="hover:text-cyan-400">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-slate-300">Case Studies</span>
-          </nav>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Case Studies
-          </h1>
-          <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
-            Project work across construction, healthcare, finance, real estate, and government
-            environments.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-12 bg-amber-950/20 border-y border-amber-900/30">
-        <div className="max-w-4xl mx-auto px-6 flex items-start space-x-4">
-          <Lock className="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
-          <div>
-            <h2 className="text-lg font-semibold text-amber-200 mb-2">
-              Many engagements are NDA-protected
-            </h2>
-            <p className="text-slate-300 leading-relaxed">
-              We provide past performance details and references on a need-to-know basis after a
-              qualifying conversation and vendor onboarding. The scenarios below are representative —
-              real work, generalized to remove identifying details. Specific named past performance is
-              available under NDA.
+          <Reveal>
+            <nav className="text-sm text-slate-400 mb-6">
+              <Link href="/" className="hover:text-cyan-400">Home</Link>
+              <span className="mx-2">/</span>
+              <span className="text-slate-300">Case Studies</span>
+            </nav>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Case Studies
+            </h1>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
+              Project work across construction, healthcare, finance, real estate, and government
+              environments.
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-6 space-y-8">
-          {scenarios.map((s) => (
-            <article
-              key={s.title}
-              className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 md:p-8"
-            >
-              <Link
-                href={s.industryHref}
-                className="inline-block text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-3 hover:text-cyan-300"
-              >
-                {s.industry}
-              </Link>
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-4">{s.title}</h2>
-              <p className="text-slate-300 leading-relaxed mb-5">{s.body}</p>
-              <div className="flex flex-wrap gap-2">
-                {s.frameworks.map((f) => (
-                  <span
-                    key={f}
-                    className="text-xs px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full text-slate-300"
-                  >
-                    {f}
-                  </span>
-                ))}
+      <section className="py-12 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <div className="relative bg-amber-950/20 border-y border-amber-900/40 rounded-lg p-6 overflow-hidden flex items-start space-x-4">
+              <Lock className="relative w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
+              <div className="relative">
+                <h2 className="text-lg font-semibold text-amber-200 mb-2">
+                  Many engagements are NDA-protected
+                </h2>
+                <p className="text-slate-300 leading-relaxed">
+                  We provide past performance details and references on a need-to-know basis after a
+                  qualifying conversation and vendor onboarding. The scenarios below are
+                  representative — real work, generalized to remove identifying details. Specific named
+                  past performance is available under NDA.
+                </p>
               </div>
-            </article>
-          ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="py-16 bg-slate-950">
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Stagger className="space-y-8" staggerDelay={0.1}>
+            {scenarios.map((s) => (
+              <StaggerItem key={s.title} as="article">
+                <PremiumCard variant="hover" className="p-6 md:p-8">
+                  <Link
+                    href={s.industryHref}
+                    className="inline-block text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-3 hover:text-cyan-300 link-underline"
+                  >
+                    {s.industry}
+                  </Link>
+                  <h2 className="text-xl md:text-2xl font-bold text-white mb-4">{s.title}</h2>
+                  <p className="text-slate-300 leading-relaxed mb-5">{s.body}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {s.frameworks.map((f) => (
+                      <span
+                        key={f}
+                        className="text-xs px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full text-slate-300 transition-colors hover:border-cyan-500/40 hover:text-cyan-300"
+                      >
+                        {f}
+                      </span>
+                    ))}
+                  </div>
+                </PremiumCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      <section className="py-16 relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Need past performance for a specific opportunity?
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8">
-            Tell us the agency, industry, or contract vehicle on a 30-minute discovery call. We'll
-            share applicable past performance details under NDA where required.
-          </p>
-          <Link
-            href="/schedule-consultation"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-colors"
-          >
-            <span>Schedule a discovery call</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <Reveal>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Need past performance for a specific opportunity?
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              Tell us the agency, industry, or contract vehicle on a 30-minute discovery call.
+              We&apos;ll share applicable past performance details under NDA where required.
+            </p>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <MagneticButton href="/schedule-consultation" variant="primary">
+              Schedule a discovery call
+              <ArrowRight className="w-4 h-4" />
+            </MagneticButton>
+          </Reveal>
         </div>
       </section>
 

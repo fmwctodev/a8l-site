@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BookOpen, TrendingUp } from 'lucide-react';
 import BlogCard from '@/app/_components/BlogCard';
+import { Reveal, Stagger, StaggerItem, MagneticButton } from '@/app/_components/ui';
 import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
@@ -83,20 +84,22 @@ export default async function BlogIndexPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 to-transparent"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <BookOpen className="w-8 h-8 text-cyan-400" />
-              <h1 className="text-5xl md:text-6xl font-bold text-white">
-                Automation{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                  Insights
-                </span>
-              </h1>
+          <Reveal>
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <BookOpen className="w-8 h-8 text-cyan-400" />
+                <h1 className="text-5xl md:text-6xl font-bold text-white">
+                  Automation{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                    Insights
+                  </span>
+                </h1>
+              </div>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                Expert insights on AI automation, workflow optimization, and building scalable systems that deliver measurable results.
+              </p>
             </div>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Expert insights on AI automation, workflow optimization, and building scalable systems that deliver measurable results.
-            </p>
-          </div>
+          </Reveal>
 
           {posts.length === 0 ? (
             <div className="text-center py-20">
@@ -105,20 +108,21 @@ export default async function BlogIndexPage() {
             </div>
           ) : (
             <>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Stagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.08}>
                 {posts.map((post) => (
-                  <BlogCard
-                    key={post.id}
-                    slug={post.slug}
-                    title={post.title}
-                    excerpt={post.excerpt}
-                    heroImage={post.hero_image}
-                    publishedAt={post.published_at}
-                    readingTimeMinutes={post.reading_time_minutes}
-                    tags={post.tags}
-                  />
+                  <StaggerItem key={post.id}>
+                    <BlogCard
+                      slug={post.slug}
+                      title={post.title}
+                      excerpt={post.excerpt}
+                      heroImage={post.hero_image}
+                      publishedAt={post.published_at}
+                      readingTimeMinutes={post.reading_time_minutes}
+                      tags={post.tags}
+                    />
+                  </StaggerItem>
                 ))}
-              </div>
+              </Stagger>
 
               <div className="mt-16 text-center">
                 <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 max-w-2xl mx-auto">

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Award, MapPin, Linkedin } from 'lucide-react';
 import { BreadcrumbSchema } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
+import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
   title: 'About Autom8ion Lab',
@@ -37,26 +38,30 @@ export default function Page() {
 
       <section className="relative min-h-[50vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950">
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
-          <nav className="text-sm text-slate-400 mb-6">
-            <Link href="/" className="hover:text-cyan-400">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-slate-300">About</span>
-          </nav>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            About Autom8ion Lab
-          </h1>
-          <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
-            A veteran-owned engineering firm building custom AI, automation, and software for industries
-            where compliance, security, and ROI all matter — operated by Sitehues Media Inc.
-          </p>
+          <Reveal>
+            <nav className="text-sm text-slate-400 mb-6">
+              <Link href="/" className="hover:text-cyan-400">Home</Link>
+              <span className="mx-2">/</span>
+              <span className="text-slate-300">About</span>
+            </nav>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              About Autom8ion Lab
+            </h1>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
+              A veteran-owned engineering firm building custom AI, automation, and software for industries
+              where compliance, security, and ROI all matter — operated by Sitehues Media Inc.
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      <section className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-6 space-y-8">
-          <div>
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6 space-y-12">
+          <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">Why we exist</h2>
             <p className="text-lg text-slate-300 leading-relaxed mb-4">
               Most technology vendors force a choice. Off-the-shelf SaaS tools move fast but rarely fit
@@ -70,11 +75,11 @@ export default function Page() {
               from the first whiteboard sketch — and we produce the documentation your assessor will
               need as we build, not at the end.
             </p>
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">Founder</h2>
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start">
+            <PremiumCard variant="hover" className="p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start">
               <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
                 <span className="text-3xl font-bold text-white">SR</span>
               </div>
@@ -98,12 +103,12 @@ export default function Page() {
                   <span>Sean on LinkedIn</span>
                 </a>
               </div>
-            </div>
-          </div>
+            </PremiumCard>
+          </Reveal>
 
-          <div>
+          <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">Federal contracting registrations</h2>
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 md:p-8">
+            <PremiumCard variant="glow" className="p-6 md:p-8">
               <div className="grid sm:grid-cols-2 gap-4 text-sm">
                 <div>
                   <div className="text-slate-400 uppercase tracking-wider text-xs mb-1">Legal name</div>
@@ -139,27 +144,30 @@ export default function Page() {
               <div className="mt-6 pt-6 border-t border-slate-800">
                 <Link
                   href="/capability-statement"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium link-underline"
                 >
                   View the full capability statement
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
-            </div>
-          </div>
+            </PremiumCard>
+          </Reveal>
 
-          <div>
+          <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">Locations</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
+            <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.08}>
+              <StaggerItem>
+              <PremiumCard variant="hover" className="p-6 h-full">
                 <div className="flex items-center space-x-2 text-cyan-400 mb-2">
                   <MapPin className="w-5 h-5" />
                   <span className="font-semibold">US Headquarters</span>
                 </div>
                 <div className="text-white text-lg">Plant City, Florida</div>
                 <div className="text-slate-400 text-sm mt-1">Sales and project delivery</div>
-              </div>
-              <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
+              </PremiumCard>
+              </StaggerItem>
+              <StaggerItem>
+              <PremiumCard variant="hover" className="p-6 h-full">
                 <div className="flex items-center space-x-2 text-cyan-400 mb-2">
                   <MapPin className="w-5 h-5" />
                   <span className="font-semibold">Operations</span>
@@ -168,46 +176,32 @@ export default function Page() {
                 <div className="text-slate-400 text-sm mt-1">
                   Development and operations only — sales geography is United States
                 </div>
-              </div>
-            </div>
-          </div>
+              </PremiumCard>
+              </StaggerItem>
+            </Stagger>
+          </Reveal>
 
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-4">What we won't do</h2>
+          <Reveal>
+            <h2 className="text-3xl font-bold text-white mb-4">What we won&apos;t do</h2>
             <p className="text-lg text-slate-300 leading-relaxed mb-4">
               The focus is what makes us useful, so we say no to a lot:
             </p>
-            <ul className="space-y-3 text-slate-300">
-              <li className="flex items-start space-x-3">
-                <Award className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
-                <span>
-                  We don't take work outside our six industries (construction, healthcare, finance, real
-                  estate, US government, defense).
-                </span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <Award className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
-                <span>
-                  We don't perform CMMC RPO or C3PAO assessment work. We engineer the controls; we
-                  partner with assessors when independent assessment is required.
-                </span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <Award className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
-                <span>
-                  We don't work on classified contracts at this time. We work with cleared firms when
-                  classified work is in scope.
-                </span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <Award className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
-                <span>
-                  We don't publish pricing tiers. Quotes are scope-driven and provided after a discovery
-                  call.
-                </span>
-              </li>
-            </ul>
-          </div>
+            <Stagger className="space-y-3 text-slate-300" staggerDelay={0.06}>
+              {[
+                "We don't take work outside our six industries (construction, healthcare, finance, real estate, US government, defense).",
+                "We don't perform CMMC RPO or C3PAO assessment work. We engineer the controls; we partner with assessors when independent assessment is required.",
+                "We don't work on classified contracts at this time. We work with cleared firms when classified work is in scope.",
+                "We don't publish pricing tiers. Quotes are scope-driven and provided after a discovery call.",
+              ].map((statement) => (
+                <StaggerItem key={statement}>
+                  <PremiumCard variant="hover" className="p-4 flex items-start space-x-3">
+                    <Award className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                    <span>{statement}</span>
+                  </PremiumCard>
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </Reveal>
         </div>
       </section>
 

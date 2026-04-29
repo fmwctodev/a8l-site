@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { BreadcrumbSchema, FAQPageSchema } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
+import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
@@ -152,56 +153,58 @@ export default function Page() {
 
       <section className="relative min-h-[40vh] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-12">
-          <nav className="text-sm text-slate-400 mb-6">
-            <Link href="/" className="hover:text-cyan-400">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-slate-300">FAQ</span>
-          </nav>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
-            Answers to the questions buyers, procurement teams, and prime contractors most often ask
-            us. Don't see your question?{' '}
-            <Link href="/get-in-touch" className="text-cyan-400 hover:text-cyan-300 underline">
-              Send it to us
-            </Link>
-            .
-          </p>
+          <Reveal>
+            <nav className="text-sm text-slate-400 mb-6">
+              <Link href="/" className="hover:text-cyan-400">Home</Link>
+              <span className="mx-2">/</span>
+              <span className="text-slate-300">FAQ</span>
+            </nav>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Frequently Asked Questions
+            </h1>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
+              Answers to the questions buyers, procurement teams, and prime contractors most often ask
+              us. Don&apos;t see your question?{' '}
+              <Link href="/get-in-touch" className="text-cyan-400 hover:text-cyan-300 link-underline">
+                Send it to us
+              </Link>
+              .
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6 space-y-16">
           {groups.map((group) => (
-            <div key={group.heading}>
+            <Reveal key={group.heading}>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">{group.heading}</h2>
-              <div className="space-y-4">
+              <Stagger className="space-y-4" staggerDelay={0.06}>
                 {group.faqs.map((f) => (
-                  <div
-                    key={f.question}
-                    className="bg-slate-900/40 border border-slate-800 rounded-lg p-6"
-                  >
-                    <h3 className="text-lg font-semibold text-white mb-3">{f.question}</h3>
-                    <p className="text-slate-300 leading-relaxed">{f.answer}</p>
-                  </div>
+                  <StaggerItem key={f.question}>
+                    <PremiumCard variant="hover" className="p-6">
+                      <h3 className="text-lg font-semibold text-white mb-3">{f.question}</h3>
+                      <p className="text-slate-300 leading-relaxed">{f.answer}</p>
+                    </PremiumCard>
+                  </StaggerItem>
                 ))}
-              </div>
-            </div>
+              </Stagger>
+            </Reveal>
           ))}
 
-          <div className="text-center pt-8 border-t border-slate-800">
-            <p className="text-slate-300 mb-6">Still have questions?</p>
-            <Link
-              href="/schedule-consultation"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-colors"
-            >
-              <span>Schedule a 30-minute discovery call</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
+          <Reveal>
+            <div className="text-center pt-8 border-t border-slate-800/50">
+              <p className="text-slate-300 mb-6">Still have questions?</p>
+              <MagneticButton href="/schedule-consultation" variant="primary">
+                Schedule a 30-minute discovery call
+                <ArrowRight className="w-4 h-4" />
+              </MagneticButton>
+            </div>
+          </Reveal>
         </div>
       </section>
 
