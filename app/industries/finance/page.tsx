@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'SOC 2 and PCI-DSS-aligned platforms, AI for underwriting and fraud, core banking integrations for community banks, credit unions, fintech, and insurers.',
   keywords:
-    'SOC 2 compliant software development, AI underwriting custom development, PCI-DSS application development, fintech custom software development, insurance claims automation AI, core banking integration custom',
+    'SOC 2 compliant software development, AI underwriting custom development, PCI-DSS application development, fintech custom software development, insurance claims automation AI, core banking integration custom, Fiserv integration, Jack Henry integration, FIS integration, Guidewire integration, Duck Creek integration, NYDFS Part 500 compliance',
   alternates: { canonical: 'https://autom8ionlab.com/industries/finance' },
   openGraph: {
     title: 'AI, Automation & Software for Banks, Fintech & Insurers',
@@ -28,10 +28,60 @@ const data: IndustryPageData = {
   h1: 'AI, Automation & Custom Software for Banks, Fintech & Insurers',
   heroSubhead:
     'SOC 2 and PCI-DSS-aligned platforms, AI for underwriting and fraud detection, core banking and core insurance integrations for community banks, credit unions, fintech, and insurance carriers.',
+
   definitionParagraph:
-    'We build for financial services teams that operate under regulator scrutiny — custom platforms with SOC 2 / PCI-DSS controls, AI for underwriting, fraud detection, claims processing, and document review, core banking and core insurance integrations (Fiserv, Jack Henry, FIS, Guidewire, Duck Creek), compliance reporting automation (BSA, OFAC, CTR, SAR), and customer-facing applications passing FFIEC scrutiny. AI tools designed deliberately to stay on the right side of SR 11-7 model risk requirements where applicable.',
+    "Autom8ion Lab builds custom platforms with SOC 2 / PCI-DSS controls, AI for underwriting, fraud detection, claims processing, and document review, and core banking and core insurance integrations (Fiserv, Jack Henry, FIS, Guidewire, Duck Creek) for community banks, credit unions, fintech, and insurance carriers. Compliance reporting automation (BSA, OFAC, CTR, SAR) and customer-facing applications passing FFIEC scrutiny. AI tools designed deliberately to stay on the right side of SR 11-7 model risk requirements where applicable. The work is precise, control-focused, and examiner-aware — engineering that treats the regulator as the third reader of every artifact we produce.",
+
   buyerProfile:
     'community and regional banks, credit unions, fintech companies, insurance carriers and MGAs, wealth management firms, payment processors, accounting firms with technology divisions.',
+
+  problemFraming: {
+    heading: 'Vendors who understand examiners can\'t ship modern software. Vendors who ship modern software can\'t pass an exam.',
+    paragraphs: [
+      "Financial services technology buyers operate under a stack of overlapping regulators — SEC, FINRA, OCC, NYDFS, FFIEC, state insurance departments — each with its own examination criteria. The legacy financial software vendors understand the examiner audience and produce documentation that survives an FFIEC IT examination, but they ship slowly and treat AI as compliance theater. The commercial AI vendors ship fast and sell underwriting and fraud capabilities, but they can't articulate how their model risk documentation lines up with SR 11-7, can't explain their data residency story for cross-border regulated firms, and won't sign the carve-outs your CISO needs in the master agreement.",
+      "We're not regulators or auditors. We're engineers who design for SOC 2 Type II, PCI-DSS, NYDFS 23 NYCRR Part 500, GLBA Safeguards Rule, FFIEC IT Examination Handbook, and SR 11-7 from the first whiteboard sketch. We produce the documentation that supports your annual CISO certification and survives an FFIEC IT exam — control narratives, evidence collection, and audit trails that demonstrate the controls actually run in production.",
+      "Most engagements blend two patterns: a custom platform with SOC 2 controls (typically replacing a legacy system or building net-new capability) and AI tooling scoped narrowly to underwriting, fraud, claims, document review, or compliance reporting where the volume justifies the build but the regulator-readability of the model matters more than peak accuracy.",
+    ],
+  },
+
+  whatWeBuildDetailed: [
+    {
+      name: 'Custom platforms with SOC 2 / PCI-DSS controls',
+      body:
+        'Web applications, internal tools, and customer-facing platforms built with SOC 2 Type II Trust Service Criteria and PCI-DSS controls implemented in code, infrastructure, and platform configuration. CDE segmentation for cardholder data, encryption strategy mapped to data classifications, RBAC tied to your IdP, and audit logging structured to satisfy the controls your auditor will sample.',
+    },
+    {
+      name: 'AI for underwriting, fraud detection, claims processing, document review',
+      body:
+        "AI capabilities scoped narrowly to processes where the regulator-readability of the model matters. Underwriting decision support that stays on the safe side of SR 11-7 model risk requirements where possible. Fraud detection classifiers with full lineage and evaluation evidence. Claims processing triage with human review on every adverse decision. Document review (loan files, KYC documents, claims documentation) with classification confidence scores and audit trail.",
+    },
+    {
+      name: 'Core banking and core insurance system integrations',
+      body:
+        'Integration approach varies by core. Banking: Fiserv DNA, Premier, Cleartouch; Jack Henry SilverLake, Jack Henry Core Director; FIS IBS, Horizon, Profile. Insurance: Guidewire (PolicyCenter, BillingCenter, ClaimCenter), Duck Creek (Policy, Billing, Claims). Each has its own API patterns, data models, and integration pacing — we scope after a discovery call with your core operations team.',
+    },
+    {
+      name: 'Compliance reporting automation (BSA/AML, OFAC, CTR/SAR)',
+      body:
+        "Automated generation and routing of BSA/AML compliance reports — Currency Transaction Reports (CTR) over $10K, Suspicious Activity Reports (SAR) on flagged behavior, OFAC sanctions screening on every customer touch, and the recordkeeping that supports an FFIEC BSA exam. We integrate with your core banking system for transaction data, with FinCEN's BSA E-Filing for submission, and with your existing case management for SAR investigation workflow.",
+    },
+    {
+      name: 'Customer-facing applications passing FFIEC scrutiny',
+      body:
+        "Online banking portals, mobile banking apps, customer onboarding flows, and digital servicing tools built for the FFIEC IT Examination Handbook expectations. Multi-factor authentication, encryption of nonpublic information at rest and in transit, audit trails for customer actions, third-party service provider management documented, and the technical controls Part 500 requires for NY-licensed entities.",
+    },
+    {
+      name: 'AI tools designed not to trigger SR 11-7 model risk requirements',
+      body:
+        'The dividing line in SR 11-7 is whether AI output materially influences a risk decision (model) versus supports a human decision (not model). We design AI tools to stay on the right side of that line where possible — recommendation engines that surface options for human review rather than autonomous classifiers that drive risk decisions. When the use case requires a model that does fall under SR 11-7, we produce the model documentation: development rationale, data lineage, validation approach, ongoing monitoring plan.',
+    },
+    {
+      name: 'Loan origination and servicing automation',
+      body:
+        'Common LOS integrations: nCino, Encompass, Calyx Point, and proprietary core LOS modules. We build both the data integration layers and the AI-enhanced underwriting tools that operate within them — automated income verification, document classification, condition tracking, and post-close servicing workflow. Adverse action notice automation under ECOA / Regulation B with full audit trail.',
+    },
+  ],
+
   whatWeBuild: [
     'Custom platforms with SOC 2 / PCI-DSS controls',
     'AI for underwriting, fraud detection, claims processing, document review',
@@ -41,16 +91,38 @@ const data: IndustryPageData = {
     'AI tools designed not to trigger SR 11-7 model risk requirements',
     'Loan origination and servicing automation',
   ],
+
   complianceConsiderations: [
-    { name: 'SOC 2 Type II', desc: 'Service organization controls' },
-    { name: 'PCI-DSS', desc: 'Cardholder data environment' },
-    { name: 'NYDFS 23 NYCRR Part 500', desc: 'NY-licensed financial entities' },
-    { name: 'GLBA Safeguards Rule', desc: 'Customer information security' },
+    { name: 'SOC 2 Type II', desc: 'Service organization controls — Security plus relevant TSCs' },
+    { name: 'PCI-DSS', desc: 'Cardholder data environment scoping, segmentation, controls' },
+    { name: 'NYDFS 23 NYCRR Part 500', desc: 'NY-licensed financial entities cybersecurity requirements' },
+    { name: 'GLBA Safeguards Rule', desc: 'Customer information security program' },
     { name: 'FFIEC IT Examination Handbook', desc: 'Bank IT examination criteria' },
-    { name: 'SR 11-7', desc: 'Model risk management for AI/ML' },
-    { name: 'BSA/AML, OFAC', desc: 'Sanctions screening and reporting' },
-    { name: 'State insurance department requirements', desc: 'Carrier-by-carrier' },
+    { name: 'SR 11-7', desc: 'Federal Reserve model risk management for AI/ML' },
+    { name: 'BSA/AML, OFAC', desc: 'Sanctions screening, suspicious activity reporting' },
+    { name: 'State insurance department requirements', desc: 'Carrier-by-carrier; MAR, NAIC Model #668' },
+    { name: 'CCPA / GLBA / state privacy laws', desc: 'Consumer financial data privacy' },
   ],
+
+  namedIntegrations: [
+    {
+      category: 'Core banking systems',
+      items: ['Fiserv (DNA, Premier, Cleartouch)', 'Jack Henry (SilverLake, Core Director)', 'FIS (IBS, Horizon, Profile)', 'CSI NuPoint', 'Finastra Phoenix'],
+    },
+    {
+      category: 'Core insurance systems',
+      items: ['Guidewire (PolicyCenter, BillingCenter, ClaimCenter)', 'Duck Creek (Policy, Billing, Claims)', 'Insurity Policy Decisions', 'Sapiens IDIT', 'Majesco P&C Suite'],
+    },
+    {
+      category: 'Loan origination & servicing',
+      items: ['nCino', 'Encompass (ICE Mortgage Technology)', 'Calyx Point', 'Black Knight Empower', 'Mortgage Cadence'],
+    },
+    {
+      category: 'Identity, fraud, KYC, compliance',
+      items: ['Plaid', 'Socure', 'Alloy', 'Persona', 'Verafin', 'NICE Actimize', 'Quantexa'],
+    },
+  ],
+
   faqs: [
     {
       question: 'Have you delivered for SEC- or FINRA-regulated firms?',
@@ -83,11 +155,13 @@ const data: IndustryPageData = {
         'Yes. Common integrations include nCino, Encompass, Calyx Point, and proprietary core LOS modules. We build both data integration layers and AI-enhanced underwriting tools that operate within them.',
     },
   ],
+
   scenarios: [
-    'AI document processing for a financial services firm, replacing manual review while satisfying internal compliance review.',
-    'Custom underwriting platform built for a regional lender, integrated with core banking and credit bureau APIs.',
-    'SOC 2 prep and audit support for a fintech pursuing enterprise contracts.',
+    'AI document processing for a financial services firm, replacing manual review while satisfying internal compliance review and an external SOC 2 audit cycle. Model documentation structured to demonstrate the AI tool supported human decisions rather than driving model risk under SR 11-7.',
+    'Custom underwriting platform built for a regional lender, integrated with core banking and credit bureau APIs. Adverse action notices automated per ECOA / Regulation B with full audit trail.',
+    'SOC 2 prep and audit support for a fintech pursuing enterprise contracts — control implementation, evidence collection automation, and the documentation package the CPA firm requested.',
   ],
+
   scenarioCta: 'Building inside a regulated financial environment? Schedule a discovery call',
   heroAccent: 'from-slate-950 via-blue-950/30 to-slate-950',
   iconAccent: 'text-blue-400',

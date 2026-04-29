@@ -1,460 +1,453 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Code, Layers, Shield, Zap, CheckCircle, ArrowRight, Cloud } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle2,
+  Code2,
+  Database,
+  Smartphone,
+  Layers,
+  Lock,
+  Workflow as WorkflowIcon,
+} from 'lucide-react';
+import {
+  BreadcrumbSchema,
+  ServiceSchema,
+  FAQPageSchema,
+} from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
-import RelatedSolutions from '@/app/_components/RelatedSolutions';
 
 export const metadata: Metadata = {
-  title: 'Custom Software Development for Federal, DIB, Healthcare & Financial Services',
-  description: 'AI-powered enterprise software, internal tools, and CRM/case management platforms for US Federal, DIB, healthcare, and financial services teams. Security architecture aligned to FedRAMP, FISMA, and NIST 800-53 from day one. SDVOSB Pending. Live in 30 days.',
-  keywords: 'federal software development, DIB software, FedRAMP software development, FISMA software, NIST 800-53 platforms, custom CRM federal, case management federal, SDVOSB software development, mission support platform, regulated industry software',
+  title: 'AI-Powered Enterprise Software & Application Development',
+  description:
+    'Custom AI-powered software, internal tools, mobile apps for compliance environments. Built for HIPAA, SOC 2, FedRAMP, and FCRA from day one.',
+  keywords:
+    'custom software development for compliance, HIPAA software development, SOC 2 application development, FedRAMP application development, custom CRM development, custom case management software, AI document processing, internal tools development, mobile app development for regulated industries',
   alternates: { canonical: 'https://autom8ionlab.com/solutions/software-development' },
   openGraph: {
-    title: 'Custom Software Development for Federal, DIB, Healthcare & Financial Services | Autom8ion Lab',
-    description: 'AI-powered enterprise platforms, internal tools, and case management built for compliance-driven workflows. FedRAMP, FISMA, NIST 800-53 from day one. SDVOSB Pending — UEI: YY2DR3KSENH7.',
+    title: 'AI-Powered Enterprise Software & Application Development | Autom8ion Lab',
+    description:
+      'Custom AI-powered software, internal tools, mobile apps for compliance environments. Built for HIPAA, SOC 2, FedRAMP, and FCRA from day one.',
     url: 'https://autom8ionlab.com/solutions/software-development',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
-    title: 'Custom Software Development Company | Scalable Engineering | Autom8ion Lab',
-    description: 'Autom8ion Lab builds scalable, secure, and high-performance software. From SaaS apps to enterprise platforms — full-stack development built around your goals.',
+    title: 'AI-Powered Enterprise Software & Application Development | Autom8ion Lab',
+    description:
+      'Custom AI-powered software, internal tools, mobile apps for compliance environments.',
   },
 };
 
-const ldSchema1 = {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Software Development",
-            "provider": {
-              "@type": "ProfessionalService",
-              "name": "Autom8ion Lab",
-              "areaServed": {
-                "@type": "Place",
-                "name": "United States"
-              }
-            },
-            "description": "Leading software development company USA delivering custom engineering services for SaaS applications, enterprise platforms, and full-stack solutions. We build scalable, secure software tailored to your business goals.",
-            "softwareRequirements": "React, Node.js, Python, TypeScript, PostgreSQL, MongoDB",
-            "programmingLanguage": ["JavaScript", "TypeScript", "Python", "Java", "Go"],
-            "serviceOutput": {
-              "@type": "SoftwareApplication",
-              "applicationCategory": ["SaaS Platform", "Enterprise Software", "Web Application", "Mobile Application"]
-            },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Worldwide"
-            },
-            "url": "https://autom8ionlab.com/solutions/software-development",
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Software Development Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Full-Stack Development",
-                    "description": "End-to-end software engineering using React, Node.js, Python, and cloud-native technologies"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "SaaS Application Development",
-                    "description": "Scalable SaaS platforms from MVP to production with ongoing maintenance"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Enterprise Software Solutions",
-                    "description": "Secure, scalable architecture for enterprise-grade applications"
-                  }
-                }
-              ]
-            }
-          };
+const whatWeBuild = [
+  {
+    icon: Layers,
+    title: 'Internal operations platforms',
+    body:
+      'Custom-built platforms for compliance-heavy industries — case management, work order routing, claims processing, intake systems, supplier portals, and the kind of operational tooling SaaS vendors haven\'t templated. Role-based access tied to your IdP, full audit logging mapped to the relevant compliance framework, and the documentation your auditor will read first.',
+  },
+  {
+    icon: Database,
+    title: 'AI-powered document processing for regulated workflows',
+    body:
+      'Document classification, extraction, validation, and routing for high-volume regulated workflows — claims documentation, loan files, HUD-50059 forms, FCRA disclosures, healthcare prior authorization documentation. Designed to stay defensible in audit: confidence scoring, human review gates on adverse outcomes, full audit trail from intake to final disposition.',
+  },
+  {
+    icon: Smartphone,
+    title: 'Custom CRMs and case management systems',
+    body:
+      'Custom CRM builds for organizations whose workflow doesn\'t fit Salesforce or HubSpot — provider directory and credentialing for healthcare, member management for credit unions, case management for state agencies, and prospect/donor management for compliance-conscious nonprofits. Built on stack you can maintain (TypeScript / React / Postgres or .NET / Azure SQL), integrated with your existing systems rather than imposing ours.',
+  },
+  {
+    icon: Smartphone,
+    title: 'iOS and Android mobile applications that pass IT security review',
+    body:
+      "Native (Swift, Kotlin) or React Native apps built to pass corporate IT security review on the first round. Common scopes: field-service apps for construction crews (offline-first), patient-facing apps with HIPAA controls and BAA-aligned data handling, federal-facing apps with Section 508 / WCAG 2.1 AA compliance and VPAT documentation, employee-facing apps with mobile device management hooks. Code-signed, distributed via App Store / Play Store / MDM enterprise channels.",
+  },
+  {
+    icon: Lock,
+    title: 'Customer-facing portals for compliance-heavy industries',
+    body:
+      'Patient portals, resident portals, vendor portals, and citizen-facing application portals where the compliance posture and the user experience both have to land. Identity proofing integrated with Login.gov / ID.me for federal, with EHR-bound IdPs for healthcare. Accessibility (WCAG 2.1 AA), audit logging, and the security review documentation the customer\'s IT team will demand.',
+  },
+  {
+    icon: Code2,
+    title: 'AI agent applications operating inside private networks',
+    body:
+      'AI agents deployed inside your environment — on-premises, GCC High, FedRAMP-authorized, or HIPAA-aligned — with no external data transfer. Local LLMs (Llama, Mistral, custom fine-tunes), private-cloud-hosted commercial models (Anthropic via AWS Bedrock GovCloud, OpenAI via Azure OpenAI Service), or hybrid patterns where the embedding model is local and the reasoning model is private-cloud. Audit logging maps to the relevant compliance framework.',
+  },
+  {
+    icon: WorkflowIcon,
+    title: "API gateways and integration layers for systems where SaaS connectors don't exist",
+    body:
+      'Custom integration layers around legacy systems — mainframe interfaces (DB2, VSAM, IMS), legacy database integration, file-based exchange (SFTP, NDM), proprietary APIs, and the bridge architectures that let new applications talk to systems you can\'t replace yet. Designed with controlled boundaries, encrypted tunnels, and the audit trail that satisfies FedRAMP, NIST 800-53, FISMA, or NYDFS Part 500 requirements.',
+  },
+];
 
-const ldSchema2 = {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autom8ionlab.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://autom8ionlab.com/#solutions" },
-              { "@type": "ListItem", "position": 3, "name": "Software Development", "item": "https://autom8ionlab.com/solutions/software-development" }
-            ]
-          };
+const comparisonRows = [
+  {
+    label: 'Time to deploy',
+    custom: '8–14 weeks for typical scopes; 4–9 months for CMMC-bound builds; 6+ months for FedRAMP-aligned. Driven by your environment, not vendor schedule.',
+    saas: 'Days to deploy. But limited to what the vendor templated and the workflow rules they expose.',
+    enterprise: '12–24+ months. Big-bang rollout against a multi-year roadmap.',
+  },
+  {
+    label: 'Compliance fit',
+    custom: 'Compliance built into architecture. SSP, control narratives, evidence collection produced as we build.',
+    saas: 'Compliance limited to the vendor\'s certifications. BAAs/DPAs available; deeper controls work limited.',
+    enterprise: 'Compliance documentation usually thorough but not always aligned to your actual controls.',
+  },
+  {
+    label: 'Customization ceiling',
+    custom: 'No ceiling. We write the system to match your workflow.',
+    saas: 'Hits the ceiling at config + light customization. Custom code requires premium contracts.',
+    enterprise: 'High ceiling, but customization runs through change requests measured in weeks.',
+  },
+  {
+    label: 'Total cost over 3 years',
+    custom: 'Higher up-front; flat ongoing. You own the code and the IP.',
+    saas: 'Predictable per-seat or per-transaction. Scales with volume; costs compound when you need exceptions.',
+    enterprise: 'Highest. License, services, ongoing maintenance, and change-request fees.',
+  },
+  {
+    label: 'Vendor lock-in',
+    custom: 'None. You own the code and the documentation.',
+    saas: 'Significant. Exporting your data and re-implementing workflow elsewhere is real work.',
+    enterprise: 'Significant. Vendor-specific tech and proprietary formats.',
+  },
+  {
+    label: 'Security review path',
+    custom: 'We produce the SSP, control narratives, and evidence package your security review or assessor will read.',
+    saas: 'You inherit the vendor\'s SOC 2 / HIPAA / FedRAMP attestation. Useful but not custom to your environment.',
+    enterprise: 'Vendor security questionnaires and attestations. Workable for established platforms.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'How do you handle code ownership and IP?',
+    answer:
+      'Client owns all custom code, repositories, and documentation produced. Standard MSA includes work-for-hire language. Open-source dependencies are declared up front with their licenses, and we avoid GPL/AGPL components unless explicitly approved.',
+  },
+  {
+    question: 'Do you support legacy system integration?',
+    answer:
+      'Yes. Legacy database integration (DB2, Oracle, mainframe), legacy file format processing, and bridge architectures are common engagement types. Approach depends on what\'s accessible from outside the legacy system — direct DB access via service account, file-based exchange, wrapper API patterns, or COBOL/CICS shim if that\'s what survives.',
+  },
+  {
+    question: "What's your stack?",
+    answer:
+      'Application: TypeScript, React, Next.js, Node.js, Python (FastAPI/Django for AI workloads). Mobile: React Native or native (Swift, Kotlin) depending on requirements. Data: PostgreSQL, Redis, S3-compatible object storage. Cloud: AWS, Azure, GovCloud equivalents. We adjust to your existing stack rather than impose ours.',
+  },
+  {
+    question: 'How do you handle code review and testing?',
+    answer:
+      'Mandatory code review on every PR. Unit and integration test coverage targets per engagement (typically 70%+ on application logic, 90%+ on critical paths). Security testing (SAST/DAST) where required by the compliance framework. Manual penetration testing via partners on production-bound builds.',
+  },
+  {
+    question: 'Can you operate inside our existing SDLC?',
+    answer:
+      'Yes. We integrate with your Jira / GitHub / Azure DevOps, your code review process, your release cadence, and your security scanning tools. We bring our own opinions but defer to your standards on things that don\'t affect quality.',
+  },
+];
+
+const buyers = [
+  {
+    name: 'Companies whose existing SaaS stack doesn\'t fit',
+    body:
+      "Your industry-specific workflow has edge cases the vendor didn't templates for. The workarounds run on spreadsheets and email. The cost is real — both in productivity and in compliance risk when the workarounds don't survive an audit.",
+  },
+  {
+    name: 'Teams replacing legacy systems',
+    body:
+      "A custom system from 1998–2010 still does the job, but the original developers have left, the documentation has decayed, and the platform stack is end-of-life. You can't rip-and-replace because the workflow knowledge is in the code. We bridge first, modernize incrementally.",
+  },
+  {
+    name: 'Companies pursuing enterprise contracts',
+    body:
+      "An enterprise prospect is asking for SOC 2 attestation, HIPAA BAA terms, or NYDFS Part 500-aligned controls. Your current platform doesn't pass IT security review. You need a system that does — and the documentation to demonstrate it.",
+  },
+  {
+    name: 'Regulated firms with AI use cases',
+    body:
+      "You have a use case for AI — document processing, prior authorization, fraud detection, claims triage — that commercial AI products can't deploy in your environment because of data residency, BAA, or model risk constraints. We build it inside your environment with the controls and documentation in place.",
+  },
+];
 
 export default function Page() {
-const features = [
-    {
-      icon: Layers,
-      title: "Custom Platforms for Regulated Workflows",
-      description: "Federal teams run on forms, approvals, records, and deadlines — generic software slows you down. We build custom internal tools, CRM and case management platforms, role-based access controls, and FedRAMP-, FISMA-, and NIST 800-53-aligned workflows. Security architecture is defined on day one — identity, encryption, logging, segmentation, and system design planned before features are built. We don't force federal workflows into a generic CRM. We build the platform around your mission and compliance requirements."
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Software Engineering for Federal Operations",
-      description: "Federal operations teams don't need another dashboard — you need systems that control work, enforce policy, support mission execution, and remove bottlenecks. We build internal platforms that become the operating layer for agency workflows: workflow portals, team-specific tools, CRM systems, and case management environments that centralize records, automate handoffs, and create clean audit trails. Unified operational data, custom workflow engines, structured case and record management, and legacy modernization with modern API wrappers."
-    },
-    {
-      icon: Zap,
-      title: "Scalable Cloud-Native Builds + AI Integration",
-      description: "We build scalable cloud-native software designed for the modern era — directly for AWS, Azure, or GCP. Serverless architectures, microservices, containerization, 99.9% uptime through built-in redundancy. Security by design with FedRAMP, FISMA, and NIST 800-53 controls integrated from day one. We integrate custom LLM systems directly into your codebase so your software can think, categorize data, and interact in natural language — and our API integrations sync with CRM, ERP, and existing platforms so your build becomes the hub of your digital ecosystem, not another silo."
-    }
-  ];
-
-  const benefits = [
-    "Custom software solutions tailored to your unique business logic, operational requirements, and industry-specific challenges with flexible architecture that adapts to changing business needs and growth objectives",
-    "Modern technology stack utilizing the latest frameworks, programming languages, and development tools including React, Node.js, Python, and cloud-native technologies for optimal performance and maintainability",
-    "Scalable architecture designed for future growth with microservices design patterns, cloud deployment capabilities, and modular components that enable seamless expansion and feature enhancement as business requirements evolve",
-    "Enterprise-grade security protocols and compliance frameworks including data encryption, access controls, audit logging, and regulatory compliance measures that protect sensitive business information and ensure industry standard adherence",
-    "Agile development methodology with rapid iteration cycles, continuous integration and deployment practices, and regular stakeholder feedback incorporation that ensures timely delivery and alignment with business objectives",
-    "Comprehensive documentation, user training, and ongoing technical support with maintenance services, performance monitoring, and feature enhancement capabilities that ensure long-term software reliability and effectiveness",
-    "Advanced integration capabilities that seamlessly connect with existing business systems, third-party APIs, and legacy applications without disrupting current operations or requiring major infrastructure changes",
-    "Performance optimization and monitoring systems that ensure optimal software performance, identify bottlenecks, and provide real-time insights into system health and user experience metrics",
-    "Cross-platform compatibility and responsive design that ensures consistent functionality across desktop, mobile, and tablet devices while maintaining optimal user experience and accessibility standards"
-  ];
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldSchema1) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldSchema2) }} />
+      <BreadcrumbSchema
+        trail={[
+          { name: 'Home', href: '/' },
+          { name: 'Solutions', href: '/#services' },
+          { name: 'AI-Powered Enterprise Software & Application Development', href: '/solutions/software-development' },
+        ]}
+      />
+      <ServiceSchema
+        name="AI-Powered Enterprise Software & Application Development"
+        serviceType="Custom software development, AI integration, mobile applications, integration layers"
+        url="https://autom8ionlab.com/solutions/software-development"
+        industry="All"
+      />
+      <FAQPageSchema faqs={faqs} />
 
-      {/* Hero Section */}
-            <section className="relative min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 overflow-hidden">
-              {/* Background Effects */}
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
+      <section className="relative min-h-[55vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950 overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+          <nav className="text-sm text-slate-400 mb-6">
+            <Link href="/" className="hover:text-cyan-400">
+              Home
+            </Link>
+            <span className="mx-2">/</span>
+            <span className="text-slate-300">Solutions</span>
+            <span className="mx-2">/</span>
+            <span className="text-slate-300">AI-Powered Software &amp; Apps</span>
+          </nav>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            AI-Powered Enterprise Software &amp; Application Development
+          </h1>
+          <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
+            Custom AI-powered software, internal tools, mobile apps, and customer-facing applications
+            for compliance environments. Built for HIPAA, SOC 2, FedRAMP, NIST 800-171, and FCRA from
+            day one.
+          </p>
+        </div>
+      </section>
+
+      {/* DEFINITION BLOCK */}
+      <section className="py-16 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="text-lg text-slate-300 leading-relaxed mb-6">
+            Autom8ion Lab builds custom-built platforms, internal tools, mobile apps, and customer-facing
+            applications — with AI capabilities integrated where they create real leverage. Full-stack
+            development with security architecture engineered from day one. Software builders who design
+            for HIPAA, SOC 2, CMMC, NIST 800-171, and FCRA from the first whiteboard sketch — not a body
+            shop, not a generic dev agency.
+          </p>
+          <p className="text-lg text-slate-300 leading-relaxed">
+            Engagements span the six industries we work in: construction, healthcare, finance, real
+            estate, US government, and the Defense Industrial Base. The technical stack varies (TypeScript
+            / React / Postgres for most web work; Python / FastAPI for AI-heavy workloads; Swift / Kotlin
+            or React Native for mobile); the discipline doesn\'t — security architecture decided on day
+            one, audit-ready documentation produced as we build, and the deployment target chosen to
+            match your compliance posture.
+          </p>
+        </div>
+      </section>
+
+      {/* WHO THIS IS FOR */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {buyers.map((b) => (
+              <div key={b.name} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
+                <h3 className="text-white font-semibold mb-3">{b.name}</h3>
+                <p className="text-slate-300 text-sm leading-relaxed">{b.body}</p>
               </div>
-      
-      
-      
-              {/* Hero Content */}
-              <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
-                <div className="max-w-6xl mx-auto text-center">
-                  <div className="mb-8 flex justify-center">
-                    <div className="flex items-center space-x-2 bg-blue-900/30 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-500/20">
-                      <Code className="w-5 h-5 text-blue-400" />
-                      <span className="text-blue-400 font-medium">Software Development Company USA</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT WE BUILD */}
+      <section className="py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we actually build</h2>
+          <div className="space-y-6">
+            {whatWeBuild.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
-                  </div>
-      
-                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    AI-Powered Enterprise Software & Application Development
-                    <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400">Solutions Built for Scale</span>
-                  </h1>
-      
-                  <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                    AI-powered enterprise software, internal tools, and CRM/case management platforms built for US Federal, DIB, healthcare, and financial services teams. Security architecture aligned to FedRAMP, FISMA, and NIST 800-53 from day one. SDVOSB Pending — UEI: YY2DR3KSENH7, CAGE: 9YCS7.
-                  </p>
-      
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <Link href="/get-in-touch" className="group bg-gradient-to-r from-blue-600 to-sky-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-sky-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center space-x-2">
-                      <span>Start Your Software Project</span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
-      
-            {/* Enterprise-Grade Software Section */}
-            <section className="py-20 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                    Enterprise-Grade Software Tailored to Your Business
-                  </h2>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Federal teams are stuck with software that almost works. You rely on off-the-shelf platforms that solve part of the problem while creating new security, integration, and compliance gaps. You duct-tape tools that don't talk, then wonder why mission workflows, approvals, and records management keep breaking. The traditional agency model is equally broken — months of discovery with account managers who never touch the code, then a bloated product that still doesn't fit your process.
-                  </p>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    At Autom8ion Lab, we build AI-powered enterprise software and applications for construction, healthcare, finance, real estate, US federal/state/local government, and the Defense Industrial Base — including custom platforms, internal tools, mobile apps, and CRM or case management systems built for compliance-driven workflows. Our founder-led model gives you direct access to the engineers designing your system. Security architecture is defined on day one with HIPAA, SOC 2, FedRAMP, FISMA, NIST 800-53, NIST 800-171, and FCRA controls in mind, not patched in later. Veteran-owned, SDVOSB pending. UEI: YY2DR3KSENH7. CAGE: 9YCS7.
-                  </p>
-                  <p className="text-lg text-slate-300 leading-relaxed">
-                    Federal operations are unique. Regulated commercial operations are too. Whether you're modernizing a federal workflow, supporting a DIB environment, replacing brittle internal systems in healthcare or finance, or building field apps for construction crews, we have the engineering talent and direct approach to get you to the finish line. Full IP ownership — you own the code. Most engagements ship in 8&ndash;14 weeks; CMMC-bound builds run 4&ndash;9 months; FedRAMP-aligned builds run 6+ months. Senior engineers, not account managers, in every stage.
-                  </p>
-                </div>
-              </div>
-            </section>
-      
-            {/* Problem/Solution Video Section - Commented out until videos are ready */}
-            {/*
-            <section className="py-16 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    See How We Solve Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">Software Challenges</span>
-                  </h2>
-                  <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-                    Watch our explainer video to understand how custom software development creates solutions that perfectly fit your business needs.
-                  </p>
-                </div>
-                <div className="max-w-5xl mx-auto">
-                  <div className="relative bg-slate-800/50 p-4 rounded-2xl border border-slate-700/50">
-                    <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
-                      <iframe
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?rel=0&modestbranding=1"
-                        title="Software Development - Problem/Solution Explainer Video"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="absolute top-0 left-0 w-full h-full rounded-xl"
-                      ></iframe>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                      <p className="text-slate-300 leading-relaxed">{item.body}</p>
                     </div>
                   </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* COMPLIANCE CONSIDERATIONS */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Compliance considerations</h2>
+          <p className="text-slate-300 leading-relaxed mb-8">
+            Security architecture decisions made at the start of the project — data classification,
+            encryption strategy, access control model, audit logging requirements, environment
+            segmentation. Compliance documentation produced in parallel with code: SSP drafts, control
+            narratives, evidence collection. The artifacts your auditor or AO will request, written
+            against your real environment rather than templated.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              'Data classification and PHI/CUI/PII boundary definition',
+              'Encryption at rest (KMS-backed) and in transit (TLS 1.3)',
+              'Access control model (RBAC, ABAC, least privilege)',
+              'Audit logging mapped to NIST 800-53 AU / HIPAA Security Rule / SOC 2 CC controls',
+              'Environment segmentation (dev / staging / production with appropriate isolation)',
+              'Vulnerability management and patching cadence',
+              'Backup, recovery, and continuity planning',
+              'Third-party dependency review and software supply chain controls',
+            ].map((item) => (
+              <div
+                key={item}
+                className="bg-slate-900/40 border border-slate-800 rounded-lg p-4 flex items-start space-x-2"
+              >
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span className="text-slate-300 text-sm">{item}</span>
               </div>
-            </section>
-            */}
-      
-            {/* Full-Stack Engineering Services Section */}
-            <section className="py-24 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Full-Stack Software <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400">Engineering Services</span>
-                  </h2>
-                  <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Comprehensive full-stack software development expertise covering frontend, backend, databases, and modern frameworks. Our engineering team brings decades of combined experience building production-grade systems.
-                  </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COMPARISON TABLE */}
+      <section className="py-20 bg-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Custom build vs. SaaS vs. enterprise platform
+          </h2>
+          <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">
+            The three paths most teams evaluate. Each is the right answer for someone — but they solve
+            different problems.
+          </p>
+
+          <div className="hidden md:block overflow-hidden rounded-xl border border-slate-800">
+            <table className="w-full text-left">
+              <thead className="bg-slate-900/60">
+                <tr>
+                  <th className="px-5 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider w-1/4">
+                    Dimension
+                  </th>
+                  <th className="px-5 py-4 text-sm font-semibold text-emerald-400 uppercase tracking-wider w-1/4">
+                    Autom8ion Lab (custom)
+                  </th>
+                  <th className="px-5 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wider w-1/4">
+                    SaaS platform
+                  </th>
+                  <th className="px-5 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wider w-1/4">
+                    Enterprise platform
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800">
+                {comparisonRows.map((row) => (
+                  <tr key={row.label} className="align-top">
+                    <td className="px-5 py-4 text-white font-semibold text-sm">{row.label}</td>
+                    <td className="px-5 py-4 text-slate-200 text-sm leading-relaxed">{row.custom}</td>
+                    <td className="px-5 py-4 text-slate-400 text-sm leading-relaxed">{row.saas}</td>
+                    <td className="px-5 py-4 text-slate-400 text-sm leading-relaxed">{row.enterprise}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="md:hidden grid gap-4">
+            {comparisonRows.map((row) => (
+              <div key={row.label} className="bg-slate-900/40 border border-slate-800 rounded-lg p-5">
+                <div className="font-semibold text-white mb-3">{row.label}</div>
+                <div className="text-emerald-400 text-xs uppercase tracking-wider mb-1">
+                  Autom8ion Lab (custom)
                 </div>
-      
-                <div className="grid md:grid-cols-3 gap-8">
-                  {features.map((feature, index) => {
-                    const IconComponent = feature.icon;
-                    return (
-                      <div
-                        key={index}
-                        className="group bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 hover:transform hover:scale-105"
-                      >
-                        <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-400 rounded-xl mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                          <IconComponent className="w-8 h-8 text-white" />
-                        </div>
-                        <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-sky-400 transition-colors">
-                          {feature.title}
-                        </h3>
-                        <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                          {feature.description}
-                        </p>
-                      </div>
-                    );
-                  })}
+                <p className="text-slate-200 text-sm mb-3">{row.custom}</p>
+                <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">SaaS platform</div>
+                <p className="text-slate-400 text-sm mb-3">{row.saas}</p>
+                <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">
+                  Enterprise platform
                 </div>
-      
-                <div className="mt-16 bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                  <h3 className="text-2xl font-bold text-white mb-4">Modern Technology Stack</h3>
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    Our full-stack software development services leverage industry-leading frameworks and languages including React, Angular, Vue.js for frontend; Node.js, Python, Java, Go for backend; PostgreSQL, MongoDB, Redis for databases; and AWS, Azure, Google Cloud for infrastructure. We follow development best practices including clean architecture, SOLID principles, comprehensive testing, and continuous integration/deployment.
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    {['React', 'Node.js', 'Python', 'TypeScript', 'PostgreSQL', 'MongoDB', 'AWS', 'Docker', 'Kubernetes'].map((tech, i) => (
-                      <span key={i} className="px-4 py-2 bg-blue-900/30 text-blue-300 rounded-lg text-sm font-medium border border-blue-700/30">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                <p className="text-slate-400 text-sm">{row.enterprise}</p>
               </div>
-            </section>
-      
-            {/* SaaS Application Development Section */}
-            <section className="py-20 bg-slate-900/50 relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                    SaaS Application Development and Deployment
-                  </h2>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Our SaaS application development expertise spans the entire product lifecycle — from initial MVP creation to production-ready deployment and ongoing maintenance. We architect multi-tenant systems that scale efficiently, optimize infrastructure costs, and deliver exceptional user experiences across thousands of concurrent users.
-                  </p>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Whether you're launching a new SaaS product or modernizing an existing platform, we handle subscription management, payment processing, user authentication, data isolation, and automated scaling. Our SaaS solutions include robust admin panels, comprehensive analytics dashboards, and API-first architecture that enables seamless third-party integrations.
-                  </p>
-                  <p className="text-lg text-slate-300 leading-relaxed">
-                    We maintain your SaaS platform with proactive monitoring, security updates, performance optimization, and feature enhancements based on user feedback and market demands. Our clients achieve 99.99% uptime SLAs and handle millions of transactions monthly with confidence. Looking to build or enhance a SaaS platform? Partner with <Link href="/solutions/mobile-app-development" className="text-blue-400 hover:text-blue-300 underline">experts who understand mobile-first</Link> and cloud-native architectures.
-                  </p>
-                </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICE-SPECIFIC FAQ */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Software development FAQ</h2>
+          <div className="space-y-5">
+            {faqs.map((q) => (
+              <div key={q.question} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
+                <p className="text-slate-300 leading-relaxed">{q.answer}</p>
               </div>
-            </section>
-      
-            {/* How It Works Section */}
-            <section className="py-24 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Our Software Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400">Process</span>
-                  </h2>
-                  <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    From requirements analysis to deployment and maintenance, our systematic approach ensures every software solution delivers exceptional performance and business value.
-                  </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INTERNAL LINKING — to industry hubs */}
+      <section className="py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Industry-specific software work
+          </h2>
+          <p className="text-slate-300 leading-relaxed mb-8">
+            The right architecture, integrations, and compliance posture depend on your industry. Each
+            industry hub covers the named systems we work with, the frameworks we engineer to, and the
+            representative engagements that shape our approach.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { slug: 'defense', name: 'Defense Industrial Base', desc: 'CMMC 2.0, NIST 800-171, GCC High' },
+              { slug: 'healthcare', name: 'Healthcare & Life Sciences', desc: 'HIPAA, EHR integration, FDA Part 11' },
+              { slug: 'finance', name: 'Finance', desc: 'SOC 2, PCI-DSS, core banking integration' },
+              { slug: 'government', name: 'US Government', desc: 'FedRAMP, FISMA, Section 508' },
+              { slug: 'real-estate-property', name: 'Real Estate & Property', desc: 'Yardi, RealPage, FCRA, HUD' },
+              { slug: 'construction', name: 'Construction', desc: 'Procore, Sage, HUD, OSHA' },
+            ].map((ind) => (
+              <Link
+                key={ind.slug}
+                href={`/industries/${ind.slug}`}
+                className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
+              >
+                <div>
+                  <div className="text-white font-semibold group-hover:text-cyan-400">{ind.name}</div>
+                  <div className="text-slate-400 text-sm">{ind.desc}</div>
                 </div>
-      
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-400 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-white font-bold text-lg">1</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Requirements & Architecture Design</h3>
-                    <p className="text-slate-400 text-sm">We analyze your business requirements, technical constraints, and scalability needs to develop comprehensive software architecture designs and development strategies tailored to your specific objectives.</p>
-                  </div>
-      
-                  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                    <div className="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-400 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-white font-bold text-lg">2</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Agile Development & Testing</h3>
-                    <p className="text-slate-400 text-sm">Our development team uses agile methodologies and continuous integration practices to build robust software solutions with comprehensive testing, code reviews, and quality assurance protocols.</p>
-                  </div>
-      
-                  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-400 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-white font-bold text-lg">3</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Integration & Security</h3>
-                    <p className="text-slate-400 text-sm">Seamless integration with existing systems and implementation of enterprise-grade security measures, including data encryption, access controls, and compliance protocols.</p>
-                  </div>
-      
-                  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                    <div className="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-400 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-white font-bold text-lg">4</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Deployment & Maintenance</h3>
-                    <p className="text-slate-400 text-sm">Production deployment with continuous monitoring, performance optimization, and ongoing maintenance to ensure optimal software performance and reliability.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-      
-            {/* Integration-Ready Systems Section */}
-            <section className="py-20 bg-slate-900/50 relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                    Integration-Ready Systems for Maximum Efficiency
-                  </h2>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Modern businesses operate on interconnected systems. Our custom software engineering services include seamless integration capabilities that connect your new software with CRMs, ERPs, payment processors, marketing automation platforms, and legacy systems. We build <Link href="/solutions/api-integrations" className="text-blue-400 hover:text-blue-300 underline">robust API bridges</Link> that enable real-time data synchronization and automated workflows across your entire technology ecosystem.
-                  </p>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Whether you need to integrate Salesforce, SAP, Oracle, Microsoft Dynamics, or custom-built internal tools, we architect integration layers that maintain data integrity, handle error recovery gracefully, and provide comprehensive audit trails. Our integration solutions reduce manual data entry by 90% and eliminate costly data silos that slow decision-making.
-                  </p>
-                  <p className="text-lg text-slate-300 leading-relaxed">
-                    We also ensure your software deploys reliably on <Link href="/solutions/cloud-systems" className="text-blue-400 hover:text-blue-300 underline">modern cloud infrastructure</Link> with automated scaling, monitoring, and disaster recovery. Whether AWS, Azure, Google Cloud, or hybrid environments, we optimize for performance and cost efficiency while maintaining enterprise-grade security and compliance standards.
-                  </p>
-                </div>
-              </div>
-            </section>
-      
-            {/* Use Cases Section */}
-            <section className="py-24 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Real-World <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400">Applications</span>
-                  </h2>
-                  <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Discover how businesses across industries leverage our custom software development platform to solve complex challenges and drive digital transformation.
-                  </p>
-                </div>
-      
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Enterprise Resource Planning</h3>
-                    <p className="text-slate-300 leading-relaxed">
-                      Develop comprehensive ERP systems that integrate financial management, inventory control, human resources, and operational workflows into unified platforms. Custom ERP solutions provide real-time visibility into business operations, automated reporting capabilities, and scalable architecture that grows with organizational needs while maintaining data integrity and security compliance.
-                    </p>
-                  </div>
-      
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Customer Relationship Management</h3>
-                    <p className="text-slate-300 leading-relaxed">
-                      Create sophisticated CRM platforms that manage customer interactions, sales pipelines, and marketing campaigns with advanced analytics and automation capabilities. Custom CRM solutions include intelligent lead scoring, automated workflow triggers, and comprehensive reporting that provides actionable insights for sales optimization and customer retention strategies.
-                    </p>
-                  </div>
-      
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Data Analytics & Business Intelligence</h3>
-                    <p className="text-slate-300 leading-relaxed">
-                      Build powerful analytics platforms that transform raw business data into actionable insights through advanced visualization, predictive modeling, and real-time reporting capabilities. Custom analytics solutions integrate multiple data sources, provide interactive dashboards, and enable data-driven decision making across all organizational levels and business functions.
-                    </p>
-                  </div>
-      
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-xl font-semibold text-white mb-4">Industry-Specific Solutions</h3>
-                    <p className="text-slate-300 leading-relaxed">
-                      Develop specialized software for healthcare, finance, real estate, construction, government, and the Defense Industrial Base — industries with unique regulatory requirements and operational challenges. Industry-specific work includes HIPAA technical safeguards (healthcare), FCRA-compliant tenant systems (real estate), Procore/Sage integrations (construction), CMMC-aligned development (DIB), and Section 508 accessibility (government).
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-      
-            {/* Benefits Section */}
-            <section className="py-24 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Transform Your Business with
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400"> Custom Software</span>
-                  </h2>
-                  <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                    Our custom software solutions are designed to solve your unique business challenges while providing the flexibility and scalability needed for future growth.
-                  </p>
-                  <Link href="/get-in-touch" className="bg-gradient-to-r from-blue-600 to-sky-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-sky-600 transition-all duration-300 transform hover:scale-105">
-                    Discuss Your Project
-                  </Link>
-                </div>
-      
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {benefits.slice(0, 8).map((benefit, index) => (
-                    <div key={index} className="flex items-start space-x-4 bg-slate-800/30 p-4 rounded-lg border border-slate-700/50">
-                      <CheckCircle className="w-6 h-6 text-sky-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-      
-            {/* Why Choose Us Section */}
-            <section className="py-24 bg-slate-900/50 relative">
-              <div className="max-w-7xl mx-auto px-6">
-                <div className="max-w-4xl mx-auto text-center">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                    Why Businesses Choose Autom8ion Lab as Their Development Partner
-                  </h2>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    As a trusted software development company USA, we differentiate ourselves through transparent project management, collaborative processes, and unwavering reliability. Unlike agencies that treat you as a ticket number, we assign dedicated engineering teams who learn your business deeply and become true partners in your success.
-                  </p>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                    Our collaborative approach means you're involved at every milestone — from architecture design to sprint reviews to deployment planning. We communicate proactively, deliver on commitments, and solve problems before they become blockers. Clients consistently rate our communication and project management as industry-leading, with 95% stating they'd recommend us to peers.
-                  </p>
-                  <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                    We measure success by your business outcomes, not just code delivered. Our clients typically achieve 300% ROI within the first year through increased efficiency, reduced operational costs, and new revenue opportunities enabled by custom software. When you need a reliable software development company USA that delivers measurable results, choose Autom8ion Lab.
-                  </p>
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      Let's Build Your Software — From Idea to Launch
-                    </h3>
-                    <p className="text-slate-300 mb-6">
-                      Ready to transform your business with custom software that scales? Schedule a free consultation with our engineering team. We'll discuss your requirements, provide architectural recommendations, and outline a clear path from concept to production deployment.
-                    </p>
-                    <Link href="/get-in-touch" className="inline-block bg-gradient-to-r from-blue-600 to-sky-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-sky-600 transition-all duration-300 transform hover:scale-105">
-                      Start Your Project Today
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
-      
-            <CTA />
-            <RelatedSolutions currentSlug="software-development" />
+                <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-slate-950 border-t border-slate-900">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Building something custom that has to pass review?
+          </h2>
+          <p className="text-slate-300 leading-relaxed mb-8">
+            30-minute discovery call. Tell us your environment, your existing stack, and the framework
+            you operate under. We'll map the engagement and tell you whether we're a fit.
+          </p>
+          <Link
+            href="/schedule-consultation"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-colors"
+          >
+            <span>Schedule a discovery call</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+          <p className="mt-6 text-sm text-slate-400">
+            Full federal registrations:{' '}
+            <Link href="/capability-statement" className="text-cyan-400 hover:underline">
+              capability statement for federal registrations
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      <CTA />
     </>
   );
 }
