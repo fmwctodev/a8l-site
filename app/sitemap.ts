@@ -41,12 +41,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     { url: `${BASE}/`, lastModified: today, changeFrequency: 'weekly', priority: 1.0 },
 
+    // Hub index pages (built per Implementation Plan §8.1 hub-and-spoke).
+    {
+      url: `${BASE}/industries`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE}/solutions`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+
     // Industries — promoted above services per LOCKED v3 IA.
     ...INDUSTRIES.map((slug) => ({
       url: `${BASE}/industries/${slug}`,
       lastModified: today,
       changeFrequency: 'monthly' as const,
-      priority: 0.95,
+      priority: 0.9,
     })),
 
     // Capability statement is high-priority federal procurement asset.

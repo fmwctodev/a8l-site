@@ -16,6 +16,7 @@ const industries = [
   { title: 'Real Estate & Property', path: '/industries/real-estate-property' },
   { title: 'US Government', path: '/industries/government' },
   { title: 'Defense Industrial Base', path: '/industries/defense' },
+  { title: 'All Industries →', path: '/industries' },
 ];
 
 const solutions = [
@@ -26,7 +27,7 @@ const solutions = [
   { title: 'Custom LLM Systems', path: '/solutions/custom-llm-systems' },
   { title: 'API Integrations', path: '/solutions/api-integrations' },
   { title: 'Cloud Infrastructure', path: '/solutions/cloud-systems' },
-  { title: 'All Capabilities', path: '/capabilities' },
+  { title: 'All Solutions →', path: '/solutions' },
 ];
 
 const resources = [

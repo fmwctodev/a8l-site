@@ -21,20 +21,21 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto text-center">
           <Reveal as="div" delay={0}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Custom AI, Automation &amp; Software for{' '}
+              Custom AI, Automation &amp;{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Compliance-Driven Industries
+                Compliance Engineering
               </span>
-              .
+              <span className="block text-2xl md:text-4xl lg:text-5xl mt-3 text-slate-200 font-semibold">
+                — Built for Audit From Day One
+              </span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.12}>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              A veteran-owned engineering team building custom AI agents, workflow automation, and
-              applications for construction, healthcare, finance, real estate, and US government clients.
-              Security architecture and compliance documentation engineered from day one — not
-              retrofitted.
+              We build custom AI agents, workflow automation, and LLM systems for mid-market
+              companies in regulated industries — engineered to commercial speed, documented to
+              federal standards.
             </p>
           </Reveal>
 

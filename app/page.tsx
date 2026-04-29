@@ -93,6 +93,25 @@ export default function HomePage() {
         called out in LOCKED v3 §"What's Locked vs. What Changed Since v2".
       */}
       <Hero />
+
+      {/* Homepage definition block — first 200 words of body. AI engines lift
+          this verbatim as a self-contained answer to "what does Autom8ion Lab
+          do" without needing to parse the rest of the page. Per Implementation
+          Plan §6.1. */}
+      <section className="py-12 bg-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <section className="definition-block">
+            <p className="lead">
+              <strong>Autom8ion Lab</strong> is a veteran-owned engineering firm that builds custom
+              AI agents, workflow automation, and LLM systems for mid-market companies in regulated
+              industries — construction, healthcare, finance, real estate, US government, and the
+              Defense Industrial Base. Most engagements launch in 30 days. Every system ships with
+              the security architecture and compliance documentation an audit actually expects.
+            </p>
+          </section>
+        </div>
+      </section>
+
       <IndustriesGrid />
       <ProblemFraming />
       <ThreeServices />
