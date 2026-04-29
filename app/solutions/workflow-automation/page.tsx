@@ -16,6 +16,7 @@ import {
   FAQPageSchema,
 } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
+import RelatedSolutions from '@/app/_components/RelatedSolutions';
 import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
@@ -539,6 +540,7 @@ export default function Page() {
       </section>
 
       <CTA />
+      <RelatedSolutions currentSlug="workflow-automation" />
     </>
   );
 }
