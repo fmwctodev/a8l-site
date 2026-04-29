@@ -204,6 +204,66 @@ const data: IndustryPageData = {
   scenarioCta: "Facing the November 2026 deadline? Let's scope a CMMC remediation timeline",
   heroAccent: 'from-slate-950 via-red-950/30 to-slate-950',
   iconAccent: 'text-red-400',
+
+  comparison: {
+    heading: 'CMMC engineering vs RPO/C3PAO consultancy vs MSSP',
+    headers: [
+      'Dimension',
+      'Autom8ion Lab (engineering)',
+      'CMMC RPO / C3PAO consultancy',
+      'MSSP / managed security services',
+    ],
+    rows: [
+      {
+        label: 'What we deliver',
+        values: [
+          'Implemented technical controls + System Security Plan + POA&M + evidence package, engineered into your stack',
+          "Gap assessment + recommendations + assessment readiness review. Implementation is your team's problem.",
+          'Operational monitoring + alerting after the controls already exist. Useful sustainment; not implementation.',
+        ],
+      },
+      {
+        label: 'Role in your CMMC path',
+        values: [
+          'We engineer the controls and the documentation. We are NOT a CMMC RPO or C3PAO. We work alongside your assessor when independent assessment is required.',
+          'Pre-assessment readiness consulting. Required if you need a registered RPO or C3PAO partner.',
+          "Post-implementation operational coverage. Required if you don't have an in-house SOC.",
+        ],
+      },
+      {
+        label: 'Engagement shape',
+        values: [
+          '30-day audit → 4–9 month remediation. Senior engineers stay through assessment prep.',
+          'Multi-week assessment + recommendations report + advisory retainer through audit',
+          'Monthly retainer; SOC + SIEM + EDR coverage',
+        ],
+      },
+      {
+        label: 'NIST 800-171 control implementation',
+        values: [
+          'All 110 controls implemented in your environment, mapped to evidence, documented in SSP form',
+          'Identifies gaps; documents what good looks like; hands implementation back to your team',
+          'Provides the operational pieces (monitoring, IR, log retention) — not the policy + access-control + system-config controls',
+        ],
+      },
+      {
+        label: 'Federal credentials',
+        values: [
+          'Veteran-owned, SDVOSB pending. UEI YY2DR3KSENH7, CAGE 9YCS7. Engineers cleared for unclassified CUI work.',
+          'Registered with The Cyber AB. RPO/C3PAO accreditation.',
+          'Varies by provider. Many are commercial-only.',
+        ],
+      },
+      {
+        label: 'Best fit',
+        values: [
+          'DoD primes and subs that need controls actually implemented and an SSP that survives a C3PAO assessment',
+          'Firms that have already implemented controls and need an assessor or pre-assessment review',
+          'Firms with controls in place that need ongoing SOC/IR coverage',
+        ],
+      },
+    ],
+  },
 };
 
 export default function Page() {

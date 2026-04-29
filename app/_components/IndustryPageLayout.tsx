@@ -1,7 +1,15 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import CTA from '@/app/_components/CTA';
-import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton } from './ui';
+import {
+  Reveal,
+  Stagger,
+  StaggerItem,
+  PremiumCard,
+  MagneticButton,
+  ComparisonTable,
+  type ComparisonRow,
+} from './ui';
 
 export type IndustryFaq = { question: string; answer: string };
 
@@ -41,6 +49,18 @@ export type IndustryPageData = {
   whatWeBuildDetailed?: { name: string; body: string }[];
   /** Named integrations specific to this vertical (Procore, Epic, Yardi, Fiserv, etc.). */
   namedIntegrations?: { category: string; items: string[] }[];
+
+  /**
+   * Optional ComparisonTable. Per Implementation Plan §6.3 — every key page
+   * should expose a "X vs Y vs Z" structure for AI engines to lift
+   * verbatim. Headers tuple: [dimensionLabel, primaryColumn, alt1, alt2].
+   * Use the existing ComparisonRow type from `app/_components/ui/ComparisonTable.tsx`.
+   */
+  comparison?: {
+    heading?: string;
+    headers: [string, string, string, string];
+    rows: ComparisonRow[];
+  };
 };
 
 export default function IndustryPageLayout({ data }: { data: IndustryPageData }) {
@@ -260,6 +280,34 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
                 </h3>
                 <p className="relative text-slate-300 leading-relaxed">{data.disclosure.body}</p>
               </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Comparison table — "Autom8ion Lab vs alternative-A vs alternative-B"
+          per Implementation Plan §6.3. Each industry defines its own
+          dimensions; the existing ComparisonTable primitive renders row-by-row
+          with prefers-reduced-motion respect. */}
+      {data.comparison && (
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-6">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                {data.comparison.heading ?? `How we compare for ${data.breadcrumbName}`}
+              </h2>
+              <p className="text-slate-400 max-w-3xl mb-10 leading-relaxed">
+                Specific to how {data.breadcrumbName.toLowerCase()} buyers actually evaluate. We
+                don&apos;t hide the trade-offs — we tell you when one of the alternatives is the
+                right call.
+              </p>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <ComparisonTable
+                headers={data.comparison.headers}
+                rows={data.comparison.rows}
+                primaryColumnClass="text-emerald-400"
+              />
             </Reveal>
           </div>
         </section>

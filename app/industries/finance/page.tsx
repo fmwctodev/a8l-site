@@ -174,6 +174,66 @@ const data: IndustryPageData = {
   scenarioCta: 'Building inside a regulated financial environment? Schedule a discovery call',
   heroAccent: 'from-slate-950 via-blue-950/30 to-slate-950',
   iconAccent: 'text-blue-400',
+
+  comparison: {
+    heading: 'Custom AI for finance vs core-banking vendor add-ons vs Excel pipelines',
+    headers: [
+      'Dimension',
+      'Autom8ion Lab (custom)',
+      'Fiserv / Jack Henry / FIS add-ons',
+      'In-house Excel + analyst team',
+    ],
+    rows: [
+      {
+        label: 'Data residency',
+        values: [
+          'Inside your perimeter — your VPC, your encryption, your KMS. SOC 2 controls applied to every system that touches the data.',
+          'Vendor-managed cloud. Their controls, their key management, their audit log format.',
+          "Excel files passed by email. SOC 2 auditor's worst nightmare.",
+        ],
+      },
+      {
+        label: 'Integration depth',
+        values: [
+          'Direct API + secure middleware into Fiserv DNA, Jack Henry SilverLake, FIS Profile, NetSuite, QuickBooks, banking-cores via FedLine + ACH file specs',
+          "Limited to what the core vendor's marketplace partner exposes — usually 1–2 generations behind",
+          'Manual export → manual import. Reconciliation breaks every quarter.',
+        ],
+      },
+      {
+        label: 'Auditability',
+        values: [
+          'Per-row, per-decision, per-user audit trail. SOX-aligned. Survives a federal regulator review.',
+          "Vendor-controlled log. You can export it; you can't extend it.",
+          'Excel change history if you remembered to enable it.',
+        ],
+      },
+      {
+        label: 'Workflow specificity',
+        values: [
+          'Built for your portfolio shape, your KYC profile, your reporting cadence — PE data normalization, fund-of-funds rollup, FCRA-aligned underwriting flows',
+          'Templated to the average mid-market bank — your edge cases break it',
+          'Whatever the analyst remembers to do this week',
+        ],
+      },
+      {
+        label: 'Time to deploy',
+        values: [
+          '30–90 days for the first workflow; 6 months for an integrated portfolio-analytics + reporting + reconciliation suite',
+          'Hours to install. Quarters to make it match your real reconciliation logic.',
+          "Indefinite. There's always a new edge case.",
+        ],
+      },
+      {
+        label: 'Best fit',
+        values: [
+          'Community and regional banks, credit unions, fintechs, PE shops, insurance carriers with SOC 2 in scope and analyst headcount that should be doing higher-value work',
+          'Standardized retail-banking workflows that the core vendor has already templated',
+          "Firms early enough that the analyst team's edge cases haven't compounded into a real liability",
+        ],
+      },
+    ],
+  },
 };
 
 export default function Page() {

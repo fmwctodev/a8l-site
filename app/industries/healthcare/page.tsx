@@ -173,6 +173,66 @@ const data: IndustryPageData = {
   scenarioCta: 'Building something HIPAA-compliant? Schedule a discovery call',
   heroAccent: 'from-slate-950 via-emerald-950/30 to-slate-950',
   iconAccent: 'text-emerald-400',
+
+  comparison: {
+    heading: 'Custom HIPAA AI vs template bots vs healthcare SaaS',
+    headers: [
+      'Dimension',
+      'Autom8ion Lab (custom)',
+      'Public LLM wrappers (template bots)',
+      'Healthcare-IT SaaS vendors',
+    ],
+    rows: [
+      {
+        label: 'PHI handling',
+        values: [
+          'Stays inside your perimeter — private cloud, on-prem, or air-gapped LLM. Zero retention. BAA covers every touch point.',
+          'Sent to OpenAI / Anthropic / Google. Data may train future models. BAA is the exception, not the rule.',
+          'BAA covers vendor cloud. Your data lives on their multi-tenant infrastructure with their key management.',
+        ],
+      },
+      {
+        label: 'EHR integration depth',
+        values: [
+          'Epic FHIR + Bridges + Caboodle, Cerner Open Engine + CCL, Athena APIs, eClinicalWorks, NextGen — bidirectional, with the auth and audit your security team will ask for',
+          'None. Output is text the user copies and pastes (which is a HIPAA event).',
+          "Pre-built EHR connectors for what the vendor has prioritized; gaps live where the SaaS roadmap hasn't caught up",
+        ],
+      },
+      {
+        label: 'Auditability',
+        values: [
+          'Per-prompt, per-output, per-PHI-access log retained per your retention policy. Auditor gets the report in seconds.',
+          'Provider-side logs only. You see what you sent, not what model versions saw it.',
+          'Vendor-defined audit log. Useful, but lives in their UI, on their schedule, with their export format.',
+        ],
+      },
+      {
+        label: 'Workflow specificity',
+        values: [
+          'Trained on your SOAP-note style, your payer mix, your prior-auth criteria, your specialty. Replaces copy-paste.',
+          'Generic "summarize this." No knowledge of your forms, specialty, network, or payers.',
+          "Templated to a clinical pattern. Customization within the vendor's roadmap, not yours.",
+        ],
+      },
+      {
+        label: 'Cost shape',
+        values: [
+          'Project + retainer. You own the system; per-call inference cost only.',
+          'Cheap up front. PHI-leak settlement is the cost.',
+          'Per-seat or per-encounter SaaS contract. Margin lives in the vendor.',
+        ],
+      },
+      {
+        label: 'Best fit',
+        values: [
+          'Health systems, ambulatory networks, specialty practices, payers, life-sciences firms with real PHI volume and a security team that reviews architecture',
+          "Pilots, demos, and use cases that don't touch real PHI",
+          'Standard workflows the vendor has already templated for your specialty',
+        ],
+      },
+    ],
+  },
 };
 
 export default function Page() {

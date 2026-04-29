@@ -178,6 +178,66 @@ const data: IndustryPageData = {
   scenarioCta: 'Looking to add Autom8ion Lab to your vendor list or sub team? Schedule a discovery call',
   heroAccent: 'from-slate-950 via-cyan-950/30 to-slate-950',
   iconAccent: 'text-cyan-400',
+
+  comparison: {
+    heading: 'Custom build vs FedRAMP-certified SaaS vs in-house agency dev team',
+    headers: [
+      'Dimension',
+      'Autom8ion Lab (custom)',
+      'FedRAMP-certified SaaS vendors',
+      'In-house agency dev team',
+    ],
+    rows: [
+      {
+        label: 'Compliance posture',
+        values: [
+          'FedRAMP-aligned + FISMA + NIST 800-53 controls engineered from day one; SSP, POA&M, SAR-ready documentation produced as we build',
+          'Vendor inherits the FedRAMP authorization — your ATO leverages theirs (when scope matches)',
+          'Custom-built to your control catalog; engineering capacity to keep up depends on your hiring model',
+        ],
+      },
+      {
+        label: 'Customization ceiling',
+        values: [
+          "No ceiling. We build around your mission workflow, not the vendor's roadmap.",
+          'Hits the ceiling at vendor-config + light customization. Custom code is a separate (large) contract.',
+          'Whatever your team can build between Tier 1 support tickets',
+        ],
+      },
+      {
+        label: 'Procurement model',
+        values: [
+          'Scoped to your contract structure — task orders, IDIQ, BPA, fixed-price commercial, T&M. SDVOSB pending. Veteran-owned.',
+          'GSA Schedule, FedRAMP marketplace, or vendor-direct. Sole-source or category management.',
+          'Internal capacity. No procurement vehicle needed; capacity constraints replace cost constraints.',
+        ],
+      },
+      {
+        label: 'Time to first deployment',
+        values: [
+          '30 days for prototype; 4–9 months for ATO-ready deployment',
+          'Days to install (when in scope); months to integrate to your environment and reach ATO',
+          '12–24 months when the build hits the FAR/DFARS approval gauntlet',
+        ],
+      },
+      {
+        label: 'Long-term cost shape',
+        values: [
+          'Project + maintenance retainer. You own the codebase + the IP.',
+          'Per-seat or per-transaction SaaS through the contract period; renewal pricing follows the vendor',
+          'FTE costs plus the platform tools your team uses. Stable but inelastic.',
+        ],
+      },
+      {
+        label: 'Best fit',
+        values: [
+          "Civilian agencies, state IT, county/municipal IT with mission workflows that don't fit a marketplace SKU",
+          'Standard agency workflows the vendor has already certified',
+          'Mission-critical systems where the agency wants full IP control and has the dev capacity',
+        ],
+      },
+    ],
+  },
 };
 
 export default function Page() {

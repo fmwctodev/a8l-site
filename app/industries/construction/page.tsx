@@ -173,6 +173,58 @@ const data: IndustryPageData = {
   scenarioCta: 'Building inside Procore, Sage, or Foundation? Schedule a discovery call',
   heroAccent: 'from-slate-950 via-orange-950/30 to-slate-950',
   iconAccent: 'text-orange-400',
+
+  comparison: {
+    heading: 'Custom build vs Procore add-ons vs in-house IT',
+    headers: [
+      'Dimension',
+      'Autom8ion Lab (custom)',
+      'Procore / SaaS add-ons',
+      'In-house IT team',
+    ],
+    rows: [
+      {
+        label: 'Integration depth',
+        values: [
+          'Direct API into Procore + Sage/Foundation/Viewpoint + your field apps; we go where the data lives',
+          "Limited to what the marketplace partner exposes — connectors break when Procore's API ships breaking changes",
+          'Whatever your team can build between actual field-IT firefighting',
+        ],
+      },
+      {
+        label: 'HUD / Davis-Bacon / OSHA workflow',
+        values: [
+          'Built into the system — certified payroll, Section 3, lien-waiver state-by-state, OSHA 300A all generate from project actuals',
+          'Bolt-ons or third-party tools that re-key data from your accounting system',
+          "Possible, but it's a 6-month project that competes with help-desk tickets",
+        ],
+      },
+      {
+        label: 'Field-to-office data flow',
+        values: [
+          'Voice notes, photos, and offline-first mobile forms parsed on-device, normalized, and pushed to ERP in real time',
+          "Web forms that field crews don't use; data still arrives on Tuesday for last Friday's pour",
+          'Spreadsheets emailed nightly; office staff re-keys on Monday',
+        ],
+      },
+      {
+        label: 'Time to launch',
+        values: [
+          '30 days for the first workflow; 60–90 days for the full 4–6 hour/day office-staff savings',
+          "Hours to install. Months to make it actually fit your specific contractor's process",
+          'Quarters. Always quarters.',
+        ],
+      },
+      {
+        label: 'Best fit',
+        values: [
+          'Mid-market and specialty contractors ($20M–$500M revenue) running Procore + Sage with real document burden',
+          "Small GCs whose workflow already fits the SaaS template they bought",
+          'Large GCs with a full enterprise IT team and quarterly project capacity',
+        ],
+      },
+    ],
+  },
 };
 
 export default function Page() {

@@ -174,6 +174,66 @@ const data: IndustryPageData = {
   scenarioCta: 'Need FCRA-compliant tenant screening or HUD automation? Schedule a discovery call',
   heroAccent: 'from-slate-950 via-violet-950/30 to-slate-950',
   iconAccent: 'text-violet-400',
+
+  comparison: {
+    heading: 'AI agents for real estate vs Yardi/AppFolio bolt-ons vs hiring more leasing agents',
+    headers: [
+      'Dimension',
+      'Autom8ion Lab (custom)',
+      'Yardi / AppFolio / RealPage marketplace bolt-ons',
+      'Hire more leasing staff',
+    ],
+    rows: [
+      {
+        label: '24/7 lead response',
+        values: [
+          'AI agent answers in <60 seconds at any hour. Pre-qualifies on income, credit, move-in date. Books tour direct to PMS calendar.',
+          'Auto-responder email confirming receipt. Lead waits until business hours.',
+          "9pm leads sit in a voicemail until 9am. By then they've booked three tours with competitors.",
+        ],
+      },
+      {
+        label: 'PMS integration depth',
+        values: [
+          'Bidirectional sync with Yardi, AppFolio, RealPage, Buildium, MRI, Entrata, ResMan — units flip available/unavailable across every marketing channel in real time',
+          'Pre-built sync for the cases the vendor templated — usually one-way (PMS → marketing) or batch overnight',
+          'Manual updates. Vacant units stay listed for days after lease signing.',
+        ],
+      },
+      {
+        label: 'Compliance workflow',
+        values: [
+          'FCRA adverse-action workflow, LIHTC tenant-income certification, HUD-50059 generation, state-by-state lease template variance — all built around your portfolio',
+          'Template-grade. Compliance edge cases require professional services hours.',
+          'Whatever your compliance officer remembers. Audit risk compounds.',
+        ],
+      },
+      {
+        label: 'Cost shape',
+        values: [
+          'Project + monthly retainer. Replaces ~1.5 FTE of leasing/admin work per 200 units.',
+          'Per-unit per-month SaaS line item, plus marketplace add-on fees.',
+          '$45–60K/year per leasing agent + benefits + turnover cost.',
+        ],
+      },
+      {
+        label: 'Time to launch',
+        values: [
+          '30 days for the first workflow (lead capture + qualification); 60–90 days for full lead-to-lease lifecycle',
+          'Hours to enable a connector. Quarters to bend the workflow into your specific compliance posture.',
+          'Two-week onboarding × every new hire × every turnover.',
+        ],
+      },
+      {
+        label: 'Best fit',
+        values: [
+          'Multi-site multifamily operators (200+ units), regional brokerages, REITs, affordable-housing operators with HUD/LIHTC volume',
+          'Single-site operators whose workflow already fits the PMS template',
+          'Boutique operators where the leasing manager IS the brand',
+        ],
+      },
+    ],
+  },
 };
 
 export default function Page() {
