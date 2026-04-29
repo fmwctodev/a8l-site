@@ -9,3 +9,4 @@ export { default as MagneticButton } from './MagneticButton';
 export { default as AnimatedMesh } from './AnimatedMesh';
 export { default as HeroScene } from './HeroScene';
 export { default as Timeline, type TimelinePhase } from './Timeline';
+export { default as ComparisonTable, type ComparisonRow } from './ComparisonTable';

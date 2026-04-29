@@ -16,6 +16,7 @@ import {
   FAQPageSchema,
 } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
+import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
   title: 'Workflow & Process Automation for Compliance Environments',
@@ -83,42 +84,54 @@ const whatWeBuild = [
   },
 ];
 
-const comparisonRows = [
+const comparisonRows: ComparisonRow[] = [
   {
     label: 'Deployment environment',
-    custom: 'On-premises, private cloud, GCC High, FedRAMP-authorized, HIPAA-aligned. Wherever your compliance posture requires.',
-    saas: 'Vendor-managed cloud only. Your data leaves your environment.',
-    iPaaS: 'Vendor-managed cloud, with private connectivity options at higher tiers.',
+    values: [
+      'On-premises, private cloud, GCC High, FedRAMP-authorized, HIPAA-aligned. Wherever your compliance posture requires.',
+      'Vendor-managed cloud only. Your data leaves your environment.',
+      'Vendor-managed cloud, with private connectivity options at higher tiers.',
+    ],
   },
   {
     label: 'Audit trail depth',
-    custom: 'Full audit trail mapped to your compliance framework (NIST 800-171 AU, HIPAA Security Rule audit controls, SOC 2 CC, etc.). Logs flow to your SIEM.',
-    saas: 'Vendor-defined audit logs. Useful but not always sufficient for assessor review.',
-    iPaaS: 'Strong audit logs at enterprise tier. Vendor-managed retention.',
+    values: [
+      'Full audit trail mapped to your compliance framework (NIST 800-171 AU, HIPAA Security Rule audit controls, SOC 2 CC, etc.). Logs flow to your SIEM.',
+      'Vendor-defined audit logs. Useful but not always sufficient for assessor review.',
+      'Strong audit logs at enterprise tier. Vendor-managed retention.',
+    ],
   },
   {
     label: 'Integration with non-SaaS systems',
-    custom: 'Native. We build integrations to mainframes, legacy on-prem databases, file-based systems, proprietary APIs.',
-    saas: 'Limited to the connectors the vendor maintains. Custom connectors are extra work.',
-    iPaaS: 'Better than SaaS. Still limited at the edges where on-prem legacy systems live.',
+    values: [
+      'Native. We build integrations to mainframes, legacy on-prem databases, file-based systems, proprietary APIs.',
+      'Limited to the connectors the vendor maintains. Custom connectors are extra work.',
+      'Better than SaaS. Still limited at the edges where on-prem legacy systems live.',
+    ],
   },
   {
     label: 'AI / LLM use in workflow',
-    custom: 'Local LLMs or private-cloud-hosted commercial models inside your bounded environment. No external data transfer.',
-    saas: 'Vendor LLM with vendor data terms. Often not BAA-eligible or FedRAMP-authorized.',
-    iPaaS: 'Vendor LLM or BYO API key to a commercial LLM. Same data-residency caveats.',
+    values: [
+      'Local LLMs or private-cloud-hosted commercial models inside your bounded environment. No external data transfer.',
+      'Vendor LLM with vendor data terms. Often not BAA-eligible or FedRAMP-authorized.',
+      'Vendor LLM or BYO API key to a commercial LLM. Same data-residency caveats.',
+    ],
   },
   {
     label: 'Total cost over 3 years',
-    custom: 'Higher up-front; flat ongoing. You own the workflow logic.',
-    saas: 'Predictable per-step or per-execution. Compounds with volume.',
-    iPaaS: 'Predictable enterprise contracts. Significantly cheaper than custom for high-volume simple workflows.',
+    values: [
+      'Higher up-front; flat ongoing. You own the workflow logic.',
+      'Predictable per-step or per-execution. Compounds with volume.',
+      'Predictable enterprise contracts. Significantly cheaper than custom for high-volume simple workflows.',
+    ],
   },
   {
     label: 'Best fit',
-    custom: "Companies whose compliance posture rules out commercial automation SaaS, or whose workflow has too many edge cases for SaaS to handle.",
-    saas: 'Simple, well-defined integrations between SaaS apps. Marketing ops, internal notifications.',
-    iPaaS: 'Mid-complexity enterprise integration where SaaS-cloud is acceptable.',
+    values: [
+      "Companies whose compliance posture rules out commercial automation SaaS, or whose workflow has too many edge cases for SaaS to handle.",
+      'Simple, well-defined integrations between SaaS apps. Marketing ops, internal notifications.',
+      'Mid-complexity enterprise integration where SaaS-cloud is acceptable.',
+    ],
   },
 ];
 
@@ -234,55 +247,68 @@ export default function Page() {
       </section>
 
       {/* WHO THIS IS FOR */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.06}>
             {buyers.map((b) => (
-              <div key={b.name} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
-                <h3 className="text-white font-semibold mb-3">{b.name}</h3>
-                <p className="text-slate-300 text-sm leading-relaxed">{b.body}</p>
-              </div>
+              <StaggerItem key={b.name}>
+                <PremiumCard variant="hover" className="p-6 h-full">
+                  <h3 className="text-white font-semibold mb-3">{b.name}</h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">{b.body}</p>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* WHAT WE BUILD */}
-      <section className="py-20 bg-black">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we build</h2>
-          <div className="space-y-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we build</h2>
+          </Reveal>
+          <Stagger className="space-y-6" staggerDelay={0.08}>
             {whatWeBuild.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-white" />
+                <StaggerItem key={item.title}>
+                  <PremiumCard variant="hover" className="p-6 group">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 shadow-glow-cyan transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <Icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                        <p className="text-slate-300 leading-relaxed">{item.body}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                      <p className="text-slate-300 leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                </div>
+                  </PremiumCard>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* COMPLIANCE CONSIDERATIONS */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Compliance considerations</h2>
-          <p className="text-slate-300 leading-relaxed mb-8">
-            Audit-trail requirements per framework. Data residency considerations. Identity propagation
-            through workflow steps so every action is attributable. Encryption of in-flight data between
-            workflow steps. Retention policies aligned to the records schedule that governs the data.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-3">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Compliance considerations</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              Audit-trail requirements per framework. Data residency considerations. Identity
+              propagation through workflow steps so every action is attributable. Encryption of
+              in-flight data between workflow steps. Retention policies aligned to the records schedule
+              that governs the data.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-3" staggerDelay={0.04}>
             {[
               'Audit trail depth per framework (NIST 800-171 AU, HIPAA Security Rule, SOC 2 CC, FCRA)',
               'Identity propagation through workflow steps (every step attributable to a user or service principal)',
@@ -293,92 +319,55 @@ export default function Page() {
               'Idempotency on every external write',
               'Observability: workflow metrics flowing to your monitoring stack',
             ].map((item) => (
-              <div
-                key={item}
-                className="bg-slate-900/40 border border-slate-800 rounded-lg p-4 flex items-start space-x-2"
-              >
-                <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300 text-sm">{item}</span>
-              </div>
+              <StaggerItem key={item}>
+                <PremiumCard variant="hover" className="p-4 flex items-start space-x-2 h-full">
+                  <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300 text-sm">{item}</span>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* COMPARISON TABLE */}
-      <section className="py-20 bg-black">
+      <section className="py-20 relative">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Custom workflow vs. Zapier/Make vs. enterprise iPaaS
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">
-            The three patterns workflow automation usually falls into. Each is the right answer for a
-            different scope.
-          </p>
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Custom workflow vs. Zapier/Make vs. enterprise iPaaS
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">
+              The three patterns workflow automation usually falls into. Each is the right answer for a
+              different scope.
+            </p>
+          </Reveal>
 
-          <div className="hidden md:block overflow-hidden rounded-xl border border-slate-800">
-            <table className="w-full text-left">
-              <thead className="bg-slate-900/60">
-                <tr>
-                  <th className="px-5 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider w-1/4">
-                    Dimension
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-emerald-400 uppercase tracking-wider w-1/4">
-                    Autom8ion Lab (custom)
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wider w-1/4">
-                    Zapier / Make
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wider w-1/4">
-                    Enterprise iPaaS
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-800">
-                {comparisonRows.map((row) => (
-                  <tr key={row.label} className="align-top">
-                    <td className="px-5 py-4 text-white font-semibold text-sm">{row.label}</td>
-                    <td className="px-5 py-4 text-slate-200 text-sm leading-relaxed">{row.custom}</td>
-                    <td className="px-5 py-4 text-slate-400 text-sm leading-relaxed">{row.saas}</td>
-                    <td className="px-5 py-4 text-slate-400 text-sm leading-relaxed">{row.iPaaS}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="md:hidden grid gap-4">
-            {comparisonRows.map((row) => (
-              <div key={row.label} className="bg-slate-900/40 border border-slate-800 rounded-lg p-5">
-                <div className="font-semibold text-white mb-3">{row.label}</div>
-                <div className="text-emerald-400 text-xs uppercase tracking-wider mb-1">
-                  Autom8ion Lab (custom)
-                </div>
-                <p className="text-slate-200 text-sm mb-3">{row.custom}</p>
-                <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">Zapier / Make</div>
-                <p className="text-slate-400 text-sm mb-3">{row.saas}</p>
-                <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">
-                  Enterprise iPaaS
-                </div>
-                <p className="text-slate-400 text-sm">{row.iPaaS}</p>
-              </div>
-            ))}
-          </div>
+          <ComparisonTable
+            headers={['Dimension', 'Autom8ion Lab (custom)', 'Zapier / Make', 'Enterprise iPaaS']}
+            rows={comparisonRows}
+          />
         </div>
       </section>
 
       {/* SERVICE-SPECIFIC FAQ */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Workflow automation FAQ</h2>
-          <div className="space-y-5">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Workflow automation FAQ</h2>
+          </Reveal>
+          <Stagger className="space-y-5" staggerDelay={0.06}>
             {faqs.map((q) => (
-              <div key={q.question} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
-                <p className="text-slate-300 leading-relaxed">{q.answer}</p>
-              </div>
+              <StaggerItem key={q.question}>
+                <PremiumCard variant="hover" className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
+                  <p className="text-slate-300 leading-relaxed">{q.answer}</p>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
@@ -442,23 +431,26 @@ export default function Page() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-slate-950 border-t border-slate-900">
+      <section className="py-20 relative border-t border-slate-900/50">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Workflow automation that has to survive an audit?
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8">
-            30-minute discovery call. Tell us your environment, your compliance framework, and the
-            workflow you\'re looking to automate. We'll map the engagement and tell you whether we're a
-            fit.
-          </p>
-          <Link
-            href="/schedule-consultation"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-pink-600 transition-colors"
-          >
-            <span>Schedule a discovery call</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <Reveal>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Workflow automation that has to survive an audit?
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              30-minute discovery call. Tell us your environment, your compliance framework, and the
+              workflow you&apos;re looking to automate. We&apos;ll map the engagement and tell you
+              whether we&apos;re a fit.
+            </p>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <MagneticButton href="/schedule-consultation" variant="primary">
+              Schedule a discovery call
+              <ArrowRight className="w-5 h-5" />
+            </MagneticButton>
+          </Reveal>
         </div>
       </section>
 

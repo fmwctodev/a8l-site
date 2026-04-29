@@ -16,6 +16,7 @@ import {
   FAQPageSchema,
 } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
+import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
   title: 'AI-Powered Enterprise Software & Application Development',
@@ -83,42 +84,54 @@ const whatWeBuild = [
   },
 ];
 
-const comparisonRows = [
+const comparisonRows: ComparisonRow[] = [
   {
     label: 'Time to deploy',
-    custom: '8–14 weeks for typical scopes; 4–9 months for CMMC-bound builds; 6+ months for FedRAMP-aligned. Driven by your environment, not vendor schedule.',
-    saas: 'Days to deploy. But limited to what the vendor templated and the workflow rules they expose.',
-    enterprise: '12–24+ months. Big-bang rollout against a multi-year roadmap.',
+    values: [
+      '8–14 weeks for typical scopes; 4–9 months for CMMC-bound builds; 6+ months for FedRAMP-aligned. Driven by your environment, not vendor schedule.',
+      'Days to deploy. But limited to what the vendor templated and the workflow rules they expose.',
+      '12–24+ months. Big-bang rollout against a multi-year roadmap.',
+    ],
   },
   {
     label: 'Compliance fit',
-    custom: 'Compliance built into architecture. SSP, control narratives, evidence collection produced as we build.',
-    saas: 'Compliance limited to the vendor\'s certifications. BAAs/DPAs available; deeper controls work limited.',
-    enterprise: 'Compliance documentation usually thorough but not always aligned to your actual controls.',
+    values: [
+      'Compliance built into architecture. SSP, control narratives, evidence collection produced as we build.',
+      "Compliance limited to the vendor's certifications. BAAs/DPAs available; deeper controls work limited.",
+      'Compliance documentation usually thorough but not always aligned to your actual controls.',
+    ],
   },
   {
     label: 'Customization ceiling',
-    custom: 'No ceiling. We write the system to match your workflow.',
-    saas: 'Hits the ceiling at config + light customization. Custom code requires premium contracts.',
-    enterprise: 'High ceiling, but customization runs through change requests measured in weeks.',
+    values: [
+      'No ceiling. We write the system to match your workflow.',
+      'Hits the ceiling at config + light customization. Custom code requires premium contracts.',
+      'High ceiling, but customization runs through change requests measured in weeks.',
+    ],
   },
   {
     label: 'Total cost over 3 years',
-    custom: 'Higher up-front; flat ongoing. You own the code and the IP.',
-    saas: 'Predictable per-seat or per-transaction. Scales with volume; costs compound when you need exceptions.',
-    enterprise: 'Highest. License, services, ongoing maintenance, and change-request fees.',
+    values: [
+      'Higher up-front; flat ongoing. You own the code and the IP.',
+      'Predictable per-seat or per-transaction. Scales with volume; costs compound when you need exceptions.',
+      'Highest. License, services, ongoing maintenance, and change-request fees.',
+    ],
   },
   {
     label: 'Vendor lock-in',
-    custom: 'None. You own the code and the documentation.',
-    saas: 'Significant. Exporting your data and re-implementing workflow elsewhere is real work.',
-    enterprise: 'Significant. Vendor-specific tech and proprietary formats.',
+    values: [
+      'None. You own the code and the documentation.',
+      'Significant. Exporting your data and re-implementing workflow elsewhere is real work.',
+      'Significant. Vendor-specific tech and proprietary formats.',
+    ],
   },
   {
     label: 'Security review path',
-    custom: 'We produce the SSP, control narratives, and evidence package your security review or assessor will read.',
-    saas: 'You inherit the vendor\'s SOC 2 / HIPAA / FedRAMP attestation. Useful but not custom to your environment.',
-    enterprise: 'Vendor security questionnaires and attestations. Workable for established platforms.',
+    values: [
+      'We produce the SSP, control narratives, and evidence package your security review or assessor will read.',
+      "You inherit the vendor's SOC 2 / HIPAA / FedRAMP attestation. Useful but not custom to your environment.",
+      'Vendor security questionnaires and attestations. Workable for established platforms.',
+    ],
   },
 ];
 
@@ -235,57 +248,69 @@ export default function Page() {
       </section>
 
       {/* WHO THIS IS FOR */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.06}>
             {buyers.map((b) => (
-              <div key={b.name} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
-                <h3 className="text-white font-semibold mb-3">{b.name}</h3>
-                <p className="text-slate-300 text-sm leading-relaxed">{b.body}</p>
-              </div>
+              <StaggerItem key={b.name}>
+                <PremiumCard variant="hover" className="p-6 h-full">
+                  <h3 className="text-white font-semibold mb-3">{b.name}</h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">{b.body}</p>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* WHAT WE BUILD */}
-      <section className="py-20 bg-black">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we actually build</h2>
-          <div className="space-y-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we actually build</h2>
+          </Reveal>
+          <Stagger className="space-y-6" staggerDelay={0.08}>
             {whatWeBuild.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-white" />
+                <StaggerItem key={item.title}>
+                  <PremiumCard variant="hover" className="p-6 group">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0 shadow-glow-cyan transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <Icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                        <p className="text-slate-300 leading-relaxed">{item.body}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                      <p className="text-slate-300 leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                </div>
+                  </PremiumCard>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* COMPLIANCE CONSIDERATIONS */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Compliance considerations</h2>
-          <p className="text-slate-300 leading-relaxed mb-8">
-            Security architecture decisions made at the start of the project — data classification,
-            encryption strategy, access control model, audit logging requirements, environment
-            segmentation. Compliance documentation produced in parallel with code: SSP drafts, control
-            narratives, evidence collection. The artifacts your auditor or AO will request, written
-            against your real environment rather than templated.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-3">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Compliance considerations</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              Security architecture decisions made at the start of the project — data classification,
+              encryption strategy, access control model, audit logging requirements, environment
+              segmentation. Compliance documentation produced in parallel with code: SSP drafts, control
+              narratives, evidence collection. The artifacts your auditor or AO will request, written
+              against your real environment rather than templated.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-3" staggerDelay={0.04}>
             {[
               'Data classification and PHI/CUI/PII boundary definition',
               'Encryption at rest (KMS-backed) and in transit (TLS 1.3)',
@@ -296,92 +321,57 @@ export default function Page() {
               'Backup, recovery, and continuity planning',
               'Third-party dependency review and software supply chain controls',
             ].map((item) => (
-              <div
-                key={item}
-                className="bg-slate-900/40 border border-slate-800 rounded-lg p-4 flex items-start space-x-2"
-              >
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300 text-sm">{item}</span>
-              </div>
+              <StaggerItem key={item}>
+                <PremiumCard variant="hover" className="p-4 flex items-start space-x-2 h-full">
+                  <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300 text-sm">{item}</span>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* COMPARISON TABLE */}
-      <section className="py-20 bg-black">
+      <section className="py-20 relative">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Custom build vs. SaaS vs. enterprise platform
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">
-            The three paths most teams evaluate. Each is the right answer for someone — but they solve
-            different problems.
-          </p>
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Custom build vs. SaaS vs. enterprise platform
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">
+              The three paths most teams evaluate. Each is the right answer for someone — but they
+              solve different problems.
+            </p>
+          </Reveal>
 
-          <div className="hidden md:block overflow-hidden rounded-xl border border-slate-800">
-            <table className="w-full text-left">
-              <thead className="bg-slate-900/60">
-                <tr>
-                  <th className="px-5 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider w-1/4">
-                    Dimension
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-emerald-400 uppercase tracking-wider w-1/4">
-                    Autom8ion Lab (custom)
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wider w-1/4">
-                    SaaS platform
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wider w-1/4">
-                    Enterprise platform
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-800">
-                {comparisonRows.map((row) => (
-                  <tr key={row.label} className="align-top">
-                    <td className="px-5 py-4 text-white font-semibold text-sm">{row.label}</td>
-                    <td className="px-5 py-4 text-slate-200 text-sm leading-relaxed">{row.custom}</td>
-                    <td className="px-5 py-4 text-slate-400 text-sm leading-relaxed">{row.saas}</td>
-                    <td className="px-5 py-4 text-slate-400 text-sm leading-relaxed">{row.enterprise}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="md:hidden grid gap-4">
-            {comparisonRows.map((row) => (
-              <div key={row.label} className="bg-slate-900/40 border border-slate-800 rounded-lg p-5">
-                <div className="font-semibold text-white mb-3">{row.label}</div>
-                <div className="text-emerald-400 text-xs uppercase tracking-wider mb-1">
-                  Autom8ion Lab (custom)
-                </div>
-                <p className="text-slate-200 text-sm mb-3">{row.custom}</p>
-                <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">SaaS platform</div>
-                <p className="text-slate-400 text-sm mb-3">{row.saas}</p>
-                <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">
-                  Enterprise platform
-                </div>
-                <p className="text-slate-400 text-sm">{row.enterprise}</p>
-              </div>
-            ))}
-          </div>
+          <ComparisonTable
+            headers={['Dimension', 'Autom8ion Lab (custom)', 'SaaS platform', 'Enterprise platform']}
+            rows={comparisonRows}
+          />
         </div>
       </section>
 
       {/* SERVICE-SPECIFIC FAQ */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Software development FAQ</h2>
-          <div className="space-y-5">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Software development FAQ
+            </h2>
+          </Reveal>
+          <Stagger className="space-y-5" staggerDelay={0.06}>
             {faqs.map((q) => (
-              <div key={q.question} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
-                <p className="text-slate-300 leading-relaxed">{q.answer}</p>
-              </div>
+              <StaggerItem key={q.question}>
+                <PremiumCard variant="hover" className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
+                  <p className="text-slate-300 leading-relaxed">{q.answer}</p>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
@@ -422,28 +412,31 @@ export default function Page() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-slate-950 border-t border-slate-900">
+      <section className="py-20 relative border-t border-slate-900/50">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Building something custom that has to pass review?
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8">
-            30-minute discovery call. Tell us your environment, your existing stack, and the framework
-            you operate under. We'll map the engagement and tell you whether we're a fit.
-          </p>
-          <Link
-            href="/schedule-consultation"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-colors"
-          >
-            <span>Schedule a discovery call</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-          <p className="mt-6 text-sm text-slate-400">
-            Full federal registrations:{' '}
-            <Link href="/capability-statement" className="text-cyan-400 hover:underline">
-              capability statement for federal registrations
-            </Link>
-          </p>
+          <Reveal>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Building something custom that has to pass review?
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              30-minute discovery call. Tell us your environment, your existing stack, and the framework
+              you operate under. We&apos;ll map the engagement and tell you whether we&apos;re a fit.
+            </p>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <MagneticButton href="/schedule-consultation" variant="primary">
+              Schedule a discovery call
+              <ArrowRight className="w-5 h-5" />
+            </MagneticButton>
+            <p className="mt-6 text-sm text-slate-400">
+              Full federal registrations:{' '}
+              <Link href="/capability-statement" className="text-cyan-400 link-underline">
+                capability statement for federal registrations
+              </Link>
+            </p>
+          </Reveal>
         </div>
       </section>
 

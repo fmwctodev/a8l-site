@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import CTA from '@/app/_components/CTA';
+import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton } from './ui';
 
 export type IndustryFaq = { question: string; answer: string };
 
@@ -74,177 +75,241 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
+      {/* Hero */}
       <section className={`relative min-h-[60vh] bg-gradient-to-br ${data.heroAccent} overflow-hidden`}>
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
-          <nav className="text-sm text-slate-400 mb-6">
-            <Link href="/" className="hover:text-cyan-400">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/#industries" className="hover:text-cyan-400">Industries</Link>
-            <span className="mx-2">/</span>
-            <span className="text-slate-300">{data.breadcrumbName}</span>
-          </nav>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">{data.h1}</h1>
-          <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">{data.heroSubhead}</p>
+          <Reveal>
+            <nav className="text-sm text-slate-400 mb-6">
+              <Link href="/" className="hover:text-cyan-400">Home</Link>
+              <span className="mx-2">/</span>
+              <Link href="/#industries" className="hover:text-cyan-400">Industries</Link>
+              <span className="mx-2">/</span>
+              <span className="text-slate-300">{data.breadcrumbName}</span>
+            </nav>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">{data.h1}</h1>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">{data.heroSubhead}</p>
+          </Reveal>
         </div>
       </section>
 
-      <section className="py-16 bg-black">
+      {/* Definition + buyer profile */}
+      <section className="py-16 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-slate-300 leading-relaxed text-lg">{data.definitionParagraph}</p>
-          <p className="text-slate-400 leading-relaxed mt-6">
-            <strong className="text-white">Buyer profile:</strong> {data.buyerProfile}
-          </p>
+          <Reveal>
+            <p className="text-slate-300 leading-relaxed text-lg">{data.definitionParagraph}</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-400 leading-relaxed mt-6">
+              <strong className="text-white">Buyer profile:</strong> {data.buyerProfile}
+            </p>
+          </Reveal>
         </div>
       </section>
 
+      {/* Problem framing (optional) */}
       {data.problemFraming && (
-        <section className="py-20 bg-slate-900/50">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              {data.problemFraming.heading}
-            </h2>
-            <div className="space-y-5 text-slate-300 leading-relaxed text-lg">
-              {data.problemFraming.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+        <section className="py-20 relative">
+          <div className="max-w-4xl mx-auto px-6 relative">
+            <div
+              aria-hidden="true"
+              className="absolute left-0 top-8 bottom-8 w-1 rounded-full bg-gradient-to-b from-cyan-400 via-blue-500 to-purple-500 animate-pulse-glow shadow-glow-cyan"
+            />
+            <div className="pl-8">
+              <Reveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
+                  {data.problemFraming.heading}
+                </h2>
+              </Reveal>
+              <Stagger className="space-y-5 text-slate-300 leading-relaxed text-lg" staggerDelay={0.08}>
+                {data.problemFraming.paragraphs.map((p, i) => (
+                  <StaggerItem key={i} as="div">
+                    <p>{p}</p>
+                  </StaggerItem>
+                ))}
+              </Stagger>
             </div>
           </div>
         </section>
       )}
 
-      <section className="py-20 bg-black">
+      {/* What we build */}
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            What we build for {data.breadcrumbName.toLowerCase()}
-          </h2>
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              What we build for {data.breadcrumbName.toLowerCase()}
+            </h2>
+          </Reveal>
 
           {data.whatWeBuildDetailed ? (
-            <div className="space-y-6">
+            <Stagger className="space-y-6" staggerDelay={0.08}>
               {data.whatWeBuildDetailed.map((section) => (
-                <div
-                  key={section.name}
-                  className="bg-slate-900/40 border border-slate-800 rounded-lg p-6"
-                >
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle2
-                      className={`w-6 h-6 ${data.iconAccent} flex-shrink-0 mt-1`}
-                    />
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{section.name}</h3>
-                      <p className="text-slate-300 leading-relaxed">{section.body}</p>
+                <StaggerItem key={section.name}>
+                  <PremiumCard variant="hover" className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle2
+                        className={`w-6 h-6 ${data.iconAccent} flex-shrink-0 mt-1`}
+                      />
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">{section.name}</h3>
+                        <p className="text-slate-300 leading-relaxed">{section.body}</p>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </PremiumCard>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           ) : (
-            <ul className="space-y-4 text-slate-300">
+            <Stagger className="space-y-4 text-slate-300" staggerDelay={0.05}>
               {data.whatWeBuild.map((item) => (
-                <li key={item} className="flex items-start space-x-3">
-                  <CheckCircle2 className={`w-6 h-6 ${data.iconAccent} flex-shrink-0 mt-0.5`} />
-                  <span>{item}</span>
-                </li>
+                <StaggerItem key={item} as="li">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className={`w-6 h-6 ${data.iconAccent} flex-shrink-0 mt-0.5`} />
+                    <span>{item}</span>
+                  </div>
+                </StaggerItem>
               ))}
-            </ul>
+            </Stagger>
           )}
         </div>
       </section>
 
+      {/* Named integrations (optional) */}
       {data.namedIntegrations && (
-        <section className="py-20 bg-slate-950">
+        <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              Named systems we integrate with
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-6">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+                Named systems we integrate with
+              </h2>
+            </Reveal>
+            <Stagger className="grid sm:grid-cols-2 gap-6" staggerDelay={0.07}>
               {data.namedIntegrations.map((cat) => (
-                <div
-                  key={cat.category}
-                  className="bg-slate-900/40 border border-slate-800 rounded-lg p-6"
-                >
-                  <h3 className="text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-3">
-                    {cat.category}
-                  </h3>
-                  <ul className="space-y-1.5 text-slate-300">
-                    {cat.items.map((item) => (
-                      <li key={item} className="text-sm">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <StaggerItem key={cat.category}>
+                  <PremiumCard variant="hover" className="p-6 h-full">
+                    <h3 className="text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-3">
+                      {cat.category}
+                    </h3>
+                    <ul className="space-y-1.5 text-slate-300">
+                      {cat.items.map((item) => (
+                        <li key={item} className="text-sm">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </PremiumCard>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         </section>
       )}
 
-      <section className="py-20 bg-black">
+      {/* Compliance considerations */}
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Compliance considerations</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Compliance considerations</h2>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-4" staggerDelay={0.04}>
             {data.complianceConsiderations.map((c) => (
-              <div key={c.name} className="bg-slate-900/40 border border-slate-800 rounded-lg p-5">
-                <div className="font-semibold text-white">{c.name}</div>
-                <div className="text-slate-400 text-sm mt-1">{c.desc}</div>
-              </div>
+              <StaggerItem key={c.name}>
+                <PremiumCard variant="hover" className="p-5 h-full">
+                  <div className="font-semibold text-white">{c.name}</div>
+                  <div className="text-slate-400 text-sm mt-1">{c.desc}</div>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
+      {/* Required disclosure (Defense-only) — wrap in pulse-glow shell */}
       {data.disclosure && (
-        <section className="py-12 bg-amber-950/20 border-y border-amber-900/30">
+        <section className="py-12 relative">
           <div className="max-w-4xl mx-auto px-6">
-            <h3 className="text-xl font-semibold text-amber-300 mb-3">{data.disclosure.heading}</h3>
-            <p className="text-slate-300 leading-relaxed">{data.disclosure.body}</p>
+            <Reveal>
+              <div className="relative bg-amber-950/20 border-y border-amber-900/40 rounded-lg p-8 overflow-hidden">
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 border-y border-amber-500/30 animate-pulse-glow rounded-lg pointer-events-none"
+                />
+                <h3 className="relative text-xl font-semibold text-amber-300 mb-3">
+                  {data.disclosure.heading}
+                </h3>
+                <p className="relative text-slate-300 leading-relaxed">{data.disclosure.body}</p>
+              </div>
+            </Reveal>
           </div>
         </section>
       )}
 
-      <section className="py-20 bg-slate-900/50">
+      {/* FAQ */}
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">{data.breadcrumbName} FAQ</h2>
-          <div className="space-y-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+              {data.breadcrumbName} FAQ
+            </h2>
+          </Reveal>
+          <Stagger className="space-y-5" staggerDelay={0.06}>
             {data.faqs.map((q) => (
-              <div key={q.question} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
-                <p className="text-slate-300 leading-relaxed">{q.answer}</p>
-              </div>
+              <StaggerItem key={q.question}>
+                <PremiumCard variant="hover" className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
+                  <p className="text-slate-300 leading-relaxed">{q.answer}</p>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      {/* Representative engagements */}
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Representative engagements</h2>
-          <ul className="space-y-4 text-slate-300">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Representative engagements
+            </h2>
+          </Reveal>
+          <Stagger className="space-y-4" staggerDelay={0.07}>
             {data.scenarios.map((s) => (
-              <li key={s} className="flex items-start space-x-3">
-                <ArrowRight className={`w-5 h-5 ${data.iconAccent} flex-shrink-0 mt-1`} />
-                <span>{s}</span>
-              </li>
+              <StaggerItem key={s}>
+                <PremiumCard variant="hover" className="p-5">
+                  <div className="flex items-start space-x-3">
+                    <ArrowRight className={`w-5 h-5 ${data.iconAccent} flex-shrink-0 mt-1`} />
+                    <span className="text-slate-300 leading-relaxed">{s}</span>
+                  </div>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </ul>
-          <p className="text-slate-400 mt-8 leading-relaxed">
-            We provide additional past performance details and references on a need-to-know basis after a
-            qualifying conversation. See our{' '}
-            <Link href="/capability-statement" className="text-cyan-400 hover:underline">
-              capability statement for full federal registrations
-            </Link>
-            .
-          </p>
-          {data.scenarioCta && (
-            <div className="mt-10">
-              <Link
-                href="/schedule-consultation"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-600 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-600 transition-colors"
-              >
-                <span>{data.scenarioCta}</span>
-                <ArrowRight className="w-5 h-5" />
+          </Stagger>
+
+          <Reveal delay={0.1}>
+            <p className="text-slate-400 mt-8 leading-relaxed">
+              We provide additional past performance details and references on a need-to-know basis after
+              a qualifying conversation. See our{' '}
+              <Link href="/capability-statement" className="text-cyan-400 link-underline">
+                capability statement for full federal registrations
               </Link>
-            </div>
+              .
+            </p>
+          </Reveal>
+
+          {data.scenarioCta && (
+            <Reveal delay={0.15}>
+              <div className="mt-10">
+                <MagneticButton href="/schedule-consultation" variant="primary">
+                  {data.scenarioCta}
+                  <ArrowRight className="w-5 h-5" />
+                </MagneticButton>
+              </div>
+            </Reveal>
           )}
         </div>
       </section>

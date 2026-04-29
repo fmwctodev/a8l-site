@@ -7,6 +7,7 @@ import {
   FAQPageSchema,
 } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
+import { Reveal, Stagger, StaggerItem, PremiumCard, MagneticButton, ComparisonTable, type ComparisonRow } from '@/app/_components/ui';
 
 export const metadata: Metadata = {
   title: 'Cybersecurity Compliance & Engineering',
@@ -72,36 +73,46 @@ const whatWeBuild = [
   },
 ];
 
-const comparisonRows = [
+const comparisonRows: ComparisonRow[] = [
   {
     label: 'Control implementation',
-    us: 'Engineered in code, infrastructure, and platform config — implemented and verifiable in your environment.',
-    consultant: 'Policy and procedure templates. Implementation left to your IT team.',
-    mssp: 'Operational monitoring after the controls are in place. Not implementation.',
+    values: [
+      'Engineered in code, infrastructure, and platform config — implemented and verifiable in your environment.',
+      'Policy and procedure templates. Implementation left to your IT team.',
+      'Operational monitoring after the controls are in place. Not implementation.',
+    ],
   },
   {
     label: 'Documentation produced',
-    us: 'SSP, POA&M, and control narratives written against your real environment.',
-    consultant: 'Templated SSP, sometimes lightly customized. May not match what your environment actually does.',
-    mssp: 'Monitoring reports and incident logs. Not the documentation an assessor asks for.',
+    values: [
+      'SSP, POA&M, and control narratives written against your real environment.',
+      'Templated SSP, sometimes lightly customized. May not match what your environment actually does.',
+      'Monitoring reports and incident logs. Not the documentation an assessor asks for.',
+    ],
   },
   {
     label: 'CMMC RPO / C3PAO',
-    us: 'Not an RPO. Not a C3PAO. We engineer the controls; we partner with assessors when independent assessment is required.',
-    consultant: 'Some are RPOs. Many are not.',
-    mssp: 'Not an assessor.',
+    values: [
+      'Not an RPO. Not a C3PAO. We engineer the controls; we partner with assessors when independent assessment is required.',
+      'Some are RPOs. Many are not.',
+      'Not an assessor.',
+    ],
   },
   {
     label: 'Software development',
-    us: 'In-house. We can write the custom platforms, internal tools, and integrations your compliance posture requires.',
-    consultant: 'Out of scope.',
-    mssp: 'Out of scope.',
+    values: [
+      'In-house. We can write the custom platforms, internal tools, and integrations your compliance posture requires.',
+      'Out of scope.',
+      'Out of scope.',
+    ],
   },
   {
     label: 'Best fit',
-    us: 'Companies that need the controls implemented and the systems built — typically pre-assessment, pre-RFP, or pre-audit.',
-    consultant: 'Companies that already have an internal IT/security team to implement what the consultant recommends.',
-    mssp: 'Companies that already have controls in place and need ongoing monitoring.',
+    values: [
+      'Companies that need the controls implemented and the systems built — typically pre-assessment, pre-RFP, or pre-audit.',
+      'Companies that already have an internal IT/security team to implement what the consultant recommends.',
+      'Companies that already have controls in place and need ongoing monitoring.',
+    ],
   },
 ];
 
@@ -157,68 +168,95 @@ export default function Page() {
 
       <section className="relative min-h-[55vh] bg-gradient-to-br from-slate-950 via-emerald-950/30 to-slate-950 overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
-          <nav className="text-sm text-slate-400 mb-6">
-            <Link href="/" className="hover:text-cyan-400">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-slate-300">Solutions</span>
-            <span className="mx-2">/</span>
-            <span className="text-slate-300">Cybersecurity Compliance &amp; Engineering</span>
-          </nav>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Cybersecurity Compliance &amp; Engineering
-          </h1>
-          <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
-            CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 prep. We
-            engineer compliant systems and document them for audit.
-          </p>
+          <Reveal>
+            <nav className="text-sm text-slate-400 mb-6">
+              <Link href="/" className="hover:text-cyan-400">Home</Link>
+              <span className="mx-2">/</span>
+              <span className="text-slate-300">Solutions</span>
+              <span className="mx-2">/</span>
+              <span className="text-slate-300">Cybersecurity Compliance &amp; Engineering</span>
+            </nav>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Cybersecurity Compliance &amp; Engineering
+            </h1>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="text-xl text-slate-300 max-w-4xl leading-relaxed">
+              CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 prep. We
+              engineer compliant systems and document them for audit.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       {/* DEFINITION BLOCK (~200 words) — LOCKED v3 §3.3 step 1 */}
-      <section className="py-16 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
-          <p className="text-lg text-slate-300 leading-relaxed mb-6">
-            Autom8ion Lab provides cybersecurity compliance engineering for organizations operating
-            under CMMC 2.0, NIST 800-171, NIST 800-53, HIPAA, SOC 2, FCRA, and FedRAMP. We are software
-            builders with an in-house cybersecurity compliance arm — not a security consulting firm and
-            not an MSSP. The output of an engagement is implemented controls in your environment, the
-            documentation an assessor expects (System Security Plan, POA&amp;M, control narratives,
-            evidence packages), and a system you can defend in audit.
-          </p>
-          <p className="text-lg text-slate-300 leading-relaxed">
-            Engagements typically span CMMC Level 2 readiness for DoD subcontractors, HIPAA-aligned
-            infrastructure for healthcare clients, SOC 2 Type II preparation for SaaS companies pursuing
-            enterprise contracts, FedRAMP-aligned environment design for vendors selling into civilian
-            agencies, and the technical safeguards work that sits across all of them.
-          </p>
-        </div>
-      </section>
-
-      {/* REQUIRED DISCLOSURE BLOCK — LOCKED v3 §3.3 CRITICAL */}
-      <section className="py-12 bg-amber-950/20 border-y border-amber-900/30">
-        <div className="max-w-4xl mx-auto px-6 flex items-start space-x-4">
-          <AlertTriangle className="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
-          <div>
-            <h2 className="text-xl font-semibold text-amber-300 mb-3">
-              Important: We are not a CMMC RPO or C3PAO
-            </h2>
-            <p className="text-slate-300 leading-relaxed">
-              We are not currently a CMMC Registered Practitioner Organization (RPO) or a C3PAO. We
-              engineer systems to NIST 800-171 controls and produce the documentation your assessor
-              will need. We work alongside RPO/C3PAO partners when independent assessment is required,
-              and we can refer you to assessment partners.
-            </p>
+      <section className="py-16 relative">
+        <div className="max-w-4xl mx-auto px-6 relative">
+          {/* Vertical gradient accent bar */}
+          <div
+            aria-hidden="true"
+            className="absolute left-0 top-0 bottom-0 w-1 rounded-full bg-gradient-to-b from-cyan-400 via-emerald-500 to-blue-500 animate-pulse-glow shadow-glow-cyan"
+          />
+          <div className="pl-8">
+            <Reveal>
+              <p className="text-lg text-slate-300 leading-relaxed mb-6">
+                Autom8ion Lab provides cybersecurity compliance engineering for organizations operating
+                under CMMC 2.0, NIST 800-171, NIST 800-53, HIPAA, SOC 2, FCRA, and FedRAMP. We are
+                software builders with an in-house cybersecurity compliance arm — not a security
+                consulting firm and not an MSSP. The output of an engagement is implemented controls in
+                your environment, the documentation an assessor expects (System Security Plan,
+                POA&amp;M, control narratives, evidence packages), and a system you can defend in audit.
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="text-lg text-slate-300 leading-relaxed">
+                Engagements typically span CMMC Level 2 readiness for DoD subcontractors, HIPAA-aligned
+                infrastructure for healthcare clients, SOC 2 Type II preparation for SaaS companies
+                pursuing enterprise contracts, FedRAMP-aligned environment design for vendors selling
+                into civilian agencies, and the technical safeguards work that sits across all of them.
+              </p>
+            </Reveal>
           </div>
         </div>
       </section>
 
-      {/* WHO THIS IS FOR */}
-      <section className="py-20 bg-black">
+      {/* REQUIRED DISCLOSURE BLOCK — LOCKED v3 §3.3 CRITICAL — pulse-glow shell */}
+      <section className="py-12 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
-          <div className="grid sm:grid-cols-2 gap-4 text-slate-300">
+          <Reveal>
+            <div className="relative bg-amber-950/20 border-y border-amber-900/40 rounded-lg p-8 overflow-hidden">
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 border-y border-amber-500/30 animate-pulse-glow rounded-lg pointer-events-none"
+              />
+              <div className="relative flex items-start space-x-4">
+                <AlertTriangle className="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
+                <div>
+                  <h2 className="text-xl font-semibold text-amber-300 mb-3">
+                    Important: We are not a CMMC RPO or C3PAO
+                  </h2>
+                  <p className="text-slate-300 leading-relaxed">
+                    We are not currently a CMMC Registered Practitioner Organization (RPO) or a C3PAO.
+                    We engineer systems to NIST 800-171 controls and produce the documentation your
+                    assessor will need. We work alongside RPO/C3PAO partners when independent
+                    assessment is required, and we can refer you to assessment partners.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* WHO THIS IS FOR */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-4 text-slate-300" staggerDelay={0.06}>
             {[
               {
                 name: 'DoD primes and subcontractors',
@@ -251,115 +289,77 @@ export default function Page() {
                   'NYDFS Part 500, GLBA, FFIEC IT Examination Handbook, and SR 11-7 model risk requirements where the technical implementation is more useful than another policy binder.',
               },
             ].map((role) => (
-              <div
-                key={role.name}
-                className="bg-slate-900/40 border border-slate-800 rounded-lg p-5"
-              >
-                <h3 className="text-white font-semibold mb-2">{role.name}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{role.body}</p>
-              </div>
+              <StaggerItem key={role.name}>
+                <PremiumCard variant="hover" className="p-5 h-full">
+                  <h3 className="text-white font-semibold mb-2">{role.name}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{role.body}</p>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* WHAT WE BUILD (~600 words across subsections) */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we build</h2>
-          <div className="space-y-6">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we build</h2>
+          </Reveal>
+          <Stagger className="space-y-6" staggerDelay={0.08}>
             {whatWeBuild.map((item) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={item.title}
-                  className="bg-slate-900/40 border border-slate-800 rounded-lg p-6"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-white" />
+                <StaggerItem key={item.title}>
+                  <PremiumCard variant="hover" className="p-6 group">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-glow-cyan transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <Icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                        <p className="text-slate-300 leading-relaxed">{item.body}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                      <p className="text-slate-300 leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                </div>
+                  </PremiumCard>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* COMPARISON TABLE — LOCKED v3 §3.3 step 5 */}
-      <section className="py-20 bg-black">
+      <section className="py-20 relative">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Compliance engineering firm vs. consultant vs. MSSP
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">
-            The three vendor categories that show up when companies start looking for compliance help.
-            Each is the right answer for someone — but they solve different problems.
-          </p>
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Compliance engineering firm vs. consultant vs. MSSP
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">
+              The three vendor categories that show up when companies start looking for compliance help.
+              Each is the right answer for someone — but they solve different problems.
+            </p>
+          </Reveal>
 
-          <div className="hidden md:block overflow-hidden rounded-xl border border-slate-800">
-            <table className="w-full text-left">
-              <thead className="bg-slate-900/60">
-                <tr>
-                  <th className="px-5 py-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider w-1/4">
-                    Dimension
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-emerald-400 uppercase tracking-wider w-1/4">
-                    Autom8ion Lab
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wider w-1/4">
-                    Compliance consultant
-                  </th>
-                  <th className="px-5 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wider w-1/4">
-                    MSSP
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-800">
-                {comparisonRows.map((row) => (
-                  <tr key={row.label} className="align-top">
-                    <td className="px-5 py-4 text-white font-semibold text-sm">{row.label}</td>
-                    <td className="px-5 py-4 text-slate-200 text-sm leading-relaxed">{row.us}</td>
-                    <td className="px-5 py-4 text-slate-400 text-sm leading-relaxed">{row.consultant}</td>
-                    <td className="px-5 py-4 text-slate-400 text-sm leading-relaxed">{row.mssp}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="md:hidden grid gap-4">
-            {comparisonRows.map((row) => (
-              <div key={row.label} className="bg-slate-900/40 border border-slate-800 rounded-lg p-5">
-                <div className="font-semibold text-white mb-3">{row.label}</div>
-                <div className="text-emerald-400 text-xs uppercase tracking-wider mb-1">
-                  Autom8ion Lab
-                </div>
-                <p className="text-slate-200 text-sm mb-3">{row.us}</p>
-                <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">
-                  Compliance consultant
-                </div>
-                <p className="text-slate-400 text-sm mb-3">{row.consultant}</p>
-                <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">MSSP</div>
-                <p className="text-slate-400 text-sm">{row.mssp}</p>
-              </div>
-            ))}
-          </div>
+          <ComparisonTable
+            headers={['Dimension', 'Autom8ion Lab', 'Compliance consultant', 'MSSP']}
+            rows={comparisonRows}
+          />
         </div>
       </section>
 
       {/* COMPLIANCE FRAMEWORKS WE BUILD TO */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Frameworks our engineering work targets
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-3 text-sm">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Frameworks our engineering work targets
+            </h2>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-3 text-sm" staggerDelay={0.04}>
             {[
               'CMMC 2.0 (Levels 1–3)',
               'NIST 800-171 Rev 2',
@@ -376,44 +376,51 @@ export default function Page() {
               'DFARS 252.204-7012 / 7021',
               'Section 508',
             ].map((f) => (
-              <div
-                key={f}
-                className="bg-slate-900/40 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 flex items-center space-x-2"
-              >
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span>{f}</span>
-              </div>
+              <StaggerItem key={f}>
+                <PremiumCard variant="hover" className="px-4 py-3 text-slate-200 flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <span>{f}</span>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* SERVICE-SPECIFIC FAQ */}
-      <section className="py-20 bg-black">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Cybersecurity FAQ</h2>
-          <div className="space-y-5">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Cybersecurity FAQ</h2>
+          </Reveal>
+          <Stagger className="space-y-5" staggerDelay={0.06}>
             {faqs.map((q) => (
-              <div key={q.question} className="bg-slate-900/40 border border-slate-800 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
-                <p className="text-slate-300 leading-relaxed">{q.answer}</p>
-              </div>
+              <StaggerItem key={q.question}>
+                <PremiumCard variant="hover" className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">{q.question}</h3>
+                  <p className="text-slate-300 leading-relaxed">{q.answer}</p>
+                </PremiumCard>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* INTERNAL LINKING — to industry hubs */}
-      <section className="py-20 bg-slate-950">
+      <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Industry-specific compliance work
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8">
-            The framework you operate under depends on your industry. Each industry hub goes deeper on
-            the specific controls, named systems, and audit posture that apply.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-3">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Industry-specific compliance work
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              The framework you operate under depends on your industry. Each industry hub goes deeper on
+              the specific controls, named systems, and audit posture that apply.
+            </p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 gap-3" staggerDelay={0.05}>
             {[
               { slug: 'defense', name: 'Defense Industrial Base', desc: 'CMMC 2.0, NIST 800-171, DFARS' },
               { slug: 'healthcare', name: 'Healthcare & Life Sciences', desc: 'HIPAA, HITRUST, FDA Part 11' },
@@ -422,46 +429,49 @@ export default function Page() {
               { slug: 'real-estate-property', name: 'Real Estate & Property', desc: 'FCRA, HUD, Fair Housing' },
               { slug: 'construction', name: 'Construction', desc: 'HUD, OSHA, Davis-Bacon' },
             ].map((ind) => (
-              <Link
-                key={ind.slug}
-                href={`/industries/${ind.slug}`}
-                className="group bg-slate-900/40 border border-slate-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all flex items-center justify-between"
-              >
-                <div>
-                  <div className="text-white font-semibold group-hover:text-cyan-400">{ind.name}</div>
-                  <div className="text-slate-400 text-sm">{ind.desc}</div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <StaggerItem key={ind.slug}>
+                <Link href={`/industries/${ind.slug}`} className="group block h-full">
+                  <PremiumCard variant="hover" className="p-4 flex items-center justify-between">
+                    <div>
+                      <div className="text-white font-semibold group-hover:text-cyan-400">{ind.name}</div>
+                      <div className="text-slate-400 text-sm">{ind.desc}</div>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  </PremiumCard>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-black border-t border-slate-900">
+      <section className="py-20 relative border-t border-slate-900/50">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Need controls implemented and documented?
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-8">
-            30-minute discovery call. Tell us your environment, your framework, and your timeline.
-            We'll map the engagement and tell you whether we're a fit — or whether you need a different
-            kind of vendor.
-          </p>
-          <Link
-            href="/schedule-consultation"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-600 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-emerald-700 hover:to-cyan-600 transition-colors"
-          >
-            <span>Schedule a discovery call</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-          <p className="mt-6 text-sm text-slate-400">
-            Full federal registrations:{' '}
-            <Link href="/capability-statement" className="text-cyan-400 hover:underline">
-              capability statement for federal registrations
-            </Link>
-          </p>
+          <Reveal>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Need controls implemented and documented?
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-slate-300 leading-relaxed mb-8">
+              30-minute discovery call. Tell us your environment, your framework, and your timeline.
+              We&apos;ll map the engagement and tell you whether we&apos;re a fit — or whether you need
+              a different kind of vendor.
+            </p>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <MagneticButton href="/schedule-consultation" variant="primary">
+              Schedule a discovery call
+              <ArrowRight className="w-5 h-5" />
+            </MagneticButton>
+            <p className="mt-6 text-sm text-slate-400">
+              Full federal registrations:{' '}
+              <Link href="/capability-statement" className="text-cyan-400 link-underline">
+                capability statement for federal registrations
+              </Link>
+            </p>
+          </Reveal>
         </div>
       </section>
 
