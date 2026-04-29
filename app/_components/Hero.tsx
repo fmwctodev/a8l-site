@@ -84,21 +84,11 @@ const Hero = () => {
             Security architecture and compliance documentation engineered from day one — not retrofitted.
           </p>
 
-          {/* Trust bar — above the fold per LOCKED v3 acceptance criteria */}
-          <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-xs md:text-sm text-cyan-300 mb-10 max-w-5xl mx-auto">
-            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">
-              Veteran-Owned
-            </span>
-            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">
-              SDVOSB Certification Pending
-            </span>
-            <span className="px-3 py-1 bg-slate-800/60 border border-slate-700 rounded-full">
-              Registered US Federal Contractor · UEI: <span className="font-mono">YY2DR3KSENH7</span> ·
-              CAGE: <span className="font-mono">9YCS7</span>
-            </span>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Trust bar removed from hero per stakeholder direction. The same
+              veteran-owned / SDVOSB / federal-registration signals appear in
+              the footer trust band, capability statement, and Organization
+              JSON-LD, so search/AI surfaces still pick them up. */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
             {/* Primary CTA per LOCKED v3 */}
             <Link
               href="/schedule-consultation"
