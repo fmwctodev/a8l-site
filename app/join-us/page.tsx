@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CareersClient from './CareersClient';
+import { BreadcrumbSchema } from '@/app/_components/Schema';
 
 export const metadata: Metadata = {
   title: { absolute: 'Careers at Autom8ion Lab' },
@@ -29,5 +30,15 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <CareersClient />;
+  return (
+    <>
+      <BreadcrumbSchema
+        trail={[
+          { name: 'Home', href: '/' },
+          { name: 'Careers', href: '/join-us' },
+        ]}
+      />
+      <CareersClient />
+    </>
+  );
 }

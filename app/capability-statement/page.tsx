@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Download, Mail, Phone, MapPin, ArrowRight, Award, Shield, Building2, Workflow, Cloud } from 'lucide-react';
+import { BreadcrumbSchema } from '@/app/_components/Schema';
 
 export const metadata: Metadata = {
   title: 'Capability Statement',
@@ -27,82 +28,18 @@ export const metadata: Metadata = {
   },
 };
 
-const ldSchema1 = {
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Autom8ion Lab',
-            legalName: 'Sitehues Media Inc.',
-            alternateName: 'Sitehues Media Inc. (DBA Autom8ion Lab)',
-            url: 'https://autom8ionlab.com',
-            logo: 'https://autom8ionlab.com/logo/logo.png',
-            description:
-              'Veteran-owned, security-first AI, automation, and software engineering firm. SDVOSB certification pending.',
-            founder: {
-              '@type': 'Person',
-              name: 'Sean Richard',
-              url: 'https://www.linkedin.com/in/a8l-sean-richard/',
-            },
-            address: [
-              {
-                '@type': 'PostalAddress',
-                addressLocality: 'Plant City',
-                addressRegion: 'FL',
-                addressCountry: 'US',
-              },
-              {
-                '@type': 'PostalAddress',
-                addressLocality: 'Montreal',
-                addressRegion: 'QC',
-                addressCountry: 'CA',
-              },
-            ],
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+1-855-508-6062',
-              contactType: 'Sales',
-              email: 'info@autom8ionlab.com',
-              availableLanguage: ['English', 'French'],
-            },
-            identifier: [
-              { '@type': 'PropertyValue', propertyID: 'UEI', value: 'YY2DR3KSENH7' },
-              { '@type': 'PropertyValue', propertyID: 'CAGE', value: '9YCS7' },
-              { '@type': 'PropertyValue', propertyID: 'DUNS', value: '05-289-2750' },
-            ],
-            knowsAbout: [
-              'CMMC 2.0 compliance',
-              'NIST 800-171',
-              'NIST 800-53',
-              'FedRAMP',
-              'HIPAA compliance',
-              'SOC 2 Type II',
-              'FDA 21 CFR Part 11',
-              'AI agents',
-              'Workflow automation',
-              'Custom enterprise software',
-              'SDVOSB',
-              'Federal contracting',
-            ],
-          };
-
-const ldSchema2 = {
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://autom8ionlab.com/' },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Capability Statement',
-                item: 'https://autom8ionlab.com/capability-statement',
-              },
-            ],
-          };
-
+// Organization schema is sitewide via app/layout.tsx; this page just adds
+// BreadcrumbSchema. The body of the page IS the public capability statement,
+// so the data lives there visibly rather than as duplicate JSON-LD.
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldSchema1) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldSchema2) }} />
+      <BreadcrumbSchema
+        trail={[
+          { name: 'Home', href: '/' },
+          { name: 'Capability Statement', href: '/capability-statement' },
+        ]}
+      />
 
       <article className="relative pt-24 pb-20 px-6">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 to-transparent pointer-events-none" />

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { BreadcrumbSchema } from '@/app/_components/Schema';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
 
@@ -30,31 +31,14 @@ export const metadata: Metadata = {
   },
 };
 
+// ContactPage schema points back to the sitewide Organization @id rather
+// than re-declaring contact info — keeps the entity graph consistent with
+// what's already in app/layout.tsx via OrganizationSchema.
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   url: 'https://autom8ionlab.com/get-in-touch',
-  mainEntity: {
-    '@type': 'Organization',
-    name: 'Autom8ion Lab',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'Sales',
-      telephone: '+1-855-508-6062',
-      email: 'info@autom8ionlab.com',
-      availableLanguage: ['English', 'French'],
-      areaServed: ['US', 'CA'],
-    },
-  },
-};
-
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://autom8ionlab.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://autom8ionlab.com/get-in-touch' },
-  ],
+  mainEntity: { '@id': 'https://autom8ionlab.com/#organization' },
 };
 
 const contactInfo = [
@@ -81,9 +65,11 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      <BreadcrumbSchema
+        trail={[
+          { name: 'Home', href: '/' },
+          { name: 'Contact', href: '/get-in-touch' },
+        ]}
       />
 
       <section className="relative py-24 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">

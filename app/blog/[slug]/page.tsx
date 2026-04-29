@@ -6,6 +6,7 @@ import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
 import ReadingProgress from '@/app/_components/blog/ReadingProgress';
 import TableOfContents from '@/app/_components/blog/TableOfContents';
 import ShareButtons from '@/app/_components/blog/ShareButtons';
+import { ArticleSchema, BreadcrumbSchema } from '@/app/_components/Schema';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -72,56 +73,34 @@ export default async function BlogPostPage({ params }: Props) {
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    image: post.og_image ?? post.hero_image,
-    datePublished: post.published_at,
-    dateModified: post.date_modified ?? post.published_at,
-    inLanguage: 'en-US',
-    keywords: post.tags.join(', '),
-    ...(post.article_section ? { articleSection: post.article_section } : {}),
-    author: {
-      '@type': 'Person',
-      name: post.author,
-      ...(post.author_title ? { jobTitle: post.author_title } : {}),
-      ...(post.author_linkedin ? { sameAs: post.author_linkedin } : {}),
-      worksFor: { '@type': 'Organization', name: 'Autom8ion Lab' },
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Autom8ion Lab',
-      logo: { '@type': 'ImageObject', url: 'https://autom8ionlab.com/logo/logo.png' },
-    },
-    description: post.excerpt,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://autom8ionlab.com/blog/${post.slug}` },
-  };
+  // Reasonable wordCount estimate from the rendered HTML body (rough — strips
+  // tags, splits on whitespace). Article schema rewards specificity here.
+  const wordCount = post.content
+    .replace(/<[^>]+>/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean).length;
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://autom8ionlab.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://autom8ionlab.com/blog' },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: post.title,
-        item: `https://autom8ionlab.com/blog/${post.slug}`,
-      },
-    ],
-  };
+  const postUrl = `https://autom8ionlab.com/blog/${post.slug}`;
 
   return (
     <div className="min-h-screen bg-slate-950">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      <ArticleSchema
+        title={post.title}
+        description={post.excerpt}
+        datePublished={post.published_at}
+        dateModified={post.date_modified ?? post.published_at}
+        url={postUrl}
+        imageUrl={post.og_image ?? post.hero_image}
+        articleSection={post.article_section ?? undefined}
+        keywords={post.tags}
+        wordCount={wordCount}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      <BreadcrumbSchema
+        trail={[
+          { name: 'Home', href: '/' },
+          { name: 'Blog', href: '/blog' },
+          { name: post.title, href: `/blog/${post.slug}` },
+        ]}
       />
 
       <ReadingProgress />

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { BreadcrumbSchema } from '@/app/_components/Schema';
 
 export const metadata: Metadata = {
   title: 'Schedule a Consultation',
@@ -28,21 +29,14 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://autom8ionlab.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Schedule a Briefing', item: 'https://autom8ionlab.com/schedule-consultation' },
-  ],
-};
-
 export default function BookingPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      <BreadcrumbSchema
+        trail={[
+          { name: 'Home', href: '/' },
+          { name: 'Schedule a Briefing', href: '/schedule-consultation' },
+        ]}
       />
 
       <section className="relative py-24 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 overflow-hidden">

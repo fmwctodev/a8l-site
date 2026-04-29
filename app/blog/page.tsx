@@ -4,6 +4,7 @@ import { BookOpen, TrendingUp } from 'lucide-react';
 import BlogCard from '@/app/_components/BlogCard';
 import { Reveal, Stagger, StaggerItem, MagneticButton } from '@/app/_components/ui';
 import { getAllPosts } from '@/lib/posts';
+import { BreadcrumbSchema } from '@/app/_components/Schema';
 
 export const metadata: Metadata = {
   title: 'Engineering Insights',
@@ -37,20 +38,18 @@ export const revalidate = 60;
 export default async function BlogIndexPage() {
   const posts = await getAllPosts();
 
+  // Blog schema lists every post as BlogPosting children. Publisher uses
+  // @id ref to resolve back to the sitewide Organization in app/layout.tsx.
   const blogSchema = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
+    '@id': 'https://autom8ionlab.com/blog#blog',
     name: 'Autom8ion Lab Blog',
     url: 'https://autom8ionlab.com/blog',
     description:
-      'Expert insights on AI automation, workflow optimization, cloud infrastructure, and cybersecurity.',
+      'Engineering insights on custom AI, workflow automation, LLM systems, and compliance — written by builders for technical decision-makers.',
     inLanguage: 'en-US',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Autom8ion Lab',
-      url: 'https://autom8ionlab.com',
-      logo: { '@type': 'ImageObject', url: 'https://autom8ionlab.com/logo/logo.png' },
-    },
+    publisher: { '@id': 'https://autom8ionlab.com/#organization' },
     ...(posts.length > 0
       ? {
           blogPost: posts.map((p) => ({
@@ -66,24 +65,17 @@ export default async function BlogIndexPage() {
       : {}),
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://autom8ionlab.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://autom8ionlab.com/blog' },
-    ],
-  };
-
   return (
     <div className="min-h-screen bg-slate-950">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      <BreadcrumbSchema
+        trail={[
+          { name: 'Home', href: '/' },
+          { name: 'Blog', href: '/blog' },
+        ]}
       />
 
       <div className="relative pt-32 pb-20 px-6">
