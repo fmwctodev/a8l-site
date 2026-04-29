@@ -34,6 +34,16 @@ const RESOURCE_PAGES = [
   '/case-studies',
 ];
 
+// Comparison routes per Implementation Plan §7.8 — buyer-intent pages
+// matched against the major decision alternatives (managed n8n SaaS,
+// no-code automation platforms, generic AI consultancies). No /compare
+// hub page yet; only the leaf pages exist.
+const COMPARE_ROUTES = [
+  'autom8ion-lab-vs-n8n-cloud',
+  'custom-build-vs-zapier-make-n8n',
+  'autom8ion-lab-vs-generic-ai-consultancy',
+];
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const today = new Date();
   const posts = await getAllPosts();
@@ -93,6 +103,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: today,
       changeFrequency: 'monthly' as const,
       priority: 0.85,
+    })),
+
+    // Comparison routes — buyer-intent leaf pages.
+    ...COMPARE_ROUTES.map((slug) => ({
+      url: `${BASE}/compare/${slug}`,
+      lastModified: today,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
     })),
 
     { url: `${BASE}/join-us`, lastModified: today, changeFrequency: 'monthly', priority: 0.5 },
