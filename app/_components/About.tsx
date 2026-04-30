@@ -3,15 +3,15 @@ import { Target, Users, Lightbulb, Shield } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-black relative overflow-hidden">
+    <section id="about" className="py-16 md:py-24 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/5 to-cyan-900/5"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="mb-6">
               <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">About Autom8ion Lab</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
                 From Marketing to Machine Learning,
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> We Evolved With What Businesses Need</span>
               </h2>

@@ -62,8 +62,8 @@ const industries: IndustryCard[] = [
 
 export default function IndustriesGrid() {
   return (
-    <section id="industries" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="industries" className="py-16 md:py-24 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <Reveal>
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">

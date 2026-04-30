@@ -135,7 +135,7 @@ export default function SolutionsHubPage() {
 
       {/* Hero */}
       <section className="relative min-h-[55vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <Reveal>
             <nav className="text-sm text-slate-400 mb-6">
               <Link href="/" className="hover:text-cyan-400">
@@ -161,7 +161,7 @@ export default function SolutionsHubPage() {
 
       {/* Definition + intro */}
       <section className="py-12 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <section className="definition-block">
               <p className="lead">
@@ -178,7 +178,7 @@ export default function SolutionsHubPage() {
 
       {/* Solutions grid */}
       <section className="py-16 relative">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">What we build</h2>
           </Reveal>
@@ -210,7 +210,7 @@ export default function SolutionsHubPage() {
 
       {/* Closing CTA */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Not sure which fits your environment?

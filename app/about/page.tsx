@@ -46,7 +46,7 @@ export default function Page() {
       />
 
       <section className="relative min-h-[50vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <Reveal>
             <nav className="text-sm text-slate-400 mb-6">
               <Link href="/" className="hover:text-cyan-400">Home</Link>
@@ -69,7 +69,7 @@ export default function Page() {
       </section>
 
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6 space-y-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">Why we exist</h2>
             <p className="text-lg text-slate-300 leading-relaxed mb-4">

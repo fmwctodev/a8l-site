@@ -115,7 +115,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
 
       {/* Hero */}
       <section className={`relative min-h-[60vh] bg-gradient-to-br ${data.heroAccent} overflow-hidden`}>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <Reveal>
             <nav className="text-sm text-slate-400 mb-6">
               <Link href="/" className="hover:text-cyan-400">Home</Link>
@@ -136,7 +136,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
 
       {/* Definition + buyer profile */}
       <section className="py-16 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {data.definition && (
             <Reveal>
               <section className="definition-block">
@@ -158,7 +158,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
       {/* Problem framing (optional) */}
       {data.problemFraming && (
         <section className="py-20 relative">
-          <div className="max-w-4xl mx-auto px-6 relative">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 relative">
             <div
               aria-hidden="true"
               className="absolute left-0 top-8 bottom-8 w-1 rounded-full bg-gradient-to-b from-cyan-400 via-blue-500 to-purple-500 animate-pulse-glow shadow-glow-cyan"
@@ -183,7 +183,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
 
       {/* What we build */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               What we build for {data.breadcrumbName.toLowerCase()}
@@ -226,7 +226,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
       {/* Named integrations (optional) */}
       {data.namedIntegrations && (
         <section className="py-20 relative">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
                 Named systems we integrate with
@@ -256,7 +256,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
 
       {/* Compliance considerations */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Compliance considerations</h2>
           </Reveal>
@@ -276,7 +276,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
       {/* Required disclosure (Defense-only) — wrap in pulse-glow shell */}
       {data.disclosure && (
         <section className="py-12 relative">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <Reveal>
               <div className="relative bg-amber-950/20 border-y border-amber-900/40 rounded-lg p-8 overflow-hidden">
                 <div
@@ -299,7 +299,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
           with prefers-reduced-motion respect. */}
       {data.comparison && (
         <section className="py-20 relative">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
                 {data.comparison.heading ?? `How we compare for ${data.breadcrumbName}`}
@@ -323,7 +323,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
 
       {/* FAQ */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
               {data.breadcrumbName} FAQ
@@ -344,7 +344,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
 
       {/* Representative engagements */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Representative engagements
@@ -392,7 +392,7 @@ export default function IndustryPageLayout({ data }: { data: IndustryPageData })
           Implementation Plan §8.3 + §8.4 hub-and-spoke architecture. */}
       {data.relatedSolutions && data.relatedSolutions.length > 0 && (
         <section className="py-16 relative">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
                 Solutions we deploy for {data.breadcrumbName}

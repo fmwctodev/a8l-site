@@ -35,16 +35,16 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="py-24 bg-black relative">
+    <section id="process" className="py-16 md:py-24 bg-black relative">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl hidden sm:block"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/3 rounded-full blur-3xl hidden sm:block"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Our Process</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             How We Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Systems in 30 Days</span>
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold text-slate-300 mb-6">
@@ -70,7 +70,7 @@ const Process = () => {
                     <div className="hidden lg:block absolute top-24 left-full w-8 h-0.5 bg-gradient-to-r from-cyan-400/50 to-transparent z-0"></div>
                   )}
                   
-                  <div className="relative bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/30 transition-all duration-300 group-hover:transform group-hover:scale-105">
+                  <div className="relative bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/30 transition-all duration-300 group-hover:transform group-hover:scale-105">
                     {/* Step Number */}
                     <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                       {index + 1}
@@ -115,7 +115,7 @@ const Process = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 max-w-2xl mx-auto">
+          <div className="bg-slate-800/50 p-6 sm:p-8 rounded-2xl border border-slate-700/50 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">Want to See If This Works for You?</h3>
             <p className="text-slate-300 mb-6">
               Book a free call to talk about what you need. We'll map out what a custom build would look like for your business.

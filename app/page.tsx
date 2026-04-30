@@ -99,7 +99,7 @@ export default function HomePage() {
           do" without needing to parse the rest of the page. Per Implementation
           Plan §6.1. */}
       <section className="py-12 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <section className="definition-block">
             <p className="lead">
               <strong>Autom8ion Lab</strong> is a veteran-owned engineering firm that builds custom

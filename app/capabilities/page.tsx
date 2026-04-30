@@ -85,7 +85,7 @@ export default function Page() {
       />
 
       <section className="relative min-h-[50vh] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <Reveal>
             <nav className="text-sm text-slate-400 mb-6">
               <Link href="/" className="hover:text-cyan-400">Home</Link>
@@ -110,7 +110,7 @@ export default function Page() {
       </section>
 
       <section className="py-20 relative">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <Reveal>
             <div className="relative bg-amber-950/20 border border-amber-900/30 rounded-xl p-6 mb-12 overflow-hidden">
               <div
@@ -153,7 +153,7 @@ export default function Page() {
       </section>
 
       <section className="py-16 relative">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Looking for something specific?

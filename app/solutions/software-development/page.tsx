@@ -212,7 +212,7 @@ export default function Page() {
       <FAQPageSchema faqs={faqs} />
 
       <section className="relative min-h-[55vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <nav className="text-sm text-slate-400 mb-6">
             <Link href="/" className="hover:text-cyan-400">
               Home
@@ -235,7 +235,7 @@ export default function Page() {
 
       {/* AEO DEFINITION BLOCK */}
       <section className="py-12 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <section className="definition-block">
               <p className="lead">
@@ -253,7 +253,7 @@ export default function Page() {
 
       {/* DEFINITION BLOCK */}
       <section className="py-16 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-lg text-slate-300 leading-relaxed mb-6">
             Scaling companies hit a wall when off-the-shelf software stops fitting the way the business
             actually runs. You end up forcing your team into someone else&apos;s workflow, stacking
@@ -276,7 +276,7 @@ export default function Page() {
 
       {/* WHO THIS IS FOR */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
           </Reveal>
@@ -295,7 +295,7 @@ export default function Page() {
 
       {/* WHAT WE BUILD */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we actually build</h2>
           </Reveal>
@@ -324,7 +324,7 @@ export default function Page() {
 
       {/* 30-DAY LAUNCH FRAMEWORK */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our 30-day launch framework</h2>
           </Reveal>
@@ -376,7 +376,7 @@ export default function Page() {
 
       {/* BEYOND TRADITIONAL DEVELOPMENT */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Beyond traditional development: AI, automation, and integration
@@ -416,7 +416,7 @@ export default function Page() {
 
       {/* COMPARISON TABLE */}
       <section className="py-20 relative">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Custom build vs. SaaS template vs. enterprise platform
@@ -438,7 +438,7 @@ export default function Page() {
 
       {/* COMPLIANCE & GOVERNMENT READINESS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Compliance &amp; government readiness
@@ -473,7 +473,7 @@ export default function Page() {
 
       {/* FAQ */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Software development FAQ
@@ -494,7 +494,7 @@ export default function Page() {
 
       {/* CTA */}
       <section className="py-20 relative border-t border-slate-900/50">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">
               Stop settling for off-the-shelf software

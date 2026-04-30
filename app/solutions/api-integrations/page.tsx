@@ -217,7 +217,7 @@ export default function Page() {
       />
 
       <section className="relative min-h-[55vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <nav className="text-sm text-slate-400 mb-6">
             <Link href="/" className="hover:text-cyan-400">
               Home
@@ -241,7 +241,7 @@ export default function Page() {
 
       {/* AEO DEFINITION BLOCK */}
       <section className="py-12 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <section className="definition-block">
               <p className="lead">
@@ -258,7 +258,7 @@ export default function Page() {
 
       {/* DEFINITION BLOCK */}
       <section className="py-16 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-lg text-slate-300 leading-relaxed mb-6">
             Your commercial systems are likely running on a dozen platforms that don&apos;t talk to
             each other. That breaks workflows fast. You have CRMs, ERPs, project management tools,
@@ -281,7 +281,7 @@ export default function Page() {
 
       {/* WHO THIS IS FOR */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Who this is for</h2>
           </Reveal>
@@ -300,7 +300,7 @@ export default function Page() {
 
       {/* THREE DIRECT PROBLEMS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Three direct problems when systems are not integrated
@@ -340,7 +340,7 @@ export default function Page() {
 
       {/* WHAT WE ACTUALLY BUILD */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               What we actually build
@@ -371,7 +371,7 @@ export default function Page() {
 
       {/* COMPARISON TABLE */}
       <section className="py-20 relative">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Custom integrations vs. Zapier/no-code vs. enterprise iPaaS
@@ -399,7 +399,7 @@ export default function Page() {
 
       {/* INDUSTRY USE CASES */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Custom integrations for commercial industries
@@ -426,7 +426,7 @@ export default function Page() {
 
       {/* WHY COMPANIES CHOOSE US + FEDERAL CREDENTIALS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Why companies choose Autom8ion Lab
@@ -480,7 +480,7 @@ export default function Page() {
 
       {/* CTA */}
       <section className="py-20 relative border-t border-slate-900/50">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">Ready to connect your systems?</h2>
           </Reveal>

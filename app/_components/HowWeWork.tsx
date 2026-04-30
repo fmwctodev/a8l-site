@@ -40,8 +40,8 @@ const phases: TimelinePhase[] = [
 
 export default function HowWeWork() {
   return (
-    <section className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 md:py-24 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <Reveal>
           <div className="max-w-3xl mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">

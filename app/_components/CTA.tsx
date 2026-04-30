@@ -4,15 +4,15 @@ import { ArrowRight, Zap } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-black relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl hidden sm:block animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-2xl hidden sm:block"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-2xl hidden sm:block"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
         {/* Main CTA Content */}
         <div className="mb-12">
           <div className="inline-flex items-center space-x-2 bg-cyan-900/30 backdrop-blur-sm px-6 py-3 rounded-full border border-cyan-500/20 mb-8">

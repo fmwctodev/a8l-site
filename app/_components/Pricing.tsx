@@ -15,16 +15,16 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-black relative overflow-hidden">
+    <section id="pricing" className="py-16 md:py-24 bg-black relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/6 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/6 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl hidden sm:block"></div>
+        <div className="absolute bottom-1/4 right-1/6 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl hidden sm:block"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Engagement Models</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Engagement models for{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">any procurement vehicle</span>
           </h2>

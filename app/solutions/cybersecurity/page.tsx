@@ -174,7 +174,7 @@ export default function Page() {
       <FAQPageSchema faqs={faqs} />
 
       <section className="relative min-h-[55vh] bg-gradient-to-br from-slate-950 via-emerald-950/30 to-slate-950 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <Reveal>
             <nav className="text-sm text-slate-400 mb-6">
               <Link href="/" className="hover:text-cyan-400">Home</Link>
@@ -201,7 +201,7 @@ export default function Page() {
 
       {/* AEO DEFINITION BLOCK */}
       <section className="py-12 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <section className="definition-block">
               <p className="lead">
@@ -219,7 +219,7 @@ export default function Page() {
 
       {/* DEFINITION BLOCK */}
       <section className="py-16 relative">
-        <div className="max-w-4xl mx-auto px-6 relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative">
           {/* Vertical gradient accent bar */}
           <div
             aria-hidden="true"
@@ -256,7 +256,7 @@ export default function Page() {
 
       {/* REQUIRED DISCLOSURE BLOCK — pulse-glow shell */}
       <section className="py-12 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <div className="relative bg-amber-950/20 border-y border-amber-900/40 rounded-lg p-8 overflow-hidden">
               <div
@@ -284,7 +284,7 @@ export default function Page() {
 
       {/* WHAT USUALLY BREAKS COMPLIANCE PROGRAMS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What usually breaks compliance programs</h2>
           </Reveal>
@@ -334,7 +334,7 @@ export default function Page() {
 
       {/* WHAT WE BUILD */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">What we build</h2>
           </Reveal>
@@ -363,7 +363,7 @@ export default function Page() {
 
       {/* 30-DAY AUDIT TIMELINE */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               The 30-day audit and 4-9 month remediation timeline
@@ -414,7 +414,7 @@ export default function Page() {
 
       {/* COMPARISON TABLE */}
       <section className="py-20 relative">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Compliance engineering firm vs. consultant vs. MSSP
@@ -436,7 +436,7 @@ export default function Page() {
 
       {/* FRAMEWORKS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Frameworks our engineering work targets
@@ -466,7 +466,7 @@ export default function Page() {
 
       {/* WHY OUR APPROACH IS DIFFERENT */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Why our approach is different
@@ -518,7 +518,7 @@ export default function Page() {
 
       {/* GOVERNMENT & DEFENSE BLOCK */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Government &amp; Defense
@@ -554,7 +554,7 @@ export default function Page() {
 
       {/* FAQ */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Cybersecurity FAQ</h2>
           </Reveal>
@@ -573,7 +573,7 @@ export default function Page() {
 
       {/* INTERNAL LINKING */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Quick links for your security strategy
@@ -614,7 +614,7 @@ export default function Page() {
 
       {/* CTA */}
       <section className="py-20 relative border-t border-slate-900/50">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">
               Stop guessing. Start hardening.

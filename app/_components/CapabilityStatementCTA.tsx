@@ -7,8 +7,8 @@ import CapabilityRequestButton from './CapabilityRequestButton';
 
 export default function CapabilityStatementCTA() {
   return (
-    <section className="py-24 relative">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="py-16 md:py-24 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <Reveal>
           <div className="relative bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-950 border border-slate-800 rounded-2xl p-10 md:p-14 overflow-hidden bg-mesh-gradient">
             {/* Animated gradient sheen behind content */}

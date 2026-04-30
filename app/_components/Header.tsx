@@ -69,6 +69,17 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Lock body scroll while the mobile menu is open so the page beneath
+  // doesn't drift when users swipe inside the menu list.
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : previous || '';
+    return () => {
+      document.body.style.overflow = previous || '';
+    };
+  }, [isMobileMenuOpen]);
+
   const toggleDropdown = (key: DropdownKey) => {
     setOpenDropdown(openDropdown === key ? null : key);
   };
@@ -198,10 +209,10 @@ export default function Header() {
                 ['resources', 'Resources', resources],
               ] as const
             ).map(([key, label, items]) => (
-              <div key={key} className="py-2 border-b border-slate-800 last:border-b-0">
+              <div key={key} className="border-b border-slate-800 last:border-b-0">
                 <button
                   onClick={() => setOpenMobileSection(openMobileSection === key ? null : key)}
-                  className="flex items-center justify-between w-full text-slate-200 hover:text-cyan-400 transition-colors py-2 font-medium"
+                  className="flex items-center justify-between w-full text-slate-200 hover:text-cyan-400 transition-colors py-3 font-medium min-h-[44px]"
                   aria-expanded={openMobileSection === key}
                 >
                   <span>{label}</span>
@@ -212,12 +223,12 @@ export default function Header() {
                   />
                 </button>
                 {openMobileSection === key && (
-                  <div className="pl-4 space-y-2 mt-2">
+                  <div className="pl-4 space-y-1 pb-2">
                     {items.map((item) => (
                       <Link
                         key={item.path}
                         href={item.path}
-                        className="block text-slate-400 hover:text-cyan-400 transition-colors py-1 text-sm"
+                        className="block text-slate-400 hover:text-cyan-400 transition-colors py-3 text-sm min-h-[44px]"
                         onClick={closeMobileMenu}
                       >
                         {item.title}
@@ -230,18 +241,18 @@ export default function Header() {
 
             <Link
               href="/get-in-touch"
-              className="block text-slate-200 hover:text-cyan-400 transition-colors py-2 font-medium border-b border-slate-800"
+              className="block text-slate-200 hover:text-cyan-400 transition-colors py-3 font-medium border-b border-slate-800 min-h-[44px]"
               onClick={closeMobileMenu}
             >
               Contact
             </Link>
 
-            <div className="pt-4 space-y-3">
+            <div className="pt-4 space-y-2">
               <a
                 href="https://os.autom8ionlab.com/client-portal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-slate-300 hover:text-cyan-400 transition-colors py-2 font-medium"
+                className="block text-slate-300 hover:text-cyan-400 transition-colors py-3 font-medium min-h-[44px]"
                 onClick={closeMobileMenu}
               >
                 Login

@@ -47,7 +47,7 @@ export default function Page() {
           <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent animate-scan-horizontal" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <div className="mb-8">
               <span

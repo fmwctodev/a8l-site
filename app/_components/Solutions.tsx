@@ -77,16 +77,16 @@ const Solutions = () => {
   ];
 
   return (
-    <section id="solutions" className="py-24 bg-black relative overflow-hidden">
+    <section id="solutions" className="py-16 md:py-24 bg-black relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/6 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl hidden sm:block"></div>
+        <div className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl hidden sm:block"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Our Solutions</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             AI Automation, <Link href="/solutions/cloud-systems" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 hover:from-blue-300 hover:to-cyan-300 transition-colors">Cloud Infrastructure</Link> & <Link href="/solutions/cybersecurity" className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-amber-400 hover:from-cyan-300 hover:to-amber-300 transition-colors">Cybersecurity</Link> Built for Your Business
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold text-slate-300 mb-6">

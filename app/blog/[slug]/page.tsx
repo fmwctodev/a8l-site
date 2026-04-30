@@ -117,9 +117,9 @@ export default async function BlogPostPage({ params }: Props) {
             maskImage: 'radial-gradient(ellipse at top, black 30%, transparent 75%)',
           }}
         />
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl hidden sm:block pointer-events-none" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-8 text-sm font-medium"
@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           )}
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight">
             {post.title}
           </h1>
 
@@ -181,7 +181,7 @@ export default async function BlogPostPage({ params }: Props) {
       </div>
 
       <article className="pb-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-[1fr_250px] gap-12">
             <div className="max-w-4xl">
               <div className="relative mb-12 rounded-2xl overflow-hidden border border-slate-800 group">

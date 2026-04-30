@@ -172,7 +172,7 @@ export default function Page() {
 
       {/* HERO */}
       <section className="relative min-h-[55vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <Reveal>
             <nav className="text-sm text-slate-400 mb-6">
               <Link href="/" className="hover:text-cyan-400">Home</Link>
@@ -199,7 +199,7 @@ export default function Page() {
 
       {/* AEO DEFINITION BLOCK */}
       <section className="py-12 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <section className="definition-block">
               <p className="lead">
@@ -215,7 +215,7 @@ export default function Page() {
 
       {/* COMPARISON TABLE */}
       <section className="py-20 relative">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Side-by-side comparison
@@ -241,7 +241,7 @@ export default function Page() {
 
       {/* WHEN GENERIC CONSULTANCY WINS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               When a generic AI consultancy is the right choice
@@ -289,7 +289,7 @@ export default function Page() {
 
       {/* WHEN BIG-4 WINS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               When a Big-4 consultancy is the right choice
@@ -337,7 +337,7 @@ export default function Page() {
 
       {/* WHEN AUTOM8ION WINS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               When Autom8ion Lab is the right choice
@@ -385,7 +385,7 @@ export default function Page() {
 
       {/* HOW TO EVALUATE */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               How to evaluate which fits your use case
@@ -443,7 +443,7 @@ export default function Page() {
 
       {/* FAQ */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Frequently asked questions
@@ -464,7 +464,7 @@ export default function Page() {
 
       {/* INTERNAL LINKS */}
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Related reading
@@ -511,7 +511,7 @@ export default function Page() {
 
       {/* CLOSING CTA */}
       <section className="py-20 relative border-t border-slate-900/50">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4">
               Get a working system, not a deck.

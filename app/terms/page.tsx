@@ -26,19 +26,19 @@ const lastUpdated = "August 17, 2025";
     <>
 
       {/* Hero Section */}
-            <section className="relative py-24 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden">
+            <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
+                <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl hidden sm:block animate-pulse-slow"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl hidden sm:block animate-pulse-slow delay-700"></div>
               </div>
       
-              <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
                 <img
                   src="/logo/logo.png"
                   alt="Autom8ion Lab Logo"
                   className="w-20 h-20 object-contain mx-auto mb-8"
                 />
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   Terms of
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> Service</span>
                 </h1>
@@ -54,7 +54,7 @@ const lastUpdated = "August 17, 2025";
       
             {/* Key Points */}
             <section className="py-16 bg-black">
-              <div className="max-w-7xl mx-auto px-6">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
                   <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 text-center">
                     <Scale className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -77,7 +77,7 @@ const lastUpdated = "August 17, 2025";
       
             {/* Terms Content */}
             <section className="py-16 bg-black">
-              <div className="max-w-4xl mx-auto px-6">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6">
                 <div className="prose prose-invert prose-lg max-w-none mb-8">
                   <p className="text-slate-300 leading-relaxed">
                     Welcome to Autom8ion Lab! These Terms of Service ("Terms") govern your access to and use of our website, services, and products. Please read them carefully.

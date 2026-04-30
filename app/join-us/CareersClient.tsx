@@ -84,15 +84,15 @@ export default function CareersClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldSchema1) }}
       />
 
-      <section className="relative py-24 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
+          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl hidden sm:block animate-pulse-slow"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl hidden sm:block animate-pulse-slow delay-700"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <Image src="/logo/logo-160.webp" alt="Autom8ion Lab Logo" width={160} height={160} sizes="80px" className="w-20 h-20 object-contain mx-auto mb-8" />
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Build the Future of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> AI & Automation</span>
           </h1>
@@ -111,10 +111,10 @@ export default function CareersClient() {
         </div>
       </section>
 
-      <section className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Our<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> Values</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -139,10 +139,10 @@ export default function CareersClient() {
         </div>
       </section>
 
-      <section id="open-positions" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="open-positions" className="py-16 md:py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Open<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> Positions</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -202,10 +202,10 @@ export default function CareersClient() {
         </div>
       </section>
 
-      <section className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Benefits &<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> Perks</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -224,9 +224,9 @@ export default function CareersClient() {
         </div>
       </section>
 
-      <section className="py-24 bg-black">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+      <section className="py-16 md:py-24 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div className="bg-slate-800/50 p-6 sm:p-8 rounded-2xl border border-slate-700/50">
             <h3 className="text-3xl font-bold text-white mb-4">Don&apos;t See the Perfect Role?</h3>
             <p className="text-slate-300 mb-6">
               We&apos;re always looking for talented individuals who share our passion for innovation. Send us your resume and tell us how you&apos;d like to contribute to the future of AI and automation.

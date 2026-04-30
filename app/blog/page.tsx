@@ -86,7 +86,7 @@ export default async function BlogIndexPage() {
             <div className="text-center mb-16">
               <div className="flex items-center justify-center gap-2 mb-6">
                 <BookOpen className="w-8 h-8 text-cyan-400" />
-                <h1 className="text-5xl md:text-6xl font-bold text-white">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
                   Automation{' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                     Insights

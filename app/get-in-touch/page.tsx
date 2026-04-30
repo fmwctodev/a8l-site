@@ -73,17 +73,17 @@ export default function ContactPage() {
         ]}
       />
 
-      <section className="relative py-24 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
+          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl hidden sm:block animate-pulse-slow"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl hidden sm:block animate-pulse-slow delay-700"></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <Image src="/logo/logo-160.webp" alt="Autom8ion Lab Logo" width={160} height={160} sizes="80px" className="w-20 h-20 object-contain mx-auto mb-8" />
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Talk to Us About
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Your Project</span>
             </h1>
@@ -97,7 +97,7 @@ export default function ContactPage() {
       </section>
 
       <section className="py-16 relative">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Stagger className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.07}>
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
@@ -125,20 +125,25 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-16 md:py-24 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Start Your
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Custom Project</span>
             </h2>
-            <p className="text-xl text-slate-300">
+            <p className="text-lg sm:text-xl text-slate-300">
               Tell us about your automation needs and we&apos;ll create a custom solution for your business.
             </p>
           </div>
 
-          <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
-            <div className="min-h-[864px]">
+          {/* Embed wrapper: padding scales down on small screens so the form gets
+              full viewport width on mobile. The 864px iframe height is a starting
+              hint — form_embed.js auto-resizes via postMessage once the form
+              renders, so on mobile (where fields stack to ~1100px) the iframe
+              grows past 864px instead of clipping the submit button. */}
+          <div className="bg-slate-800/50 p-4 sm:p-6 md:p-8 rounded-2xl border border-slate-700/50">
+            <div className="min-h-[600px]">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/SNkHAghEAJ6mS7wUtBep"
                 style={{ width: '100%', height: '864px', border: 'none', borderRadius: '3px' }}

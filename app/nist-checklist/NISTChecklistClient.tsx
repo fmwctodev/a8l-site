@@ -170,7 +170,7 @@ const NISTChecklistClient = () => {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(6,182,212,0.08)_0%,_transparent_60%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(59,130,246,0.06)_0%,_transparent_60%)]" />
 
-            <div className="relative max-w-5xl mx-auto px-6 text-center">
+            <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
               <div className="inline-flex items-center gap-2 bg-cyan-400/10 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
                 <AlertTriangle className="w-4 h-4 text-cyan-400" />
                 <span className="text-cyan-400 text-sm font-semibold tracking-wide uppercase">
@@ -178,7 +178,7 @@ const NISTChecklistClient = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Your AI Is Running.
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
@@ -220,7 +220,7 @@ const NISTChecklistClient = () => {
 
           {/* Framework pillars */}
           <section className="py-16 bg-black">
-            <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6">
               <div className="text-center mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   The Four Functions of the NIST AI RMF
@@ -256,7 +256,7 @@ const NISTChecklistClient = () => {
 
           {/* What's inside */}
           <section className="py-16 bg-slate-950">
-            <div className="max-w-4xl mx-auto px-6">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6">
               <div className="text-center mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   What's Inside the Checklist
@@ -395,7 +395,7 @@ const NISTChecklistClient = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(6,182,212,0.07)_0%,_transparent_65%)]" />
 
-          <div className="relative max-w-3xl mx-auto px-6 text-center">
+          <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-cyan-400/10 border border-cyan-400/30 rounded-full mb-8">
               <CheckCircle className="w-10 h-10 text-cyan-400" />
             </div>

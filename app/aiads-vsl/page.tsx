@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <>
 
-      <section className="py-24 bg-black relative">
-              <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-black relative">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="max-w-4xl mx-auto text-center">
                   <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                     AI-Powered Advertising Solutions

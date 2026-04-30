@@ -77,7 +77,7 @@ export default function Page() {
       />
 
       <section className="relative min-h-[40vh] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-12">
           <Reveal>
             <nav className="text-sm text-slate-400 mb-6">
               <Link href="/" className="hover:text-cyan-400">Home</Link>
@@ -100,7 +100,7 @@ export default function Page() {
       </section>
 
       <section className="py-12 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal>
             <div className="relative bg-amber-950/20 border-y border-amber-900/40 rounded-lg p-6 overflow-hidden flex items-start space-x-4">
               <Lock className="relative w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
@@ -121,7 +121,7 @@ export default function Page() {
       </section>
 
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Stagger className="space-y-8" staggerDelay={0.1}>
             {scenarios.map((s) => (
               <StaggerItem key={s.title} as="article">
@@ -152,7 +152,7 @@ export default function Page() {
       </section>
 
       <section className="py-16 relative">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Need past performance for a specific opportunity?

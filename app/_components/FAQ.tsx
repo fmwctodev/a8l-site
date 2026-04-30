@@ -56,13 +56,13 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-purple-900/5"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Frequently Asked Questions</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Common questions from{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               prospective clients

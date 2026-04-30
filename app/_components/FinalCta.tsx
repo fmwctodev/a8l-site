@@ -5,7 +5,7 @@ import { Reveal, MagneticButton } from './ui';
 
 export default function FinalCta() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Animated gradient mesh */}
       <div
         aria-hidden="true"
@@ -16,7 +16,7 @@ export default function FinalCta() {
         className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/60"
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <Reveal>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Ready to talk about a project?

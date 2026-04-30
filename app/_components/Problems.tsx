@@ -21,13 +21,13 @@ const Problems = () => {
   ];
 
   return (
-    <section className="py-24 bg-black relative">
+    <section className="py-16 md:py-24 bg-black relative">
       <div className="absolute inset-0 bg-gradient-to-r from-red-900/5 to-orange-900/5"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-red-400 font-semibold text-sm uppercase tracking-wider">The Problem</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Why Generic Automation Fails, and How We Fix It
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold text-cyan-400 mb-6">

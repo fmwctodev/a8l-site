@@ -4,8 +4,8 @@ import { Reveal } from './ui';
 
 export default function ProblemFraming() {
   return (
-    <section className="py-24 relative">
-      <div className="max-w-4xl mx-auto px-6 relative">
+    <section className="py-16 md:py-24 relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative">
         {/* Pulsing gradient accent bar — visual anchor for the prose */}
         <div
           aria-hidden="true"

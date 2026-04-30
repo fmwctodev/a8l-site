@@ -17,7 +17,7 @@ const Footer = () => {
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent bg-[length:200%_100%] animate-gradient-shift"
       />
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-4 text-center text-xs md:text-sm text-cyan-200/90 font-medium tracking-wide">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-4 text-center text-xs md:text-sm text-cyan-200/90 font-medium tracking-wide">
         Veteran-Owned · SDVOSB Certified · SBA Certified · Registered US Federal Contractor —{' '}
         <span className="font-mono">UEI YY2DR3KSENH7</span> ·{' '}
         <span className="font-mono">CAGE 9YCS7</span>
@@ -25,7 +25,7 @@ const Footer = () => {
     </div>
 
     <footer className="bg-black/80 backdrop-blur-sm border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         {/* Brand row — logo + one-line value prop sit above the link columns
             so the four columns are pure navigation per Implementation Plan §8.4. */}
         <div className="mb-12 max-w-3xl">

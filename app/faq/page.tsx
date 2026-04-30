@@ -152,7 +152,7 @@ export default function Page() {
       <FAQPageSchema faqs={allFaqs} />
 
       <section className="relative min-h-[40vh] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-12">
           <Reveal>
             <nav className="text-sm text-slate-400 mb-6">
               <Link href="/" className="hover:text-cyan-400">Home</Link>
@@ -179,7 +179,7 @@ export default function Page() {
       </section>
 
       <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-6 space-y-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-16">
           {groups.map((group) => (
             <Reveal key={group.heading}>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">{group.heading}</h2>
