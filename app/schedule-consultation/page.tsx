@@ -66,14 +66,12 @@ export default function BookingPage() {
               <p className="text-slate-300 text-center mb-8">
                 Select a time that works best for you to discuss your environment, your compliance posture, and the work you&apos;d like to scope.
               </p>
+              {/* Booking widget hosted on os.autom8ionlab.com — replaces the
+                  legacy GoHighLevel iframe. The widget script reads its
+                  data-* attributes to mount the inline calendar into the
+                  target div. */}
               <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50">
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/booking/UJkdnKQqWn85wjSSrKoI"
-                  style={{ width: '100%', border: 'none', overflow: 'hidden', height: '1200px' }}
-                  scrolling="no"
-                  id="UJkdnKQqWn85wjSSrKoI_inline"
-                  title="Schedule a capability briefing"
-                />
+                <div id="a8l-booking" />
               </div>
             </div>
           </div>
@@ -107,7 +105,18 @@ export default function BookingPage() {
         </div>
       </section>
 
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
+      {/* a8l booking widget loader. Reads its own data-* attributes to mount
+          the inline calendar into #a8l-booking above. afterInteractive so the
+          calendar paints as soon as hydration finishes — this page exists
+          specifically to book a call, so we don't want lazyOnload here. */}
+      <Script
+        src="https://os.autom8ionlab.com/booking-widget.js"
+        strategy="afterInteractive"
+        data-base-url="https://os.autom8ionlab.com"
+        data-calendar-slug="capability-briefing"
+        data-mode="inline"
+        data-target="#a8l-booking"
+      />
     </>
   );
 }
