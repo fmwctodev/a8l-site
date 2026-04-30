@@ -8,14 +8,14 @@ import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui'
 export const metadata: Metadata = {
   title: { absolute: 'About Autom8ion Lab' },
   description:
-    'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB pending.',
+    'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB Certified · SBA Certified.',
   keywords:
     'Autom8ion Lab, Sitehues Media Inc., Sean Richard, veteran-owned software, SDVOSB, compliance engineering firm, federal contractor',
   alternates: { canonical: 'https://autom8ionlab.com/about' },
   openGraph: {
     title: 'About Autom8ion Lab',
     description:
-      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB pending.',
+      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB Certified · SBA Certified.',
     url: 'https://autom8ionlab.com/about',
     images: [{
       url: 'https://autom8ionlab.com/api/og?title=About+Autom8ion+Lab&section=Company',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'About Autom8ion Lab',
     description:
-      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB pending.',
+      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB Certified · SBA Certified.',
     images: ['https://autom8ionlab.com/api/og?title=About+Autom8ion+Lab&section=Company'],
   },
 };
@@ -126,7 +126,7 @@ export default function Page() {
                 <div>
                   <div className="text-slate-400 uppercase tracking-wider text-xs mb-1">Type</div>
                   <div className="text-white font-medium">
-                    Veteran-Owned Small Business · SDVOSB pending
+                    Veteran-Owned Small Business · SDVOSB Certified · SBA Certified · VA Vets First
                   </div>
                 </div>
                 <div>

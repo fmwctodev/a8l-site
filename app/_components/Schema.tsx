@@ -323,7 +323,7 @@ export function ProfessionalServiceSchema() {
     email: 'info@autom8ionlab.com',
     areaServed: 'US',
     description:
-      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. SDVOSB certification pending. UEI YY2DR3KSENH7. CAGE 9YCS7.',
+      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. SDVOSB Certified · SBA Certified. UEI YY2DR3KSENH7. CAGE 9YCS7.',
     knowsAbout: [
       'AI Agent Development for Regulated Environments',
       'Custom LLM Systems',

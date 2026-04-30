@@ -59,7 +59,7 @@ const CTA = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-slate-800/30 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50">
             <div className="text-2xl font-bold text-cyan-400 mb-2">Veteran-Owned</div>
-            <div className="text-slate-300">SDVOSB certification pending</div>
+            <div className="text-slate-300">SDVOSB Certified · SBA Certified</div>
           </div>
 
           <div className="bg-slate-800/30 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50">

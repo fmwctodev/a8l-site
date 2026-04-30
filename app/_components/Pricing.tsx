@@ -62,7 +62,7 @@ const Pricing = () => {
                   <strong className="text-white">Registered with SAM.gov</strong> — UEI:{' '}
                   <span className="text-cyan-300 font-mono">YY2DR3KSENH7</span> · CAGE:{' '}
                   <span className="text-cyan-300 font-mono">9YCS7</span> · DUNS:{' '}
-                  <span className="text-cyan-300 font-mono">05-289-2750</span>. Veteran-owned, SDVOSB certification pending.
+                  <span className="text-cyan-300 font-mono">05-289-2750</span>. Veteran-owned, SDVOSB Certified · SBA Certified.
                 </p>
               </div>
 

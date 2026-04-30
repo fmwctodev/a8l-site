@@ -18,19 +18,19 @@ import { ProfessionalServiceSchema, FAQPageSchema } from './_components/Schema';
 export const metadata: Metadata = {
   title: { absolute: 'Autom8ion Lab — Custom AI, Automation & Compliance Engineering' },
   description:
-    'Custom AI agents, workflow automation, and LLM systems for regulated industries. Veteran-owned, SDVOSB pending. 30-day launches. Audit-ready from day one.',
+    'Custom AI agents, workflow automation, and LLM systems for regulated industries. Veteran-owned, SDVOSB Certified · SBA Certified. 30-day launches. Audit-ready from day one.',
   alternates: { canonical: 'https://autom8ionlab.com/' },
   openGraph: {
     title: 'Autom8ion Lab — Custom AI, Automation & Compliance Engineering',
     description:
-      'Custom AI agents, workflow automation, and LLM systems for regulated industries. Veteran-owned, SDVOSB pending. 30-day launches. Audit-ready from day one.',
+      'Custom AI agents, workflow automation, and LLM systems for regulated industries. Veteran-owned, SDVOSB Certified · SBA Certified. 30-day launches. Audit-ready from day one.',
     url: 'https://autom8ionlab.com/',
     images: [{ url: 'https://autom8ionlab.com/logo/logo.png', width: 1200, height: 630 }],
   },
   twitter: {
     title: 'Autom8ion Lab — Custom AI, Automation & Compliance Engineering',
     description:
-      'Custom AI agents, workflow automation, and LLM systems for regulated industries. SDVOSB pending. UEI YY2DR3KSENH7.',
+      'Custom AI agents, workflow automation, and LLM systems for regulated industries. SDVOSB Certified · SBA Certified. UEI YY2DR3KSENH7.',
   },
 };
 
@@ -45,7 +45,7 @@ const homepageFaqs = [
   {
     question: 'Are you registered for federal contracting?',
     answer:
-      'Yes. UEI: YY2DR3KSENH7. CAGE: 9YCS7. DUNS: 05-289-2750. SDVOSB certification pending. Veteran-owned.',
+      'Yes. UEI: YY2DR3KSENH7. CAGE: 9YCS7. DUNS: 05-289-2750. SDVOSB Certified · SBA Certified · VA Vets First. Veteran-owned.',
   },
   {
     question: 'Are you a CMMC RPO or C3PAO?',

@@ -114,7 +114,7 @@ export async function GET(request: NextRequest) {
         >
           <span style={{ color: '#22D3EE' }}>Veteran-Owned</span>
           <span>·</span>
-          <span>SDVOSB Pending</span>
+          <span>SDVOSB Certified</span>
           <span>·</span>
           <span>30-Day Launches</span>
           <span>·</span>

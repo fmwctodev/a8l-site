@@ -42,12 +42,12 @@ const groups: FaqGroup[] = [
       {
         question: 'Are you registered for federal contracting?',
         answer:
-          'Yes. UEI: YY2DR3KSENH7. CAGE: 9YCS7. DUNS: 05-289-2750. SDVOSB certification pending. Veteran-owned. Active SAM.gov registration.',
+          'Yes. UEI: YY2DR3KSENH7. CAGE: 9YCS7. DUNS: 05-289-2750. SDVOSB Certified · SBA Certified · VA Vets First. Veteran-owned. Active SAM.gov registration.',
       },
       {
         question: 'Are you SDVOSB-certified?',
         answer:
-          "Pending. Once approved, we will be eligible for SDVOSB set-aside competitions and SDVOSB sole-source awards under federal procurement preferences. We can currently compete openly and serve as an SDVOSB-track subcontractor under primes' subcontracting plans.",
+          "Yes. Certified as of April 2026 — SDVOSB Certified, SBA Certified, and VA Vets First. We are eligible today for SDVOSB set-aside competitions and SDVOSB sole-source awards under federal procurement preferences, and can also compete openly or serve as an SDVOSB subcontractor under primes' subcontracting plans.",
       },
     ],
   },
