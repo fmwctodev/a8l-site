@@ -58,7 +58,7 @@ export default function Page() {
                 </div>
       
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-purple-500/30 transition-all duration-300">
+                  <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center group hover:border-purple-500/30 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                       <FileText className="w-8 h-8 text-white" />
                     </div>
@@ -66,7 +66,7 @@ export default function Page() {
                     <p className="text-slate-400 leading-relaxed">Our hiring team is carefully reviewing your application and resume to assess your qualifications and fit for the role.</p>
                   </div>
       
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-cyan-500/30 transition-all duration-300">
+                  <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center group hover:border-cyan-500/30 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                       <Mail className="w-8 h-8 text-white" />
                     </div>
@@ -74,7 +74,7 @@ export default function Page() {
                     <p className="text-slate-400 leading-relaxed">If your background aligns with our needs, we'll reach out within 3-5 business days to discuss the opportunity further.</p>
                   </div>
       
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-green-500/30 transition-all duration-300">
+                  <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center group hover:border-green-500/30 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                       <Users className="w-8 h-8 text-white" />
                     </div>
@@ -82,7 +82,7 @@ export default function Page() {
                     <p className="text-slate-400 leading-relaxed">We'll schedule interviews with team members to learn more about your experience and discuss how you'd contribute to our mission.</p>
                   </div>
       
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-amber-500/30 transition-all duration-300">
+                  <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center group hover:border-amber-500/30 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                       <CheckCircle className="w-8 h-8 text-white" />
                     </div>
@@ -97,7 +97,7 @@ export default function Page() {
             <section className="py-16 md:py-24 bg-black">
               <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="max-w-4xl mx-auto">
-                  <div className="bg-slate-800/50 backdrop-blur-sm p-12 rounded-2xl border border-slate-700/50 text-center">
+                  <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-6 sm:p-10 md:p-12 rounded-2xl border border-slate-700/50 text-center">
                     <h3 className="text-3xl font-bold text-white mb-6">
                       Our Hiring
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> Timeline</span>
@@ -160,7 +160,7 @@ export default function Page() {
                 </div>
       
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 text-center">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <Users className="w-6 h-6 text-white" />
                     </div>
@@ -168,7 +168,7 @@ export default function Page() {
                     <p className="text-slate-400 text-sm">We're actively expanding our team with talented individuals who share our passion for innovation.</p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 text-center">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
@@ -176,7 +176,7 @@ export default function Page() {
                     <p className="text-slate-400 text-sm">Every application receives careful consideration and we provide feedback regardless of the outcome.</p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 text-center">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-400 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <ArrowRight className="w-6 h-6 text-white" />
                     </div>
@@ -190,7 +190,7 @@ export default function Page() {
             {/* Contact Information */}
             <section className="py-16 bg-black">
               <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-                <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
+                <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50">
                   <h3 className="text-2xl font-bold text-white mb-4">Questions About Your Application?</h3>
                   <p className="text-slate-300 mb-6">
                     If you have any questions about the hiring process or your application status, feel free to reach out to our HR team.

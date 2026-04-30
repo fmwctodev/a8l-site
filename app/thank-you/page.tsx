@@ -58,7 +58,7 @@ export default function Page() {
                 </div>
       
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-blue-500/30 transition-all duration-300">
+                  <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center group hover:border-blue-500/30 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                       <Mail className="w-8 h-8 text-white" />
                     </div>
@@ -66,7 +66,7 @@ export default function Page() {
                     <p className="text-slate-400 leading-relaxed">Your capabilities statement is being sent to your email address right now. Check your inbox (and spam folder just in case).</p>
                   </div>
       
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-cyan-500/30 transition-all duration-300">
+                  <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center group hover:border-cyan-500/30 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                       <CheckCircle className="w-8 h-8 text-white" />
                     </div>
@@ -74,7 +74,7 @@ export default function Page() {
                     <p className="text-slate-400 leading-relaxed">Browse our solution and industry pages to see what we build for compliance-driven environments.</p>
                   </div>
       
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-green-500/30 transition-all duration-300">
+                  <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center group hover:border-green-500/30 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                       <Phone className="w-8 h-8 text-white" />
                     </div>
@@ -82,7 +82,7 @@ export default function Page() {
                     <p className="text-slate-400 leading-relaxed">We'll reach out within 24 hours via call or text to discuss your automation needs and answer any questions.</p>
                   </div>
       
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center group hover:border-purple-500/30 transition-all duration-300">
+                  <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 text-center group hover:border-purple-500/30 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                       <Calendar className="w-8 h-8 text-white" />
                     </div>
@@ -97,7 +97,7 @@ export default function Page() {
             <section className="py-16 md:py-24 bg-black">
               <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="max-w-4xl mx-auto">
-                  <div className="bg-slate-800/50 backdrop-blur-sm p-12 rounded-2xl border border-slate-700/50 text-center">
+                  <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-6 sm:p-10 md:p-12 rounded-2xl border border-slate-700/50 text-center">
                     <h3 className="text-3xl font-bold text-white mb-6">
                       Ready to Get
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Started?</span>

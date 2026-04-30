@@ -88,9 +88,13 @@ export default function Timeline({ phases }: TimelineProps) {
               {/* Spacer column on the opposite side (desktop only) */}
               {!isRight && <div className="hidden md:block" />}
 
-              {/* Content card */}
+              {/* Content card.
+                  col-start-2 on mobile is load-bearing: the desktop-only
+                  spacer above is `hidden md:block` (display:none) on mobile,
+                  so without an explicit col-start the card auto-places into
+                  the 48px first column and wraps one-word-per-line. */}
               <motion.div
-                className={`pl-8 md:pl-0 ${isRight ? 'md:col-start-2' : ''}`}
+                className={`col-start-2 md:col-start-auto pl-8 md:pl-0 ${isRight ? 'md:col-start-2' : ''}`}
                 initial={{
                   opacity: reduceMotion ? 1 : 0,
                   x: reduceMotion ? 0 : isRight ? 30 : -30,
@@ -99,8 +103,11 @@ export default function Timeline({ phases }: TimelineProps) {
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               >
-                <div className="bg-gradient-to-br from-slate-900/60 to-slate-900/30 backdrop-blur-sm border border-slate-800 rounded-xl p-6 md:p-8 hover:border-cyan-500/30 hover:shadow-glow-cyan transition-all duration-300">
-                  <div className="flex items-baseline gap-3 mb-3">
+                <div className="bg-gradient-to-br from-slate-900/60 to-slate-900/30 backdrop-blur-sm border border-slate-800 rounded-xl p-5 sm:p-6 md:p-8 hover:border-cyan-500/30 hover:shadow-glow-cyan transition-all duration-300">
+                  {/* Stack name + duration on mobile — the flex row was
+                      forcing min-content on both children, wrapping the
+                      phase name one word per line. */}
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 mb-3">
                     <h3 className="text-lg md:text-xl font-semibold text-white">
                       {phase.name}
                     </h3>

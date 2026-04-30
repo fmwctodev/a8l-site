@@ -44,7 +44,7 @@ const Problems = () => {
             return (
               <div
                 key={index}
-                className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700/50 hover:border-red-500/30 transition-all duration-300 group"
+                className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-slate-700/50 hover:border-red-500/30 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-center w-16 h-16 bg-red-900/30 rounded-xl mb-6 group-hover:bg-red-900/50 transition-colors">
                   <IconComponent className="w-8 h-8 text-red-400" />

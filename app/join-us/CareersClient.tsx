@@ -152,7 +152,7 @@ export default function CareersClient() {
 
           <div className="space-y-6">
             {openPositions.map((position, index) => (
-              <div key={index} className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-500/30 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700/50 hover:border-purple-500/30 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{position.title}</h3>

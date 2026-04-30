@@ -86,7 +86,7 @@ const lastUpdated = "August 17, 2025";
       
                 <div className="prose prose-invert prose-lg max-w-none">
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
                     <p className="text-slate-300 mb-4">
                       By accessing or using Autom8ion Lab's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
@@ -96,7 +96,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">2. Definitions</h2>
                     <ul className="text-slate-300 space-y-2">
                       <li>• <strong>"Services"</strong> refers to all products, platforms, software, solutions, and consulting offered by Autom8ion Lab.</li>
@@ -105,14 +105,14 @@ const lastUpdated = "August 17, 2025";
                     </ul>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">3. Eligibility</h2>
                     <p className="text-slate-300">
                       You must be at least 18 years old (or the age of legal majority in your jurisdiction) to use our services. By using our services, you confirm that you meet this requirement.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">4. Description of Services</h2>
                     <p className="text-slate-300 mb-4">
                       Autom8ion Lab provides custom AI and automation solutions, including but not limited to:
@@ -131,7 +131,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">5. User Accounts and Registration</h2>
                     <p className="text-slate-300 mb-4">
                       To access certain features, you may be required to register an account. You agree to:
@@ -147,7 +147,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">6. Payment Terms</h2>
                     <h3 className="text-xl font-semibold text-cyan-400 mb-3">Pricing and Billing</h3>
                     <ul className="text-slate-300 space-y-2 mb-4">
@@ -167,7 +167,7 @@ const lastUpdated = "August 17, 2025";
                     </ul>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">7. Intellectual Property</h2>
                     <h3 className="text-xl font-semibold text-cyan-400 mb-3">Our IP</h3>
                     <p className="text-slate-300 mb-4">
@@ -185,7 +185,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">8. User Responsibilities and Prohibited Uses</h2>
                     <h3 className="text-xl font-semibold text-cyan-400 mb-3">Acceptable Use</h3>
                     <p className="text-slate-300 mb-4">You agree not to:</p>
@@ -206,7 +206,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">9. Service Availability and Modifications</h2>
                     <p className="text-slate-300 mb-4">
                       While we strive for reliability, we cannot guarantee uninterrupted service. We reserve the right to:
@@ -219,7 +219,7 @@ const lastUpdated = "August 17, 2025";
                     </ul>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">10. Third-Party Services</h2>
                     <p className="text-slate-300 mb-4">
                       We may use or integrate third-party tools and platforms (e.g., hosting providers, analytics tools). We are not responsible for their performance, availability, or security practices.
@@ -229,7 +229,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">11. Privacy and Data Protection</h2>
                     <p className="text-slate-300 mb-4">
                       We respect your privacy. Our <a href="https://autom8ionlab.com/privacy" className="text-cyan-400 hover:text-cyan-300 transition-colors">Privacy Policy</a> outlines how we collect, use, and protect your data.
@@ -239,21 +239,21 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">12. Data Retention</h2>
                     <p className="text-slate-300">
                       We retain client data only for as long as necessary for business and legal purposes. Unless required by law, we do not retain user data indefinitely. Backup services are not guaranteed unless specified.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">13. Security</h2>
                     <p className="text-slate-300 mb-4">
                       We implement appropriate security measures to protect your data. However, no system is completely secure, and you acknowledge that internet-based communications carry inherent risks.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">14. Disclaimers and Limitation of Liability</h2>
                     <h3 className="text-xl font-semibold text-cyan-400 mb-3">Disclaimer</h3>
                     <p className="text-slate-300 mb-4">
@@ -266,14 +266,14 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">15. Indemnification</h2>
                     <p className="text-slate-300">
                       You agree to indemnify and hold harmless Autom8ion Lab, its directors, employees, and affiliates against any claims, losses, or liabilities arising from your use of our services, violation of these Terms, or infringement of third-party rights.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">16. Termination</h2>
                     <p className="text-slate-300 mb-4">
                       Either party may terminate this agreement with notice.
@@ -289,14 +289,14 @@ const lastUpdated = "August 17, 2025";
                     </ul>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">17. Force Majeure</h2>
                     <p className="text-slate-300 mb-4">
                       We are not liable for failure to perform due to events beyond our control, including natural disasters, cyberattacks, labor disputes, or government restrictions.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">18. Dispute Resolution</h2>
                     <p className="text-slate-300 mb-4">
                       Any disputes will be resolved by:
@@ -311,28 +311,28 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">19. Modifications to These Terms</h2>
                     <p className="text-slate-300">
                       We may revise these Terms at any time. Material changes will be communicated via email or notice on our website. Continued use of our services after changes constitutes acceptance of the updated Terms.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50">
                     <h2 className="text-2xl font-bold text-white mb-4">20. Severability</h2>
                     <p className="text-slate-300 mb-4">
                       If any provision of these Terms is found unenforceable, the remaining provisions will continue in full force and effect.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">21. No Waiver</h2>
                     <p className="text-slate-300">
                       Our failure to enforce any right or provision of these Terms does not waive our right to enforce that or any other provision in the future.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50">
                     <h2 className="text-2xl font-bold text-white mb-4">22. Contact Us</h2>
                     <p className="text-slate-300 mb-4">
                       If you have any questions about these Terms, please contact:

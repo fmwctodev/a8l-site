@@ -86,7 +86,7 @@ const lastUpdated = "August 17, 2025";
       
                 <div className="prose prose-invert prose-lg max-w-none">
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">1. Information We Collect</h2>
       
                     <h3 className="text-xl font-semibold text-cyan-400 mb-3">Information You Provide</h3>
@@ -116,7 +116,7 @@ const lastUpdated = "August 17, 2025";
                     </ul>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">2. How We Use Your Information</h2>
                     <p className="text-slate-300 mb-4">
                       We process your information to:
@@ -133,7 +133,7 @@ const lastUpdated = "August 17, 2025";
                     </ul>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">3. AI-Generated Communications</h2>
                     <p className="text-slate-300 mb-4">
                       By using our services and opting in via our webforms, you acknowledge and agree that you may receive communications generated or assisted by AI systems. This includes:
@@ -151,7 +151,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">4. Consent and Opt-In Requirements</h2>
                     <p className="text-slate-300 mb-4">
                       We use explicit opt-in checkboxes on our forms to collect consent for:
@@ -169,7 +169,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">5. Information Sharing</h2>
                     <p className="text-slate-300 mb-4">
                       We do not sell or rent your personal information. However, we may share it with:
@@ -186,7 +186,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">6. Data Security</h2>
                     <p className="text-slate-300 mb-4">
                       We take your data security seriously and implement measures including:
@@ -201,7 +201,7 @@ const lastUpdated = "August 17, 2025";
                     </ul>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">7. Your Rights Under GDPR and Other Laws</h2>
                     <p className="text-slate-300 mb-4">
                       If you are in the EU or UK, or if applicable privacy laws grant you rights, you may:
@@ -220,7 +220,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">8. Cookies and Tracking</h2>
                     <p className="text-slate-300 mb-4">
                       We use cookies and similar technologies to:
@@ -236,7 +236,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">9. Data Retention</h2>
                     <p className="text-slate-300 mb-4">
                       We retain your personal data only for as long as necessary to:
@@ -251,7 +251,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">10. International Transfers</h2>
                     <p className="text-slate-300">
                       Your data may be transferred and stored outside your country, including in the United States, under appropriate safeguards such as:
@@ -266,14 +266,14 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">11. Children's Privacy</h2>
                     <p className="text-slate-300">
                       We do not knowingly collect personal data from children under 13 (or under 16 in the EU). If we become aware that we have collected such data, we will delete it promptly.
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50 mb-12">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
                     <h2 className="text-2xl font-bold text-white mb-4">12. Changes to This Privacy Policy</h2>
                     <p className="text-slate-300">
                       We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify users of any material changes by:
@@ -288,7 +288,7 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
-                  <div className="bg-slate-800/30 p-8 rounded-xl border border-slate-700/50">
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50">
                     <h2 className="text-2xl font-bold text-white mb-4">13. Contact Us</h2>
                     <p className="text-slate-300 mb-4">
                       If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:

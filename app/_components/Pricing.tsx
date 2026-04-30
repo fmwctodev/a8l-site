@@ -34,7 +34,7 @@ const Pricing = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-slate-900/50 backdrop-blur-sm p-10 md:p-12 rounded-2xl border border-slate-700/50 relative overflow-hidden">
+          <div className="bg-slate-900/50 backdrop-blur-sm p-10 md:p-6 sm:p-6 sm:p-10 md:p-12 rounded-2xl border border-slate-700/50 relative overflow-hidden">
             <div className="relative z-10">
               <div className="text-center mb-10">
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl mb-6 shadow-lg">

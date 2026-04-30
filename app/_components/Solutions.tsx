@@ -104,7 +104,7 @@ const Solutions = () => {
               <Link
                 href={solution.path}
                 key={index}
-                className="group bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-slate-800/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group bg-slate-900/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-slate-800/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className={`flex items-center justify-center w-16 h-16 bg-gradient-to-r ${solution.color} rounded-xl mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                   <IconComponent className="w-8 h-8 text-white" />
@@ -130,7 +130,7 @@ const Solutions = () => {
               <Link
                 href={solution.path}
                 key={index}
-                className="group bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-slate-800/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group bg-slate-900/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-slate-800/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className={`flex items-center justify-center w-16 h-16 bg-gradient-to-r ${solution.color} rounded-xl mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                   <IconComponent className="w-8 h-8 text-white" />
@@ -156,7 +156,7 @@ const Solutions = () => {
               <Link
                 href={solution.path}
                 key={index}
-                className="group bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-slate-800/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group bg-slate-900/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-slate-800/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className={`flex items-center justify-center w-16 h-16 bg-gradient-to-r ${solution.color} rounded-xl mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                   <IconComponent className="w-8 h-8 text-white" />
@@ -182,7 +182,7 @@ const Solutions = () => {
               <Link
                 href={solution.path}
                 key={index}
-                className="group bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-slate-800/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center gap-8"
+                className="group bg-slate-900/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-slate-800/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center gap-8"
               >
                 <div className={`flex items-center justify-center w-20 h-20 bg-gradient-to-r ${solution.color} rounded-xl group-hover:scale-110 transition-transform shadow-lg flex-shrink-0`}>
                   <IconComponent className="w-10 h-10 text-white" />
