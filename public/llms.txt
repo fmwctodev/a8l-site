@@ -1,96 +1,194 @@
 # Autom8ion Lab
 
-> Veteran-owned engineering firm building custom AI, automation, and software for compliance-driven industries: construction, healthcare, finance, real estate, US federal/state/local government, and the Defense Industrial Base.
+> SDVOSB-Certified · SBA-Certified · VA Vets First. Veteran-owned engineering firm building bespoke AI/LLM agents, custom software, managed services, and cybersecurity for federal, state, and enterprise mission environments. Compliance is built in from day one, not bolted on.
 
-Autom8ion Lab — operated by Sitehues Media Inc. — builds AI agents, workflow automation, and custom software for environments where security architecture and compliance documentation must be engineered from day one. We work inside CMMC, NIST 800-171, HIPAA, SOC 2, FCRA, HUD, and FedRAMP environments. Most engagements ship in 8–14 weeks; CMMC remediation runs 4–9 months; FedRAMP-aligned builds run 6+ months.
+Autom8ion Lab — operated by Sitehues Media Inc. — engineers production AI/LLM systems, workflow automation, and custom software for environments where security architecture and compliance documentation must be engineered from day one. We work inside CMMC 2.0, NIST 800-171, NIST 800-53, FedRAMP, HIPAA, SOC 2, FCRA, HUD, and CIS frameworks. Most custom builds ship discovery-to-live-launch in 30 days; CMMC remediation runs 4–9 months; FedRAMP-aligned builds run 6+ months. All CUI is handled on US-based systems only.
 
-## Core Services
+## Headline Telemetry
 
-- [AI-Powered Enterprise Software & Applications](https://autom8ionlab.com/solutions/software-development): Custom platforms, internal tools, mobile apps, and customer-facing applications with AI integrated where it creates real leverage. Security architecture engineered from day one.
-- [Workflow & Process Automation](https://autom8ionlab.com/solutions/workflow-automation): Custom workflow automation, AI agents, and process automation deployed where SaaS tools cannot go — on-premises, private cloud, and FedRAMP-aligned environments.
-- [Cybersecurity Compliance & Engineering](https://autom8ionlab.com/solutions/cybersecurity): CMMC readiness, NIST 800-171 implementation, HIPAA technical safeguards, SOC 2 Type II preparation. We engineer compliant systems and document them for audit. We are not a CMMC RPO or C3PAO; we work alongside your assessor or a partner C3PAO.
+- **30 days** from discovery to live launch on most custom builds
+- **90%** manual matching eliminated via AI normalization (AI hospital inventory normalization, Intermed · 150K+ record ETL)
+- **300%** data processing speed gain (multi-tenant OpenSearch on construction/BIM datasets)
+- **<1 second** RAG query response across 500K+ documents (Conduit RAG Engine)
+- **95%** staff retention · 48-hour average placement
+- **20+** specialists placed (devs, QA, DevOps, data eng.)
 
-## Adjacent Capabilities
+## Core Capabilities Ecosystem (6 Domains, 1 Unified Architecture)
 
-- [AI Agent Development for Regulated Environments](https://autom8ionlab.com/solutions/ai-agent-development)
-- [Custom LLM Systems for Sensitive Data Environments](https://autom8ionlab.com/solutions/custom-llm-systems)
-- [Custom API Integrations for Compliance-Heavy Stacks](https://autom8ionlab.com/solutions/api-integrations)
-- [Cloud Infrastructure for FedRAMP, CMMC & HIPAA Workloads](https://autom8ionlab.com/solutions/cloud-systems)
+- [Custom AI & LLMs](https://autom8ionlab.com/solutions/custom-llm-systems): RAG engines, NLP pipelines, agentic architectures, LLM fine-tuning. Local LLM systems for HIPAA, CMMC, FedRAMP, and FISMA environments. No external data transfer.
+- [AI Agent Development](https://autom8ionlab.com/solutions/ai-agent-development): Custom AI agents that execute multi-step tasks, not just chat. Trained on your data, deployed in your environment, audit-ready from day one.
+- [Workflow Automation](https://autom8ionlab.com/solutions/workflow-automation): Enterprise workflow automation with n8n, Python, and custom integrations. For teams that have outgrown Zapier and need real business logic.
+- [Custom API Integrations](https://autom8ionlab.com/solutions/api-integrations): RESTful, GraphQL, webhooks, and enterprise middleware. ETL pipelines, BigQuery, OpenSearch, PostHog. 150K+ record processing pipelines.
+- [Custom Software Development](https://autom8ionlab.com/solutions/software-development): Full-stack custom software for SaaS, enterprise, and regulated environments. Python, Node.js, React, Matlab, FastAPI, iOS, Android. Security architecture and compliance documentation built in from day one.
+- [Cloud & Infrastructure](https://autom8ionlab.com/solutions/cloud-systems): AWS, Azure, Kubernetes. CI/CD and container orchestration. FedRAMP-aligned hosting, GovCloud architecture. Designed for compliance from day one.
+- [Cybersecurity Compliance](https://autom8ionlab.com/solutions/cybersecurity): CMMC 2.0, NIST 800-171, HIPAA, SOC 2, and CIS-aligned readiness. Pen testing, vulnerability remediation, Zero Trust architecture. We are not a CMMC RPO or C3PAO — we engineer the controls and document them, then work alongside your assessor or a partner C3PAO.
+- [Engineering Staff Augmentation](https://autom8ionlab.com/join-us): Devs, QA, DevOps, data engineering. 48-hour average placement. 95% retention. 20+ specialists placed.
+
+## Hub Index Pages
+
+- [All Solutions](https://autom8ionlab.com/solutions)
+- [All Industries](https://autom8ionlab.com/industries)
+- [Engineering Insights (Blog)](https://autom8ionlab.com/blog)
+- [Capability Statement](https://autom8ionlab.com/capability-statement)
 
 ## Industries Served
 
-- [Construction](https://autom8ionlab.com/industries/construction): Project management automation, AI for takeoff and plan review, custom field apps, accounting and PM integrations for mid-market and specialty contractors.
-- [Healthcare & Life Sciences](https://autom8ionlab.com/industries/healthcare): HIPAA-compliant software, AI for clinical and operational workflows, EHR integrations (Epic, Cerner, Athena), FDA 21 CFR Part 11 systems.
-- [Finance](https://autom8ionlab.com/industries/finance): SOC 2 and PCI-DSS-aligned platforms, AI for underwriting and fraud, core banking integrations (Fiserv, Jack Henry, FIS) for community banks, credit unions, fintech, and insurers.
-- [Real Estate & Property Management](https://autom8ionlab.com/industries/real-estate-property): Property management automation, FCRA-compliant tenant screening, lease lifecycle, HUD compliance, AI document review.
-- [US Federal, State & Local Government](https://autom8ionlab.com/industries/government): Custom software, AI, and automation for civilian agencies, state government, and municipal IT. FedRAMP, FISMA, NIST 800-53, StateRAMP-aligned.
-- [Defense Industrial Base](https://autom8ionlab.com/industries/defense): CMMC 2.0 readiness, NIST 800-171 implementation, custom development for DoD primes and subcontractors. November 2026 Phase 2 deadline.
+- [Construction](https://autom8ionlab.com/industries/construction): Site-to-office AI workflows. Automate RFIs, submittals, OSHA reporting, certified payroll, and the integration gaps between Procore, Sage, and your field apps.
+- [Healthcare & Life Sciences](https://autom8ionlab.com/industries/healthcare): HIPAA-compliant AI agents and LLM systems. Referral automation, prior-auth automation, EHR integration (Epic, Cerner, Athena, eClinicalWorks, NextGen), FDA 21 CFR Part 11 systems. PHI never leaves your boundary.
+- [Finance](https://autom8ionlab.com/industries/finance): Custom AI for portfolio analytics, PE data normalization, SOX-aligned automation. SOC 2 and bank-level security from day one. Core banking integrations (Fiserv, Jack Henry, FIS) for community banks, credit unions, fintech, and insurers.
+- [Real Estate & Property Management](https://autom8ionlab.com/industries/real-estate-property): AI agents for lead capture, lead-to-lease automation, FCRA-compliant tenant screening, HUD compliance, and PMS integrations across Yardi, AppFolio, RealPage, Buildium, MRI, and Entrata.
+- [US Federal, State & Local Government](https://autom8ionlab.com/industries/government): Custom AI, automation, and software for civilian agencies, state IT, and municipal IT. FedRAMP-aligned, FISMA, NIST 800-53, StateRAMP-ready.
+- [Defense Industrial Base](https://autom8ionlab.com/industries/defense): CMMC 2.0 readiness, NIST 800-171 implementation, and audit-ready documentation for DoD primes and subcontractors.
 
-## Compliance Frameworks We Build To
+## Comparison Pages
 
-CMMC 2.0 (Levels 1–3) · NIST 800-171 Rev 2 · NIST 800-53 · FedRAMP Moderate / High · HIPAA / HITECH · FDA 21 CFR Part 11 · SOC 2 Type II · PCI-DSS · FCRA · HUD (50059, MOR, EIV, REAC) · FFIEC · Section 508
+- [Autom8ion Lab vs n8n Cloud](https://autom8ionlab.com/compare/autom8ion-lab-vs-n8n-cloud): Custom n8n hosting + custom Python nodes vs managed n8n SaaS, for buyers who already chose n8n and want a partner.
+- [Custom Build vs Zapier vs Make vs n8n](https://autom8ionlab.com/compare/custom-build-vs-zapier-make-n8n): When the no-code platforms hit their ceiling — task-tax, security, scale, and customization tradeoffs.
+- [Autom8ion Lab vs Generic AI Consultancy](https://autom8ionlab.com/compare/autom8ion-lab-vs-generic-ai-consultancy): Engineering shop vs advisory consultancy vs Big-4 firm. SDVOSB Certified · veteran-owned · founder-led delivery.
 
-## Federal Contracting Registrations
+## Compliance by Default
 
-- Legal Name: Sitehues Media Inc. (DBA Autom8ion Lab)
-- Type: Veteran-Owned Small Business; SDVOSB certification pending
-- DUNS: 05-289-2750
-- UEI: YY2DR3KSENH7
-- CAGE / NCAGE: 9YCS7
-- Recommended NAICS primaries: 541511, 541512, 541519, 541611, 541690
+NIST 800-171 · NIST 800-53 · CIS Aligned · SOC 2 Aligned · CMMC Level 2 Ready · FedRAMP Aligned · HIPAA / HITECH · FDA 21 CFR Part 11 · PCI-DSS · FCRA · HUD (50059, MOR, EIV, REAC) · FFIEC · Section 508
+
+## Federal Contracting Credentials
+
+- **Legal Name**: Sitehues Media Inc. (DBA Autom8ion Lab)
+- **Type**: SDVOSB · SBA Certified · VA Vets First
+- **CAGE**: 9YCS7
+- **UEI**: YY2DR3KSENH7
+- **DUNS**: 05-289-2750
+- **HQ**: Florida & New Mexico, US
+- **Delivery**: US + Canada · Follow-the-sun · Montreal, QC dual-shore (development + operations only; sales geography is United States)
+
+## NAICS Coverage (10 Codes)
+
+- **541511** Custom Computer Programming — bespoke software, mobile apps, AI agents
+- **541512** Computer Systems Design — cloud architecture, BI/analytics
+- **541519** Other Computer Services — AI/ML consulting, RAG engines
+- **541715** R&D — Engineering Sciences
+- **541515** Computer Security Services
+- **518210** Data Processing & Hosting — ETL, cloud hosting
+- **511210** Software Publishers — SaaS platforms
+- **561320** Temporary Help Services — staff augmentation
+- **541990** Compliance / NIST Services
+- **541690** Scientific & Technical Consulting
+
+## Target Contract Vehicles
+
+- GSA MAS 54151S / HACS 54151HACS
+- CIO-SP4 SDVOSB Pool (NITAAC)
+- OASIS+ SB / SDVOSB Pool
+- AFWERX Open Topic SBIR
+- VA Vets First · FL & NM Veteran Preference
+
+## Registrations & Certifications
+
+- SAM.gov Active
+- SDVOSB SBA Certified
+- FL MFMP Registered
+- NM SPD Registered
+- GSA MAS 54151S — applied
+- GSA HACS — applied
+
+## Set-Aside Advantage
+
+3–6 bidders per SDVOSB / VA Vets First set-aside vs. 15+ bidders in open competition. Substantially improves win probability for qualifying scopes.
 
 ## Engagement Models
 
 We scope work to your contract structure — single-system task orders, multi-year IDIQ and BPA arrangements, fixed-price commercial engagements, time-and-materials advisory work, or commercial MSAs. Quotes are scope-driven and provided after a discovery call.
 
+## The Autom8ion Blueprint (vs Generic Software)
+
+- **Purpose-built automation** around your workflows, data, and scale — not generic bolted-on software
+- **AI-native from day one** — production LLM pipelines and agentic systems, not basic chatbot plugins
+- **SOC 2-aligned, NIST/CIS, CMMC L2 ready, private cloud** — not standard protocols with optional security
+- **Vetted senior staff · 48-hour placement · 95% retention** — not unvetted freelancers
+
 ## Differentiators
 
+- SDVOSB Certified, SBA Certified, VA Vets First
 - Software builders with in-house cybersecurity compliance arm
 - Engineered for audit from day one — not retrofitted
-- Veteran-owned (SDVOSB certification pending)
-- Multi-vertical experience: construction, healthcare, finance, real estate, government, defense
+- Multi-vertical experience: construction, healthcare, finance, real estate, government, defense, tech scaling
 - Founder-led: senior engineering access on every engagement
+- Dual-shore delivery (Florida & New Mexico, US + Montreal, QC)
 
-## Past Performance
+## Past Performance (Real-World Telemetry)
 
-Representative engagements include project management automation for a multi-state specialty construction firm (replacing manual reporting workflows across 40+ active projects), a HIPAA-aligned patient communication platform for a multi-specialty healthcare group, AI-powered document processing for a financial services firm, FCRA tenant screening automation for a multifamily property management company, and NIST 800-171 controls implementation for a DoD subcontractor pursuing CMMC Level 2 readiness. Many engagements are NDA-governed; details and references provided after a qualifying conversation.
+- **AI hospital inventory normalization** (Intermed) — 150K+ record ETL · 90% manual work eliminated
+- **Multi-tenant OpenSearch on construction/BIM datasets** — 300% data processing speed gain
+- **Conduit RAG Engine across 500K+ document corpus** — sub-second query response time
+- **Engineering staff augmentation** — 20+ specialists placed (devs, QA, DevOps) · 48-hour turnaround · 95% retention
+
+Many engagements are NDA-governed; details and references provided after a qualifying conversation.
 
 ## Company Information
 
-- Founder: Sean Richard (https://www.linkedin.com/in/a8l-sean-richard/)
-- US HQ: Plant City, FL
-- Operations: Montreal, Quebec (development and operations only — sales geography is United States)
-- Best fit: federal agencies, DoD primes and subcontractors, mid-market contractors, health systems and life-sciences companies, banks, fintechs, property managers, REITs
+- **Founder**: Sean Richard (https://www.linkedin.com/in/a8l-sean-richard/)
+- **HQ**: Florida & New Mexico, US
+- **Operations**: Montreal, Quebec, Canada (development + operations only — sales geography is United States and Canada)
+- **Best fit**: federal civilian agencies, DoD primes and subcontractors, mid-market contractors, health systems and life-sciences companies, banks, fintechs, PE shops, property managers, REITs, scaling tech companies
 
 ## Contact
 
-- Website: https://autom8ionlab.com
-- Email: info@autom8ionlab.com
-- Phone: +1 855-508-6062
-- Capability statement: https://autom8ionlab.com/capability-statement
-- Schedule a discovery call: https://autom8ionlab.com/schedule-consultation
+- **Website**: https://autom8ionlab.com
+- **Email**: info@autom8ionlab.com
+- **Phone**: +1 855-508-6062
+- **Capability Statement**: https://autom8ionlab.com/capability-statement
+- **Schedule a Discovery Call**: https://autom8ionlab.com/schedule-consultation
+- **Founder Bio**: https://autom8ionlab.com/about
 
 ## Blog Articles
 
 ### CMMC & Defense Compliance
-- [AI-Driven Evidence: Automating Your CMMC Audit Without the Hallucinations](https://autom8ionlab.com/blog/ai-driven-evidence-automating-cmmc-audit-without-hallucinations)
-- [From Zero to CMMC Ready](https://autom8ionlab.com/blog/from-zero-to-cmmc-ready-ai-30-day-timeline)
-- [Local LLMs vs. CMMC Level 2](https://autom8ionlab.com/blog/local-llms-vs-cmmc-level-2-c3pao-assessment)
-- [Stop Pasting CUI Into ChatGPT](https://autom8ionlab.com/blog/stop-pasting-cui-into-chatgpt-defense-contractor-guide)
-- [The CMMC 2.0 AI Paradox](https://autom8ionlab.com/blog/cmmc-20-ai-paradox-innovation-certification-fix)
+- [AI-Driven Evidence: Automating Your CMMC Audit Without the "Hallucinations"](https://autom8ionlab.com/blog/ai-driven-evidence-automating-cmmc-audit-without-hallucinations)
+- [From Zero to CMMC Ready: Can AI Really Shrink Your 12-Month Timeline to 30 Days?](https://autom8ionlab.com/blog/from-zero-to-cmmc-ready-ai-30-day-timeline)
+- [Local LLMs vs. CMMC Level 2: Why Going Custom Is the Only Way to Pass Your C3PAO Assessment](https://autom8ionlab.com/blog/local-llms-vs-cmmc-level-2-c3pao-assessment)
+- [Stop Pasting CUI Into ChatGPT: A Defense Contractor's Guide to Secure, Compliant AI](https://autom8ionlab.com/blog/stop-pasting-cui-into-chatgpt-defense-contractor-guide)
+- [The CMMC 2.0 AI Paradox: How Innovation Could Kill Your Certification (and How to Fix It)](https://autom8ionlab.com/blog/cmmc-20-ai-paradox-innovation-certification-fix)
 
 ### AI Security & Strategy
-- [From Audit to ROI: 30-Day Blueprint for Security-First AI Automation](https://autom8ionlab.com/blog/from-audit-to-10x-roi-30-day-blueprint-security-first-ai-automation)
-- [Local LLMs vs. The Cloud](https://autom8ionlab.com/blog/local-llms-vs-cloud-bank-level-encryption-business-logic)
-- [Shadow AI Is Quietly Killing Your Security](https://autom8ionlab.com/blog/shadow-ai-killing-security-audit-reclaim-data-privacy)
-- [The NIST AI RMF Awareness Gap](https://autom8ionlab.com/blog/nist-ai-rmf-awareness-gap-healthcare-founders-compliance)
-- [Why "Plug-and-Play" AI Is a Liability](https://autom8ionlab.com/blog/plug-and-play-ai-liability-nist-framework-secure-agents)
+- [From Audit to 10x ROI: Our 30-Day Blueprint for Security-First AI Automation](https://autom8ionlab.com/blog/from-audit-to-10x-roi-30-day-blueprint-security-first-ai-automation)
+- [Local LLMs vs. The Cloud: Keeping Your Business Logic Under Bank-Level Encryption](https://autom8ionlab.com/blog/local-llms-vs-cloud-bank-level-encryption-business-logic)
+- [Shadow AI Is Quietly Killing Your Security: How to Audit and Reclaim Your Data Privacy](https://autom8ionlab.com/blog/shadow-ai-killing-security-audit-reclaim-data-privacy)
+- [The NIST AI RMF Awareness Gap: Why Federal, DIB, Healthcare, and Financial Teams Are Already Behind](https://autom8ionlab.com/blog/nist-ai-rmf-awareness-gap-healthcare-founders-compliance)
+- [Why "Plug-and-Play" AI Is a Liability: Using the NIST Framework to Build Secure Agents](https://autom8ionlab.com/blog/plug-and-play-ai-liability-nist-framework-secure-agents)
 
-### Earlier Reading
-- [AI Agents vs. Traditional Workflow Automation in 2026](https://autom8ionlab.com/blog/ai-agents-vs-traditional-workflow-automation-2026)
+### Cybersecurity for AI Workflows
+- [The Secure AI Development Lifecycle for Regulated Industries](https://autom8ionlab.com/blog/secure-ai-development-lifecycle-for-regulated-industries)
+- [Cybersecurity Audit Readiness for AI-Driven Workflows](https://autom8ionlab.com/blog/cybersecurity-audit-readiness-for-ai-driven-workflows)
+- [7 Workflow Automation Security Sins: Is Your Data Leaking?](https://autom8ionlab.com/blog/7-workflow-automation-security-sins-is-your-data-leaking)
+
+### AI Architecture & Engineering
+- [Federated Multi-Agent Systems for Complex Business Logic](https://autom8ionlab.com/blog/federated-multi-agent-systems-for-complex-business-logic)
+- [AI-Native Operating System for Distributed Teams](https://autom8ionlab.com/blog/ai-native-operating-system-for-distributed-teams)
+
+### Industry Deep-Dives — Construction
+- [The Construction Paper Trail: Automating Site-to-Office Data](https://autom8ionlab.com/blog/the-construction-paper-trail-automating-site-to-office-data)
+- [Bridging the Construction Site-to-Office Data Gap with AI](https://autom8ionlab.com/blog/bridging-the-construction-site-to-office-data-gap-with-ai)
+- [Automating RFI and Submittal Workflows in Construction: A Practical Playbook](https://autom8ionlab.com/blog/automating-rfi-and-submittal-workflows-in-construction)
+- [AI-Driven Site Safety Compliance and OSHA Reporting](https://autom8ionlab.com/blog/ai-driven-site-safety-compliance-and-osha-reporting)
+
+### Industry Deep-Dives — Healthcare
+- [HIPAA-Compliant AI for Healthcare Ops: Beyond Template Bots](https://autom8ionlab.com/blog/hipaa-compliant-ai-for-healthcare-ops-beyond-template-bots)
+- [Referral-to-Renewal Automation for Healthcare Providers](https://autom8ionlab.com/blog/referral-to-renewal-automation-for-healthcare-providers)
+- [Interoperable AI Workflows for Epic and Cerner Systems](https://autom8ionlab.com/blog/interoperable-ai-workflows-for-epic-and-cerner-systems)
+
+### Industry Deep-Dives — Finance & Real Estate
+- [Custom AI Systems for Private Equity Data Normalization](https://autom8ionlab.com/blog/custom-ai-systems-for-private-equity-data-normalization)
+- [Real Estate 2.0: AI Agents from Lead to Lease](https://autom8ionlab.com/blog/real-estate-2-0-ai-agents-from-lead-to-lease)
+
+### Integration Strategy
+- [Why Your Scaling Business Has Outgrown Zapier](https://autom8ionlab.com/blog/why-your-scaling-business-has-outgrown-zapier)
 
 ## Social
 
 - LinkedIn: https://www.linkedin.com/company/autom8ionlab
 - Facebook: https://www.facebook.com/autom8ionlab
 - Instagram: https://www.instagram.com/autom8ionlab
+- YouTube: https://www.youtube.com/@autom8ionlab
+- TikTok: https://tiktok.com/@autom8ionlab
+
+---
+Last updated: 2026-04-29

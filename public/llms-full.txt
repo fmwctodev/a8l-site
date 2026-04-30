@@ -10,7 +10,7 @@ This document expands the index at /llms.txt with full prose for the homepage, s
 
 A veteran-owned engineering team building custom AI agents, workflow automation, and applications for construction, healthcare, finance, real estate, and US government clients. Security architecture and compliance documentation engineered from day one — not retrofitted.
 
-Veteran-Owned · SDVOSB Certification Pending · Registered US Federal Contractor (UEI: YY2DR3KSENH7 · CAGE: 9YCS7).
+Veteran-Owned · SDVOSB Certified · SBA Certified · VA Vets First · Registered US Federal Contractor (UEI: YY2DR3KSENH7 · CAGE: 9YCS7).
 
 ### Built for industries where outcomes matter as much as compliance
 
@@ -102,13 +102,13 @@ Buyer profile: residential and commercial property management companies, REITs, 
 
 ## Industry — US Federal, State & Local Government (/industries/government)
 
-AI, automation, and custom software for US federal, state, and local government. Custom software, AI, and automation for civilian agencies, state government, and municipal IT teams. FedRAMP, FISMA, NIST 800-53, StateRAMP-aligned. Registered US federal contractor with SDVOSB pending status.
+AI, automation, and custom software for US federal, state, and local government. Custom software, AI, and automation for civilian agencies, state government, and municipal IT teams. FedRAMP, FISMA, NIST 800-53, StateRAMP-aligned. Registered US federal contractor with SDVOSB Certified status (SBA Certified · VA Vets First eligible).
 
 We build custom software for case management, citizen services, and internal operations, AI for backlog processing, document review, and intake automation, FedRAMP-aligned cloud services, Section 508 compliant applications, records management aligned with NARA / state retention schedules, modernization of legacy systems (mainframe interfaces, legacy database integration), and citizen-facing portals with accessibility built in.
 
 Compliance considerations include FedRAMP Moderate / High, FISMA / NIST 800-53, NIST 800-171 (CUI), StateRAMP, Section 508, NARA records management, and state-level cybersecurity requirements.
 
-SDVOSB note: certification is pending. Once approved, we will be eligible for SDVOSB set-aside competitions and SDVOSB sole-source awards under federal procurement preferences. We can currently compete openly and serve as an SDVOSB-track subcontractor under primes' subcontracting plans.
+SDVOSB note: SDVOSB SBA-Certified, VA Vets First eligible. Eligible for SDVOSB set-aside competitions and SDVOSB sole-source awards under federal procurement preferences. Set-aside advantage: typically 3–6 bidders in SDVOSB pools vs 15+ in open competition.
 
 Buyer profile: US federal civilian agencies, state government IT, county and municipal IT, special districts, public utilities, large school districts, state universities, state DOTs.
 
@@ -116,7 +116,7 @@ Buyer profile: US federal civilian agencies, state government IT, county and mun
 
 ## Industry — Defense Industrial Base (/industries/defense)
 
-AI, automation, and software engineering for the Defense Industrial Base. CMMC 2.0 readiness, NIST 800-171 implementation, and custom software development for DoD primes and subcontractors. Veteran-owned. SDVOSB pending. Built for the contractors facing the November 2026 Phase 2 deadline.
+AI, automation, and software engineering for the Defense Industrial Base. CMMC 2.0 readiness, NIST 800-171 implementation, and custom software development for DoD primes and subcontractors. Veteran-owned. SDVOSB Certified · SBA Certified. Built for the contractors facing the November 2026 Phase 2 deadline.
 
 We build CMMC 2.0 readiness (Levels 1–2, occasionally 3), NIST 800-171 controls implementation, custom software development that maintains CMMC posture, SSP (System Security Plan) and POA&M development, GCC High environment configuration and migration, AI capabilities deployable in CUI environments, and document automation for DoD reporting and submissions.
 
@@ -166,10 +166,10 @@ Important disclosure: We are not currently a CMMC Registered Practitioner Organi
 
 ## Capability Statement
 
-Autom8ion Lab — operated by Sitehues Media Inc. (DBA Autom8ion Lab). Veteran-owned engineering firm. SDVOSB certification pending. Registered US federal contractor.
+Autom8ion Lab — operated by Sitehues Media Inc. (DBA Autom8ion Lab). Veteran-owned engineering firm. SDVOSB Certified · SBA Certified. Registered US federal contractor.
 
 - Legal Name: Sitehues Media Inc. (DBA Autom8ion Lab)
-- Type: Veteran-Owned Small Business; SDVOSB certification pending
+- Type: Veteran-Owned Small Business; SDVOSB Certified · SBA Certified
 - DUNS: 05-289-2750
 - UEI: YY2DR3KSENH7
 - CAGE / NCAGE: 9YCS7
@@ -177,7 +177,7 @@ Autom8ion Lab — operated by Sitehues Media Inc. (DBA Autom8ion Lab). Veteran-o
 
 Core competencies: AI-Powered Enterprise Software & Application Development; Workflow & Process Automation for Compliance Environments; Cybersecurity Compliance & Engineering (CMMC, NIST 800-171, HIPAA, SOC 2); Custom AI Agents & LLM Systems for Regulated Environments; Cloud Infrastructure for FedRAMP & GovCloud Workloads.
 
-Differentiators: software builders with in-house cybersecurity compliance arm; engineered for audit from day one; veteran-owned (SDVOSB pending); multi-vertical experience across construction, healthcare, finance, real estate, government, and defense; founder-led with senior engineer access on every engagement.
+Differentiators: software builders with in-house cybersecurity compliance arm; engineered for audit from day one; veteran-owned (SDVOSB Certified · SBA Certified · VA Vets First); multi-vertical experience across construction, healthcare, finance, real estate, government, and defense; founder-led with senior engineer access on every engagement.
 
 Industries served: Construction; Healthcare & Life Sciences; Finance (banks, credit unions, fintech, insurance); Real Estate & Property Management; US Federal, State & Local Government; Defense Industrial Base (DoD primes and subcontractors).
 
