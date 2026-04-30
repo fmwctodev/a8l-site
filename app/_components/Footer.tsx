@@ -1,78 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, Linkedin, Facebook, Instagram, Loader2 } from 'lucide-react';
+import { Mail, Phone, Linkedin, Facebook, Instagram, Download } from 'lucide-react';
 import { conversionEvents } from '@/lib/analytics';
+import CapabilityRequestButton from './CapabilityRequestButton';
 
 const Footer = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState(false);
-
-  const handleCapabilitiesSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError(false);
-
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email')
-    };
-
-    try {
-      // Submit to Netlify Forms via the static endpoint registered in
-      // public/__forms.html (required by @netlify/plugin-nextjs v5).
-      await fetch('/__forms.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-      });
-
-      // Trigger GHL webhook via serverless function (now SendGrid/Supabase)
-      try {
-        const response = await fetch('/.netlify/functions/capabilities-webhook', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-
-        if (!response.ok) {
-          const errorData = await response.json().catch(() => ({}));
-          console.error('Webhook error response:', errorData);
-          setSubmitError(true);
-        }
-      } catch (webhookError) {
-        console.error('Webhook execution failed:', webhookError);
-        setSubmitError(true);
-      }
-
-      // Fire GA4 conversion event before the download/redirect — captures the
-      // submit even if the PDF download or thank-you redirect drops the page.
-      conversionEvents.formSubmitCapability();
-      conversionEvents.downloadCapabilityPdf();
-
-      // Trigger automatic download
-      const downloadLink = document.createElement('a');
-      downloadLink.href = '/downloads/Autom8ion_Lab_Capabilities_Statement.pdf';
-      downloadLink.download = 'Autom8ion_Lab_Capabilities_Statement.pdf';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-
-      // Brief delay to ensure download starts before navigation
-      setTimeout(() => {
-        window.location.href = '/thank-you';
-      }, 1000);
-    } catch (error) {
-      console.error('Form submission failed:', error);
-      setSubmitError(true);
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <>
     {/* Animated trust band — subtle gradient sweep above the footer marks the
@@ -84,7 +18,7 @@ const Footer = () => {
         className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent bg-[length:200%_100%] animate-gradient-shift"
       />
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-4 text-center text-xs md:text-sm text-cyan-200/90 font-medium tracking-wide">
-        Veteran-Owned · SDVOSB Certification Pending · Registered US Federal Contractor —{' '}
+        Veteran-Owned · SDVOSB Certified · SBA Certified · Registered US Federal Contractor —{' '}
         <span className="font-mono">UEI YY2DR3KSENH7</span> ·{' '}
         <span className="font-mono">CAGE 9YCS7</span>
       </div>
@@ -221,64 +155,27 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Capability statement request — moved below the 4-column nav so the
-            link columns aren't visually crowded by the form. */}
-        <div className="border-t border-slate-800 pt-12 mt-12 relative z-50">
-          <div className="max-w-2xl">
-            <h3 className="text-white font-semibold mb-4">Request our capability statement</h3>
-            <p className="text-slate-400 mb-6">Looking to add Autom8ion Lab to your vendor list, qualified vendor pool, or prime/sub team? Enter your details and we&apos;ll send the latest version of our capability statement directly to your inbox.</p>
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 relative z-50">
-              <p className="text-slate-300 mb-4">Enter your details to receive our capabilities statement:</p>
-              {submitError && (
-                <div className="mb-4 p-3 bg-red-500/20 border border-red-500/50 rounded-lg text-red-300 text-sm">
-                  Something went wrong. Please try again.
-                </div>
-              )}
-              <form className="space-y-4" onSubmit={handleCapabilitiesSubmit} name="capabilities-statement" data-netlify="true">
-                <input type="hidden" name="form-name" value="capabilities-statement" />
-                <div>
-                  <label htmlFor="footer-name" className="sr-only">Name</label>
-                  <input
-                    type="text"
-                    id="footer-name"
-                    name="name"
-                    placeholder="Your Name"
-                    required
-                    autoComplete="name"
-                    disabled={isSubmitting}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-700 text-white placeholder-slate-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed text-base"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="footer-email" className="sr-only">Email</label>
-                  <input
-                    type="email"
-                    id="footer-email"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                    autoComplete="email"
-                    inputMode="email"
-                    disabled={isSubmitting}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-700 text-white placeholder-slate-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed text-base"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none min-h-[48px] touch-manipulation flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-5 h-5 animate-spin mr-2" />
-                      Submitting...
-                    </>
-                  ) : (
-                    'Request Statement'
-                  )}
-                </button>
-              </form>
+        {/* Capability statement request — replaced the inline form with a
+            modal-trigger CTA so every "Download capability statement" entry
+            point across the site funnels through the same SendGrid + instant-
+            download flow. The modal lives in app/_components/CapabilityStatementModal.tsx
+            and is provided sitewide by app/layout.tsx. */}
+        <div className="border-t border-slate-800 pt-12 mt-12">
+          <div className="max-w-3xl flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="max-w-xl">
+              <h3 className="text-white font-semibold mb-2 flex items-center gap-2">
+                <Download className="w-4 h-4 text-cyan-400" />
+                Request our capability statement
+              </h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Adding Autom8ion Lab to your vendor list, qualified vendor pool, or prime/sub
+                team? Get the latest PDF — registration data, NAICS codes, contract vehicles,
+                and contact info — delivered instantly.
+              </p>
             </div>
+            <CapabilityRequestButton variant="primary">
+              Request statement
+            </CapabilityRequestButton>
           </div>
         </div>
 
@@ -293,7 +190,7 @@ const Footer = () => {
             <a href="/terms" className="text-slate-400 hover:text-cyan-400 transition-colors">Terms of Service</a>
             <span className="text-slate-500 hidden md:inline">·</span>
             <span className="text-slate-500 text-xs">
-              Veteran-Owned · SDVOSB Pending ·{' '}
+              Veteran-Owned · SDVOSB Certified ·{' '}
               <span className="font-mono">UEI YY2DR3KSENH7</span> ·{' '}
               <span className="font-mono">CAGE 9YCS7</span>
             </span>

@@ -5,6 +5,7 @@ import Header from './_components/Header';
 import Footer from './_components/Footer';
 import AnimatedMesh from './_components/ui/AnimatedMeshLazy';
 import { OrganizationSchema, WebSiteSchema } from './_components/Schema';
+import { CapabilityStatementModalProvider } from './_components/CapabilityStatementModal';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://autom8ionlab.com'),
@@ -112,9 +113,11 @@ export default function RootLayout({
           <input type="email" name="email" />
         </form>
 
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
+        <CapabilityStatementModalProvider>
+          <Header />
+          <main id="main">{children}</main>
+          <Footer />
+        </CapabilityStatementModalProvider>
 
         {/* All third-party analytics + pixels load AFTER window.onload via
             strategy="lazyOnload" — keeps them out of the main-thread budget

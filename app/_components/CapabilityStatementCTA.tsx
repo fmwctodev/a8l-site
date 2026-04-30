@@ -1,8 +1,9 @@
 // LOCKED v3 §"Final Homepage Copy" §8 — Capability statement CTA.
 
 import Link from 'next/link';
-import { Download, ArrowRight } from 'lucide-react';
-import { Reveal, MagneticButton } from './ui';
+import { ArrowRight } from 'lucide-react';
+import { Reveal } from './ui';
+import CapabilityRequestButton from './CapabilityRequestButton';
 
 export default function CapabilityStatementCTA() {
   return (
@@ -22,19 +23,14 @@ export default function CapabilityStatementCTA() {
               </h2>
               <p className="text-lg text-slate-300 leading-relaxed mb-8 max-w-3xl">
                 Looking to add Autom8ion Lab to your vendor list, qualified vendor pool, or prime/sub
-                team? Download our capability statement — registration data, NAICS codes, core
-                competencies, and contact information.
+                team? Request the latest PDF — registration data, NAICS codes, core competencies,
+                and contact information — delivered to your inbox instantly.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <MagneticButton
-                  href="/downloads/Autom8ion_Lab_Capabilities_Statement.pdf"
-                  variant="primary"
-                  external
-                >
-                  <Download className="w-5 h-5" />
+                <CapabilityRequestButton variant="primary">
                   Download capability statement (PDF)
-                </MagneticButton>
+                </CapabilityRequestButton>
 
                 <Link
                   href="/capability-statement"

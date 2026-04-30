@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  Download,
   Mail,
   Phone,
   MapPin,
@@ -20,6 +19,7 @@ import {
   Globe,
 } from 'lucide-react';
 import { BreadcrumbSchema } from '@/app/_components/Schema';
+import CapabilityRequestButton from '@/app/_components/CapabilityRequestButton';
 
 export const metadata: Metadata = {
   title: 'Capability Statement',
@@ -99,14 +99,9 @@ export default function Page() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a
-              href="/downloads/Autom8ion_Lab_Capabilities_Statement.pdf"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all min-h-[48px]"
-              download
-            >
-              <Download className="w-5 h-5" />
+            <CapabilityRequestButton variant="primary">
               Download PDF version
-            </a>
+            </CapabilityRequestButton>
             <Link
               href="/schedule-consultation"
               className="inline-flex items-center justify-center gap-2 border border-slate-600 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 px-6 py-3 rounded-lg font-semibold transition-all min-h-[48px]"
@@ -735,14 +730,9 @@ export default function Page() {
               .
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/downloads/Autom8ion_Lab_Capabilities_Statement.pdf"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all min-h-[48px]"
-                download
-              >
-                <Download className="w-5 h-5" />
+              <CapabilityRequestButton variant="primary">
                 Download PDF version
-              </a>
+              </CapabilityRequestButton>
               <Link
                 href="/schedule-consultation"
                 className="inline-flex items-center justify-center gap-2 border border-slate-600 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 px-6 py-3 rounded-lg font-semibold transition-all min-h-[48px]"

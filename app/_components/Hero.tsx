@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import HeroScene from './ui/HeroSceneLazy';
+import CapabilityRequestButton from './CapabilityRequestButton';
 
 /**
  * Hero — LOCKED v3 §"Final Homepage Copy" §1.
@@ -59,13 +60,12 @@ const Hero = () => {
               Schedule a discovery call
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            <Link
-              href="/capability-statement"
-              className="group inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-900/40 px-8 py-4 text-base font-semibold text-slate-200 backdrop-blur-sm transition-all hover:border-cyan-400 hover:text-white hover:bg-slate-900/60 min-h-[48px]"
-            >
-              <Download className="w-4 h-4" />
-              Download capability statement
-            </Link>
+            <CapabilityRequestButton
+              variant="secondary"
+              className="px-8 py-4"
+              iconClassName="w-4 h-4"
+            />
+
           </div>
 
           <p className="fade-up fade-up-delay-3 text-sm text-slate-400 mt-6 max-w-3xl mx-auto">
