@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-const lastUpdated = "August 17, 2025";
+const lastUpdated = "May 3, 2026";
 
   return (
     <>
@@ -80,7 +80,7 @@ const lastUpdated = "August 17, 2025";
               <div className="max-w-4xl mx-auto px-4 sm:px-6">
                 <div className="prose prose-invert prose-lg max-w-none mb-8">
                   <p className="text-slate-300 leading-relaxed">
-                    Welcome to Autom8ion Lab! These Terms of Service ("Terms") govern your access to and use of our website, services, and products. Please read them carefully.
+                    Welcome to Autom8ion Lab, the trade name under which Sitehues Media Inc. ("we," "us," or "our") provides its services. These Terms of Service ("Terms") govern your access to and use of our website, services, and products. Please read them carefully.
                   </p>
                 </div>
       
@@ -101,7 +101,7 @@ const lastUpdated = "August 17, 2025";
                     <ul className="text-slate-300 space-y-2">
                       <li>• <strong>"Services"</strong> refers to all products, platforms, software, solutions, and consulting offered by Autom8ion Lab.</li>
                       <li>• <strong>"Client" or "User"</strong> refers to any individual or entity using our services.</li>
-                      <li>• <strong>"We," "us," or "our"</strong> refers to Autom8ion Lab LLC.</li>
+                      <li>• <strong>"We," "us," or "our"</strong> refers to Sitehues Media Inc., a Florida corporation operating under the trade name "Autom8ion Lab" (DBA).</li>
                     </ul>
                   </div>
       
@@ -341,7 +341,7 @@ const lastUpdated = "August 17, 2025";
                       <p><strong>Autom8ion Lab Legal Department</strong></p>
                       <p>📧 Email: <a href="mailto:info@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@autom8ionlab.com</a></p>
                       <p>📞 Phone: <a href="tel:+18555086062" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 855-508-6062</a></p>
-                      <p>🏢 Address: Autom8ion Lab, 486 lake cir, plant city, fl 33565</p>
+                      <p>🏢 Address: Sitehues Media Inc. (DBA Autom8ion Lab), 486 Lake Cir, Plant City, FL 33565</p>
                     </div>
                     <div className="mt-6 pt-6 border-t border-slate-700">
                       <p className="text-slate-300 text-center">

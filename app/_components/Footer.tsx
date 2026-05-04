@@ -46,6 +46,13 @@ const Footer = () => {
             mid-market companies in regulated industries. Engineered to commercial speed,
             documented to federal standards.
           </p>
+          {/* Legal entity line — required for 10DLC/A2P brand verification.
+              Reviewers must see the registered TCR brand "Sitehues Media Inc."
+              tied to the public-facing "Autom8ion Lab" brand without scrolling. */}
+          <p className="text-slate-500 text-sm mt-3">
+            Operated by <strong className="text-slate-300">Sitehues Media Inc.</strong> (DBA Autom8ion Lab) ·
+            Registered in Florida, USA
+          </p>
         </div>
 
         {/* 4-column nav grid per Implementation Plan §8.4. */}

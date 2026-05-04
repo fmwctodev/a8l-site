@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-const lastUpdated = "August 17, 2025";
+const lastUpdated = "May 3, 2026";
 
   return (
     <>
@@ -80,7 +80,7 @@ const lastUpdated = "August 17, 2025";
               <div className="max-w-4xl mx-auto px-4 sm:px-6">
                 <div className="prose prose-invert prose-lg max-w-none mb-8">
                   <p className="text-slate-300 leading-relaxed">
-                    We at Autom8ion Lab are committed to protecting your privacy and handling your personal information transparently and in compliance with applicable privacy laws, including the General Data Protection Regulation (GDPR), Telephone Consumer Protection Act (TCPA), Federal Communications Commission (FCC) and Federal Trade Commission (FTC) guidelines, as well as 10DLC and A2P messaging regulations.
+                    Sitehues Media Inc., operating under the trade name Autom8ion Lab ("we," "us," or "our"), is committed to protecting your privacy and handling your personal information transparently and in compliance with applicable privacy laws, including the General Data Protection Regulation (GDPR), Telephone Consumer Protection Act (TCPA), Federal Communications Commission (FCC) and Federal Trade Commission (FTC) guidelines, as well as 10DLC and A2P messaging regulations.
                   </p>
                 </div>
       
@@ -169,8 +169,31 @@ const lastUpdated = "August 17, 2025";
                     </p>
                   </div>
       
+                  {/* §5 Mobile Information & SMS Privacy — required by 10DLC/A2P
+                      campaign review (T-Mobile/AT&T/Verizon/CTIA). The first
+                      sentence uses the verbatim TCR-recognized no-sharing
+                      phrase so reviewers can pattern-match instantly. */}
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">5. Information Sharing</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">5. Mobile Information &amp; SMS Privacy</h2>
+                    <p className="text-slate-300 mb-4">
+                      <strong className="text-white">No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> All categories of information described in this Privacy Policy exclude text-messaging originator opt-in data and consent; this information will not be shared with any third parties.
+                    </p>
+                    <p className="text-slate-300 mb-4">
+                      Specifically, mobile phone numbers collected for SMS communications, SMS opt-in records, and related consent data are used solely by Sitehues Media Inc. (DBA Autom8ion Lab) and our contracted message-delivery providers (e.g., Twilio, LeadConnector) strictly for the purpose of delivering the messages you have opted in to receive, and for legal compliance with the TCPA, CTIA Messaging Principles, and 10DLC / A2P regulations.
+                    </p>
+                    <p className="text-slate-300 mb-4">
+                      We do not sell, rent, lease, or share mobile phone numbers or SMS opt-in data with third parties, affiliates, advertising networks, data brokers, or any other party for their own marketing or promotional use.
+                    </p>
+                    <p className="text-slate-300">
+                      Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to unsubscribe at any time, or <strong>HELP</strong> for assistance. For full SMS terms and consent records, contact us using the information in the Contact section below.
+                    </p>
+                  </div>
+
+                  <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
+                    <h2 className="text-2xl font-bold text-white mb-4">6. Information Sharing</h2>
+                    <p className="text-slate-300 mb-4">
+                      <em>Note: Mobile phone numbers and SMS opt-in data are governed by Section 5 above and are <strong>not</strong> included in any of the sharing categories below.</em>
+                    </p>
                     <p className="text-slate-300 mb-4">
                       We do not sell or rent your personal information. However, we may share it with:
                     </p>
@@ -187,7 +210,7 @@ const lastUpdated = "August 17, 2025";
                   </div>
       
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">6. Data Security</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">7. Data Security</h2>
                     <p className="text-slate-300 mb-4">
                       We take your data security seriously and implement measures including:
                     </p>
@@ -202,7 +225,7 @@ const lastUpdated = "August 17, 2025";
                   </div>
       
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">7. Your Rights Under GDPR and Other Laws</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">8. Your Rights Under GDPR and Other Laws</h2>
                     <p className="text-slate-300 mb-4">
                       If you are in the EU or UK, or if applicable privacy laws grant you rights, you may:
                     </p>
@@ -221,7 +244,7 @@ const lastUpdated = "August 17, 2025";
                   </div>
       
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">8. Cookies and Tracking</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">9. Cookies and Tracking</h2>
                     <p className="text-slate-300 mb-4">
                       We use cookies and similar technologies to:
                     </p>
@@ -237,7 +260,7 @@ const lastUpdated = "August 17, 2025";
                   </div>
       
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">9. Data Retention</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">10. Data Retention</h2>
                     <p className="text-slate-300 mb-4">
                       We retain your personal data only for as long as necessary to:
                     </p>
@@ -252,7 +275,7 @@ const lastUpdated = "August 17, 2025";
                   </div>
       
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">10. International Transfers</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">11. International Transfers</h2>
                     <p className="text-slate-300">
                       Your data may be transferred and stored outside your country, including in the United States, under appropriate safeguards such as:
                     </p>
@@ -267,14 +290,14 @@ const lastUpdated = "August 17, 2025";
                   </div>
       
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">11. Children's Privacy</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">12. Children's Privacy</h2>
                     <p className="text-slate-300">
                       We do not knowingly collect personal data from children under 13 (or under 16 in the EU). If we become aware that we have collected such data, we will delete it promptly.
                     </p>
                   </div>
       
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">12. Changes to This Privacy Policy</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">13. Changes to This Privacy Policy</h2>
                     <p className="text-slate-300">
                       We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify users of any material changes by:
                     </p>
@@ -289,14 +312,14 @@ const lastUpdated = "August 17, 2025";
                   </div>
       
                   <div className="bg-slate-800/30 p-6 sm:p-8 rounded-xl border border-slate-700/50">
-                    <h2 className="text-2xl font-bold text-white mb-4">13. Contact Us</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">14. Contact Us</h2>
                     <p className="text-slate-300 mb-4">
                       If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:
                     </p>
                     <div className="text-slate-300 space-y-2">
                       <p><strong>Email:</strong> <a href="mailto:info@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@autom8ionlab.com</a></p>
                       <p><strong>Phone:</strong> <a href="tel:+18555086062" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 855-508-6062</a></p>
-                      <p><strong>Mailing Address:</strong> Autom8ion Lab, 486 lake cir, Plant city, FL 33565</p>
+                      <p><strong>Mailing Address:</strong> Sitehues Media Inc. (DBA Autom8ion Lab), 486 Lake Cir, Plant City, FL 33565</p>
                     </div>
                   </div>
       
