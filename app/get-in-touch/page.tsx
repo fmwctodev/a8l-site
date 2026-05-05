@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/app/_components/Schema';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
+import GamifiedContactForm from '@/app/_components/GamifiedContactForm';
 
 export const metadata: Metadata = {
   title: { absolute: 'Contact Autom8ion Lab' },
@@ -137,31 +137,14 @@ export default function ContactPage() {
             </p>
           </div>
 
-          {/* Embed wrapper: padding scales down on small screens so the form gets
-              full viewport width on mobile. The 864px iframe height is a starting
-              hint — form_embed.js auto-resizes via postMessage once the form
-              renders, so on mobile (where fields stack to ~1100px) the iframe
-              grows past 864px instead of clipping the submit button. */}
-          <div className="bg-slate-800/50 p-4 sm:p-6 md:p-8 rounded-2xl border border-slate-700/50">
-            <div className="min-h-[600px]">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/SNkHAghEAJ6mS7wUtBep"
-                style={{ width: '100%', height: '864px', border: 'none', borderRadius: '3px' }}
-                id="inline-SNkHAghEAJ6mS7wUtBep"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-form-name="Autom8ion Lab Site Contact Form"
-                data-height="864"
-                data-layout-iframe-id="inline-SNkHAghEAJ6mS7wUtBep"
-                data-form-id="SNkHAghEAJ6mS7wUtBep"
-                title="Autom8ion Lab Site Contact Form"
-              />
-            </div>
-          </div>
+          {/* Replaced the LeadConnector iframe with a native gamified form that
+              POSTs directly to the a8l-os form-submit Edge Function. The Edge
+              Function auto-creates a Contact + Inbound Sales / New Lead
+              Opportunity on submission. No third-party CRM in the conversion
+              path. */}
+          <GamifiedContactForm />
         </div>
       </section>
-
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
     </>
   );
 }

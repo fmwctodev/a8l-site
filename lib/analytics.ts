@@ -45,6 +45,10 @@ export const conversionEvents = {
   formSubmitBriefing: () => trackEvent('form_submit_briefing'),
   formSubmitCapability: (params?: GtagEventParams) =>
     trackEvent('form_submit_capability', params),
+  formSubmitContact: (params?: GtagEventParams) =>
+    trackEvent('form_submit_contact', params),
+  formSubmitCareers: (params?: GtagEventParams) =>
+    trackEvent('form_submit_careers', params),
   downloadCapabilityPdf: () => trackEvent('download_capability_pdf'),
   phoneClick: () => trackEvent('phone_click'),
   emailClick: () => trackEvent('email_click'),

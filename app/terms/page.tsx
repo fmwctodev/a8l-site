@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-const lastUpdated = "May 3, 2026";
+const lastUpdated = "May 5, 2026";
 
   return (
     <>

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-const lastUpdated = "May 3, 2026";
+const lastUpdated = "May 5, 2026";
 
   return (
     <>
@@ -162,7 +162,7 @@ const lastUpdated = "May 3, 2026";
                       <li>• AI-assisted communications</li>
                     </ul>
                     <p className="text-slate-300 mb-4">
-                      We store timestamped consent records in our CRM (e.g., LeadConnector).
+                      We store timestamped consent records in our internal CRM (a8l-os).
                     </p>
                     <p className="text-slate-300">
                       You can withdraw consent at any time by replying "STOP" to any SMS or contacting us directly (see Contact section).
@@ -179,7 +179,7 @@ const lastUpdated = "May 3, 2026";
                       <strong className="text-white">No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> All categories of information described in this Privacy Policy exclude text-messaging originator opt-in data and consent; this information will not be shared with any third parties.
                     </p>
                     <p className="text-slate-300 mb-4">
-                      Specifically, mobile phone numbers collected for SMS communications, SMS opt-in records, and related consent data are used solely by Sitehues Media Inc. (DBA Autom8ion Lab) and our contracted message-delivery providers (e.g., Twilio, LeadConnector) strictly for the purpose of delivering the messages you have opted in to receive, and for legal compliance with the TCPA, CTIA Messaging Principles, and 10DLC / A2P regulations.
+                      Specifically, mobile phone numbers collected for SMS communications, SMS opt-in records, and related consent data are used solely by Sitehues Media Inc. (DBA Autom8ion Lab) and our contracted message-delivery provider (Plivo) strictly for the purpose of delivering the messages you have opted in to receive, and for legal compliance with the TCPA, CTIA Messaging Principles, and 10DLC / A2P regulations.
                     </p>
                     <p className="text-slate-300 mb-4">
                       We do not sell, rent, lease, or share mobile phone numbers or SMS opt-in data with third parties, affiliates, advertising networks, data brokers, or any other party for their own marketing or promotional use.
@@ -198,7 +198,7 @@ const lastUpdated = "May 3, 2026";
                       We do not sell or rent your personal information. However, we may share it with:
                     </p>
                     <ul className="text-slate-300 space-y-2">
-                      <li>• Authorized service providers (e.g., Twilio, LeadConnector, CRM platforms)</li>
+                      <li>• Authorized service providers (e.g., Plivo for SMS delivery, our internal CRM a8l-os, email service providers)</li>
                       <li>• Legal authorities when required by law</li>
                       <li>• Payment processors for billing purposes</li>
                       <li>• IT, security, and hosting vendors (under contract)</li>

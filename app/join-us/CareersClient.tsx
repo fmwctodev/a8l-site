@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Users, Zap, Globe, Heart, ArrowRight, MapPin, Clock, Send, DollarSign } from 'lucide-react';
 import Modal from '@/app/_components/Modal';
+import CareersApplicationForm from '@/app/_components/CareersApplicationForm';
 
 const ldSchema1 = {
   '@context': 'https://schema.org',
@@ -243,17 +244,15 @@ export default function CareersClient() {
       </section>
 
       <Modal isOpen={isCareersModalOpen} onClose={closeCareersModal}>
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Apply to Autom8ion Lab</h2>
-          <p className="text-slate-300 mb-6">
-            Drop your resume below and tell us why you&apos;d be a great fit. We respond within one business day.
+        <div>
+          <h2 className="text-2xl font-bold text-white mb-2 text-center">Apply to Autom8ion Lab</h2>
+          <p className="text-slate-300 mb-6 text-center">
+            Tell us a little about yourself. We respond within 5 business days.
           </p>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/QqJzjQyYKcWxqIcJjEla"
-            style={{ width: '100%', height: '480px', border: 'none', borderRadius: '8px' }}
-            title="Autom8ion Lab Careers Form"
-            data-form-name="Autom8ion Lab Careers Form"
-          />
+          {/* Replaced LeadConnector iframe with native form posting to a8l-os
+              form-submit Edge Function under public_slug "careers-application".
+              No opportunity is auto-created for career applications — just a contact. */}
+          <CareersApplicationForm onSuccess={() => { /* keep modal open so user sees success state */ }} />
         </div>
       </Modal>
     </>
