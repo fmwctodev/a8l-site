@@ -19,15 +19,24 @@ LeadConnector / GHL gives you two paths. **Option A is recommended** — the das
 4. Wait for the email with the download link (usually under 5 minutes for under 10k contacts)
 5. Save the CSV as `~/Downloads/leadconnector-contacts-export.csv`
 
-### Option B: REST API
+### Option B: REST API via the export script (recommended for large exports)
+
+A complete export script lives in [scripts/export-leadconnector-contacts.mjs](../../../a8l-os/scripts/export-leadconnector-contacts.mjs) on a8l-os. It paginates the LeadConnector API, normalizes the SMS-consent fields, and emits a CSV that matches the Phase D staging-table schema verbatim.
+
 ```bash
-# Requires LeadConnector / GoHighLevel API key with contacts.read scope
-curl -H "Authorization: Bearer $LEADCONNECTOR_API_KEY" \
-     -H "Version: 2021-07-28" \
-     "https://services.leadconnectorhq.com/contacts/?locationId=$LOCATION_ID&limit=1000" \
-     > leadconnector-contacts.json
+# Find your custom field UUIDs in LeadConnector Settings → Custom Fields
+# (click each field, the URL contains the UUID)
+
+cd J:/GitHub/a8l-os
+LEADCONNECTOR_API_KEY=pit-... \
+LEADCONNECTOR_LOCATION_ID=loc_... \
+LC_FIELD_INDUSTRY=<uuid> \
+LC_FIELD_SMS_OPT_IN=<uuid> \
+LC_FIELD_SMS_OPT_IN_DATE=<uuid> \
+node scripts/export-leadconnector-contacts.mjs --out=leadconnector-contacts-export.csv
 ```
-Paginate `?startAfterId=` until empty. Then convert to CSV with `jq` or a small script.
+
+The script writes progress to stderr (number of pages exported) and the CSV to the file.
 
 ---
 

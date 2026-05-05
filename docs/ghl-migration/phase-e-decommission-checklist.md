@@ -16,42 +16,16 @@ Estimated effort: ~2 hours of human work over a few days.
 
 ---
 
-## Step 1 — Final code cleanup
+## Step 1 — Final code cleanup (largely already done)
 
-After Phase A shipped, the marketing site no longer references LeadConnector in active code, but a few legacy text references remain. After Phase E, even those go away.
+Audited 2026-05-05 after Phase A:
+- ✅ Privacy policy already names "Plivo" + "a8l-os" instead of "LeadConnector / Twilio" (Phase A commit)
+- ✅ Terms of Service has no provider names to scrub
+- ✅ `Schema.tsx` has no LeadConnector references
+- ✅ `public/llms.txt` and `public/llms-full.txt` are clean
+- ✅ Netlify env vars audited — no `LEADCONNECTOR_*` or `GHL_*` keys present
 
-### Privacy policy: remove all remaining provider names
-File: [app/privacy/page.tsx](app/privacy/page.tsx)
-
-Replace any remaining mentions of "LeadConnector" / "Twilio" with a generic phrase. Final desired wording:
-
-```
-§5 Mobile Information & SMS Privacy — middle paragraph:
-
-  "Specifically, mobile phone numbers collected for SMS communications,
-   SMS opt-in records, and related consent data are used solely by Sitehues
-   Media Inc. (DBA Autom8ion Lab) and our contracted SMS-delivery provider
-   strictly for the purpose of delivering the messages you have opted in
-   to receive..."
-
-§6 Information Sharing — service provider line:
-
-  "Authorized service providers (e.g., our SMS delivery provider, our
-   internal CRM, and email service providers)"
-```
-
-Bump `lastUpdated` to the cutover date.
-
-### Schema.tsx — knowsAbout
-No LeadConnector references in `Schema.tsx` today. Skip.
-
-### llms.txt / llms-full.txt
-Search [public/llms.txt](public/llms.txt) and [public/llms-full.txt](public/llms-full.txt) for any LeadConnector mentions. Remove if found.
-
-### Netlify env vars to remove
-- `LEADCONNECTOR_API_KEY` (if exists)
-- `LEADCONNECTOR_LOCATION_ID` (if exists)
-- Any `GHL_*` vars
+**Remaining residue (optional):** Two code comments at [app/get-in-touch/page.tsx:140](app/get-in-touch/page.tsx) and [app/join-us/CareersClient.tsx:252](app/join-us/CareersClient.tsx) reference LeadConnector for historical context ("Replaced LeadConnector iframe with..."). These are useful migration documentation; recommend keeping them. If you want them gone for absolute cleanliness, a one-line edit on each removes the comment.
 
 ---
 

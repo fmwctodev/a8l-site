@@ -4,6 +4,19 @@ The brand `Sitehues Media Inc.` is already approved by The Campaign Registry (TC
 
 Wall-clock: 2-4 weeks for carrier review. During the wait window, proactive SMS does not fire (1:1 inbound handling continues to work normally on the LeadConnector rail until cutover).
 
+## Status as of 2026-05-05
+
+✅ **Plivo account connected** to a8l-os
+✅ **Two phone numbers active** in Plivo: `+1 813-320-9652` (Plant City local — default SMS) and `+1 888-984-3641` (toll-free)
+✅ **Form-submit captures sms_consent** with timestamp on every submission
+✅ **Privacy policy + terms** already reflect Plivo as SMS provider
+
+⏳ **Workflows in a8l-os** must be built in the UI (see [phase-b-plivo-sms-rail.md](./phase-b-plivo-sms-rail.md)) BEFORE submitting Phase C, because TCR reviewers may attempt a test message during validation.
+
+⏳ **THIS phase is YOUR action** — TCR campaign submission requires logging into Plivo Console and clicking through the campaign creation flow. There is no API endpoint that can submit on your behalf. Application copy below is paste-ready.
+
+---
+
 ---
 
 ## When to start Phase C

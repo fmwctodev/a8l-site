@@ -1,6 +1,29 @@
-# GHL → a8l-os Migration — Morning Handoff
+# GHL → a8l-os Migration — Master Handoff
 
-**Status as of 2026-05-05 overnight:** All code for Phases A through E is written and committed locally on `main` in both repos. **Nothing has been pushed to GitHub. Nothing has been deployed. No Supabase migrations have been applied to production.** Everything is staged and waiting for your review + go-ahead.
+**Status as of 2026-05-05 — Phase A SHIPPED, B prepped, C ready to submit, D scripts ready, E mostly clean.**
+
+Phase A (forms + CRM migration) is live in production:
+- ✅ All 7 a8l-os migrations applied to prod Supabase (`uscpncgnkmjirbrpidgu`)
+- ✅ form-submit Edge Function deployed at v76 with createOpportunityFromForm + writeOpportunityCustomFieldValues helpers
+- ✅ Smoke test passed end-to-end (contact + opportunity + custom fields all populated correctly, then cleaned up)
+- ✅ Netlify env vars set across all contexts
+- ✅ `https://autom8ionlab.com/get-in-touch` + `/join-us` rendering native gamified forms (no LeadConnector iframes)
+
+Phase B prerequisites set up:
+- ✅ Plivo connected, 2 numbers active, `+1 813-320-9652` set as default SMS (matches registered FL address)
+- ✅ Workflow trigger types extended (`form_submitted`, `opportunity_created`, etc.)
+- ⏳ **YOUR action:** Build the 6 SMS workflows in `os.autom8ionlab.com → Automation` per [phase-b-plivo-sms-rail.md](./phase-b-plivo-sms-rail.md). Keep DRAFT until Phase C clears.
+
+Phase C (TCR re-registration with Plivo) ready to submit:
+- ✅ Application copy paste-ready in [phase-c-tcr-plivo-reregistration.md](./phase-c-tcr-plivo-reregistration.md)
+- ⏳ **YOUR action:** Log into Plivo Console → A2P 10DLC → Campaigns → Create. Cannot be done via API.
+
+Phase D (LeadConnector → a8l-os data migration) scripts ready:
+- ✅ Export script: [scripts/export-leadconnector-contacts.mjs](../../../a8l-os/scripts/export-leadconnector-contacts.mjs)
+- ✅ Import SQL: [phase-d-leadconnector-data-migration.md](./phase-d-leadconnector-data-migration.md)
+- ⏳ **YOUR action:** Provide LeadConnector API key + custom field UUIDs, run the export script, run the import SQL.
+
+Phase E (decommission): code is already clean — only residue is 2 historical code comments (recommended to keep). External cancellations require your account access.
 
 This doc is your single entry point. Read it top-to-bottom before doing anything.
 
