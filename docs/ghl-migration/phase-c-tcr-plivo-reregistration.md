@@ -21,7 +21,7 @@ Wall-clock: 2-4 weeks for carrier review. During the wait window, proactive SMS 
 
 ## When to start Phase C
 
-After Phase B is verified working (a8l-os emits `sms_send_requested` events to event_outbox AND a workflow exists that consumes them and calls `plivo-sms-send`), but **before** Phase D (data migration). Reason: you want the new rail proven end-to-end with at least one test contact before cutover, so any Plivo / workflow bugs surface before live traffic depends on them.
+After Phase B is verified working (a8l-os emits `form_submitted` / `opportunity_created` events to event_outbox AND at least one workflow consumes them and calls `plivo-sms-send` end-to-end with a real test contact). Phase D was skipped — no data migration to wait on. Once Phase B is proven, submit Phase C immediately.
 
 ---
 

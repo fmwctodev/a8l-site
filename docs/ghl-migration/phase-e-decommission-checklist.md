@@ -1,6 +1,6 @@
 # Phase E — LeadConnector Decommission
 
-Final phase. Cancel LeadConnector subscription and clean up all references. Run only AFTER Phase C's Plivo cutover has been stable for 7+ days AND Phase D data migration is verified.
+Final phase. Cancel LeadConnector subscription and clean up all references. Run only AFTER Phase C's Plivo cutover has been stable for 7+ days. (Phase D data migration was skipped per decision 2026-05-05 — historical contacts stay in LeadConnector and are not imported into a8l-os.)
 
 Estimated effort: ~2 hours of human work over a few days.
 
@@ -9,10 +9,32 @@ Estimated effort: ~2 hours of human work over a few days.
 ## Pre-decommission sanity checks (do not skip)
 
 - [ ] Phase C clean: 7+ consecutive days of Plivo SMS deliveries with no fallback to LeadConnector
-- [ ] Phase D clean: All LeadConnector contacts present in a8l-os contacts table; spot-checked 10 random consent records show preserved `original_consent_at` timestamps
+- [ ] **TCPA archival completed (CRITICAL — read below)**
 - [ ] No active LeadConnector workflows still firing — check the LeadConnector dashboard's automation history for any sends in the last 7 days
 - [ ] No remaining iframe embeds on the marketing site referencing `leadconnectorhq.com` or `msgsndr.com` — `grep -ri "leadconnectorhq\|msgsndr" J:\GitHub\a8l-site/app` should return zero matches outside of `_legacy_src/`
 - [ ] No customer-facing communications in the last 30 days reference a LeadConnector portal URL
+
+---
+
+## TCPA archival (required before cancellation)
+
+Even though we're not importing historical contacts into a8l-os, **TCPA requires you to retain SMS consent records for any phone number you've ever sent commercial SMS to**, regardless of which provider sent it. The retention period varies by jurisdiction but the FCC default is 4 years from the last consented message; some state-level rules go longer. Plaintiffs' attorneys routinely request these records in TCPA suits.
+
+If LeadConnector is cancelled and contacts are deleted, that audit trail vanishes — and "the data was on a vendor we cancelled" is not a valid defense.
+
+### Minimum acceptable archival
+1. **Dashboard CSV export** — LeadConnector → Contacts → Export to CSV including all custom fields. Save the file somewhere with backups (Google Drive, Dropbox, S3 — pick one with version history).
+2. **Conversation history** — LeadConnector → Conversations → export the full SMS thread history per contact. This is harder; their dashboard may only let you export per-contact. If volume is small (<100 contacts), worth doing manually.
+3. **File the archive** — Drop both into a single zip named `leadconnector-archive-YYYY-MM-DD.zip`, hash it, store the hash + location somewhere durable (e.g., a private Notion page, password manager note). Treat it like a tax record — you might need it 4+ years from now.
+
+### If you ever need to look something up post-cancellation
+The archive is read-only reference. If a recipient files a TCPA complaint claiming they never consented, you'll need to:
+- Find their phone number in the archived CSV
+- Pull the timestamped consent value (`sms_opt_in_date`)
+- Pull the conversation thread showing the opt-in confirmation reply
+- Provide the archive hash + access trail to your lawyer
+
+This is a 30-minute task ONCE NOW, vs. an existential business risk LATER.
 
 ---
 

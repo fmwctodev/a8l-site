@@ -18,12 +18,9 @@ Phase C (TCR re-registration with Plivo) ready to submit:
 - ✅ Application copy paste-ready in [phase-c-tcr-plivo-reregistration.md](./phase-c-tcr-plivo-reregistration.md)
 - ⏳ **YOUR action:** Log into Plivo Console → A2P 10DLC → Campaigns → Create. Cannot be done via API.
 
-Phase D (LeadConnector → a8l-os data migration) scripts ready:
-- ✅ Export script: [scripts/export-leadconnector-contacts.mjs](../../../a8l-os/scripts/export-leadconnector-contacts.mjs)
-- ✅ Import SQL: [phase-d-leadconnector-data-migration.md](./phase-d-leadconnector-data-migration.md)
-- ⏳ **YOUR action:** Provide LeadConnector API key + custom field UUIDs, run the export script, run the import SQL.
+Phase D (data migration) — **skipped per decision 2026-05-05.** Historical contacts stay in LeadConnector. New leads start fresh in a8l-os. ⚠️ TCPA archival concern is now folded into Phase E — see below.
 
-Phase E (decommission): code is already clean — only residue is 2 historical code comments (recommended to keep). External cancellations require your account access.
+Phase E (decommission): code is already clean — only residue is 2 historical code comments (recommended to keep). External cancellations require your account access. **Includes a TCPA archival step that must run before cancelling LeadConnector** to preserve consent records for any contacts who'd received SMS from you.
 
 This doc is your single entry point. Read it top-to-bottom before doing anything.
 
@@ -278,9 +275,9 @@ After Phase A is green and you've watched 24 hours of traffic, pick up the rest 
 
 - **Phase C** — [phase-c-tcr-plivo-reregistration.md](./phase-c-tcr-plivo-reregistration.md). Multi-week wall-clock. Submit new TCR campaign with Plivo as provider. Application copy is fully drafted — paste-ready.
 
-- **Phase D** — [phase-d-leadconnector-data-migration.md](./phase-d-leadconnector-data-migration.md). Export contacts from LeadConnector, import to a8l-os, preserve TCPA consent timestamps. SQL transform is fully written — needs a CSV from LeadConnector to run against.
+- **Phase D** — SKIPPED per decision 2026-05-05. Not migrating historical contacts; new leads only.
 
-- **Phase E** — [phase-e-decommission-checklist.md](./phase-e-decommission-checklist.md). Cancel LeadConnector subscription + final code cleanup. Run only after Phase C is stable for 7 days.
+- **Phase E** — [phase-e-decommission-checklist.md](./phase-e-decommission-checklist.md). Cancel LeadConnector subscription + final code cleanup. Run only after Phase C is stable for 7 days. ⚠️ Includes a TCPA-archival step (export LeadConnector contact list to file, even if not importing) — TCPA requires keeping consent records for any phone number you've ever sent SMS to, even after you stop using that provider.
 
 ---
 

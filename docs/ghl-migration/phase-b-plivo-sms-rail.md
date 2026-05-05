@@ -81,7 +81,7 @@ These auto-replies are TCPA-mandated. Without workflow 6 the campaign will fail 
 
 Every SMS workflow MUST gate on `sms_consent = true` before sending. The form-submit Edge Function writes the consent value to the `sms_consent` contact custom field with a timestamp, but the workflow filter is what protects you legally. Triple-check this filter exists in workflows 1–4.
 
-For the existing imported contacts that came in via LeadConnector pre-migration, the `sms_consent` value will be backfilled by Phase D's data import (it preserves the original LeadConnector opt-in timestamp). Workflows reference the same field key — no per-source branching needed.
+Historical LeadConnector contacts are NOT being migrated into a8l-os (Phase D skipped per 2026-05-05 decision). They stay where they are; a8l-os starts with only the contacts that come in via the new gamified form post-Phase A launch. SMS workflows therefore only need to evaluate `sms_consent` on a8l-os-native contacts.
 
 ---
 
