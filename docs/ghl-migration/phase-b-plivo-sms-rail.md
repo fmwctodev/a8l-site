@@ -17,11 +17,19 @@ Configure a8l-os to send proactive SMS via Plivo (replacing LeadConnector). Most
 
 ---
 
-## What's left
+## Status update — 2026-05-05
 
-The single missing piece: **published workflow records** with node graphs that consume those events and call `plivo-sms-send`. Workflow definitions are non-trivial node graphs (react-flow JSON) that the visual builder produces. Seeding them directly via SQL is brittle and skips the validation the UI does — the right path is to build them in the a8l-os Workflow Builder UI.
+✅ **5 workflows seeded as DRAFT** via migration `20260505140000_seed_inbound_sms_workflows.sql`. Visit `os.autom8ionlab.com → Automation → Workflows` to see them. They will not fire (status=draft AND triggers.is_active=false) until you explicitly publish them after Phase C clears.
 
-### Workflows to build in `os.autom8ionlab.com → Automation → Workflows`
+✅ **TCPA server-side gate added** to form-submit Edge Function (v77). When a form has both a phone field and an sms_consent boolean, the Edge Function strips contacts.phone unless sms_consent === true. Verified end-to-end: payload with `phone="555-123-4567"` and `sms_consent=false` results in a contact with `phone=NULL`. Workflows therefore safely use `contact.phone is_not_empty` as the consent proxy.
+
+✅ **Default SMS number set** to `+1 813-320-9652` (Plant City local — matches registered FL business address).
+
+## What's left in Phase B
+
+Just the visual review. Open each workflow in the builder UI and confirm the node graph looks right (you may want to tighten merge field references, adjust message bodies, or add additional action nodes — e.g., the STOP branch should ALSO clear the contact's phone column so even direct-API hits can't bypass the unsubscribe).
+
+### Workflows seeded as DRAFT (status='draft', triggers.is_active=false)
 
 #### Workflow 1: "Inbound — New Lead Welcome SMS"
 - **Trigger:** `form_submitted`
