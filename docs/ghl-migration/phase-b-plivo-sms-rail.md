@@ -27,7 +27,32 @@ Configure a8l-os to send proactive SMS via Plivo (replacing LeadConnector). Most
 
 ## What's left in Phase B
 
-Just the visual review. Open each workflow in the builder UI and confirm the node graph looks right (you may want to tighten merge field references, adjust message bodies, or add additional action nodes — e.g., the STOP branch should ALSO clear the contact's phone column so even direct-API hits can't bypass the unsubscribe).
+### Edge Function deploys (required before publishing workflows)
+
+Two Edge Functions have local commits ahead of what's deployed. Both need to ship before the seeded workflows can fire correctly:
+
+```bash
+cd J:/GitHub/a8l-os
+supabase link --project-ref uscpncgnkmjirbrpidgu  # one-time
+supabase functions deploy booking-api
+supabase functions deploy workflow-processor
+```
+
+What each one unlocks:
+
+- **`booking-api`** (commit `d40dafa`) — emits `appointment_booked` to `event_outbox` after every successful booking, with a payload that includes `start_at_minus_24h`, `start_at_minus_1h`, and visitor-timezone-aware `date` / `time` strings. Without this, the workflow engine never sees appointments — Workflows 2 & 3 (Confirmation, 24h Reminder) won't fire at all.
+
+- **`workflow-processor`** (commit `d40dafa`) — generalizes `resolveMergeFields` to walk arbitrary dotted paths (so `{{appointment.date}}`, `{{opportunity.stage_name}}`, etc. work in SMS/email bodies). `calculateDelayRunAt` now resolves merge fields in `wait_until_datetime` so Workflow 3 can delay until 24h before the appt instead of falling through to "now."
+
+Why the deploys aren't already pushed via MCP: the workflow-processor file is 3500 lines (~130KB), expensive to push through this conversation. The user-side CLI deploy is 30 seconds.
+
+### Visual review
+
+Open each workflow in the builder UI and confirm the node graph looks right. Three pre-flagged improvements to consider:
+
+1. **STOP branch** of Workflow 5 should ALSO clear the contact's phone column (or set DND) so even direct-API hits can't bypass the unsubscribe. Add an `update_contact_field` action node after the STOP reply.
+2. **Workflow 4 (opportunity stage update)** fires on every stage change including internal ones. Tighten the trigger filter to scope to client-facing stages (e.g., Discovery / Demo Scheduled, Proposal Sent, Closed Won) via the Trigger config panel.
+3. **Workflow 3 (24h reminder)** — the merge field is `{{appointment.start_at_minus_24h}}` and is now wired up via the booking-api change. Once you deploy both Edge Functions, this should work. Test it by booking an appointment 25+ hours in the future and watching the workflow_jobs table for a delayed pending row.
 
 ### Workflows seeded as DRAFT (status='draft', triggers.is_active=false)
 
