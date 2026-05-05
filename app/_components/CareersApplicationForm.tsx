@@ -1,11 +1,12 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Upload, Loader2, FileText, X } from 'lucide-react';
 import MomentumBar from './forms/MomentumBar';
 import FormStep, { FieldShell, TextInput, TextArea, ChipPicker } from './forms/FormStep';
 import { useA8LOSFormSubmit } from './forms/useA8LOSFormSubmit';
+import { getSupabaseClient } from '@/lib/supabaseClient';
 import { conversionEvents } from '@/lib/analytics';
 
 /**
@@ -92,6 +93,20 @@ interface CareersApplicationFormProps {
   onSuccess?: () => void;
 }
 
+const RESUME_BUCKET = 'careers-resumes';
+const MAX_RESUME_BYTES = 5 * 1024 * 1024; // 5 MB — must match the bucket's file_size_limit
+const ALLOWED_RESUME_TYPES = [
+  'application/pdf',
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+];
+
+interface ResumeUploadState {
+  status: 'idle' | 'uploading' | 'uploaded' | 'error';
+  fileName: string | null;
+  errorMessage: string | null;
+}
+
 export default function CareersApplicationForm({
   positionTitle,
   onSuccess,
@@ -103,10 +118,82 @@ export default function CareersApplicationForm({
     position_applying_for: positionTitle ?? '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [resumeUpload, setResumeUpload] = useState<ResumeUploadState>({
+    status: 'idle',
+    fileName: null,
+    errorMessage: null,
+  });
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { submit, loading, error: submitError } = useA8LOSFormSubmit('careers-application');
 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) => {
     setData(prev => ({ ...prev, [key]: value }));
+  };
+
+  const handleResumeSelected = async (file: File) => {
+    if (!ALLOWED_RESUME_TYPES.includes(file.type)) {
+      setResumeUpload({
+        status: 'error',
+        fileName: file.name,
+        errorMessage: 'Please upload a PDF, DOC, or DOCX file.',
+      });
+      return;
+    }
+    if (file.size > MAX_RESUME_BYTES) {
+      setResumeUpload({
+        status: 'error',
+        fileName: file.name,
+        errorMessage: 'File too large. Please keep resumes under 5 MB.',
+      });
+      return;
+    }
+
+    const supabase = getSupabaseClient();
+    if (!supabase) {
+      setResumeUpload({
+        status: 'error',
+        fileName: file.name,
+        errorMessage: 'Upload not configured. Email info@autom8ionlab.com instead.',
+      });
+      return;
+    }
+
+    setResumeUpload({ status: 'uploading', fileName: file.name, errorMessage: null });
+
+    // Random UUID-prefixed path so concurrent uploads can't collide and
+    // the URL is unguessable even though the bucket is public.
+    const ext = file.name.split('.').pop()?.toLowerCase() || 'pdf';
+    const uuid =
+      typeof crypto !== 'undefined' && 'randomUUID' in crypto
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    const path = `${uuid}.${ext}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from(RESUME_BUCKET)
+      .upload(path, file, {
+        contentType: file.type,
+        upsert: false,
+      });
+
+    if (uploadError) {
+      setResumeUpload({
+        status: 'error',
+        fileName: file.name,
+        errorMessage: uploadError.message || 'Upload failed. Please try again.',
+      });
+      return;
+    }
+
+    const { data: urlData } = supabase.storage.from(RESUME_BUCKET).getPublicUrl(path);
+    update('resume_file_url', urlData.publicUrl);
+    setResumeUpload({ status: 'uploaded', fileName: file.name, errorMessage: null });
+  };
+
+  const clearResume = () => {
+    update('resume_file_url', '');
+    setResumeUpload({ status: 'idle', fileName: null, errorMessage: null });
+    if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   const phoneDigits = digitsOnly(data.phone);
@@ -377,18 +464,54 @@ export default function CareersApplicationForm({
             />
           </FieldShell>
           <FieldShell
-            label="Resume URL"
-            htmlFor="careers_resume"
+            label="Resume"
             optional
-            hint="Paste a Google Drive / Dropbox / personal-site link to your resume PDF."
+            hint="PDF, DOC, or DOCX. Max 5 MB."
+            error={resumeUpload.status === 'error' ? resumeUpload.errorMessage : null}
           >
-            <TextInput
-              id="careers_resume"
-              type="url"
-              value={data.resume_file_url}
-              onChange={e => update('resume_file_url', e.target.value)}
-              placeholder="https://drive.google.com/..."
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              className="hidden"
+              onChange={e => {
+                const file = e.target.files?.[0];
+                if (file) handleResumeSelected(file);
+              }}
             />
+            {resumeUpload.status === 'uploaded' && resumeUpload.fileName ? (
+              <div className="flex items-center gap-3 p-4 rounded-lg border border-cyan-500/40 bg-cyan-500/10">
+                <FileText className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm text-white truncate">{resumeUpload.fileName}</div>
+                  <div className="text-xs text-cyan-300">Uploaded</div>
+                </div>
+                <button
+                  type="button"
+                  onClick={clearResume}
+                  className="text-slate-400 hover:text-red-400 transition-colors p-1"
+                  aria-label="Remove uploaded resume"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            ) : resumeUpload.status === 'uploading' ? (
+              <div className="flex items-center gap-3 p-4 rounded-lg border border-slate-700 bg-slate-900/60">
+                <Loader2 className="w-5 h-5 text-cyan-400 animate-spin" />
+                <div className="text-sm text-slate-300">
+                  Uploading {resumeUpload.fileName}…
+                </div>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => fileInputRef.current?.click()}
+                className="w-full flex items-center justify-center gap-2 p-4 rounded-lg border border-dashed border-slate-700 hover:border-cyan-500/40 hover:bg-cyan-500/5 transition-all text-slate-300 hover:text-cyan-300"
+              >
+                <Upload className="w-4 h-4" />
+                {resumeUpload.status === 'error' ? 'Try a different file' : 'Click to upload your resume'}
+              </button>
+            )}
           </FieldShell>
         </FormStep>
       )}
