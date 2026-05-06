@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Award, MapPin, Linkedin } from 'lucide-react';
+import { ArrowRight, Award, MapPin, Linkedin, ExternalLink } from 'lucide-react';
 import { BreadcrumbSchema, PersonSchema } from '@/app/_components/Schema';
 import CTA from '@/app/_components/CTA';
 import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
@@ -102,6 +102,17 @@ export default function Page() {
                   engagement gets senior engineering access — Sean leads scoping personally and stays
                   in delivery through deployment.
                 </p>
+                <div className="mb-2">
+                  <a
+                    href="https://seanrichard.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span>More About Sean</span>
+                  </a>
+                </div>
                 <a
                   href="https://www.linkedin.com/in/a8l-sean-richard/"
                   target="_blank"
