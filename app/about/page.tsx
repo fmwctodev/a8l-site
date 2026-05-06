@@ -8,14 +8,14 @@ import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui'
 export const metadata: Metadata = {
   title: { absolute: 'About Autom8ion Lab' },
   description:
-    'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB Certified · SBA Certified.',
+    'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard with Founding Partner Gabe Wilkinson. SDVOSB Certified · SBA Certified.',
   keywords:
-    'Autom8ion Lab, Sitehues Media Inc., Sean Richard, veteran-owned software, SDVOSB, compliance engineering firm, federal contractor',
+    'Autom8ion Lab, Sitehues Media Inc., Sean Richard, Gabe Wilkinson, AI systems architect, veteran-owned software, SDVOSB, compliance engineering firm, federal contractor',
   alternates: { canonical: 'https://autom8ionlab.com/about' },
   openGraph: {
     title: 'About Autom8ion Lab',
     description:
-      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB Certified · SBA Certified.',
+      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard with Founding Partner Gabe Wilkinson. SDVOSB Certified · SBA Certified.',
     url: 'https://autom8ionlab.com/about',
     images: [{
       url: 'https://autom8ionlab.com/api/og?title=About+Autom8ion+Lab&section=Company',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'About Autom8ion Lab',
     description:
-      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard. SDVOSB Certified · SBA Certified.',
+      'Veteran-owned engineering firm building custom AI, automation, and software for compliance-heavy industries. Founded by Sean Richard with Founding Partner Gabe Wilkinson. SDVOSB Certified · SBA Certified.',
     images: ['https://autom8ionlab.com/api/og?title=About+Autom8ion+Lab&section=Company'],
   },
 };
@@ -42,7 +42,7 @@ export default function Page() {
         ]}
       />
       <PersonSchema
-        description="Sean Richard founded Autom8ion Lab to build the kind of compliance-first engineering team he could not find when he needed one. Veteran. Engineer. Builds custom AI, automation, and software for environments where security architecture and compliance documentation must be engineered from day one."
+        description="Sean Richard founded Autom8ion Lab to build the kind of compliance-first engineering team he could not find when he needed one. Veteran. Engineer. Builds custom AI, automation, and software for environments where security architecture and compliance documentation must be engineered from day one. Founding Partner Gabe Wilkinson is an AI systems architect with hands-on experience on critical and complex software systems for the U.S. government and private enterprise."
       />
 
       <section className="relative min-h-[50vh] bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950">
@@ -87,7 +87,7 @@ export default function Page() {
           </Reveal>
 
           <Reveal>
-            <h2 className="text-3xl font-bold text-white mb-4">Founder</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Founders</h2>
             <PremiumCard variant="hover" className="p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start">
               <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
                 <span className="text-3xl font-bold text-white">SR</span>
@@ -110,6 +110,31 @@ export default function Page() {
                 >
                   <Linkedin className="w-4 h-4" />
                   <span>Sean on LinkedIn</span>
+                </a>
+              </div>
+            </PremiumCard>
+            <PremiumCard variant="hover" className="mt-4 p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start">
+              <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
+                <span className="text-3xl font-bold text-white">GW</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-1">Gabe Wilkinson</h3>
+                <p className="text-cyan-400 text-sm font-medium mb-3">Founding Partner</p>
+                <p className="text-slate-300 leading-relaxed mb-4">
+                  Gabe is a founder, AI systems architect, and visionary at Autom8ion Lab. His
+                  practical AI knowledge stems from hands-on experience working with critical and
+                  complex software systems for the U.S. government and private enterprise. This
+                  experience gives him the unique ability to understand and solve problems for his
+                  clients. He wants to help owners and operators get back to the work they love.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/gabe-at-autom8ionlab/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span>Gabe on LinkedIn</span>
                 </a>
               </div>
             </PremiumCard>
