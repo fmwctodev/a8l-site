@@ -340,7 +340,7 @@ const lastUpdated = "May 5, 2026";
                     <div className="text-slate-300 space-y-2">
                       <p><strong>Autom8ion Lab Legal Department</strong></p>
                       <p>📧 Email: <a href="mailto:info@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@autom8ionlab.com</a></p>
-                      <p>📞 Phone: <a href="tel:+18555086062" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 855-508-6062</a></p>
+                      <p>📞 Phone: <a href="tel:+18554390072" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 855-439-0072</a></p>
                       <p>🏢 Address: Sitehues Media Inc. (DBA Autom8ion Lab), 486 Lake Cir, Plant City, FL 33565</p>
                     </div>
                     <div className="mt-6 pt-6 border-t border-slate-700">

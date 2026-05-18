@@ -114,12 +114,12 @@ const Footer = () => {
                 info@autom8ionlab.com
               </a>
               <a
-                href="tel:+18555086062"
+                href="tel:+18554390072"
                 onClick={() => conversionEvents.phoneClick()}
                 className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
               >
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                +1 855-508-6062
+                +1 855-439-0072
               </a>
               <p className="text-slate-500 text-xs pl-6">Plant City, FL · Montreal, QC</p>
               <a

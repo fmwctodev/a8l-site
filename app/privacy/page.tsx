@@ -318,7 +318,7 @@ const lastUpdated = "May 5, 2026";
                     </p>
                     <div className="text-slate-300 space-y-2">
                       <p><strong>Email:</strong> <a href="mailto:info@autom8ionlab.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@autom8ionlab.com</a></p>
-                      <p><strong>Phone:</strong> <a href="tel:+18555086062" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 855-508-6062</a></p>
+                      <p><strong>Phone:</strong> <a href="tel:+18554390072" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 855-439-0072</a></p>
                       <p><strong>Mailing Address:</strong> Sitehues Media Inc. (DBA Autom8ion Lab), 486 Lake Cir, Plant City, FL 33565</p>
                     </div>
                   </div>

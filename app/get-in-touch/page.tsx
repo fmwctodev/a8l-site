@@ -49,7 +49,7 @@ const contactInfo = [
     details: 'mailto:info@autom8ionlab.com',
     description: 'Response within one business day',
   },
-  { icon: Phone, title: 'Call Us', details: 'tel:+18555086062', description: 'Mon-Fri, 9AM-6PM EST' },
+  { icon: Phone, title: 'Call Us', details: 'tel:+18554390072', description: 'Mon-Fri, 9AM-6PM EST' },
   {
     icon: MapPin,
     title: 'Locations',
@@ -111,7 +111,7 @@ export default function ContactPage() {
                     <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                     {isLink ? (
                       <a href={info.details} className="text-cyan-400 font-medium mb-1 hover:text-cyan-300 transition-colors block link-underline w-fit mx-auto">
-                        {info.details.replace('mailto:', '').replace('tel:', '').replace('+18555086062', '+1 855-508-6062')}
+                        {info.details.replace('mailto:', '').replace('tel:', '').replace('+18554390072', '+1 855-439-0072')}
                       </a>
                     ) : (
                       <p className="text-cyan-400 font-medium mb-1">{info.details}</p>

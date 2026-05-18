@@ -205,11 +205,11 @@ export default function Page() {
                     </a>
                     <div className="hidden sm:block w-px h-6 bg-slate-600"></div>
                     <a
-                      href="tel:+18555086062"
+                      href="tel:+18554390072"
                       className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold flex items-center space-x-2"
                     >
                       <Clock className="w-5 h-5" />
-                      <span>+1 855-508-6062</span>
+                      <span>+1 855-439-0072</span>
                     </a>
                   </div>
                 </div>

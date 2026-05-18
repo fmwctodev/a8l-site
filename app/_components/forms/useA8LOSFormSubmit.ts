@@ -48,7 +48,7 @@ export function useA8LOSFormSubmit(slug: string) {
 
       if (!supabaseUrl || !anonKey) {
         const msg =
-          'Form is not yet configured. Email info@autom8ionlab.com or call +1 855-508-6062.';
+          'Form is not yet configured. Email info@autom8ionlab.com or call +1 855-439-0072.';
         setState({ loading: false, error: msg, result: null });
         return { success: false, message: msg };
       }

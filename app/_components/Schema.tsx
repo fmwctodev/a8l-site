@@ -61,7 +61,7 @@ export function OrganizationSchema() {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-855-508-6062',
+      telephone: '+1-855-439-0072',
       contactType: 'Sales',
       email: 'info@autom8ionlab.com',
       areaServed: 'US',
@@ -319,7 +319,7 @@ export function ProfessionalServiceSchema() {
     '@type': 'ProfessionalService',
     name: 'Autom8ion Lab',
     url: BASE,
-    telephone: '+1-855-508-6062',
+    telephone: '+1-855-439-0072',
     email: 'info@autom8ionlab.com',
     areaServed: 'US',
     description:

@@ -493,11 +493,11 @@ export default function GamifiedContactForm() {
         </a>{' '}
         or call{' '}
         <a
-          href="tel:+18555086062"
+          href="tel:+18554390072"
           className="text-cyan-400 hover:text-cyan-300"
           onClick={() => conversionEvents.phoneClick()}
         >
-          +1 855-508-6062
+          +1 855-439-0072
         </a>
         .
       </div>

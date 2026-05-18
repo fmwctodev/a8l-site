@@ -678,10 +678,10 @@ export default function Page() {
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <a
-                      href="tel:+18555086062"
+                      href="tel:+18554390072"
                       className="hover:text-cyan-400 transition-colors"
                     >
-                      +1 855-508-6062
+                      +1 855-439-0072
                     </a>
                   </div>
                 </div>
