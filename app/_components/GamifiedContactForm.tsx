@@ -71,8 +71,7 @@ interface FormState {
   project_description: string;
   job_title: string;
   phone: string;
-  sms_consent: boolean;
-  human_acknowledgement: boolean;
+  compliance_acknowledgement: boolean;
   // Honeypot — must remain empty. Bots fill all fields they see.
   website: string;
 }
@@ -90,8 +89,7 @@ const INITIAL_STATE: FormState = {
   project_description: '',
   job_title: '',
   phone: '',
-  sms_consent: false,
-  human_acknowledgement: false,
+  compliance_acknowledgement: false,
   website: '',
 };
 
@@ -132,15 +130,11 @@ export default function GamifiedContactForm() {
         // Steps 2 and 3 are entirely optional — momentum forward shouldn't gate on data
         return true;
       case 3:
-        return (
-          data.human_acknowledgement &&
-          phoneValid &&
-          (!phoneFilled || data.sms_consent) // if phone provided, SMS consent required
-        );
+        return data.compliance_acknowledgement && phoneValid;
       default:
         return false;
     }
-  }, [step, data, phoneFilled, phoneValid]);
+  }, [step, data, phoneValid]);
 
   const advance = () => {
     if (!stepValid) return;
@@ -176,8 +170,8 @@ export default function GamifiedContactForm() {
       ideal_start: data.ideal_start.trim() || undefined,
       project_description: data.project_description.trim() || undefined,
       phone: phoneFilled ? data.phone.trim() : undefined,
-      sms_consent: phoneFilled ? data.sms_consent : false,
-      human_acknowledgement: data.human_acknowledgement,
+      sms_consent: phoneFilled ? data.compliance_acknowledgement : false,
+      human_acknowledgement: data.compliance_acknowledgement,
       _honeypot: data.website || undefined,
     };
 
@@ -445,65 +439,44 @@ export default function GamifiedContactForm() {
             />
           </FieldShell>
 
-          {phoneFilled && phoneValid && (
-            <motion.label
-              initial={reduceMotion ? false : { opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              transition={reduceMotion ? { duration: 0 } : { duration: 0.3 }}
-              className="flex items-start gap-3 cursor-pointer p-4 rounded-lg border border-slate-700/60 bg-slate-900/50 hover:border-cyan-500/40 transition-colors"
-            >
-              <input
-                type="checkbox"
-                checked={data.sms_consent}
-                onChange={e => update('sms_consent', e.target.checked)}
-                className="mt-1 w-4 h-4 accent-cyan-500 flex-shrink-0"
-              />
-              <span className="text-xs text-slate-300 leading-relaxed space-y-2 block">
-                <span className="block">
-                  <strong className="text-white">Yes, I would like to receive SMS text messages</strong>{' '}
-                  from Autom8ion Lab (Sitehues Media Inc.) about my inquiry, scheduled
-                  appointments, and project updates at the mobile number provided.
-                  I understand I will receive up to 8 messages per month.
-                </span>
-                <span className="block">
-                  <strong className="text-white">Message Frequency:</strong> You will receive
-                  up to 8 messages per month.
-                </span>
-                <span className="block">
-                  <strong className="text-white">Standard Rates:</strong> Message and data
-                  rates may apply depending on your mobile phone service plan.
-                </span>
-                <span className="block">
-                  <strong className="text-white">Help &amp; Stop:</strong> Reply HELP for
-                  help or STOP to cancel at any time.
-                </span>
-                <span className="block">
-                  By providing your phone number and checking the box above, you agree
-                  to receive text messages from Autom8ion Lab. Consent is not required
-                  to make a purchase. See our{' '}
-                  <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
-                    Privacy Policy
-                  </Link>{' '}
-                  and{' '}
-                  <Link href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
-                    Terms of Service
-                  </Link>
-                  .
-                </span>
-              </span>
-            </motion.label>
-          )}
-
           <label className="flex items-start gap-3 cursor-pointer p-4 rounded-lg border border-slate-700/60 bg-slate-900/50 hover:border-cyan-500/40 transition-colors">
             <input
               type="checkbox"
-              checked={data.human_acknowledgement}
-              onChange={e => update('human_acknowledgement', e.target.checked)}
-              className="mt-1 w-4 h-4 accent-cyan-500"
+              checked={data.compliance_acknowledgement}
+              onChange={e => update('compliance_acknowledgement', e.target.checked)}
+              className="mt-1 w-4 h-4 accent-cyan-500 flex-shrink-0"
               required
             />
-            <span className="text-xs text-slate-300 leading-relaxed">
-              I&apos;m a real person interested in working with Autom8ion Lab.
+            <span className="text-xs text-slate-300 leading-relaxed space-y-2 block">
+              <span className="block">
+                <strong className="text-white">I&apos;m a real person interested in working with Autom8ion Lab.</strong>{' '}
+                If I provided a phone number above, I authorize Autom8ion Lab (Sitehues Media Inc.)
+                to send me SMS text messages about my inquiry, scheduled appointments, and project
+                updates at that number. I understand I will receive up to 8 messages per month.
+              </span>
+              <span className="block">
+                <strong className="text-white">Message Frequency:</strong> You will receive
+                up to 8 messages per month.
+              </span>
+              <span className="block">
+                <strong className="text-white">Standard Rates:</strong> Message and data
+                rates may apply depending on your mobile phone service plan.
+              </span>
+              <span className="block">
+                <strong className="text-white">Help &amp; Stop:</strong> Reply HELP for
+                help or STOP to cancel at any time.
+              </span>
+              <span className="block">
+                Consent is not required to make a purchase. See our{' '}
+                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                  Privacy Policy
+                </Link>{' '}
+                and{' '}
+                <Link href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                  Terms of Service
+                </Link>
+                .
+              </span>
             </span>
           </label>
         </FormStep>
