@@ -456,23 +456,40 @@ export default function GamifiedContactForm() {
                 type="checkbox"
                 checked={data.sms_consent}
                 onChange={e => update('sms_consent', e.target.checked)}
-                className="mt-1 w-4 h-4 accent-cyan-500"
+                className="mt-1 w-4 h-4 accent-cyan-500 flex-shrink-0"
               />
-              <span className="text-xs text-slate-300 leading-relaxed">
-                <strong className="text-white">SMS consent (required if phone provided):</strong>{' '}
-                I authorize Autom8ion Lab (Sitehues Media Inc.) to send me SMS text messages about
-                my inquiry, scheduled appointments, and project updates at the mobile number
-                provided. Message frequency varies. Message and data rates may apply. Reply STOP
-                to opt out at any time, or HELP for help. Consent is not a condition of purchase.
-                See our{' '}
-                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
-                  Privacy Policy
-                </Link>{' '}
-                and{' '}
-                <Link href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
-                  Terms of Service
-                </Link>
-                .
+              <span className="text-xs text-slate-300 leading-relaxed space-y-2 block">
+                <span className="block">
+                  <strong className="text-white">Yes, I would like to receive SMS text messages</strong>{' '}
+                  from Autom8ion Lab (Sitehues Media Inc.) about my inquiry, scheduled
+                  appointments, and project updates at the mobile number provided.
+                  I understand I will receive up to 8 messages per month.
+                </span>
+                <span className="block">
+                  <strong className="text-white">Message Frequency:</strong> You will receive
+                  up to 8 messages per month.
+                </span>
+                <span className="block">
+                  <strong className="text-white">Standard Rates:</strong> Message and data
+                  rates may apply depending on your mobile phone service plan.
+                </span>
+                <span className="block">
+                  <strong className="text-white">Help &amp; Stop:</strong> Reply HELP for
+                  help or STOP to cancel at any time.
+                </span>
+                <span className="block">
+                  By providing your phone number and checking the box above, you agree
+                  to receive text messages from Autom8ion Lab. Consent is not required
+                  to make a purchase. See our{' '}
+                  <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                    Privacy Policy
+                  </Link>{' '}
+                  and{' '}
+                  <Link href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                    Terms of Service
+                  </Link>
+                  .
+                </span>
               </span>
             </motion.label>
           )}

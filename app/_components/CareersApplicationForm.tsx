@@ -3,6 +3,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { CheckCircle2, Upload, Loader2, FileText, X } from 'lucide-react';
+import Link from 'next/link';
 import MomentumBar from './forms/MomentumBar';
 import FormStep, { FieldShell, TextInput, TextArea, ChipPicker } from './forms/FormStep';
 import { useA8LOSFormSubmit } from './forms/useA8LOSFormSubmit';
@@ -52,6 +53,7 @@ interface FormState {
   portfolio_url: string;
   cover_letter: string;
   resume_file_url: string;
+  sms_consent: boolean;
   website: string; // honeypot
 }
 
@@ -67,6 +69,7 @@ const INITIAL_STATE: FormState = {
   portfolio_url: '',
   cover_letter: '',
   resume_file_url: '',
+  sms_consent: false,
   website: '',
 };
 
@@ -252,6 +255,7 @@ export default function CareersApplicationForm({
       portfolio_url: data.portfolio_url.trim() || undefined,
       cover_letter: data.cover_letter.trim() || undefined,
       resume_file_url: data.resume_file_url.trim() || undefined,
+      sms_consent: data.sms_consent,
       _honeypot: data.website || undefined,
     };
 
@@ -513,6 +517,46 @@ export default function CareersApplicationForm({
               </button>
             )}
           </FieldShell>
+
+          <label className="flex items-start gap-3 cursor-pointer p-4 rounded-lg border border-slate-700/60 bg-slate-900/50 hover:border-cyan-500/40 transition-colors">
+            <input
+              type="checkbox"
+              checked={data.sms_consent}
+              onChange={e => update('sms_consent', e.target.checked)}
+              className="mt-1 w-4 h-4 accent-cyan-500 flex-shrink-0"
+            />
+            <span className="text-xs text-slate-300 leading-relaxed space-y-2 block">
+              <span className="block">
+                <strong className="text-white">Optional — Yes, I would like to receive SMS text messages</strong>{' '}
+                from Autom8ion Lab (Sitehues Media Inc.) about interview scheduling,
+                application status updates, and follow-ups at the mobile number
+                provided. I understand I will receive up to 8 messages per month.
+              </span>
+              <span className="block">
+                <strong className="text-white">Message Frequency:</strong> You will receive
+                up to 8 messages per month.
+              </span>
+              <span className="block">
+                <strong className="text-white">Standard Rates:</strong> Message and data
+                rates may apply depending on your mobile phone service plan.
+              </span>
+              <span className="block">
+                <strong className="text-white">Help &amp; Stop:</strong> Reply HELP for
+                help or STOP to cancel at any time.
+              </span>
+              <span className="block">
+                Checking this box is optional and is not required to apply. See our{' '}
+                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                  Privacy Policy
+                </Link>{' '}
+                and{' '}
+                <Link href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                  Terms of Service
+                </Link>
+                .
+              </span>
+            </span>
+          </label>
         </FormStep>
       )}
     </div>
