@@ -92,6 +92,7 @@ export default function robots(): MetadataRoute.Robots {
           '/application-received',
           '/aiads-vsl',
           '/nist-checklist',
+          '/project-portfolio',
           ...blockTrackingParams,
         ],
       },
