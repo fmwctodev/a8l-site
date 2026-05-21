@@ -98,7 +98,7 @@ export default function PortfolioTabs() {
       </div>
 
       <Stagger key={active} staggerDelay={0.07} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        {projects.map(p =>
+        {projects.map((p, i) =>
           active === 'sites' ? (
             <StaggerItem key={p.url}>
               <a href={p.url} target="_blank" rel="noopener noreferrer" className="group block h-full">
@@ -106,7 +106,12 @@ export default function PortfolioTabs() {
               </a>
             </StaggerItem>
           ) : (
-            <StaggerItem key={p.url}>
+            // .systems has 4 cards; the 4th sits alone on row 2 at lg —
+            // start it in column 2 so it's centered instead of left-aligned.
+            <StaggerItem
+              key={p.url}
+              className={i === projects.length - 1 ? 'lg:col-start-2' : undefined}
+            >
               <ProjectCard project={p} kind="systems" />
             </StaggerItem>
           )
