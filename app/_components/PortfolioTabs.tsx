@@ -7,18 +7,18 @@ import { Stagger, StaggerItem, PremiumCard } from './ui';
 
 type Project = { name: string; url: string; image?: string };
 
-// Real screenshots arrive later. Set `image: '/portfolio/<slug>.webp'` per
-// project to replace the placeholder; until then the styled placeholder shows.
+// .sites carry real screenshots from /public/portfolio. .systems have no
+// images yet, so those cards fall back to the icon + domain placeholder.
 const SITES: Project[] = [
-  { name: 'BuilderLync', url: 'https://builderlync.com/' },
-  { name: 'SW Pest & Weeds', url: 'https://swpestweeds.com/' },
-  { name: 'That Roof Dude', url: 'https://thatroofdude.com/' },
-  { name: 'Peerless Services', url: 'https://peerless-services.com/' },
-  { name: 'Clockwork Concrete', url: 'https://clockworkconcrete.com/' },
-  { name: 'HelpYHWH', url: 'https://helpyhwh.org/' },
-  { name: 'ShingleRx NTX', url: 'https://shinglerx-ntx.com/' },
-  { name: 'Purple Cow Roofing', url: 'https://purplecowroofing.com/' },
-  { name: 'Autom8ion Lab', url: 'https://autom8ionlab.com/' },
+  { name: 'BuilderLync', url: 'https://builderlync.com/', image: '/portfolio/builderlync-site.png' },
+  { name: 'SW Pest & Weeds', url: 'https://swpestweeds.com/', image: '/portfolio/swpests-site.png' },
+  { name: 'That Roof Dude', url: 'https://thatroofdude.com/', image: '/portfolio/thatroofdude-site.png' },
+  { name: 'Peerless Services', url: 'https://peerless-services.com/', image: '/portfolio/peerless-site.png' },
+  { name: 'Clockwork Concrete', url: 'https://clockworkconcrete.com/', image: '/portfolio/clockwork-site.png' },
+  { name: 'HelpYHWH', url: 'https://helpyhwh.org/', image: '/portfolio/yhwh-site.png' },
+  { name: 'ShingleRx NTX', url: 'https://shinglerx-ntx.com/', image: '/portfolio/shinglerx-site.png' },
+  { name: 'Purple Cow Roofing', url: 'https://purplecowroofing.com/', image: '/portfolio/purplecow-site.png' },
+  { name: 'Autom8ion Lab', url: 'https://autom8ionlab.com/', image: '/portfolio/autom8ionlab-site.png' },
 ];
 
 const SYSTEMS: Project[] = [
@@ -49,7 +49,7 @@ function ProjectCard({ project, kind }: { project: Project; kind: TabId }) {
             alt={`${project.name} preview`}
             loading="lazy"
             decoding="async"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-top"
           />
         ) : (
           <div className="flex flex-col items-center gap-2 text-slate-500">
