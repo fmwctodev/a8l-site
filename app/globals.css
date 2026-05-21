@@ -132,6 +132,15 @@
   50% { opacity: 0.8; }
 }
 
+/* "As Seen On" press strip — gentle staggered opacity pulse. Base opacity is
+   1 (the keyframe endpoints), so when the animation is disabled for
+   reduced-motion users the logos remain fully visible. Per-logo
+   animation-delay is set inline in AsSeenOn.tsx. */
+@keyframes logo-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
 /* Animation Classes */
 .animate-grid-slide {
   animation: grid-slide 20s linear infinite;
@@ -195,6 +204,10 @@
 
 .animate-circuit-pulse {
   animation: circuit-pulse 2s ease-in-out infinite;
+}
+
+.animate-logo-pulse {
+  animation: logo-pulse 3.5s ease-in-out infinite;
 }
 
 /* Smooth scrolling and prevent horizontal overflow */
@@ -711,7 +724,8 @@ input:focus {
   .animate-particle-2,
   .animate-particle-3,
   .animate-particle-4,
-  .animate-particle-5 {
+  .animate-particle-5,
+  .animate-logo-pulse {
     animation: none !important;
   }
   .shimmer-sheen::before,

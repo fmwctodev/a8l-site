@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Hero from './_components/Hero';
+import AsSeenOn from './_components/AsSeenOn';
 import IndustriesGrid from './_components/IndustriesGrid';
 import ProblemFraming from './_components/ProblemFraming';
 import ThreeServices from './_components/ThreeServices';
@@ -111,6 +112,8 @@ export default function HomePage() {
           </section>
         </div>
       </section>
+
+      <AsSeenOn />
 
       <IndustriesGrid />
       <ProblemFraming />
