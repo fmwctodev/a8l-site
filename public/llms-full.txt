@@ -8,6 +8,8 @@ This document expands the index at /llms.txt with full prose for the homepage, s
 
 ## Homepage — Custom AI, Automation & Software for Compliance-Driven Industries
 
+Autom8ion Lab is a veteran-owned engineering firm that builds custom AI agents, workflow automation, and LLM systems for mid-market companies in regulated industries — construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. Most engagements launch in 30 days. Every system ships with the security architecture and compliance documentation an audit actually expects.
+
 A veteran-owned engineering team building custom AI agents, workflow automation, and applications for construction, healthcare, finance, real estate, and US government clients. Security architecture and compliance documentation engineered from day one — not retrofitted.
 
 Veteran-Owned · SDVOSB Certified · SBA Certified · VA Vets First · Registered US Federal Contractor (UEI: YY2DR3KSENH7 · CAGE: 9YCS7).

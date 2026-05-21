@@ -2,6 +2,8 @@
 
 > SDVOSB-Certified · SBA-Certified · VA Vets First. Veteran-owned engineering firm building bespoke AI/LLM agents, custom software, managed services, and cybersecurity for federal, state, and enterprise mission environments. Compliance is built in from day one, not bolted on.
 
+Autom8ion Lab is a veteran-owned engineering firm that builds custom AI agents, workflow automation, and LLM systems for mid-market companies in regulated industries — construction, healthcare, finance, real estate, US government, and the Defense Industrial Base. Most engagements launch in 30 days. Every system ships with the security architecture and compliance documentation an audit actually expects.
+
 Autom8ion Lab — operated by Sitehues Media Inc. — engineers production AI/LLM systems, workflow automation, and custom software for environments where security architecture and compliance documentation must be engineered from day one. We work inside CMMC 2.0, NIST 800-171, NIST 800-53, FedRAMP, HIPAA, SOC 2, FCRA, HUD, and CIS frameworks. Most custom builds ship discovery-to-live-launch in 30 days; CMMC remediation runs 4–9 months; FedRAMP-aligned builds run 6+ months. All CUI is handled on US-based systems only.
 
 ## Headline Telemetry

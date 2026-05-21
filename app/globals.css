@@ -141,6 +141,14 @@
   50% { opacity: 0.4; }
 }
 
+/* "As Seen On" marquee — infinite horizontal scroll. List rendered twice;
+   translateX(-50%) advances exactly one set for a seamless loop. Each logo
+   independently runs .animate-logo-pulse. */
+@keyframes as-seen-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 /* Animation Classes */
 .animate-grid-slide {
   animation: grid-slide 20s linear infinite;
@@ -208,6 +216,29 @@
 
 .animate-logo-pulse {
   animation: logo-pulse 3.5s ease-in-out infinite;
+}
+
+.animate-as-seen-marquee {
+  animation: as-seen-marquee 40s linear infinite;
+}
+
+/* Soft fade-out at both horizontal edges of the marquee viewport. */
+.mask-fade-x {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+
+/* Reduced motion: stop the marquee scroll, hide the duplicate set, and wrap
+   the single set into a static centered row. (.animate-logo-pulse is disabled
+   by the main reduced-motion block below.) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-as-seen-marquee {
+    animation: none !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .as-seen-marquee-dup { display: none !important; }
 }
 
 /* Smooth scrolling and prevent horizontal overflow */
