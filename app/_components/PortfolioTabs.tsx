@@ -22,11 +22,10 @@ const SITES: Project[] = [
 ];
 
 const SYSTEMS: Project[] = [
-  { name: 'BuilderLync App', url: 'https://app.builderlync.com' },
-  { name: 'Sitehues ARMY', url: 'https://army.sitehues.agency' },
-  { name: 'Tarrytown Roofing', url: 'https://contact.tarrytownroofing.com' },
-  { name: 'Revive GC', url: 'https://success.revive-gc.com' },
-  { name: 'Autom8ion Lab OS', url: 'https://os.autom8ionlab.com' },
+  { name: 'BuilderLync App', url: 'https://app.builderlync.com', image: '/portfolio/builderlync-app.png' },
+  { name: 'Tarrytown Roofing', url: 'https://contact.tarrytownroofing.com', image: '/portfolio/tarrytown-app.png' },
+  { name: 'Revive GC', url: 'https://success.revive-gc.com', image: '/portfolio/success-app.png' },
+  { name: 'Autom8ion Lab OS', url: 'https://os.autom8ionlab.com', image: '/portfolio/autom8ionlab-app.png' },
 ];
 
 const TABS = [
