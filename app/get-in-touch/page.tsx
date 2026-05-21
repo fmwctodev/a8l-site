@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Script from 'next/script';
 import { BreadcrumbSchema } from '@/app/_components/Schema';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Reveal, Stagger, StaggerItem, PremiumCard } from '@/app/_components/ui';
@@ -125,6 +126,28 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <section className="py-16 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+              What Our
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Clients Say</span>
+            </h2>
+            <p className="text-lg text-slate-300">
+              Real reviews from the teams we&apos;ve built for.
+            </p>
+          </div>
+          {/* Elfsight Google Reviews | Autom8ion Lab. The platform.js loader
+              (mounted at the end of this page) scans the DOM for this class and
+              renders the widget here. data-elfsight-app-lazy defers the widget
+              itself until it scrolls into view. */}
+          <div
+            className="elfsight-app-ef98b94d-4795-410a-a71a-e651f75ee489"
+            data-elfsight-app-lazy=""
+          />
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 md:mb-16">
@@ -145,6 +168,12 @@ export default function ContactPage() {
           <GamifiedContactForm />
         </div>
       </section>
+
+      {/* Elfsight platform loader. lazyOnload because the reviews are
+          below-the-fold social proof, not the page's primary action (the
+          form is) — defer the third-party JS until the browser is idle.
+          Mirrors the next/script pattern used on /schedule-consultation. */}
+      <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
     </>
   );
 }
