@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Globe, AppWindow, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import { Globe, AppWindow, ShieldCheck, ArrowUpRight, Maximize2 } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
 import Link from 'next/link';
+import Modal from './Modal';
 import { Stagger, StaggerItem, PremiumCard } from './ui';
 
 type Project = { name: string; url: string; image?: string };
@@ -62,9 +64,11 @@ function ProjectCard({ project, kind }: { project: Project; kind: TabId }) {
           <h3 className="text-white font-semibold truncate">{project.name}</h3>
           <p className="text-slate-400 text-sm font-mono truncate">{prettyDomain(project.url)}</p>
         </div>
-        {kind === 'sites' && (
+        {kind === 'sites' ? (
           <ArrowUpRight className="w-5 h-5 text-cyan-400 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        )}
+        ) : project.image ? (
+          <Maximize2 className="w-5 h-5 text-cyan-400 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+        ) : null}
       </div>
     </PremiumCard>
   );
@@ -72,6 +76,8 @@ function ProjectCard({ project, kind }: { project: Project; kind: TabId }) {
 
 export default function PortfolioTabs() {
   const [active, setActive] = useState<TabId>('sites');
+  const [lightbox, setLightbox] = useState<Project | null>(null);
+  const reduceMotion = useReducedMotion();
   const projects = active === 'sites' ? SITES : SYSTEMS;
 
   return (
@@ -112,7 +118,18 @@ export default function PortfolioTabs() {
               key={p.url}
               className={i === projects.length - 1 ? 'lg:col-start-2' : undefined}
             >
-              <ProjectCard project={p} kind="systems" />
+              {p.image ? (
+                <button
+                  type="button"
+                  onClick={() => setLightbox(p)}
+                  aria-label={`Enlarge ${p.name} screenshot`}
+                  className="group block h-full w-full text-left cursor-zoom-in"
+                >
+                  <ProjectCard project={p} kind="systems" />
+                </button>
+              ) : (
+                <ProjectCard project={p} kind="systems" />
+              )}
             </StaggerItem>
           )
         )}
@@ -136,6 +153,31 @@ export default function PortfolioTabs() {
           </div>
         </div>
       )}
+
+      <Modal
+        isOpen={!!lightbox}
+        onClose={() => setLightbox(null)}
+        contentClassName="p-2 sm:p-4 max-w-6xl mx-auto w-full max-h-[92vh] overflow-y-auto"
+      >
+        {lightbox && (
+          <motion.figure
+            initial={reduceMotion ? false : { scale: 0.96, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={reduceMotion ? { duration: 0 } : { duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={lightbox.image}
+              alt={`${lightbox.name} — full screenshot`}
+              className="w-full h-auto rounded-lg border border-slate-700"
+            />
+            <figcaption className="mt-3 text-center text-sm text-slate-300">
+              <span className="text-white font-semibold">{lightbox.name}</span>
+              <span className="font-mono text-slate-400"> · {prettyDomain(lightbox.url)}</span>
+            </figcaption>
+          </motion.figure>
+        )}
+      </Modal>
     </div>
   );
 }

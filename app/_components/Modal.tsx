@@ -6,9 +6,11 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  /** Override the content-box classes (width/padding/scroll). Defaults to the standard centered 4xl box. */
+  contentClassName?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, contentClassName }) => {
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -46,7 +48,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         >
           <X className="w-5 h-5" />
         </button>
-        <div className="p-6 max-w-4xl mx-auto w-full max-h-[90vh] overflow-y-auto">
+        <div className={contentClassName ?? 'p-6 max-w-4xl mx-auto w-full max-h-[90vh] overflow-y-auto'}>
           {children}
         </div>
     </div>
