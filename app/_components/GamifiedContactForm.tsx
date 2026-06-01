@@ -447,36 +447,19 @@ export default function GamifiedContactForm() {
               className="mt-1 w-4 h-4 accent-cyan-500 flex-shrink-0"
               required
             />
-            <span className="text-xs text-slate-300 leading-relaxed space-y-2 block">
-              <span className="block">
-                <strong className="text-white">I&apos;m a real person interested in working with Autom8ion Lab.</strong>{' '}
-                If I provided a phone number above, I authorize Autom8ion Lab (Sitehues Media Inc.)
-                to send me SMS text messages about my inquiry, scheduled appointments, and project
-                updates at that number. I understand I will receive up to 8 messages per month.
-              </span>
-              <span className="block">
-                <strong className="text-white">Message Frequency:</strong> You will receive
-                up to 8 messages per month.
-              </span>
-              <span className="block">
-                <strong className="text-white">Standard Rates:</strong> Message and data
-                rates may apply depending on your mobile phone service plan.
-              </span>
-              <span className="block">
-                <strong className="text-white">Help &amp; Stop:</strong> Reply HELP for
-                help or STOP to cancel at any time.
-              </span>
-              <span className="block">
-                Consent is not required to make a purchase. See our{' '}
-                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
-                  Privacy Policy
-                </Link>{' '}
-                and{' '}
-                <Link href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
-                  Terms of Service
-                </Link>
-                .
-              </span>
+            <span className="text-xs text-slate-300 leading-relaxed block">
+              By checking this box and providing my phone number, I agree to receive SMS messages
+              from Autom8ion Lab (Sitehues Media Inc.) about appointments, bookings, lead responses,
+              and service updates. Message frequency varies. Message and data rates may apply.
+              Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our{' '}
+              <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                Privacy Policy
+              </Link>{' '}
+              and{' '}
+              <Link href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                Terms of Service
+              </Link>
+              .
             </span>
           </label>
         </FormStep>
