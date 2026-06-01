@@ -447,7 +447,7 @@ export default function GamifiedContactForm() {
               className="mt-1 w-4 h-4 accent-cyan-500 flex-shrink-0"
               required
             />
-            <span className="text-xs text-slate-300 leading-relaxed block">
+            <span className="text-sm text-slate-300 leading-relaxed block">
               By checking this box and providing my phone number, I agree to receive SMS messages
               from Autom8ion Lab (Sitehues Media Inc.) about appointments, bookings, lead responses,
               and service updates. Message frequency varies. Message and data rates may apply.
